@@ -1,0 +1,9 @@
+# Solo public/ y Dockerfile son necesarios para el build
+.git
+.gitignore
+*.md
+.env
+.env.*
+!.env.example
+docker-compose*.yml
+*.md
