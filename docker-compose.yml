@@ -1,0 +1,25 @@
+# NEST Hub - servidor para CLI y web
+# Uso: docker compose up -d
+# Requiere .env con CLI_API_TOKEN (y opcionalmente NEST_PUBLIC_URL, TELEGRAM_BOT_TOKEN)
+
+services:
+  hub:
+    build: .
+    image: nest-terminal-hub:latest
+    container_name: nest-hub
+    restart: unless-stopped
+    ports:
+      - "${NEST_LISTEN_PORT:-3006}:3006"
+    environment:
+      - CLI_API_TOKEN=${CLI_API_TOKEN}
+      - NEST_LISTEN_HOST=0.0.0.0
+      - NEST_LISTEN_PORT=3006
+      - NEST_PUBLIC_URL=${NEST_PUBLIC_URL:-}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:-}
+      - NEST_HOME=/data
+      - DB_PATH=/data/nest.db
+    volumes:
+      - nest-data:/data
+
+volumes:
+  nest-data:
