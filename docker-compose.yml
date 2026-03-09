@@ -1,4 +1,4 @@
-# NEST Hub - servidor para CLI y web
+# NEST Server - for CLI and web
 # Uso: docker compose up -d
 # Requiere .env con CLI_API_TOKEN (y opcionalmente NEST_PUBLIC_URL, TELEGRAM_BOT_TOKEN)
 

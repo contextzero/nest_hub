@@ -4,7 +4,7 @@
   <img src="./public/icon.svg" alt="NEST" width="120" height="120" />
 </p>
 
-**Enterprise-ready distribution for the NEST CLI and Hub server.** Run AI coding agents (Claude Code, Codex, Cursor, Gemini, OpenCode) locally and control them remotely via the web app. This repository provides everything needed to install the CLI with **npm** and run the Hub server with **Docker**.
+**Enterprise-ready distribution for the NEST CLI and Server.** Run AI coding agents (Claude Code, Codex, Cursor, Gemini, OpenCode) locally and control them remotely via the web app. This repository provides everything needed to install the CLI with **npm** and run the Server with **Docker**.
 
 ---
 
@@ -29,11 +29,11 @@
 
 | Component | Description |
 |-----------|-------------|
-| **NEST CLI** | Runs agent sessions on your machine and connects them to the Hub. Install globally via npm. |
-| **NEST Hub** | HTTP API, Socket.IO, and web app. Deploy with Docker using this repository. |
-| **Web app** | Served by the Hub at the same URL. Lists sessions, chat, permissions, terminal, and files. |
+| **NEST CLI** | Runs agent sessions on your machine and connects them to the Server. Install globally via npm. |
+| **NEST Server** | HTTP API, Socket.IO, and web app. Deploy with Docker using this repository. |
+| **Web app** | Served by the Server at the same URL. Lists sessions, chat, permissions, terminal, and files. |
 
-**Data flow:** CLI ↔ Hub (Socket.IO + REST) ↔ Web (SSE + REST). The Hub persists state in SQLite.
+**Data flow:** CLI ↔ Server (Socket.IO + REST) ↔ Web (SSE + REST). The Server persists state in SQLite.
 
 ---
 
@@ -43,8 +43,8 @@
 |-------------|---------|
 | **Node.js 18+** | For npm and the NEST CLI. |
 | **npm** | To install the NEST CLI globally (`npm install -g @factadev/cli`). |
-| **Docker & Docker Compose** | To run the Hub server. |
-| **CLI_API_TOKEN** | Shared secret between CLI and Hub; generate a secure value before first use. |
+| **Docker & Docker Compose** | To run the Server. |
+| **CLI_API_TOKEN** | Shared secret between CLI and Server; generate a secure value before first use. |
 
 Optional: [Claude CLI](https://claude.ai), [Cursor Agent CLI](https://cursor.com), or other agents depending on which mode you use (`nest`, `nest cursor`, etc.).
 
@@ -52,7 +52,7 @@ Optional: [Claude CLI](https://claude.ai), [Cursor Agent CLI](https://cursor.com
 
 ## Quick start
 
-1. **Start the Hub (Docker)**
+1. **Start the Server (Docker)**
 
    ```bash
    git clone https://github.com/Facta-Dev/ctx0_nest_terminal.git
@@ -62,7 +62,7 @@ Optional: [Claude CLI](https://claude.ai), [Cursor Agent CLI](https://cursor.com
    docker compose up -d
    ```
 
-   The Hub and web app are available at **http://localhost:3006** (or the port set in `.env`).
+   The Server and web app are available at **http://localhost:3006** (or the port set in `.env`).
 
 2. **Install the CLI (npm)**
 
@@ -102,8 +102,8 @@ nest --help
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `CLI_API_TOKEN` | Yes | Must match the Hub’s `CLI_API_TOKEN`. |
-| `NEST_API_URL` | Yes | Hub base URL (e.g. `http://localhost:3006`). |
+| `CLI_API_TOKEN` | Yes | Must match the Server’s `CLI_API_TOKEN`. |
+| `NEST_API_URL` | Yes | Server base URL (e.g. `http://localhost:3006`). |
 | `NEST_HOME` | No | Config directory (default: `~/.nest`). |
 
 ### Main commands
@@ -117,14 +117,14 @@ nest --help
 | `nest opencode` | Start OpenCode mode. |
 | `nest auth login` | Save `CLI_API_TOKEN` interactively. |
 | `nest auth status` | Show auth configuration. |
-| `nest runner start` | Start the background runner (remote spawn). |
-| `nest doctor` | Run diagnostics. |
+| `nest worker start` | Start the background worker (remote spawn). |
+| `nest diagnose` | Run diagnostics. |
 
 ---
 
 ## Server deployment (Docker)
 
-This repository includes a **Dockerfile** and **docker-compose.yml** to build and run the NEST Hub. The image builds the Hub and web app from the [NEST](https://github.com/ctx0/nest) source and overlays this repo’s **`public/`** assets (logo and branding).
+This repository includes a **Dockerfile** and **docker-compose.yml** to build and run the NEST Server. The image builds the Server and web app from the [NEST](https://github.com/ctx0/nest) source and overlays this repo’s **`public/`** assets (logo and branding).
 
 ### Start the server
 
@@ -157,7 +157,7 @@ Build with another repository or branch:
 docker build \
   --build-arg NEST_REPO=https://github.com/your-org/nest.git \
   --build-arg NEST_REF=main \
-  -t nest-terminal-hub .
+  -t nest-terminal-server .
 ```
 
 Then run the container with the same environment variables as in `docker-compose.yml`.
@@ -166,12 +166,12 @@ Then run the container with the same environment variables as in `docker-compose
 
 ## Configuration reference
 
-### Hub (Docker / `.env`)
+### Server (Docker / `.env`)
 
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `CLI_API_TOKEN` | Yes | Shared secret for CLI and web auth. |
-| `NEST_LISTEN_PORT` | No | Port the Hub listens on (default: `3006`). |
+| `NEST_LISTEN_PORT` | No | Port the Server listens on (default: `3006`). |
 | `NEST_PUBLIC_URL` | No | Public HTTPS URL (for Telegram Mini App / PWA). |
 | `TELEGRAM_BOT_TOKEN` | No | Telegram bot token; omit to run without Telegram. |
 
@@ -182,8 +182,8 @@ See `.env.example` for the full list.
 ## Security
 
 - **Token:** Use a strong, random `CLI_API_TOKEN` (e.g. `openssl rand -hex 32`). Do not commit `.env` or share the token.
-- **Network:** In production, put the Hub behind HTTPS and restrict `CORS_ORIGINS` and `NEST_PUBLIC_URL` to your domains.
-- **Docker:** The Hub runs as the container’s default user; mount only the data volume you need (e.g. `nest-data` for SQLite).
+- **Network:** In production, put the Server behind HTTPS and restrict `CORS_ORIGINS` and `NEST_PUBLIC_URL` to your domains.
+- **Docker:** The Server runs as the container’s default user; mount only the data volume you need (e.g. `nest-data` for SQLite).
 
 ---
 
@@ -191,12 +191,12 @@ See `.env.example` for the full list.
 
 | Issue | Action |
 |-------|--------|
-| CLI cannot connect | Ensure the Hub is running and `NEST_API_URL` matches (e.g. `http://localhost:3006`). Check firewall and Docker port mapping. |
-| “Unauthorized” or 401 | Verify `CLI_API_TOKEN` is identical for the Hub (`.env`) and the CLI (`export` or `nest auth login`). |
+| CLI cannot connect | Ensure the Server is running and `NEST_API_URL` matches (e.g. `http://localhost:3006`). Check firewall and Docker port mapping. |
+| “Unauthorized” or 401 | Verify `CLI_API_TOKEN` is identical for the Server (`.env`) and the CLI (`export` or `nest auth login`). |
 | Port already in use | Change `NEST_LISTEN_PORT` in `.env` and ensure the same port is mapped in `docker-compose.yml`. |
 | Web app not loading | Rebuild the image: `docker compose build --no-cache && docker compose up -d`. |
 
-Run `nest doctor` on the client for diagnostics.
+Run `nest diagnose` on the client for diagnostics.
 
 ---
 
@@ -208,8 +208,8 @@ ctx0_nest_terminal/
 ├── QUICKSTART.md          # Short quick start
 ├── RELEASES.md            # What we've built; release info
 ├── ROADMAP.md             # Pending: Souls, multi-agents, Forge
-├── Dockerfile             # Hub + web image; overlays public/
-├── docker-compose.yml     # Hub service and volumes
+├── Dockerfile             # Server + web image; overlays public/
+├── docker-compose.yml     # Server service and volumes
 ├── .env.example           # Environment template
 ├── .dockerignore          # Build context exclusions
 ├── docs/
@@ -221,7 +221,7 @@ ctx0_nest_terminal/
     └── facta_isotype.svg
 ```
 
-Assets in `public/` are served by the Hub at `/public/` (e.g. `/public/facta.svg`).
+Assets in `public/` are served by the Server at `/public/` (e.g. `/public/facta.svg`).
 
 ---
 

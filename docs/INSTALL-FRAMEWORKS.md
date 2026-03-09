@@ -8,11 +8,11 @@ This guide covers installing the runtimes and tools used by NEST and the Facta e
 
 | Framework / tool | Used by | Required for |
 |------------------|---------|--------------|
-| **Node.js 18+** | NEST CLI (runtime), Hub (Bun/Node) | CLI and Hub |
+| **Node.js 18+** | NEST CLI (runtime), Server (Bun/Node) | CLI and Server |
 | **npm** | NEST CLI install | `npm install -g @factadev/cli` |
-| **Docker & Compose** | Hub in ctx0_nest_terminal | Server deployment |
+| **Docker & Compose** | Server in ctx0_nest_terminal | Server deployment |
 | **Rust** | NEST Rust server (hexagonal backend) | Optional; future backend |
-| **Bun** | Hub dev/build in main NEST repo | Optional; build from source |
+| **Bun** | Server dev/build in main NEST repo | Optional; build from source |
 
 ---
 
@@ -48,7 +48,7 @@ npm -v
 
 ## Docker and Docker Compose
 
-Required to run the Hub with the [ctx0_nest_terminal](https://github.com/Facta-Dev/ctx0_nest_terminal) Docker setup.
+Required to run the Server with the [ctx0_nest_terminal](https://github.com/Facta-Dev/ctx0_nest_terminal) Docker setup.
 
 ### macOS
 
@@ -81,7 +81,7 @@ docker compose version
 
 ## Rust (optional — NEST Rust server)
 
-The NEST project includes a **Rust server** with hexagonal architecture (domain, ports, application, adapters). It is used for a future backend option and for contributors. You do **not** need Rust to use the CLI or the Docker Hub from this repo.
+The NEST project includes a **Rust server** with hexagonal architecture (domain, ports, application, adapters). It is used for a future backend option and for contributors. You do **not** need Rust to use the CLI or the Docker Server from this repo.
 
 ### Install Rust
 
@@ -101,9 +101,9 @@ cargo build --release
 
 ---
 
-## Bun (optional — build Hub from source)
+## Bun (optional — build Server from source)
 
-If you build or develop the Hub from the [NEST](https://github.com/ctx0/nest) repo, Bun is used for install and build.
+If you build or develop the Server from the [NEST](https://github.com/ctx0/nest) repo, Bun is used for install and build.
 
 ```bash
 # macOS / Linux

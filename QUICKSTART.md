@@ -1,6 +1,6 @@
 # NEST Terminal — Quick Start
 
-Get the NEST Hub running and your first agent session in under 5 minutes.
+Get the NEST Server running and your first agent session in under 5 minutes.
 
 ---
 
@@ -13,7 +13,7 @@ Install the runtimes and tools NEST depends on. **Recommended:** follow the full
 **Minimum for this quick start:**
 
 - **Node.js 18+** and **npm** — to install the NEST CLI.
-- **Docker** and **Docker Compose** — to run the Hub.
+- **Docker** and **Docker Compose** — to run the Server.
 
 ```bash
 # Check versions
@@ -25,7 +25,7 @@ docker compose version
 
 ---
 
-## 2. Clone and start the Hub
+## 2. Clone and start the Server
 
 ```bash
 git clone https://github.com/Facta-Dev/ctx0_nest_terminal.git
@@ -39,7 +39,7 @@ Edit `.env` and set a strong `CLI_API_TOKEN` (e.g. `openssl rand -hex 32`).
 docker compose up -d
 ```
 
-The Hub and web app are at **http://localhost:3006** (or your `NEST_LISTEN_PORT`).
+The Server and web app are at **http://localhost:3006** (or your `NEST_LISTEN_PORT`).
 
 ---
 
