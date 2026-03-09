@@ -15,10 +15,10 @@ Enables adaptive, long-horizon behavior: agents that “remember” you and prio
 
 - **Storage:** Durable store (e.g. SQLite or dedicated store) keyed by namespace/user/session.
 - **API:** Read/write/query memories; optional summarization and retrieval for agent context.
-- **Integration:** CLI and Hub expose memory APIs; agents receive relevant memories in context.
+- **Integration:** CLI and Server expose memory APIs; agents receive relevant memories in context.
 - **Governance:** Access control, retention, and optional deletion to meet enterprise and privacy needs.
 
-**Status:** Design and scoping; not yet implemented in the current CLI/Hub release.
+**Status:** Design and scoping; not yet implemented in the current CLI/Server release.
 
 ---
 
@@ -38,7 +38,7 @@ Single-session agents are limited; complex products need orchestrated workflows.
 
 - **Orchestrator:** A coordinator agent or service that runs pipelines, spawns specialists, and enforces phase transitions and quality gates.
 - **Specialists:** Reusable agent roles (engineering, design, product, marketing, support) aligned with our [agents/specialists](https://github.com/ctx0/nest/tree/main/docs/knowladge/agents/specialists) definitions.
-- **Integration with NEST:** Sessions and machines as execution units; Hub as the sync and persistence layer for multi-agent state and events.
+- **Integration with NEST:** Sessions and machines as execution units; Server as the sync and persistence layer for multi-agent state and events.
 - **Runbooks:** Codified scenarios (MVP, enterprise feature, campaign, incident) as in our strategy runbooks.
 
 **Status:** Strategy and playbooks exist in the knowledge base; runtime orchestration and full NEST integration are pending.
@@ -57,7 +57,7 @@ Reduces ambiguity and rework; aligns implementation with intent. Complements mul
 - **Spec format:** Structured specs (e.g. markdown + schema or YAML) with sections for scope, requirements, acceptance criteria, and constraints.
 - **Forge workflow:** Spec ingestion → task breakdown (manual or agent-assisted) → assignment to agents/sessions → verification (tests, checks, evidence).
 - **Traceability:** Links from requirements to tasks to code/artifacts to verification results.
-- **Tooling:** CLI and/or Hub features to create, version, and reference specs; optional UI for spec and task status.
+- **Tooling:** CLI and/or Server features to create, version, and reference specs; optional UI for spec and task status.
 
 **Status:** Concept and alignment with playbooks; spec format and Forge implementation are pending.
 
