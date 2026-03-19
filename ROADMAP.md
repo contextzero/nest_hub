@@ -1,6 +1,6 @@
 # Roadmap — pending implementation
 
-This document outlines **planned and in-progress** capabilities for NEST and the Facta platform. It aligns with our knowledge base (agents, strategy, entrepreneurship) and is intended to promote a clear product direction.
+This document outlines **planned and in-progress** capabilities for NEST. It aligns with our knowledge base (agents, strategy, entrepreneurship) and with the [NEST holding](https://github.com/ctx0/nest/tree/main/docs/holding) workforce hub. We are building an **enterprise-grade solution** where organizations can **participate** in design and adoption.
 
 ---
 
@@ -91,4 +91,4 @@ Releases and current deliverables are documented in [RELEASES.md](RELEASES.md). 
 
 ---
 
-*Powered by [facta.dev](https://facta.dev).*
+*Part of the [ctx0/nest](https://github.com/ctx0/nest) ecosystem; methodology: [docs/holding](https://github.com/ctx0/nest/tree/main/docs/holding), [docs/knowladge](https://github.com/ctx0/nest/tree/main/docs/knowladge).*

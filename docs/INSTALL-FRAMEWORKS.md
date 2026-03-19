@@ -1,6 +1,6 @@
 # Install frameworks and tools
 
-This guide covers installing the runtimes and tools used by NEST and the Facta ecosystem: **Node.js**, **npm**, **Docker**, and **Rust** (for the optional Rust backend). Use it to prepare your machine for the [Quick Start](../QUICKSTART.md) or for contributing to NEST.
+This guide covers installing the runtimes and tools used by NEST: **Node.js**, **npm**, **Docker**, and **Rust** (for the optional Rust backend). Use it to prepare your machine for the [Quick Start](../QUICKSTART.md) or for contributing to NEST.
 
 ---
 
@@ -9,7 +9,7 @@ This guide covers installing the runtimes and tools used by NEST and the Facta e
 | Framework / tool | Used by | Required for |
 |------------------|---------|--------------|
 | **Node.js 18+** | NEST CLI (runtime), Server (Bun/Node) | CLI and Server |
-| **npm** | NEST CLI install | `npm install -g @factadev/cli` |
+| **npm** | NEST CLI install | `npm install -g @ctx0/nest` |
 | **Docker & Compose** | Server in ctx0_nest_terminal | Server deployment |
 | **Rust** | NEST Rust server (hexagonal backend) | Optional; future backend |
 | **Bun** | Server dev/build in main NEST repo | Optional; build from source |
@@ -48,7 +48,7 @@ npm -v
 
 ## Docker and Docker Compose
 
-Required to run the Server with the [ctx0_nest_terminal](https://github.com/Facta-Dev/ctx0_nest_terminal) Docker setup.
+Required to run the Server with the [ctx0_nest_terminal](https://github.com/ctx0/ctx0_nest_terminal) Docker setup.
 
 ### macOS
 
