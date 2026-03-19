@@ -1,25 +1,69 @@
-# NEST Server - for CLI and web
-# Uso: docker compose up -d
-# Requiere .env con CLI_API_TOKEN (y opcionalmente NEST_PUBLIC_URL, TELEGRAM_BOT_TOKEN)
+# NEST - Server + Web from public images (no build)
+# Usage: cp .env.example .env && docker compose up -d
+# Web app and API: http://localhost (port 80) or WEB_PORT from .env
 
 services:
-  hub:
-    build: .
-    image: nest-terminal-hub:latest
-    container_name: nest-hub
+  db:
+    image: postgres:16-alpine
+    container_name: nest-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changethis}
+      POSTGRES_DB: ${POSTGRES_DB:-nest}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - nest-internal
+    ports:
+      - "${PGPORT:-5433}:5432"
+
+  nest-server:
+    image: matiasbaglieri/nest-server:latest
+    container_name: nest-server
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - NEST_LISTEN_ADDR=0.0.0.0:8088
+      - DATABASE_URL=postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-changethis}@db:5432/${POSTGRES_DB:-nest}
+      - CLI_API_TOKEN=${CLI_API_TOKEN}
+    depends_on:
+      - db
+    networks:
+      - nest-internal
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8088/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  nest-web:
+    image: matiasbaglieri/nest-web:latest
+    container_name: nest-web
+    restart: unless-stopped
+    networks:
+      - nest-internal
+
+  nginx:
+    image: nginx:alpine
+    container_name: nest-nginx
     restart: unless-stopped
     ports:
-      - "${NEST_LISTEN_PORT:-3006}:3006"
-    environment:
-      - CLI_API_TOKEN=${CLI_API_TOKEN}
-      - NEST_LISTEN_HOST=0.0.0.0
-      - NEST_LISTEN_PORT=3006
-      - NEST_PUBLIC_URL=${NEST_PUBLIC_URL:-}
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:-}
-      - NEST_HOME=/data
-      - DB_PATH=/data/nest.db
+      - "${WEB_PORT:-80}:80"
     volumes:
-      - nest-data:/data
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      nest-server:
+        condition: service_healthy
+      nest-web:
+        condition: service_started
+    networks:
+      - nest-internal
 
 volumes:
-  nest-data:
+  pgdata:
+
+networks:
+  nest-internal:
+    driver: bridge
