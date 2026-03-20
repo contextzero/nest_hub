@@ -1,0 +1,115 @@
+# Value Proposition — NEST Hub
+
+## Problem Decomposition
+
+### First Principles Analysis
+
+The fundamental question: **What do organizations actually need from AI agents?**
+
+| Requirement | Current Gap | NEST Solution |
+|-------------|-------------|---------------|
+| **Visibility** | Agents run invisibly on employee machines | Real-time dashboard, mobile approvals |
+| **Control** | No governance over agent actions | Policy-driven, approval-gated execution |
+| **Memory** | Context lost between sessions | Colony memory preserves learning |
+| **Audit** | Actions untraceable | Full PostgreSQL audit trail |
+| **Sovereignty** | Vendor lock-in with SaaS tools | Self-hosted, BYOK, Docker/npm |
+
+---
+
+## Value by Stakeholder
+
+### For the Founder / Admin
+
+| Capability | Benefit | Trade-off Analysis |
+|------------|---------|-------------------|
+| **Self-hosted** | No recurring SaaS fee | Your infra cost vs vendor subscription |
+| **BYOK (LLMs)** | You control spend | Flexibility vs simplicity |
+| **Complete visibility** | Know what's happening | Overhead vs risk reduction |
+| **Policy control** | Match org security posture | Complexity vs compliance |
+| **Full audit** | Evidence for stakeholders | Storage cost vs peace of mind |
+
+**Key Message:** *"Your AI workforce, on your infrastructure. Full control, zero vendor lock-in."*
+
+### For the Employee (Mobile / Tablet)
+
+| Capability | Benefit | Validation Design |
+|------------|---------|-------------------|
+| **Work from phone** | True mobile operations | Usage metrics, task completion rate |
+| **Multi-session** | Parallel task handling | Concurrent session support |
+| **Voice interface** | Faster input (ElevenLabs) | Voice adoption rate |
+| **Context awareness** | Agents understand your style | Profile accuracy metrics |
+| **SSD workflow** | Structured task execution | Task completion vs approval delay |
+
+**Key Message:** *"Your AI workforce, in your pocket."*
+
+### For the Business
+
+| Capability | Operational Impact | Risk Assessment |
+|------------|--------------------| -----------------|
+| **Single hub** | Eliminate tool fragmentation | Integration simplicity vs capability depth |
+| **Spec-driven** | Traceable execution | Template adoption vs flexibility |
+| **Media path** | Video/image automation | Future investment vs current need |
+| **Full traceability** | Compliance-ready | Implementation cost vs regulatory requirement |
+
+**Key Message:** *"From coding to communications to media—one platform, infinite possibilities."*
+
+---
+
+## Multi-Dimensional Trade-off Matrix
+
+| Solution Path | Technical Benefits | Implementation Cost | Risk Assessment |
+|---------------|--------------------|--------------------|-----------------|
+| **NEST (Self-hosted)** | Full control, sovereignty, learning | Requires infra management | Low operational risk once deployed |
+| **NEST (Enterprise Cloud)** | Zero maintenance, colony memory | Subscription cost | Low risk, managed by us |
+| **Point Solutions** (Copilot, Zapier, etc.) | Quick to start | High integration cost, no learning | High risk: vendor lock-in, data isolation |
+
+---
+
+## Constraint Priority Framework
+
+When evaluating NEST, consider these decision dimensions:
+
+| Dimension | NEST Strength | Consider |
+|-----------|---------------|----------|
+| **Security vs Convenience** | Full audit, granular policies | Configure approval thresholds |
+| **Speed vs Quality** | Token efficiency via indexing | Balance auto vs approval modes |
+| **Autonomy vs Control** | Policy-driven execution | Define team policies |
+| **Cost vs Features** | Free Community, subscription Enterprise | Scale when needed |
+
+---
+
+## Key Differentiators Summary
+
+| Theme | NEST | Competitors |
+|-------|------|-------------|
+| **Economic Model** | $0 product fee (self-hosted) | SaaS subscriptions |
+| **Workforce Model** | Phone-first operations | Desktop-only |
+| **Intelligence** | Multi-agent + automation + SSD | Single-purpose agents |
+| **Sovereignty** | Full data ownership | Vendor lock-in |
+
+---
+
+## The NEST Promise
+
+> **Your AI workforce, on your infrastructure. Full control, zero vendor lock-in.**
+
+---
+
+## Validation Approach
+
+Before full adoption, validate these hypotheses:
+
+1. ✅ **Visibility hypothesis:** Deploy to 3 employees, measure time-to-insight
+2. ✅ **Control hypothesis:** Configure approval workflow, measure approval latency
+3. ✅ **Efficiency hypothesis:** Enable indexing, measure token spend reduction
+4. ✅ **Adoption hypothesis:** Enable voice interface, measure usage
+
+---
+
+## Related Documents
+
+- [Business README](./README.md) — Strategic overview
+- [Use Cases](./use-cases.md) — Real-world scenarios
+- [Console Flow](./console-flow.md) — Technical pipeline
+- [Phases](./phases.md) — Product evolution
+- [Enterprise Features](../enterprise/README.md) — Scaling options

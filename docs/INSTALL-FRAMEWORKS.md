@@ -1,131 +1,235 @@
-# Install frameworks and tools
+# Install Frameworks & Tools
 
-This guide covers installing the runtimes and tools used by NEST: **Node.js**, **npm**, **Docker**, and **Rust** (for the optional Rust backend). Use it to prepare your machine for the [Quick Start](../QUICKSTART.md) or for contributing to NEST.
+<p align="center">
+  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
+  <img src="./public/annie.png" alt="annie" width="120" height="120" />
+</p>
+**By Context Zero.** Everything you need to run NEST — Node.js, npm, Docker, and optionally Rust — installed correctly in minutes. Follow this guide once, then go straight to the [Quick Start](../QUICKSTART.md).
 
 ---
 
-## Overview
+## What You're Installing and Why
 
-| Framework / tool | Used by | Required for |
-|------------------|---------|--------------|
-| **Node.js 18+** | NEST CLI (runtime), Server (Bun/Node) | CLI and Server |
-| **npm** | NEST CLI install | `npm install -g @ctx0/nest` |
-| **Docker & Compose** | Server in ctx0_nest_terminal | Server deployment |
-| **Rust** | NEST Rust server (hexagonal backend) | Optional; future backend |
-| **Bun** | Server dev/build in main NEST repo | Optional; build from source |
+Before you copy a single command, here's the full picture — so you know exactly what each tool does and whether you actually need it:
+
+| Tool | Why You Need It | Required? |
+|------|----------------|-----------|
+| **Node.js 18+** | Runtime for the `annie` CLI — this is what makes `annie` work on any machine | ✅ Yes — every machine running agents |
+| **npm** | Installs `annie` globally via `npm install -g @contextzero/nest` | ✅ Yes — comes with Node.js |
+| **Docker** | Runs the NEST server stack (Rust server + Postgres + nginx) without building anything from source | ✅ Yes — the machine hosting the server |
+| **Docker Compose** | Wires the server containers together with one command | ✅ Yes — included with Docker Desktop |
+| **Rust** | Only needed if you want to build the server from source or contribute to the Rust codebase | ❌ Optional |
+| **Bun** | Only needed if you're developing or building the server from the main NEST repo | ❌ Optional |
+
+**The most common setup:** Docker on the server machine (yours or a VPS), Node.js + npm on each employee's machine. That's it.
 
 ---
 
 ## Node.js and npm
 
-NEST CLI is distributed via npm and runs on Node.js. Use the LTS version (18 or 20+).
+The `annie` CLI runs on Node.js. Install the LTS version — Node 18 or 20.
 
-### macOS / Linux (recommended: nvm)
+### macOS / Linux — Recommended: nvm
+
+`nvm` (Node Version Manager) lets you install and switch Node versions without `sudo`. It's the cleanest approach on any Unix-based system.
 
 ```bash
-# Install nvm: https://github.com/nvm-sh/nvm
+# Step 1: Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-# Restart shell, then:
+
+# Step 2: Restart your terminal (or run the export lines nvm prints after install)
+
+# Step 3: Install Node 20 LTS
+nvm install 20
+nvm use 20
+
+# Step 4: Verify
+node -v   # Should print v20.x.x
+npm -v    # Should print 10.x or higher
+```
+
+> **Why nvm instead of a system install?** System Node installs often require `sudo` for global npm packages — which causes permission errors when running `npm install -g @contextzero/nest`. nvm installs Node in your home directory, so global installs work without elevated permissions.
+
+### Windows
+
+**Option A — Installer (simplest):**
+Download the LTS installer from [nodejs.org](https://nodejs.org/) and run it. Node and npm are installed together.
+
+**Option B — nvm-windows (recommended if you manage multiple projects):**
+Download and run the installer from [nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases), then:
+
+```powershell
 nvm install 20
 nvm use 20
 node -v
 npm -v
 ```
 
-### Windows
-
-- Download the LTS installer from [nodejs.org](https://nodejs.org/).
-- Or use [nvm-windows](https://github.com/coreybutler/nvm-windows).
-
-### Verify
+### Verify — Both Platforms
 
 ```bash
 node -v   # v18.x or v20.x
-npm -v
+npm -v    # 9.x or higher
 ```
+
+If both commands print version numbers, Node and npm are ready. Move to the next section.
 
 ---
 
 ## Docker and Docker Compose
 
-Required to run the Server with the [ctx0_nest_terminal](https://github.com/ctx0/ctx0_nest_terminal) Docker setup.
+Docker runs the NEST server stack — the Rust API, PostgreSQL, and nginx — without you needing to install or configure any of those individually. One command starts everything.
+
+Docker Compose is what makes that one command work. It's included with Docker Desktop on Mac and Windows. On Linux, it's a plugin installed alongside Docker.
 
 ### macOS
 
-- [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/) (includes Compose).
-
-### Linux
+1. Download [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/)
+2. Open the `.dmg`, drag Docker to Applications, and launch it
+3. Wait for the Docker menu bar icon to show "Docker Desktop is running"
 
 ```bash
-# Ubuntu/Debian: see https://docs.docker.com/engine/install/ubuntu/
+# Verify
+docker --version         # Docker version 24.x or higher
+docker compose version   # Docker Compose version v2.x
+```
+
+> **Important:** Use `docker compose` (with a space, V2 syntax) — not `docker-compose` (hyphenated, V1). NEST uses V2.
+
+### Linux (Ubuntu / Debian)
+
+```bash
+# Step 1: Update and install Docker
 sudo apt-get update
 sudo apt-get install -y docker.io docker-compose-plugin
+
+# Step 2: Add your user to the docker group (avoids needing sudo for every command)
 sudo usermod -aG docker $USER
-# Log out and back in
+
+# Step 3: Apply group change — log out and back in, or run:
+newgrp docker
+
+# Step 4: Verify
 docker --version
 docker compose version
 ```
+
+**Other Linux distributions:** Follow the official [Docker Engine install guide](https://docs.docker.com/engine/install/) for your distro — Fedora, CentOS, RHEL, Arch, and others are all covered there.
 
 ### Windows
 
-- [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) (includes Compose).
+1. Download [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/)
+2. Run the installer — it enables WSL 2 automatically if needed
+3. Launch Docker Desktop and wait for "Docker Desktop is running"
 
-### Verify
-
-```bash
+```powershell
+# Verify in PowerShell or Windows Terminal
 docker --version
 docker compose version
 ```
 
----
-
-## Rust (optional — NEST Rust server)
-
-The NEST project includes a **Rust server** with hexagonal architecture (domain, ports, application, adapters). It is used for a future backend option and for contributors. You do **not** need Rust to use the CLI or the Docker Server from this repo.
-
-### Install Rust
+### Verify — All Platforms
 
 ```bash
+docker --version         # Docker version 24.x or higher
+docker compose version   # Docker Compose version v2.x or higher
+```
+
+Both print version numbers? Docker is ready. You can now run `docker compose up -d` from the `nest_hub` directory and the full NEST stack starts.
+
+---
+
+## Rust — Optional
+
+You do **not** need Rust to run NEST. The server is distributed as a public Docker image — you pull and run it, no compilation required.
+
+Install Rust only if you want to:
+- Build the NEST server from source
+- Contribute to the Rust codebase
+- Inspect or modify the server architecture
+
+### Install
+
+```bash
+# macOS / Linux
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Follow the on-screen prompts (default install is fine)
+# Then apply the PATH change:
 source "$HOME/.cargo/env"
-rustc --version
-cargo --version
+
+# Verify
+rustc --version   # rustc 1.7x.x
+cargo --version   # cargo 1.7x.x
 ```
 
-### Build NEST Rust server (from main NEST repo)
+**Windows:** Download and run [rustup-init.exe](https://rustup.rs/) — it handles everything including the MSVC build tools.
+
+### Build the NEST Rust Server from Source
 
 ```bash
-cd /path/to/nest/server
+# Clone the main NEST repo
+git clone https://github.com/contextzero/nest.git
+cd nest/server
+
+# Build release binary
 cargo build --release
+
+# Binary will be at: target/release/nest-server
 ```
+
+See [RELEASES.md](../RELEASES.md) for the current architecture status of the Rust server.
 
 ---
 
-## Bun (optional — build Server from source)
+## Bun — Optional
 
-If you build or develop the Server from the [NEST](https://github.com/ctx0/nest) repo, Bun is used for install and build.
+Bun is only needed if you're developing or building the NEST server and web app from the [main NEST source repo](https://github.com/contextzero/nest). It's not required for deploying or using NEST.
 
 ```bash
 # macOS / Linux
 curl -fsSL https://bun.sh/install | bash
-bun --version
+
+# Restart terminal, then verify
+bun --version   # 1.x.x
 ```
 
----
-
-## Summary checklist
-
-| Step | Command / link |
-|------|-----------------|
-| Node.js 18+ | `nvm install 20` or [nodejs.org](https://nodejs.org/) |
-| npm | Comes with Node.js |
-| Docker | [Docker Desktop](https://docs.docker.com/desktop/) or distro package |
-| Docker Compose | Included with Docker Desktop or `docker-compose-plugin` |
-| Rust (optional) | `curl -sSf https://sh.rustup.rs \| sh` |
-| Bun (optional) | `curl -fsSL https://bun.sh/install \| bash` |
-
-After installing, continue with the [Quick Start](../QUICKSTART.md).
+**Windows:** [Bun for Windows](https://bun.sh/docs/installation#windows) via npm or WinGet.
 
 ---
 
-*Powered by [facta.dev](https://facta.dev).*
+## Checklist — Before You Go to Quick Start
+
+Run through this before opening [QUICKSTART.md](../QUICKSTART.md). Every box checked means a smooth setup.
+
+```bash
+# On the server machine (the one running Docker):
+docker --version          # ✅ v24+
+docker compose version    # ✅ V2 syntax (space, not hyphen)
+
+# On every employee machine (the ones running annie):
+node -v                   # ✅ v18.x or v20.x
+npm -v                    # ✅ 9.x+
+
+# Optional — only if building from source:
+rustc --version           # ✅ 1.7x+
+bun --version             # ✅ 1.x+
+```
+
+All green? Head to the [Quick Start →](../QUICKSTART.md)
+
+---
+
+## Common Issues
+
+| Problem | Fix |
+|---------|-----|
+| `npm install -g` fails with permission error | You're using a system Node install. Switch to nvm — it installs Node in your home directory and fixes this entirely. |
+| `docker compose` not found (but `docker-compose` works) | You have Docker Compose V1. Update Docker Desktop, or install `docker-compose-plugin` on Linux. NEST uses V2 syntax. |
+| `docker: command not found` after install on Linux | Log out and back in so the PATH changes take effect, or run `source ~/.bashrc`. |
+| `docker` requires sudo on Linux | You haven't been added to the `docker` group yet. Run `sudo usermod -aG docker $USER`, then log out and back in. |
+| `rustup` install fails on Windows | You need the [MSVC C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). `rustup-init.exe` will prompt you to install them. |
+
+---
+
+*After this guide, continue with: [QUICKSTART.md](../QUICKSTART.md) · [INSTALL.md](INSTALL.md) · [README.md](../README.md)*
