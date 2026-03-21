@@ -50,6 +50,9 @@ services:
     image: matiasbaglieri/nest-web:latest
     container_name: nest-web
     restart: unless-stopped
+    # La imagen tiene ENTRYPOINT /usr/sbin/nginx y CMD nginx -g ... → invoca "nginx" como flag erróneo
+    entrypoint: ["/usr/sbin/nginx"]
+    command: ["-g", "daemon off;"]
     networks:
       - nest-internal
 
@@ -63,7 +66,7 @@ services:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       nest-server:
-        condition: service_healthy
+        condition: service_started
       nest-web:
         condition: service_started
     networks:
