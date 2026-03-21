@@ -1,6 +1,7 @@
-# NEST - Server + Web from public images (no build)
+# NEST - Server + Web from public images (blackbox: no source code, no DB access)
 # Usage: cp .env.example .env && docker compose up -d
 # Web app and API: http://localhost (port 80) or WEB_PORT from .env
+# DB is internal-only; all access goes through the API via nginx.
 
 services:
   db:
@@ -9,34 +10,41 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changethis}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB:-nest}
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
       - nest-internal
-    ports:
-      - "${PGPORT:-5433}:5432"
+    # No ports exposed: DB only reachable from nest-server via internal network.
+    # For emergency admin: docker exec -it nest-db psql -U postgres -d nest
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
 
   nest-server:
     image: matiasbaglieri/nest-server:latest
     container_name: nest-server
     restart: unless-stopped
-    env_file: .env
     environment:
       - NEST_LISTEN_ADDR=0.0.0.0:8088
-      - DATABASE_URL=postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-changethis}@db:5432/${POSTGRES_DB:-nest}
+      - DATABASE_URL=postgres://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-nest}
       - CLI_API_TOKEN=${CLI_API_TOKEN}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-}
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - nest-internal
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8088/health"]
-      interval: 30s
+      test: ["CMD", "/app/nest-server", "healthcheck"]
+      interval: 15s
       timeout: 5s
-      retries: 3
-      start_period: 10s
+      retries: 5
+      start_period: 30s
 
   nest-web:
     image: matiasbaglieri/nest-web:latest
