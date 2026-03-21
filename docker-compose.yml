@@ -1,5 +1,5 @@
 # NEST - Server + Web from public images (blackbox: no source code, no DB access)
-# Usage: cp .env.example .env && docker compose up -d
+# Usage: ./setup.sh  (auto-generates secrets, pulls images, starts stack)
 # Web app and API: http://localhost (port 80) or WEB_PORT from .env
 # DB is internal-only; all access goes through the API via nginx.
 
