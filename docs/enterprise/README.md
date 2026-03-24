@@ -1,4 +1,15 @@
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # Enterprise — NEST Platform
+
+[English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
 
 The **Enterprise version** of NEST provides advanced features for organizations that need more than self-hosted can offer. While the Community version is free and self-contained, Enterprise adds intelligence, scale, and support.
 
@@ -8,9 +19,9 @@ The **Enterprise version** of NEST provides advanced features for organizations 
 
 | Feature | Community | Enterprise |
 |---------|-----------|------------|
-| **Price** | Free | Subscription |
+| **Price** | $0 product fee | Subscription |
 | **Deployment** | Self-hosted Docker | Managed cloud |
-| **Users** | Unlimited | Unlimited |
+| **Users** | Individual / Small team | Organizations, NGOs, Governments |
 | **Basic Agents** | ✅ | ✅ |
 | **Darwin Agents** | ❌ | ✅ |
 | **Colony Memory** | ❌ | ✅ |
@@ -207,3 +218,14 @@ Already using self-hosted NEST?
 - [Methodology](../methodology/README.md) — Implementation guide
 - [CLI Business](../CLI-BUSINESS.md) — Technical deep dive
 - [Install Guide](../INSTALL.md) — Setup reference
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

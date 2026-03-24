@@ -1,10 +1,18 @@
-# NEST Hub — Quick Start
+<div align="center">
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
-**By Context Zero.** From zero to a live AI workforce hub in under 5 minutes. Server running, agent connected, first session visible on your phone — that's the finish line. Let's go.
+<img src="./public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# NEST — Quick Start
+
+[English](./QUICKSTART.md) | [Español](./QUICKSTART-ES.md) | [中文](./QUICKSTART-ZH.md) | [Deutsch](./QUICKSTART-DE.md) | [Português](./QUICKSTART-PT.md) | [Français](./QUICKSTART-FR.md)
+
+**By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
+From zero to a live AI workforce hub in under 5 minutes.
 
 ---
 
@@ -14,7 +22,7 @@ In the next 5 minutes you will:
 
 1. ✅ Deploy the NEST server (Rust + Postgres + nginx) locally with **one command**
 2. ✅ Install the `annie` CLI on any machine
-3. ✅ Start your first real AI agent session (Claude Code, Codex, Cursor, or Gemini)
+3. ✅ Start your first real AI agent session (Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, or OpenClaw)
 4. ✅ Watch it **live from your browser** — and from your phone
 
 No prior Rust knowledge required. No cloud account needed. No credit card. If Docker runs on your machine, NEST runs on your machine.
@@ -40,57 +48,28 @@ docker compose version  # V2 syntax (not docker-compose)
 
 ---
 
-## Step 1 — Get the Stack (30 seconds)
+## Step 1 — Deploy the Hub (60 seconds)
 
 ```bash
 git clone https://github.com/contextzero/nest_hub.git
 cd nest_hub
-cp .env.example .env
+./setup.sh
 ```
 
-Now open `.env` in any text editor. You only need to set **one value**:
+That's it. `setup.sh` auto-generates all secrets, pulls Docker images, starts the stack, and waits for health. When you see:
 
-```env
-CLI_API_TOKEN=your-secret-here
+```
+=== NEST ready ===
+  Web:  http://localhost
 ```
 
-Generate a strong one instantly:
+Your hub is live. Open it in your browser — and on your phone.
 
-```bash
-openssl rand -hex 32
-```
-
-Copy the output, paste it as your `CLI_API_TOKEN`. Save the file.
-
-> **This token is the single key** that connects your CLI to your server. Keep it secret. You can rotate it any time by changing it in `.env` and restarting the stack.
+> **What just happened?** `setup.sh` created a `.env` with auto-generated `POSTGRES_PASSWORD`, `CLI_API_TOKEN`, and `ENCRYPTION_KEY`. It then pulled and started four containers: `nest-server` (Rust), `nest-web` (React PWA), `postgres`, and `nginx`.
 
 ---
 
-## Step 2 — Launch the Server (60 seconds)
-
-```bash
-docker compose up -d
-```
-
-This pulls and starts four containers:
-- `nest-server` — the Rust/Axum API + Socket.IO + SSE engine
-- `nest-web` — the React PWA served by nginx
-- `postgres` — your session and audit database
-- `nginx` — routes everything through port 80
-
-**Wait ~30 seconds** for the health check to pass, then open:
-
-```
-http://localhost
-```
-
-You should see the NEST web app. **That's your control center.** Bookmark it — and open it on your phone too.
-
-> **Troubleshooting:** If the page doesn't load, run `docker compose logs nest-server` and wait another 15 seconds for the DB to initialize fully.
-
----
-
-## Step 3 — Install the CLI on Any Machine (30 seconds)
+## Step 2 — Install the CLI on Any Machine (30 seconds)
 
 The `annie` CLI is what your employees (or you) install on the machines where AI agents run. Install it globally:
 
@@ -110,7 +89,7 @@ You should see the full command list. The CLI is now ready on this machine.
 
 ---
 
-## Step 4 — Connect to Your Server (30 seconds)
+## Step 3 — Connect to Your Server (30 seconds)
 
 You have two options — pick one:
 
@@ -120,6 +99,8 @@ You have two options — pick one:
 export CLI_API_TOKEN="same-token-from-your-env-file"
 export NEST_API_URL="http://localhost"
 ```
+
+> **Where's your token?** `setup.sh` saved it in `.env`. Run: `grep CLI_API_TOKEN .env` to see it.
 
 **Option B: Interactive login (saves credentials permanently)**
 
@@ -139,7 +120,7 @@ You should see your server URL and a confirmed token. **You're authenticated.**
 
 ---
 
-## Step 5 — Start Your First Agent Session
+## Step 4 — Start Your First Agent Session
 
 Pick your agent and run one command:
 
@@ -151,6 +132,8 @@ Pick your agent and run one command:
 | **Gemini** | `annie gemini` | Google's multimodal agent |
 | **OpenCode** | `annie opencode` | Open-source coding agent |
 | **KiloCode** | `annie kilocode` | Task execution + remote control |
+| **ZeroClaw** | `annie zeroclaw` | Headless automation with self-correction |
+| **OpenClaw** | `annie openclaw` | Project orchestration + browser control |
 
 Example — start Claude Code:
 
@@ -162,7 +145,7 @@ The terminal will show the session connecting and streaming. **Don't close this 
 
 ---
 
-## Step 6 — Your AHA Moment 🎯
+## Step 5 — Your AHA Moment 🎯
 
 Switch to your browser (or phone) and open:
 
@@ -191,6 +174,8 @@ annie cursor            # Start Cursor agent
 annie gemini            # Start Gemini session
 annie opencode          # Start OpenCode session
 annie kilocode          # Start KiloCode session
+annie zeroclaw          # Start ZeroClaw (headless automation)
+annie openclaw          # Start OpenClaw (project orchestration)
 annie worker start      # Start background worker (remote spawn)
 annie auth login        # Save credentials interactively
 annie auth status       # Check current auth config
@@ -218,7 +203,7 @@ You now have:
 | Live session dashboard | Browser / phone | See every agent session your team runs, in real time |
 | Approval workflow | Mobile PWA | Agents wait for your OK before high-stakes actions |
 | Full audit log | Your PostgreSQL | Every message, every action, persisted on your server |
-| Multi-agent support | Any employee machine | Claude, Codex, Cursor, Gemini — all in one hub |
+| Multi-agent support | Any employee machine | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw — all in one hub |
 | Zero monthly cost | Your infrastructure | You own the server, the data, and the keys |
 
 > **Ready for more?** Explore these docs:
@@ -251,7 +236,7 @@ You now have:
 |---------|-----|
 | `annie` not found after install | Run `npm install -g @contextzero/nest` again; check your `$PATH` |
 | Web app shows blank / won't load | Wait 30s for DB init; run `docker compose logs nest-server` |
-| `401 Unauthorized` in CLI | Token mismatch — confirm `CLI_API_TOKEN` in `.env` equals what `annie` is using |
+| `401 Unauthorized` in CLI | Token mismatch — `setup.sh` generates it automatically. Run `grep CLI_API_TOKEN .env` to see your token. |
 | Port 80 already in use | Set `WEB_PORT=8080` in `.env`, then `docker compose restart` |
 | Session not appearing in dashboard | Confirm `NEST_API_URL` in CLI points to the correct server address |
 | Something else is wrong | Run `annie diagnose` — it prints a full diagnostic report |
@@ -261,3 +246,14 @@ You now have:
 > **You're running an enterprise-grade AI workforce hub. For free. On your own infrastructure.**
 > 
 > When you're ready to take it further — HTTPS, multiple teams, custom LLM routing — everything is in [docs/DEVOPS.md](docs/DEVOPS.md) and [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md).
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

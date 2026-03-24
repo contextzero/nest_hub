@@ -1,3 +1,12 @@
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # Branding — NEST Platform
 
 ## Overview
@@ -10,10 +19,10 @@ NEST is a complete workforce automation platform. This document defines our bran
 
 **NEST** is not just another AI tool — it's a **complete workforce automation platform** that:
 
-- Empowers employees to do more with AI
-- Learns and evolves with your organization
-- Replaces manual work with intelligent automation
-- Works across coding, communication, research, and operations
+- **Hub for Enterprise** — One app replaces Slack + Notion + Trello + WhatsApp
+- **Mobile for the Employee** — PWA on any phone. Approve from the bus. No laptop needed
+- **Memory Bank (Souls)** — Hub learns each employee. Intelligence accumulates
+- **Agent Swarm** — Multiple specialized AI agents working in parallel
 
 ---
 
@@ -104,10 +113,9 @@ See [voice-and-tone.md](voice-and-tone.md) for full guidelines.
 
 - Free forever
 - Docker deployment
-- Basic agents
-- OpenClaw / ZeroClaw
+- 8 agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw
 
-See [Quick Start](../QUICKSTART.md) and [Install Guide](INSTALL.md).
+See [Quick Start](../QUICKSTART.md) and [Install Guide](../INSTALL.md).
 
 ### Enterprise
 
@@ -117,7 +125,7 @@ See [Quick Start](../QUICKSTART.md) and [Install Guide](INSTALL.md).
 - Colony memory
 - Advanced automation
 
-See [Enterprise Features](enterprise/README.md) and [Business Overview](business/README.md).
+See [Enterprise Features](../enterprise/README.md) and [Business Overview](../business/README.md).
 
 ---
 
@@ -126,8 +134,19 @@ See [Enterprise Features](enterprise/README.md) and [Business Overview](business
 | Document | For Who | What's Inside |
 |----------|---------|---------------|
 | [Quick Start](../QUICKSTART.md) | Everyone | 5-minute setup |
-| [Install Guide](INSTALL.md) | IT/Ops | Full installation reference |
-| [Business Overview](business/README.md) | Founders | Strategic value, pillars |
-| [Value Proposition](business/value-proposition.md) | Decision makers | Detailed benefits |
-| [Methodology](methodology/README.md) | Leaders | Implementation phases |
-| [Enterprise Features](enterprise/README.md) | Organizations | Pricing, features, SLA |
+| [Install Guide](../INSTALL.md) | IT/Ops | Full installation reference |
+| [Business Overview](../business/README.md) | Founders | Strategic value, pillars |
+| [Value Proposition](../business/value-proposition.md) | Decision makers | Detailed benefits |
+| [Methodology](../methodology/README.md) | Leaders | Implementation phases |
+| [Enterprise Features](../enterprise/README.md) | Organizations | Pricing, features, SLA |
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

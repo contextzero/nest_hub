@@ -1,6 +1,17 @@
-# DevOps reference
+<div align="center">
 
-By **Context zero.** This page summarizes deployment, configuration, and URL rules for the stack (server, web, annie CLI).
+<img src="../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# DevOps Reference
+
+**By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
+
+This page summarizes deployment, configuration, and URL rules for the stack (server, web, annie CLI).
 
 ---
 
@@ -36,7 +47,7 @@ See `.env.example` in this repo for the full list.
 
 | Scenario | What to do |
 |----------|------------|
-| **Local (localhost)** | `cp .env.example .env`, set `CLI_API_TOKEN`, `docker compose up -d`. On the machine where you run the CLI: set `NEST_API_URL=http://localhost` and the same token; then run **annie**. |
+| **Local (localhost)** | `./setup.sh` (auto-generates secrets and starts the stack). On the machine where you run the CLI: set `NEST_API_URL=http://localhost` and the same token; then run **annie**. |
 | **Production, SSL on load balancer (e.g. AWS ACM)** | Configure your load balancer for HTTPS (e.g. ACM certificate); point it to nginx on port 80. Set `NEST_PUBLIC_URL` to your HTTPS domain. |
 | **Production, SSL on host (Let's Encrypt)** | Use a reverse proxy (e.g. nginx or Caddy) with certbot on the host; proxy to `nest-server` and `nest-web`; set `NEST_PUBLIC_URL`. |
 
@@ -67,3 +78,14 @@ This repo provides the **Docker Compose** stack with public images. For custom n
 ## Links
 
 - [README](../README.md) · [INSTALL](INSTALL.md) · [CLI (business)](CLI-BUSINESS.md)
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

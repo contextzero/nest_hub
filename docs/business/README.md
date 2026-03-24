@@ -1,4 +1,15 @@
-# Business — NEST Hub
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# Business — NEST
+
+[English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
 
 Strategic documentation for founders and leaders building their AI workforce.
 
@@ -22,6 +33,7 @@ This document provides the strategic context for evaluating and adopting NEST.
 | **IT Leader** | Security & compliance gaps | Audit trail missing |
 | **Team Lead** | Cannot oversee distributed agents | No mobile control |
 | **Employee** | Context lost between sessions | Memory not persistent |
+| **NGO / Government** | No audit trail for donor/citizen reporting | Manual processes, no compliance visibility |
 
 ### The Solution (NEST Value)
 
@@ -30,58 +42,47 @@ This document provides the strategic context for evaluating and adopting NEST.
 | **Founder/Admin** | Total control without vendor lock-in | Your infrastructure, your keys, your data |
 | **Employee** | Work from phone/tablet with voice | True mobile-first operations |
 | **Business** | Single hub for all agents | Eliminate tool fragmentation |
+| **NGO / Government** | Compliance-ready audit + mobile field ops | Donor reporting, citizen services, rotating staff context |
 
 ---
 
-## The Three Pillars
+## The Four Pillars
 
-### 1. Intelligence
+### 1. Hub for Enterprise
 
-**Colony Memory** — The system learns from every interaction:
-- Which agents perform best for specific task types
-- Employee preferences and work patterns
-- Project context that accelerates future work
-- Optimal workflows discovered by experience
+One app replaces Slack + Notion + Trello + WhatsApp. Projects → Employees → Sessions.
 
-**Darwin Agents** — AI workers that evolve:
-- Created from your requirements
-- Trained on your data
-- Evaluated by performance metrics
-- Best variants replicate across the team
-- Continuously improving over time
+- Centralized management of all AI agents
+- Project-based organization with role-based access
+- Complete visibility and audit trail
+- Self-hosted: your infrastructure, your data
 
-> *Design Principle: Knowledge never leaves your infrastructure.*
+### 2. Mobile for the Employee
 
-### 2. Automation
+PWA on any phone. Approve from the bus. No laptop needed.
 
-**ZeroClaw** — Headless automation with self-correction:
-- Runs tasks autonomously
-- Observes outcomes, adapts, retries
-- Full audit trail for compliance
+- Full mobile operations via Progressive Web App
+- Real-time approvals and session control
+- Voice interface (ElevenLabs) for faster input
+- Works on 4G or Wi-Fi — true remote operations
 
-**OpenClaw** — Visual workflow orchestration:
-- Drag-and-drop task graphs
-- Dependencies and conditions
-- Browser and desktop control
+### 3. Memory Bank (Souls)
 
-**Workflow Pattern:** Spec → Preparation → Execution (auto or approval)
+Hub learns each employee. No re-explaining context. Intelligence accumulates.
 
-### 3. Control
+- Employee profiles preserve preferences and work patterns
+- Project memory retains decisions, glossary, context
+- Colony memory discovers optimal workflows
+- Knowledge never leaves your infrastructure
 
-**Mobile-First Oversight:**
-- Approvals from phone/tablet
-- Real-time session visibility
-- Notification-driven workflow
+### 4. Agent Swarm
 
-**Granular Policies:**
-- Who can run auto vs must approve
-- Per-project configuration
-- Role-based access
+Multiple specialized AI agents working in parallel.
 
-**Complete Audit:**
-- Every action logged to PostgreSQL
-- Exportable for compliance
-- Full traceability
+- Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
+- ZeroClaw: headless automation with self-correction
+- OpenClaw: visual workflow orchestration
+- Darwin Agents: AI workers that evolve with your organization
 
 ---
 
@@ -131,3 +132,14 @@ This document provides the strategic context for evaluating and adopting NEST.
 - [Enterprise Features](../enterprise/README.md) — Scaling beyond Community
 - [CLI Business Overview](../CLI-BUSINESS.md) — Technical deep dive
 - [Roadmap](../ROADMAP.md) — What's coming next
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

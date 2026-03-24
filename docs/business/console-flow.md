@@ -1,3 +1,12 @@
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # Console Flow — How Requests Become Results on Your Phone
 
 The **console** is the **logical backoffice** of NEST: everything that happens **between** "employee taps Send on the phone" and "employee sees the result on the phone." It is **not** a separate app—it is the **pipeline** implemented by **server + CLI runners + integrations**.
@@ -11,7 +20,7 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 | **Employee (PWA)** | Sends requests, specs, voice; receives streams and final answers; approves or denies. |
 | **Owner / admin** | Sets policies, providers, indexing, auto vs approval, and employee profiles. |
 | **Server (Rust)** | Session authority, DB, events, RPC to CLI, permission gates. |
-| **CLI runners** | Cursor, Claude Code, Codex, OpenCode, KiloCode; **OpenClaw / ZeroClaw** for project/task automation at scale. |
+| **CLI runners** | Cursor, Claude Code, Codex, Gemini, OpenCode, KiloCode; **OpenClaw / ZeroClaw** for project/task automation at scale. |
 | **LLM providers** | OpenRouter, Vertex, DeepInfra, etc. — keys on server only. |
 | **Voice** | ElevenLabs — bridges mic on phone to tool/session actions. |
 | **Media services (roadmap)** | Video, image as **task backends** when enabled. |
@@ -93,3 +102,14 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 - [Use Cases](./use-cases.md)
 - [Phases](./phases.md)
 - [Enterprise Features](../enterprise/README.md)
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

@@ -1,9 +1,14 @@
+<div align="center">
+
+<img src="../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # Install Frameworks & Tools
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
 **By Context Zero.** Everything you need to run NEST — Node.js, npm, Docker, and optionally Rust — installed correctly in minutes. Follow this guide once, then go straight to the [Quick Start](../QUICKSTART.md).
 
 ---
@@ -233,3 +238,14 @@ All green? Head to the [Quick Start →](../QUICKSTART.md)
 ---
 
 *After this guide, continue with: [QUICKSTART.md](../QUICKSTART.md) · [INSTALL.md](INSTALL.md) · [README.md](../README.md)*
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

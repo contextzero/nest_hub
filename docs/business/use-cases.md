@@ -1,4 +1,13 @@
-# Use Cases — NEST Hub
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# Use Cases — NEST
 
 Real scenarios where NEST delivers value to your organization.
 
@@ -133,9 +142,75 @@ Real scenarios where NEST delivers value to your organization.
 
 ---
 
+## NGOs & International Organizations
+
+### Scenario: Field Coordination
+
+**Problem**: Remote field teams lack oversight; task approvals delayed until someone reaches a laptop.
+
+**Solution**:
+- Field staff submit tasks via phone → Agent prepares deliverables
+- Supervisors **approve from phone** on 4G — no laptop needed
+- Memory bank preserves project context across rotating staff
+- Full audit trail for donor reporting
+
+**Outcome**: Faster field operations; donor compliance built in; zero context loss on staff rotation.
+
+### Scenario: Donor Reporting Automation
+
+**Problem**: Manual compilation of progress reports for multiple donors with different formats.
+
+**Solution**:
+- Agent tracks all session activity → auto-generates progress summaries
+- Maps outputs to donor-specific reporting templates
+- Human reviews → approves → sends
+
+**Outcome**: Reporting time cut by 80%; consistent quality across donors.
+
+---
+
+## Government & Public Sector
+
+### Scenario: Citizen Service Automation
+
+**Problem**: Permit processing backlogs; citizens wait weeks for routine approvals.
+
+**Solution**:
+- Structured agent workflows handle permit intake and validation
+- Auto-checks against regulations → flags exceptions for human review
+- Full audit trail for regulatory compliance
+- Mobile approvals for inspectors in the field
+
+**Outcome**: Processing time reduced from weeks to days; complete compliance trail.
+
+### Scenario: Inspector Field Operations
+
+**Problem**: Inspectors fill paper forms; data entry happens days later at the office.
+
+**Solution**:
+- Inspector uses phone to trigger agent → captures findings via voice/text
+- Agent structures data, cross-references regulations, flags violations
+- Supervisor reviews and approves from phone
+- Reports auto-generated for compliance
+
+**Outcome**: Real-time inspections; zero paper; instant compliance reports.
+
+---
+
 ## Related
 
 - [Value Proposition](./value-proposition.md)
 - [Console Flow](./console-flow.md)
 - [Phases](./phases.md)
 - [Enterprise Features](../enterprise/README.md)
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

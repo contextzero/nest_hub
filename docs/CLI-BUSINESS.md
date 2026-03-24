@@ -1,9 +1,14 @@
+<div align="center">
+
+<img src="../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # CLI (annie) — Business Overview
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
 **By Context Zero.** This page is for **business owners and team leads** — the people who decide how the AI workforce runs, not the people who write the code. If you're looking for install commands or raw configuration, see [INSTALL.md](INSTALL.md) and [README.md](../README.md).
 
 ---
@@ -34,7 +39,7 @@ Your Employees' Machines          Your Server (Docker)          Your Phone / Tab
 
 ---
 
-## The Six Agent Modes
+## The Eight Agent Modes
 
 Every mode runs through the same hub. Every session is visible from the same mobile dashboard. Every approval comes to the same place: your phone.
 
@@ -46,8 +51,10 @@ Every mode runs through the same hub. Every session is visible from the same mob
 | `annie opencode` | **OpenCode** | Open-source agent — no vendor lock-in, full tool use with approval gates. Remote and local control from the web app or PWA. Ideal for teams that want transparency in the agent layer. |
 | `annie gemini` | **Google Gemini** | Multimodal agent via ACP. Remote mode: messages originate from the server UI or Telegram. Useful when tasks require image, document, or audio context. |
 | `annie kilocode` | **KiloCode** | Task execution with the deepest remote control. Multiple concurrent sessions. Every action requires phone approval. Built for business owners who want the tightest oversight loop. |
+| `annie zeroclaw` | **ZeroClaw** | Headless, policy-driven workflow automation. Define playbooks with conditions, fallbacks, and retry logic. Self-correcting — if an action fails, the playbook retries or escalates per your rules. Full audit trail to Postgres. |
+| `annie openclaw` | **OpenClaw** | Visual workflow orchestration and task graph execution. Manages entire task graphs with dependencies, sequencing, and real-time status in your dashboard. Browser and desktop automation with approval gates. |
 
-**You don't have to choose one.** The same server hub handles all six. An employee can run Claude on one machine and Codex on another — both appear in your dashboard simultaneously.
+**You don't have to choose one.** The same server hub handles all eight. An employee can run Claude on one machine and Codex on another — both appear in your dashboard simultaneously.
 
 ---
 
@@ -79,7 +86,7 @@ LLM credentials are configured in **Admin on the server**. The CLI never holds, 
 
 ---
 
-## Workforce Automation — Coming Soon
+## Workflow Automation — ZeroClaw & OpenClaw
 
 The coding agents handle development work. **OpenClaw** and **ZeroClaw** handle everything else — browser automation, desktop control, multi-step business workflows, and zero-touch machine orchestration.
 
@@ -107,7 +114,7 @@ ZeroClaw is the headless, policy-driven layer. You define playbooks — sequence
 - Granular permissions: each playbook defines what it can and cannot touch
 - Full audit trail — every execution logged to Postgres, visible in your dashboard
 
-**Status:** Both are in active development. Current agent modes (annie, kilocode, etc.) are live today. OpenClaw and ZeroClaw ship on top of the same server and hub — no migration required when they arrive.
+Both run on the same server and hub as the coding agents — no separate infrastructure required.
 
 ---
 
@@ -210,6 +217,8 @@ annie cursor            # Cursor Agent
 annie opencode          # OpenCode
 annie gemini            # Google Gemini (via ACP)
 annie kilocode          # KiloCode (tightest oversight)
+annie zeroclaw          # ZeroClaw (headless workflow automation)
+annie openclaw          # OpenClaw (visual workflow orchestration)
 
 # Infrastructure
 annie worker start      # Background worker daemon (remote spawn)
@@ -240,3 +249,14 @@ annie diagnose          # Full diagnostic report — run this first if anything'
 | [Use Cases](../business/use-cases.md) | Real scenarios and use cases |
 | [Methodology](../methodology/README.md) | Implementation phases guide |
 | [Enterprise Features](../enterprise/README.md) | Enterprise pricing and features |
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

@@ -1,3 +1,12 @@
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # Phases — NEST Product Evolution
 
 The roadmap from a single tool to a complete workforce automation platform.
@@ -53,6 +62,8 @@ The roadmap from a single tool to a complete workforce automation platform.
 - Memory system
 - Prompt templates
 - Multi-agent support (Claude, Codex, Cursor, OpenCode, Gemini, KiloCode)
+- ZeroClaw (headless automation with self-correction)
+- OpenClaw (project orchestration)
 
 **Status:** ✅ In Progress
 
@@ -77,18 +88,18 @@ The roadmap from a single tool to a complete workforce automation platform.
 
 ---
 
-## Phase 4 — Automation at Scale (OpenClaw / ZeroClaw)
+## Phase 4 — Automation at Scale
 
-**Focus:** Beyond coding — full automation
+**Focus:** Beyond coding — full automation at enterprise scale
 
 - Machine automation (browser/terminal)
 - End-to-end playbooks
 - Strong security policies + advanced audit
 
 **What's Built:**
-- OpenClaw (project orchestration)
-- ZeroClaw (headless automation with self-correction)
 - Playbook system
+- Advanced ZeroClaw/OpenClaw workflows
+- Enterprise-grade security policies
 
 **Status:** 🚧 Building
 
@@ -118,3 +129,14 @@ The roadmap from a single tool to a complete workforce automation platform.
 - [Console Flow](./console-flow.md)
 - [Methodology](../methodology/README.md)
 - [Enterprise Features](../enterprise/README.md)
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

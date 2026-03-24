@@ -1,8 +1,17 @@
-# Positioning — NEST Hub
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# Positioning — NEST
 
 ## Market Position
 
-**NEST Hub** is positioned as the **self-hosted enterprise workforce platform** for AI agent management.
+**NEST** is positioned as the **self-hosted enterprise workforce platform** for AI agent management.
 
 ---
 
@@ -24,6 +33,9 @@
 | **Individual Developers** | Personal AI coding assistant with mobile control |
 | **Small Teams** | 2-10 developers needing shared agent infrastructure |
 | **Agencies** | Multiple clients, project-based AI work |
+| **Entrepreneurs** | Solo founders managing AI agents from phone |
+| **NGOs** | Field coordination, donor reporting, rotating staff context |
+| **Governments** | Citizen service automation, compliance audit trails, field inspections |
 
 ---
 
@@ -45,7 +57,7 @@
 
 1. **Self-Hosted First** — No recurring SaaS fees, complete data ownership
 2. **Mobile-First Control** — Phone/tablet PWA for real-time oversight
-3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode in one platform
+3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw in one platform
 4. **BYOK Everything** — Your LLMs, your voice, your infrastructure
 5. **Enterprise Audit** — Full Postgres audit trail, compliance-ready
 6. **Zero Lock-In** — Docker + npm, no proprietary stack
@@ -102,4 +114,15 @@ The market is shifting from:
 - **Desktop-only** → Mobile-first oversight
 - **Proprietary stacks** → Open standards (Docker, npm)
 
-NEST Hub rides all four trends simultaneously.
+NEST rides all four trends simultaneously.
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

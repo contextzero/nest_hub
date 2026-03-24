@@ -1,10 +1,16 @@
-# NEST Hub — Releases & What's Shipped
+<div align="center">
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
-**By Context Zero.** This document is your proof of delivery — every component that exists today, where to get it, and what it does. No vaporware. No feature promises without a package behind them. Real software, running now, free to deploy.
+<img src="./public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# NEST — Releases & What's Shipped
+
+**By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
+Every component that exists today — real software, running now, free to deploy.
 
 > **Trust is built on one question:** *"Have you done it before?"*
 > Every item below has a public repo, a public Docker image, or a public npm package. Click the links and verify for yourself.
@@ -25,7 +31,7 @@ The command employees run on their machines to start AI agent sessions and conne
 | **Status** | ✅ Live — install and run today |
 
 **What it ships:**
-- Agent runners for **Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode**
+- Agent runners for **Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw**
 - Session lifecycle management (start, stop, reconnect)
 - Auth: `annie auth login` / `annie auth status`
 - Background worker daemon: `annie worker start`
@@ -101,7 +107,7 @@ The one-command deployment package that wires everything together for business o
 **What it ships:**
 - `docker-compose.yml` — server + web + PostgreSQL + nginx in a single file
 - `nginx/conf.d/` — routing config (API, Socket.IO, SSE, PWA — all on port 80)
-- `.env.example` — full environment variable reference; copy and fill one value
+- `setup.sh` — auto-generates `.env` with all secrets on first run
 - `QUICKSTART.md` — server live in 5 minutes, no prior experience needed
 - `docs/INSTALL.md` — complete installation reference
 - `docs/DEVOPS.md` — production setup: HTTPS, public URL, scaling
@@ -112,37 +118,23 @@ The one-command deployment package that wires everything together for business o
 - `public/` — branding assets (icon, etc.)
 
 ```bash
-# Everything above, running in one command:
 git clone https://github.com/contextzero/nest_hub.git
-cd nest_hub && cp .env.example .env
-# Set CLI_API_TOKEN in .env
-docker compose up -d
+cd nest_hub
+./setup.sh
 ```
 
 ---
 
-### 5 — NEST Rust Server — Phase 1 (In Progress)
+### 5 — NEST Rust Server — Architecture
 
-A parallel Rust backend with full hexagonal architecture — clean separation between domain, ports, application, and adapters. This is the foundation for future enterprise extensibility.
+The NEST server is built with a hexagonal architecture — clean separation between domain, ports, application, and adapters.
 
 | | |
 |---|---|
 | **Source** | [github.com/contextzero/nest](https://github.com/contextzero/nest) — `server/` |
-| **Status** | 🔨 Phase 1 — REST API and storage complete; real-time (Socket.IO/SSE) and Telegram in progress |
-
-**What's done in Phase 1:**
-- Complete REST API surface
-- SQLite persistence (development) via `rusqlite`
-- Hexagonal architecture: `domain/` · `ports/` · `application/` · `adapters/`
-- Built on Axum + Tokio + tower-http
-
-**What's next for this component:** Full feature parity with the current server — real-time events, Socket.IO, Telegram. Tracked in [ROADMAP.md](ROADMAP.md).
-
-```bash
-# Build from source if you want to inspect the architecture
-cargo build --release  # from the server/ directory
-# See docs/INSTALL-FRAMEWORKS.md for Rust install
-```
+| **Architecture** | Hexagonal: `domain/` · `ports/` · `application/` · `adapters/` |
+| **Stack** | Rust · Axum · Tokio · tower-http · PostgreSQL |
+| **Status** | ✅ Live — powering the platform |
 
 ---
 
@@ -173,7 +165,7 @@ cargo build --release  # from the server/ directory
 │  NEST Server (Rust)  │  ✅ Live   │  docker compose up -d       │
 │  NEST Web (PWA)      │  ✅ Live   │  http://localhost            │
 │  nest_hub            │  ✅ Live   │  git clone + docker compose │
-│  Rust Server Phase 2 │  🔨 WIP   │  ROADMAP.md                 │
+│  Rust Server         │  ✅ Live   │  See Section 5 above        │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -187,4 +179,11 @@ Spec-driven development, Souls (persistent agent personas), extended multi-agent
 
 ---
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem. Business and workforce hub documentation: [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md).*
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>
