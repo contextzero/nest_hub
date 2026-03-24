@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./public/nest_logo.png" alt="NEST Logo" width="280"/>
+<img src="./public/nest_logo.png" alt="NEST" width="280"/>
 
 <br/>
 
@@ -235,6 +235,8 @@ annie codex               # Start Codex session
 annie gemini              # Start Gemini session
 annie opencode            # Start OpenCode session
 annie kilocode            # Start KiloCode session
+annie zeroclaw            # Start ZeroClaw (headless automation)
+annie openclaw            # Start OpenClaw (project orchestration)
 annie worker start        # Start background worker (remote spawn)
 annie auth login          # Save credentials
 annie auth status         # Check connection

@@ -1,10 +1,19 @@
+<div align="center">
+
+<img src="../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
 # NEST — Full Installation Guide
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
-**By Context Zero.** This guide gets the complete NEST stack running — server, database, web app, and CLI — using public Docker images. No Rust knowledge, no build from source, no cloud account required.
+[English](./INSTALL.md) | [Español](./INSTALL-ES.md) | [中文](./INSTALL-ZH.md) | [Deutsch](./INSTALL-DE.md) | [Português](./INSTALL-PT.md) | [Français](./INSTALL-FR.md)
+
+**By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
+
+This guide gets the complete NEST stack running — server, database, web app, and CLI — using public Docker images. No Rust knowledge, no build from source, no cloud account required.
 
 > **In a hurry?** → [QUICKSTART.md](../QUICKSTART.md) gets you live in 5 minutes with the essential steps only.
 > This guide is the complete reference — every option, every flag, every troubleshooting path.
@@ -42,15 +51,52 @@ The server machine and an employee machine can be the same machine during setup 
 
 ## Part 1 — Server Setup
 
-### Step 1.1 — Clone and initialize
+### Step 1.1 — Clone and run setup
 
 ```bash
 git clone https://github.com/contextzero/nest_hub.git
 cd nest_hub
-cp .env.example .env
+./setup.sh
 ```
 
-### Step 1.2 — Configure `.env`
+The setup script generates a secure `CLI_API_TOKEN`, creates your `.env`, and starts the full stack. Follow the prompts — the entire process takes under 2 minutes.
+
+Once complete, open **http://localhost** in your browser. You should see the NEST web app. If it loads — your server is fully operational.
+
+### Step 1.2 — Verify the server is running
+
+```bash
+docker compose ps
+```
+
+All four containers should show `Up` or `healthy`:
+
+```
+NAME           STATUS          PORTS
+nest-server    Up (healthy)    3000/tcp
+nest-web       Up              80/tcp
+postgres       Up              0.0.0.0:5433->5432/tcp
+nginx          Up              0.0.0.0:80->80/tcp
+```
+
+Watch the startup logs:
+
+```bash
+docker compose logs -f
+```
+
+You're ready when you see the nest-server health check pass. Look for a line like:
+```
+nest-server  | Server listening on 0.0.0.0:3000
+```
+
+### Advanced: Manual Configuration
+
+If you prefer to configure `.env` manually instead of using `./setup.sh`:
+
+```bash
+cp .env.example .env
+```
 
 Open `.env` in any text editor. The only value you must set is `CLI_API_TOKEN`:
 
@@ -85,43 +131,13 @@ Everything else has sensible defaults for local deployment.
 
 > **Security note:** `CLI_API_TOKEN` is the single key that connects your team's CLIs to your server. Generate it with `openssl rand -hex 32`. Never commit `.env` to version control.
 
-### Step 1.3 — Start the stack
+Then start the stack:
 
 ```bash
 docker compose up -d
 ```
 
 Docker will pull four images on first run (this takes 1–2 minutes depending on your connection). Subsequent starts are instant.
-
-Watch the startup:
-
-```bash
-docker compose logs -f
-```
-
-You're ready when you see the nest-server health check pass. Look for a line like:
-```
-nest-server  | Server listening on 0.0.0.0:3000
-```
-
-### Step 1.4 — Verify the server is running
-
-```bash
-# Check all four containers are up
-docker compose ps
-```
-
-All four should show `Up` or `healthy`:
-
-```
-NAME           STATUS          PORTS
-nest-server    Up (healthy)    3000/tcp
-nest-web       Up              80/tcp
-postgres       Up              0.0.0.0:5433->5432/tcp
-nginx          Up              0.0.0.0:80->80/tcp
-```
-
-Open **http://localhost** in your browser. You should see the NEST web app. If it loads — your server is fully operational.
 
 ---
 
@@ -176,12 +192,14 @@ Should print your server URL and confirm the token is set. If it shows an error,
 ### Step 2.3 — Start your first agent session
 
 ```bash
-annie          # Claude Code — Anthropic's coding agent
-annie codex    # OpenAI Codex
-annie cursor   # Cursor Agent
-annie gemini   # Google Gemini (via ACP)
-annie opencode # OpenCode — open-source agent
-annie kilocode # KiloCode — task execution with tight approval control
+annie            # Claude Code — Anthropic's coding agent
+annie codex      # OpenAI Codex
+annie cursor     # Cursor Agent
+annie gemini     # Google Gemini (via ACP)
+annie opencode   # OpenCode — open-source agent
+annie kilocode   # KiloCode — task execution with tight approval control
+annie zeroclaw   # ZeroClaw — headless workflow automation with self-correction
+annie openclaw   # OpenClaw — visual workflow orchestration and task graphs
 ```
 
 Once a session starts, open **http://localhost** in your browser (or on your phone). The session appears in the dashboard in real time.
@@ -273,3 +291,14 @@ Full production reference: [DEVOPS.md](DEVOPS.md)
 | Enterprise features | [enterprise/README.md](enterprise/README.md) |
 | All commands and config reference | [README.md](../README.md) |
 | What's coming next | [ROADMAP.md](../ROADMAP.md) |
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

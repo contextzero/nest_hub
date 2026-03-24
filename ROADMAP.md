@@ -1,10 +1,16 @@
-# NEST Hub — Roadmap
+<div align="center">
 
-<p align="center">
-  <img src="./public/icon.svg" alt="NEST Hub" width="140" height="140" />
-  <img src="./public/annie.png" alt="annie" width="120" height="120" />
-</p>
-**By Context Zero.** What's being built next, why it matters to your business, and how to participate in shaping it.
+<img src="./public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# NEST — Roadmap
+
+**By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
+What's being built next, why it matters, and how to participate.
 
 > **Already live and free today:** See [RELEASES.md](RELEASES.md).
 > This document is about what comes *after* — the capabilities that transform NEST from a workforce monitor into a fully autonomous AI business operating system.
@@ -20,6 +26,8 @@ That's the foundation. What's being built next goes further:
 - **Agents that remember** — across sessions, across time, across your entire company context
 - **Agents that coordinate** — specialized roles working in defined pipelines with quality gates you control
 - **Development driven by your specs** — implementation that traces directly back to your business requirements
+
+> **The Four Pillars of NEST:** Hub for Enterprise · Mobile for the Employee · Memory Bank (Souls) · Agent Swarm. The initiatives below extend these pillars.
 
 The three initiatives below are the next phase of NEST. Each one compounds the value of what's already running.
 
@@ -187,13 +195,14 @@ Each layer builds on the one before it. Deploy today. The layers ship on top of 
 
 ## How to Participate
 
-NEST is being built with input from the organizations using it. If you're deploying NEST and want to:
+NEST is being built with input from the businesses, entrepreneurs, NGOs, and governments using it. If you're deploying NEST and want to:
 
 - **Shape the Souls data model** for your use case (enterprise vs. team vs. solo)
 - **Define specialist roles** for your industry or workflow
 - **Pilot Forge** with your real specifications before general release
 - **Contribute playbooks** for your domain (legal, fintech, e-commerce, SaaS, etc.)
 
+→ Join the conversation: [Telegram](https://t.me/ctx0_io) · [Discord](https://discord.gg/ygjuuDAw)
 → Open an issue or start a discussion at [contextzero/nest_hub](https://github.com/contextzero/nest_hub)
 → Reference business and workforce hub methodology: [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md)
 
@@ -213,4 +222,11 @@ Current deliverables: [RELEASES.md](RELEASES.md) · Setup: [QUICKSTART.md](QUICK
 
 ---
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem. Knowledge base and methodology: [docs/knowladge](https://github.com/contextzero/nest/tree/main/docs/knowladge) · [docs/holding](https://github.com/contextzero/nest/tree/main/docs/holding).*
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>

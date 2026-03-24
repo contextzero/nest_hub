@@ -1,4 +1,13 @@
-# Value Proposition — NEST Hub
+<div align="center">
+
+<img src="../../public/nest_logo.png" alt="NEST" width="200"/>
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+</div>
+
+# Value Proposition — NEST
 
 ## Problem Decomposition
 
@@ -53,6 +62,17 @@ The fundamental question: **What do organizations actually need from AI agents?*
 
 **Key Message:** *"From coding to communications to media—one platform, infinite possibilities."*
 
+### For NGOs & Governments
+
+| Capability | Benefit | Validation Design |
+|------------|---------|-------------------|
+| **Audit trail** | Donor/citizen reporting with full traceability | Compliance export, report generation |
+| **Mobile field ops** | Inspectors and field staff approve from phone | Task completion rate in low-connectivity environments |
+| **Memory bank** | Context preserved across rotating staff | Onboarding time for new team members |
+| **Self-hosted** | Data sovereignty for sensitive citizen/donor data | Regulatory compliance verification |
+
+**Key Message:** *"Compliance-ready AI workforce for mission-driven organizations."*
+
 ---
 
 ## Multi-Dimensional Trade-off Matrix
@@ -78,13 +98,24 @@ When evaluating NEST, consider these decision dimensions:
 
 ---
 
+## The Four Pillars
+
+NEST's value rests on four pillars:
+
+1. **Hub for Enterprise** — One app replaces Slack + Notion + Trello + WhatsApp. Projects → Employees → Sessions.
+2. **Mobile for the Employee** — PWA on any phone. Approve from the bus. No laptop needed.
+3. **Memory Bank (Souls)** — Hub learns each employee. No re-explaining context. Intelligence accumulates.
+4. **Agent Swarm** — Multiple specialized AI agents working in parallel.
+
+---
+
 ## Key Differentiators Summary
 
 | Theme | NEST | Competitors |
 |-------|------|-------------|
 | **Economic Model** | $0 product fee (self-hosted) | SaaS subscriptions |
 | **Workforce Model** | Phone-first operations | Desktop-only |
-| **Intelligence** | Multi-agent + automation + SSD | Single-purpose agents |
+| **Intelligence** | Four pillars: Hub + Mobile + Memory + Swarm | Single-purpose agents |
 | **Sovereignty** | Full data ownership | Vendor lock-in |
 
 ---
@@ -113,3 +144,14 @@ Before full adoption, validate these hypotheses:
 - [Console Flow](./console-flow.md) — Technical pipeline
 - [Phases](./phases.md) — Product evolution
 - [Enterprise Features](../enterprise/README.md) — Scaling options
+
+---
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
+[![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
+
+*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+
+</div>
