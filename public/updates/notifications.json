@@ -2,20 +2,20 @@
     {
         "id": "u1",
         "category": "updates",
-        "date": "2026-03-16",
+        "date": "2026-03-22",
         "title": {
-            "en": "NEST Desktop App is here",
-            "es": "La app de escritorio NEST ya está aquí",
-            "de": "NEST Desktop-App ist da",
-            "fr": "L'app bureau NEST est arrivée",
-            "pt": "O app desktop NEST chegou"
+            "en": "Introducing NEST",
+            "es": "Presentamos NEST",
+            "de": "Wir stellen NEST vor",
+            "fr": "Présentation de NEST",
+            "pt": "Apresentamos o NEST"
         },
         "body": {
-            "en": "Download NEST Desktop to unlock local file access, run agents directly on your machine, and manage projects without a browser.",
-            "es": "Descarga NEST Desktop para desbloquear el acceso a archivos locales, ejecutar agentes directamente en tu máquina y gestionar proyectos sin navegador.",
-            "de": "Laden Sie NEST Desktop herunter, um auf lokale Dateien zuzugreifen, Agenten direkt auf Ihrem Computer auszuführen und Projekte ohne Browser zu verwalten.",
-            "fr": "Téléchargez NEST Desktop pour accéder aux fichiers locaux, exécuter des agents directement sur votre machine et gérer des projets sans navigateur.",
-            "pt": "Baixe o NEST Desktop para acessar arquivos locais, executar agentes diretamente na sua máquina e gerenciar projetos sem navegador."
+            "en": "Control your AI coding agents from anywhere. NEST connects Claude Code, Codex, Gemini, Cursor and OpenCode to a web dashboard so you can monitor, interact and manage sessions from your phone or any browser.",
+            "es": "Controla tus agentes de programación IA desde cualquier lugar. NEST conecta Claude Code, Codex, Gemini, Cursor y OpenCode a un panel web para monitorear, interactuar y gestionar sesiones desde tu teléfono o cualquier navegador.",
+            "de": "Steuern Sie Ihre KI-Coding-Agenten von überall. NEST verbindet Claude Code, Codex, Gemini, Cursor und OpenCode mit einem Web-Dashboard zur Überwachung und Verwaltung von Sitzungen.",
+            "fr": "Contrôlez vos agents IA depuis n'importe où. NEST connecte Claude Code, Codex, Gemini, Cursor et OpenCode à un tableau de bord web.",
+            "pt": "Controle seus agentes IA de qualquer lugar. NEST conecta Claude Code, Codex, Gemini, Cursor e OpenCode a um painel web."
         },
         "video": "https://youtu.be/t12su6vuw1Q",
         "image": "https://raw.githubusercontent.com/contextzero/nest_hub/main/public/annie.png"
@@ -23,96 +23,400 @@
     {
         "id": "u2",
         "category": "updates",
-        "date": "2026-03-01",
+        "date": "2026-03-20",
         "title": {
-            "en": "Multi-agent support with Gemini",
-            "es": "Soporte multi-agente con Gemini",
-            "de": "Multi-Agent-Unterstützung mit Gemini",
-            "fr": "Support multi-agent avec Gemini",
-            "pt": "Suporte multi-agente com Gemini"
+            "en": "Enterprise web terminal",
+            "es": "Terminal web enterprise",
+            "de": "Enterprise-Web-Terminal",
+            "fr": "Terminal web entreprise",
+            "pt": "Terminal web enterprise"
         },
         "body": {
-            "en": "You can now run Gemini alongside Claude and Codex. Select your agent when starting a session and switch mid-conversation.",
-            "es": "Ahora puedes ejecutar Gemini junto con Claude y Codex. Selecciona tu agente al iniciar una sesión y cambia durante la conversación.",
-            "de": "Sie können jetzt Gemini neben Claude und Codex ausführen. Wählen Sie Ihren Agenten beim Starten einer Sitzung und wechseln Sie während des Gesprächs.",
-            "fr": "Vous pouvez maintenant exécuter Gemini aux côtés de Claude et Codex. Sélectionnez votre agent au démarrage et changez en cours de conversation.",
-            "pt": "Agora você pode executar Gemini junto com Claude e Codex. Selecione seu agente ao iniciar uma sessão e troque durante a conversa."
+            "en": "The remote terminal now supports horizontal and vertical splits, broadcast mode, multiple themes, command snippets, search, export, and keyboard shortcuts.",
+            "es": "La terminal remota ahora soporta splits horizontales y verticales, modo broadcast, múltiples temas, snippets de comandos, búsqueda, exportación y atajos de teclado.",
+            "de": "Das Remote-Terminal unterstützt jetzt horizontale und vertikale Splits, Broadcast-Modus, mehrere Themes, Befehls-Snippets, Suche, Export und Tastaturkürzel.",
+            "fr": "Le terminal distant prend désormais en charge les divisions, le mode broadcast, les thèmes, snippets, recherche, export et raccourcis clavier.",
+            "pt": "O terminal remoto agora suporta splits horizontais e verticais, modo broadcast, múltiplos temas, snippets, busca, exportação e atalhos de teclado."
         }
     },
     {
         "id": "u3",
         "category": "updates",
-        "date": "2026-02-14",
+        "date": "2026-03-18",
         "title": {
-            "en": "Real-time terminal sharing",
-            "es": "Compartir terminal en tiempo real",
-            "de": "Echtzeit-Terminal-Freigabe",
-            "fr": "Partage de terminal en temps réel",
-            "pt": "Compartilhamento de terminal em tempo real"
+            "en": "Terminal data persistence & encryption",
+            "es": "Persistencia y encriptación de datos de terminal",
+            "de": "Terminal-Datenpersistenz und Verschlüsselung",
+            "fr": "Persistance et chiffrement des données terminal",
+            "pt": "Persistência e criptografia de dados do terminal"
         },
         "body": {
-            "en": "Split panes, broadcast mode, themes, and command snippets are now available in the web terminal. All terminal data is encrypted and persisted.",
-            "es": "Paneles divididos, modo broadcast, temas y snippets de comandos ya están disponibles en la terminal web. Todos los datos del terminal están encriptados y persistidos.",
-            "de": "Geteilte Fenster, Broadcast-Modus, Themes und Befehls-Snippets sind jetzt im Web-Terminal verfügbar. Alle Terminal-Daten sind verschlüsselt und gespeichert.",
-            "fr": "Panneaux divisés, mode broadcast, thèmes et snippets de commandes sont maintenant disponibles dans le terminal web. Toutes les données sont chiffrées et persistées.",
-            "pt": "Painéis divididos, modo broadcast, temas e snippets de comandos já estão disponíveis no terminal web. Todos os dados do terminal são criptografados e persistidos."
+            "en": "All terminal input and output is now encrypted with AES-256-GCM and stored on the server. Reconnect or refresh and your terminal history is restored automatically.",
+            "es": "Toda la entrada y salida del terminal ahora está encriptada con AES-256-GCM y almacenada en el servidor. Reconéctate o refresca y tu historial se restaura automáticamente.",
+            "de": "Alle Terminal-Ein-/Ausgaben werden jetzt mit AES-256-GCM verschlüsselt und auf dem Server gespeichert. Verbinden Sie sich erneut und Ihr Verlauf wird automatisch wiederhergestellt.",
+            "fr": "Toutes les entrées/sorties du terminal sont chiffrées AES-256-GCM et stockées sur le serveur. Reconnectez-vous et votre historique est restauré.",
+            "pt": "Todas as entradas e saídas do terminal agora são criptografadas com AES-256-GCM e armazenadas no servidor. Reconecte e seu histórico é restaurado."
         }
     },
     {
         "id": "u4",
         "category": "updates",
-        "date": "2026-01-20",
+        "date": "2026-03-15",
         "title": {
-            "en": "Enhanced permission modes",
-            "es": "Modos de permisos mejorados",
-            "de": "Erweiterte Berechtigungsmodi",
-            "fr": "Modes de permission améliorés",
-            "pt": "Modos de permissão aprimorados"
+            "en": "Multi-agent model selection",
+            "es": "Selección de modelo multi-agente",
+            "de": "Multi-Agent-Modellauswahl",
+            "fr": "Sélection de modèle multi-agent",
+            "pt": "Seleção de modelo multi-agente"
         },
         "body": {
-            "en": "New permission modes let you control exactly what your agents can do: default, acceptEdits, bypassPermissions, and plan mode. Switch mid-session from the composer.",
-            "es": "Los nuevos modos de permisos te permiten controlar exactamente lo que pueden hacer tus agentes: default, acceptEdits, bypassPermissions y modo plan. Cambia durante la sesión desde el compositor.",
-            "de": "Neue Berechtigungsmodi ermöglichen die genaue Kontrolle: default, acceptEdits, bypassPermissions und Plan-Modus. Wechseln Sie während der Sitzung über den Composer.",
-            "fr": "Les nouveaux modes de permission vous permettent de contrôler exactement ce que vos agents peuvent faire. Changez en cours de session depuis le composeur.",
-            "pt": "Os novos modos de permissão permitem controlar exatamente o que seus agentes podem fazer. Troque durante a sessão pelo compositor."
+            "en": "Pick the AI model when starting a session and switch mid-conversation. Inline dropdowns in the composer support Claude, Codex, Gemini, Cursor and OpenCode.",
+            "es": "Elige el modelo de IA al iniciar una sesión y cambia durante la conversación. Selectores inline en el compositor para Claude, Codex, Gemini, Cursor y OpenCode.",
+            "de": "Wählen Sie das KI-Modell beim Start und wechseln Sie mitten im Gespräch. Inline-Dropdowns im Composer für alle Agenten.",
+            "fr": "Choisissez le modèle IA au démarrage et changez en cours de conversation. Menus déroulants inline dans le composeur.",
+            "pt": "Escolha o modelo de IA ao iniciar e troque durante a conversa. Dropdowns inline no compositor para todos os agentes."
+        }
+    },
+    {
+        "id": "u5",
+        "category": "updates",
+        "date": "2026-03-12",
+        "title": {
+            "en": "Permission modes & task modes",
+            "es": "Modos de permisos y modos de tarea",
+            "de": "Berechtigungsmodi und Aufgabenmodi",
+            "fr": "Modes de permission et de tâche",
+            "pt": "Modos de permissão e modos de tarefa"
+        },
+        "body": {
+            "en": "Control what your agents can do: default, accept edits, bypass permissions, and plan-only. Plus task modes like Architect and Ask, switchable mid-session.",
+            "es": "Controla lo que pueden hacer tus agentes: default, aceptar ediciones, bypass de permisos y solo planificación. Más modos de tarea como Architect y Ask.",
+            "de": "Steuern Sie Agentenberechtigungen: Standard, Änderungen akzeptieren, umgehen und Nur-Planung. Plus Aufgabenmodi wie Architect und Ask.",
+            "fr": "Contrôlez les permissions des agents : par défaut, accepter, contourner et planification. Plus des modes de tâche comme Architect et Ask.",
+            "pt": "Controle permissões dos agentes: padrão, aceitar edições, ignorar e somente planejamento. Mais modos de tarefa como Architect e Ask."
+        }
+    },
+    {
+        "id": "u6",
+        "category": "updates",
+        "date": "2026-03-08",
+        "title": {
+            "en": "Git file browser & change tracking",
+            "es": "Explorador de archivos Git",
+            "de": "Git-Dateibrowser und Änderungsverfolgung",
+            "fr": "Explorateur Git et suivi des modifications",
+            "pt": "Explorador de arquivos Git"
+        },
+        "body": {
+            "en": "Browse project files, view git status, staged and unstaged changes, file diffs, and search by filename from the session Files tab.",
+            "es": "Explora archivos del proyecto, ve el estado de git, cambios staged/unstaged, diffs y busca por nombre desde la pestaña Files.",
+            "de": "Durchsuchen Sie Projektdateien, sehen Sie Git-Status, staged/unstaged Änderungen, Diffs und suchen Sie nach Dateinamen.",
+            "fr": "Parcourez les fichiers, consultez le statut git, les modifications staged/unstaged, les diffs et recherchez par nom.",
+            "pt": "Navegue pelos arquivos, veja status git, alterações staged/unstaged, diffs e pesquise por nome na aba Files."
+        }
+    },
+    {
+        "id": "u7",
+        "category": "updates",
+        "date": "2026-03-05",
+        "title": {
+            "en": "Gemini token usage tracking",
+            "es": "Seguimiento de tokens de Gemini",
+            "de": "Gemini Token-Nutzungsverfolgung",
+            "fr": "Suivi des tokens Gemini",
+            "pt": "Rastreamento de tokens do Gemini"
+        },
+        "body": {
+            "en": "Gemini sessions now report token usage into the same pipeline as Claude and Codex. The context meter shows real-time input/output tokens.",
+            "es": "Las sesiones de Gemini ahora reportan uso de tokens en el mismo pipeline que Claude y Codex. El medidor muestra tokens en tiempo real.",
+            "de": "Gemini-Sitzungen melden jetzt Token-Nutzung in derselben Pipeline wie Claude und Codex. Der Kontextmesser zeigt Echtzeit-Token.",
+            "fr": "Les sessions Gemini reportent maintenant l'utilisation des tokens dans le même pipeline que Claude et Codex.",
+            "pt": "Sessões Gemini agora reportam uso de tokens no mesmo pipeline que Claude e Codex. O medidor mostra tokens em tempo real."
+        }
+    },
+    {
+        "id": "u8",
+        "category": "updates",
+        "date": "2026-03-02",
+        "title": {
+            "en": "OpenCode & Kilocode token tracking",
+            "es": "Seguimiento de tokens OpenCode y Kilocode",
+            "de": "OpenCode & Kilocode Token-Tracking",
+            "fr": "Suivi des tokens OpenCode et Kilocode",
+            "pt": "Rastreamento de tokens OpenCode e Kilocode"
+        },
+        "body": {
+            "en": "Token usage from OpenCode and Kilocode agents is now captured in remote and local modes. Usage meters and analytics work across all supported agents.",
+            "es": "El uso de tokens de OpenCode y Kilocode ahora se captura en modos remoto y local. Los medidores y analíticas funcionan en todos los agentes.",
+            "de": "Die Token-Nutzung von OpenCode und Kilocode wird jetzt in Remote- und lokalen Modi erfasst. Alle Agenten werden unterstützt.",
+            "fr": "L'utilisation des tokens OpenCode et Kilocode est maintenant capturée en modes distant et local. Tous les agents sont pris en charge.",
+            "pt": "O uso de tokens do OpenCode e Kilocode agora é capturado em modos remoto e local. Todos os agentes são suportados."
+        }
+    },
+    {
+        "id": "u9",
+        "category": "updates",
+        "date": "2026-02-26",
+        "title": {
+            "en": "Command palette (Ctrl+K)",
+            "es": "Paleta de comandos (Ctrl+K)",
+            "de": "Befehlspalette (Strg+K)",
+            "fr": "Palette de commandes (Ctrl+K)",
+            "pt": "Paleta de comandos (Ctrl+K)"
+        },
+        "body": {
+            "en": "Press Ctrl+K to run slash commands, switch modes, change models, abort sessions, and access quick actions from one searchable menu.",
+            "es": "Presiona Ctrl+K para ejecutar slash commands, cambiar modos, modelos, abortar sesiones y acceder a acciones rápidas desde un menú con búsqueda.",
+            "de": "Drücken Sie Strg+K für Slash-Befehle, Moduswechsel, Modellwechsel, Sitzungsabbruch und Schnellaktionen in einem durchsuchbaren Menü.",
+            "fr": "Appuyez sur Ctrl+K pour les commandes slash, changer de mode, de modèle, annuler des sessions et accéder aux actions rapides.",
+            "pt": "Pressione Ctrl+K para slash commands, trocar modos, modelos, abortar sessões e acessar ações rápidas de um menu com busca."
+        }
+    },
+    {
+        "id": "u10",
+        "category": "updates",
+        "date": "2026-02-22",
+        "title": {
+            "en": "Silent auth refresh",
+            "es": "Refresh silencioso de autenticación",
+            "de": "Stille Auth-Aktualisierung",
+            "fr": "Rafraîchissement silencieux de l'auth",
+            "pt": "Refresh silencioso de autenticação"
+        },
+        "body": {
+            "en": "No more unexpected logouts. When your access token expires, NEST silently refreshes it using your stored refresh token. Sessions persist across browser restarts.",
+            "es": "No más cierres de sesión inesperados. Cuando tu token expira, NEST lo renueva silenciosamente. Las sesiones persisten entre reinicios del navegador.",
+            "de": "Keine unerwarteten Abmeldungen mehr. NEST erneuert Token automatisch. Sitzungen bleiben über Browser-Neustarts erhalten.",
+            "fr": "Plus de déconnexions inattendues. NEST renouvelle le token automatiquement. Les sessions persistent entre redémarrages.",
+            "pt": "Sem mais logouts inesperados. NEST renova o token automaticamente. Sessões persistem entre reinícios do navegador."
+        }
+    },
+    {
+        "id": "u11",
+        "category": "updates",
+        "date": "2026-02-18",
+        "title": {
+            "en": "Cost tracking & budget alerts",
+            "es": "Seguimiento de costos y alertas",
+            "de": "Kostenverfolgung und Budget-Warnungen",
+            "fr": "Suivi des coûts et alertes budgétaires",
+            "pt": "Rastreamento de custos e alertas"
+        },
+        "body": {
+            "en": "See estimated costs per session and per model. Set daily or monthly budgets and get warnings when approaching limits. Admin views show spend across users.",
+            "es": "Ve costos estimados por sesión y modelo. Configura presupuestos diarios o mensuales y recibe alertas. Las vistas admin muestran gastos por usuario.",
+            "de": "Geschätzte Kosten pro Sitzung und Modell. Budget-Warnungen und Admin-Ausgabenübersicht über alle Benutzer.",
+            "fr": "Coûts estimés par session et modèle. Alertes budgétaires et vue admin des dépenses par utilisateur.",
+            "pt": "Custos estimados por sessão e modelo. Alertas de orçamento e visão admin de gastos por usuário."
+        }
+    },
+    {
+        "id": "u12",
+        "category": "updates",
+        "date": "2026-02-14",
+        "title": {
+            "en": "Error boundaries per section",
+            "es": "Límites de error por sección",
+            "de": "Fehlergrenzen pro Bereich",
+            "fr": "Limites d'erreur par section",
+            "pt": "Limites de erro por seção"
+        },
+        "body": {
+            "en": "Errors in admin, profile, projects, or settings are contained to that area with a recovery UI instead of blanking the whole app.",
+            "es": "Los errores en admin, perfil, proyectos o configuración se contienen en esa área con un UI de recuperación en vez de romper toda la app.",
+            "de": "Fehler in Admin, Profil, Projekten oder Einstellungen werden lokal mit Wiederherstellungs-UI behandelt statt die ganze App zu blockieren.",
+            "fr": "Les erreurs sont contenues dans leur section avec une interface de récupération au lieu de bloquer toute l'application.",
+            "pt": "Erros em admin, perfil, projetos ou configurações ficam contidos naquela área com UI de recuperação em vez de travar todo o app."
+        }
+    },
+    {
+        "id": "u13",
+        "category": "updates",
+        "date": "2026-02-10",
+        "title": {
+            "en": "OS-aware desktop downloads",
+            "es": "Descargas de escritorio según sistema operativo",
+            "de": "Betriebssystemabhängige Desktop-Downloads",
+            "fr": "Téléchargements bureau adaptés à l'OS",
+            "pt": "Downloads desktop por sistema operacional"
+        },
+        "body": {
+            "en": "The download menu detects your OS and architecture, highlights the recommended binary, and links to all releases on GitHub.",
+            "es": "El menú de descarga detecta tu SO y arquitectura, resalta el binario recomendado y enlaza a todas las releases en GitHub.",
+            "de": "Das Download-Menü erkennt Ihr Betriebssystem, hebt die empfohlene Binärdatei hervor und verlinkt alle Releases auf GitHub.",
+            "fr": "Le menu de téléchargement détecte votre OS, met en avant le binaire recommandé et renvoie vers toutes les releases GitHub.",
+            "pt": "O menu de download detecta seu SO e arquitetura, destaca o binário recomendado e linka todas as releases no GitHub."
+        }
+    },
+    {
+        "id": "u14",
+        "category": "updates",
+        "date": "2026-02-06",
+        "title": {
+            "en": "Real-time notifications page",
+            "es": "Página de notificaciones en tiempo real",
+            "de": "Echtzeit-Benachrichtigungsseite",
+            "fr": "Page de notifications en temps réel",
+            "pt": "Página de notificações em tempo real"
+        },
+        "body": {
+            "en": "Stay informed with product updates and session messages in one place. Filter by tab, watch embedded videos, and see the latest announcements.",
+            "es": "Mantente informado con actualizaciones del producto y mensajes de sesión en un solo lugar. Filtra por pestaña, mira videos embebidos y ve los últimos anuncios.",
+            "de": "Bleiben Sie über Produktupdates und Sitzungsnachrichten informiert. Filtern Sie nach Tab, schauen Sie eingebettete Videos und sehen Sie die neuesten Ankündigungen.",
+            "fr": "Restez informé avec les mises à jour produit et messages de session. Filtrez par onglet, regardez les vidéos intégrées.",
+            "pt": "Fique informado com atualizações do produto e mensagens de sessão. Filtre por aba, assista vídeos e veja os últimos anúncios."
+        }
+    },
+    {
+        "id": "u15",
+        "category": "updates",
+        "date": "2026-02-02",
+        "title": {
+            "en": "Terminal command autocomplete",
+            "es": "Autocompletado de comandos en terminal",
+            "de": "Terminal-Befehlsautovervollständigung",
+            "fr": "Auto-complétion des commandes terminal",
+            "pt": "Autocomplete de comandos no terminal"
+        },
+        "body": {
+            "en": "Start typing and get OS-aware command suggestions. The autocomplete detects Linux, macOS, or Windows and filters commands with descriptions and usage hints.",
+            "es": "Empieza a escribir y recibe sugerencias de comandos según tu SO. El autocompletado detecta Linux, macOS o Windows y filtra con descripciones y hints de uso.",
+            "de": "Beginnen Sie zu tippen und erhalten Sie OS-abhängige Befehlsvorschläge mit Beschreibungen und Nutzungshinweisen.",
+            "fr": "Commencez à taper et obtenez des suggestions de commandes adaptées à votre OS avec descriptions et astuces.",
+            "pt": "Comece a digitar e receba sugestões de comandos por SO. O autocomplete filtra com descrições e dicas de uso."
+        }
+    },
+    {
+        "id": "u16",
+        "category": "updates",
+        "date": "2026-01-28",
+        "title": {
+            "en": "PWA improvements for tablets",
+            "es": "Mejoras PWA para tablets",
+            "de": "PWA-Verbesserungen für Tablets",
+            "fr": "Améliorations PWA pour tablettes",
+            "pt": "Melhorias PWA para tablets"
+        },
+        "body": {
+            "en": "Fixed scrolling and touch responsiveness on iPad and Android tablets. The PWA now works smoothly on old and new models with proper viewport handling.",
+            "es": "Corregido el scroll y la respuesta táctil en iPad y tablets Android. La PWA ahora funciona bien en modelos antiguos y nuevos con manejo correcto del viewport.",
+            "de": "Scrolling und Touch-Reaktionsfähigkeit auf iPad und Android-Tablets behoben. Die PWA funktioniert jetzt auf alten und neuen Modellen.",
+            "fr": "Correction du défilement et de la réactivité tactile sur iPad et tablettes Android. La PWA fonctionne sur tous les modèles.",
+            "pt": "Corrigido scroll e responsividade touch em iPad e tablets Android. A PWA agora funciona em modelos antigos e novos."
+        }
+    },
+    {
+        "id": "u17",
+        "category": "updates",
+        "date": "2026-01-22",
+        "title": {
+            "en": "Full internationalization (5 languages)",
+            "es": "Internacionalización completa (5 idiomas)",
+            "de": "Vollständige Internationalisierung (5 Sprachen)",
+            "fr": "Internationalisation complète (5 langues)",
+            "pt": "Internacionalização completa (5 idiomas)"
+        },
+        "body": {
+            "en": "The entire web interface is now available in English, Spanish, German, French, and Portuguese. Switch languages from the header at any time.",
+            "es": "Toda la interfaz web está disponible en inglés, español, alemán, francés y portugués. Cambia de idioma desde el header en cualquier momento.",
+            "de": "Die gesamte Weboberfläche ist jetzt in Englisch, Spanisch, Deutsch, Französisch und Portugiesisch verfügbar.",
+            "fr": "Toute l'interface web est disponible en anglais, espagnol, allemand, français et portugais.",
+            "pt": "Toda a interface web está disponível em inglês, espanhol, alemão, francês e português. Troque o idioma a qualquer momento."
+        }
+    },
+    {
+        "id": "u18",
+        "category": "updates",
+        "date": "2026-01-16",
+        "title": {
+            "en": "Admin analytics with D3.js charts",
+            "es": "Analíticas admin con gráficos D3.js",
+            "de": "Admin-Analysen mit D3.js-Diagrammen",
+            "fr": "Analyses admin avec graphiques D3.js",
+            "pt": "Análises admin com gráficos D3.js"
+        },
+        "body": {
+            "en": "Project detail pages now include interactive D3.js charts: area charts for activity, pie charts for agent distribution, bar charts for usage, and heatmaps for session patterns.",
+            "es": "Las páginas de detalle de proyecto ahora incluyen gráficos D3.js interactivos: área para actividad, pastel para distribución de agentes, barras para uso y heatmaps para patrones de sesión.",
+            "de": "Projektdetailseiten enthalten jetzt interaktive D3.js-Diagramme: Flächendiagramme, Kreisdiagramme, Balkendiagramme und Heatmaps.",
+            "fr": "Les pages projet incluent des graphiques D3.js interactifs : aires, camemberts, barres et cartes de chaleur.",
+            "pt": "Páginas de detalhe de projeto agora incluem gráficos D3.js interativos: área, pizza, barras e heatmaps."
+        }
+    },
+    {
+        "id": "u19",
+        "category": "updates",
+        "date": "2026-01-10",
+        "title": {
+            "en": "Unified composer with Stop/Send button",
+            "es": "Compositor unificado con botón Stop/Send",
+            "de": "Einheitlicher Composer mit Stop/Send-Button",
+            "fr": "Composeur unifié avec bouton Stop/Envoyer",
+            "pt": "Compositor unificado com botão Stop/Send"
+        },
+        "body": {
+            "en": "The chat composer now has a single button that toggles between Send and Stop. Model and permission selectors are inline dropdowns right in the composer bar.",
+            "es": "El compositor del chat ahora tiene un botón único que alterna entre Enviar y Detener. Los selectores de modelo y permisos son dropdowns inline en la barra del compositor.",
+            "de": "Der Chat-Composer hat jetzt einen Button, der zwischen Senden und Stoppen wechselt. Modell- und Berechtigungswähler sind Inline-Dropdowns.",
+            "fr": "Le composeur a maintenant un bouton unique Envoyer/Arrêter. Les sélecteurs de modèle et permissions sont des menus déroulants inline.",
+            "pt": "O compositor agora tem um botão único que alterna entre Enviar e Parar. Seletores de modelo e permissões são dropdowns inline."
+        }
+    },
+    {
+        "id": "u20",
+        "category": "updates",
+        "date": "2026-01-04",
+        "title": {
+            "en": "Multi-instance terminal connection fix",
+            "es": "Fix de conexión terminal multi-instancia",
+            "de": "Multi-Instanz Terminal-Verbindungsfix",
+            "fr": "Correction de connexion terminal multi-instance",
+            "pt": "Fix de conexão terminal multi-instância"
+        },
+        "body": {
+            "en": "Fixed the 'Connecting...' issue in production multi-instance deployments. Added polling fallback when SSE terminal-ready events are missed due to load balancing.",
+            "es": "Corregido el problema de 'Connecting...' en despliegues multi-instancia en producción. Agregado fallback de polling cuando los eventos SSE de terminal-ready se pierden por load balancing.",
+            "de": "Das 'Connecting...'-Problem in Multi-Instanz-Deployments behoben. Polling-Fallback hinzugefügt wenn SSE-Events durch Load Balancing verloren gehen.",
+            "fr": "Correction du problème 'Connecting...' en déploiement multi-instance. Ajout d'un fallback polling quand les événements SSE sont perdus.",
+            "pt": "Corrigido o problema 'Connecting...' em deploys multi-instância. Adicionado fallback de polling quando eventos SSE são perdidos por load balancing."
         }
     },
     {
         "id": "m1",
         "category": "messages",
-        "date": "2026-03-20",
+        "date": "2026-03-22",
         "title": {
-            "en": "Session completed: nest refactoring",
-            "es": "Sesión completada: refactoring nest",
-            "de": "Sitzung abgeschlossen: nest Refactoring",
-            "fr": "Session terminée : refactoring nest",
-            "pt": "Sessão concluída: refatoração nest"
+            "en": "Welcome to NEST",
+            "es": "Bienvenido a NEST",
+            "de": "Willkommen bei NEST",
+            "fr": "Bienvenue sur NEST",
+            "pt": "Bem-vindo ao NEST"
         },
         "body": {
-            "en": "Claude finished the refactoring session. 14 files changed, all tests passing.",
-            "es": "Claude terminó la sesión de refactoring. 14 archivos modificados, todos los tests pasando.",
-            "de": "Claude hat die Refactoring-Sitzung abgeschlossen. 14 Dateien geändert, alle Tests bestanden.",
-            "fr": "Claude a terminé la session de refactoring. 14 fichiers modifiés, tous les tests passent.",
-            "pt": "Claude finalizou a sessão de refatoração. 14 arquivos alterados, todos os testes passando."
+            "en": "Your account is ready. Start a session from the sidebar, connect your CLI with 'nest auth', and control your agents remotely. Check the Updates tab for new features.",
+            "es": "Tu cuenta está lista. Inicia una sesión desde el sidebar, conecta tu CLI con 'nest auth' y controla tus agentes remotamente. Revisa la pestaña Actualizaciones.",
+            "de": "Ihr Konto ist bereit. Starten Sie eine Sitzung, verbinden Sie Ihre CLI mit 'nest auth' und steuern Sie Ihre Agenten remote.",
+            "fr": "Votre compte est prêt. Démarrez une session, connectez votre CLI avec 'nest auth' et contrôlez vos agents à distance.",
+            "pt": "Sua conta está pronta. Inicie uma sessão, conecte seu CLI com 'nest auth' e controle seus agentes remotamente."
         }
     },
     {
         "id": "m2",
         "category": "messages",
-        "date": "2026-03-18",
+        "date": "2026-03-10",
         "title": {
-            "en": "Permission request: file deletion",
-            "es": "Solicitud de permiso: eliminar archivo",
-            "de": "Berechtigungsanfrage: Datei löschen",
-            "fr": "Demande de permission : suppression de fichier",
-            "pt": "Solicitação de permissão: exclusão de arquivo"
+            "en": "Install the CLI for full access",
+            "es": "Instala el CLI para acceso completo",
+            "de": "Installieren Sie die CLI für vollen Zugriff",
+            "fr": "Installez la CLI pour un accès complet",
+            "pt": "Instale o CLI para acesso completo"
         },
         "body": {
-            "en": "Codex is requesting permission to delete 3 files in src/legacy/. Review and approve from the session.",
-            "es": "Codex solicita permiso para eliminar 3 archivos en src/legacy/. Revisa y aprueba desde la sesión.",
-            "de": "Codex fordert die Berechtigung an, 3 Dateien in src/legacy/ zu löschen. Überprüfen und genehmigen Sie in der Sitzung.",
-            "fr": "Codex demande la permission de supprimer 3 fichiers dans src/legacy/. Vérifiez et approuvez depuis la session.",
-            "pt": "Codex está solicitando permissão para excluir 3 arquivos em src/legacy/. Revise e aprove na sessão."
+            "en": "Get the most out of NEST by installing the CLI: npm install -g @anthropic/nest. Run 'nest auth' to connect and 'nest start' to launch your first agent session.",
+            "es": "Saca el máximo de NEST instalando el CLI: npm install -g @anthropic/nest. Ejecuta 'nest auth' para conectar y 'nest start' para lanzar tu primera sesión.",
+            "de": "Holen Sie das Beste aus NEST mit der CLI: npm install -g @anthropic/nest. Führen Sie 'nest auth' zum Verbinden und 'nest start' zum Starten aus.",
+            "fr": "Tirez le meilleur de NEST avec la CLI : npm install -g @anthropic/nest. Lancez 'nest auth' puis 'nest start'.",
+            "pt": "Tire o máximo do NEST com o CLI: npm install -g @anthropic/nest. Execute 'nest auth' para conectar e 'nest start' para iniciar."
         }
     }
 ]
