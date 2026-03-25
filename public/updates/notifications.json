@@ -16,9 +16,7 @@
             "de": "Steuern Sie Ihre KI-Coding-Agenten von überall. NEST verbindet Claude Code, Codex, Gemini, Cursor und OpenCode mit einem Web-Dashboard zur Überwachung und Verwaltung von Sitzungen.",
             "fr": "Contrôlez vos agents IA depuis n'importe où. NEST connecte Claude Code, Codex, Gemini, Cursor et OpenCode à un tableau de bord web.",
             "pt": "Controle seus agentes IA de qualquer lugar. NEST conecta Claude Code, Codex, Gemini, Cursor e OpenCode a um painel web."
-        },
-        "video": "https://youtu.be/t12su6vuw1Q",
-        "image": "https://raw.githubusercontent.com/contextzero/nest_hub/main/public/annie.png"
+        }
     },
     {
         "id": "u2",
