@@ -1,0 +1,118 @@
+[
+    {
+        "id": "u1",
+        "category": "updates",
+        "date": "2026-03-16",
+        "title": {
+            "en": "NEST Desktop App is here",
+            "es": "La app de escritorio NEST ya está aquí",
+            "de": "NEST Desktop-App ist da",
+            "fr": "L'app bureau NEST est arrivée",
+            "pt": "O app desktop NEST chegou"
+        },
+        "body": {
+            "en": "Download NEST Desktop to unlock local file access, run agents directly on your machine, and manage projects without a browser.",
+            "es": "Descarga NEST Desktop para desbloquear el acceso a archivos locales, ejecutar agentes directamente en tu máquina y gestionar proyectos sin navegador.",
+            "de": "Laden Sie NEST Desktop herunter, um auf lokale Dateien zuzugreifen, Agenten direkt auf Ihrem Computer auszuführen und Projekte ohne Browser zu verwalten.",
+            "fr": "Téléchargez NEST Desktop pour accéder aux fichiers locaux, exécuter des agents directement sur votre machine et gérer des projets sans navigateur.",
+            "pt": "Baixe o NEST Desktop para acessar arquivos locais, executar agentes diretamente na sua máquina e gerenciar projetos sem navegador."
+        },
+        "video": "https://youtu.be/t12su6vuw1Q",
+        "image": "https://raw.githubusercontent.com/contextzero/nest_hub/main/public/annie.png"
+    },
+    {
+        "id": "u2",
+        "category": "updates",
+        "date": "2026-03-01",
+        "title": {
+            "en": "Multi-agent support with Gemini",
+            "es": "Soporte multi-agente con Gemini",
+            "de": "Multi-Agent-Unterstützung mit Gemini",
+            "fr": "Support multi-agent avec Gemini",
+            "pt": "Suporte multi-agente com Gemini"
+        },
+        "body": {
+            "en": "You can now run Gemini alongside Claude and Codex. Select your agent when starting a session and switch mid-conversation.",
+            "es": "Ahora puedes ejecutar Gemini junto con Claude y Codex. Selecciona tu agente al iniciar una sesión y cambia durante la conversación.",
+            "de": "Sie können jetzt Gemini neben Claude und Codex ausführen. Wählen Sie Ihren Agenten beim Starten einer Sitzung und wechseln Sie während des Gesprächs.",
+            "fr": "Vous pouvez maintenant exécuter Gemini aux côtés de Claude et Codex. Sélectionnez votre agent au démarrage et changez en cours de conversation.",
+            "pt": "Agora você pode executar Gemini junto com Claude e Codex. Selecione seu agente ao iniciar uma sessão e troque durante a conversa."
+        }
+    },
+    {
+        "id": "u3",
+        "category": "updates",
+        "date": "2026-02-14",
+        "title": {
+            "en": "Real-time terminal sharing",
+            "es": "Compartir terminal en tiempo real",
+            "de": "Echtzeit-Terminal-Freigabe",
+            "fr": "Partage de terminal en temps réel",
+            "pt": "Compartilhamento de terminal em tempo real"
+        },
+        "body": {
+            "en": "Split panes, broadcast mode, themes, and command snippets are now available in the web terminal. All terminal data is encrypted and persisted.",
+            "es": "Paneles divididos, modo broadcast, temas y snippets de comandos ya están disponibles en la terminal web. Todos los datos del terminal están encriptados y persistidos.",
+            "de": "Geteilte Fenster, Broadcast-Modus, Themes und Befehls-Snippets sind jetzt im Web-Terminal verfügbar. Alle Terminal-Daten sind verschlüsselt und gespeichert.",
+            "fr": "Panneaux divisés, mode broadcast, thèmes et snippets de commandes sont maintenant disponibles dans le terminal web. Toutes les données sont chiffrées et persistées.",
+            "pt": "Painéis divididos, modo broadcast, temas e snippets de comandos já estão disponíveis no terminal web. Todos os dados do terminal são criptografados e persistidos."
+        }
+    },
+    {
+        "id": "u4",
+        "category": "updates",
+        "date": "2026-01-20",
+        "title": {
+            "en": "Enhanced permission modes",
+            "es": "Modos de permisos mejorados",
+            "de": "Erweiterte Berechtigungsmodi",
+            "fr": "Modes de permission améliorés",
+            "pt": "Modos de permissão aprimorados"
+        },
+        "body": {
+            "en": "New permission modes let you control exactly what your agents can do: default, acceptEdits, bypassPermissions, and plan mode. Switch mid-session from the composer.",
+            "es": "Los nuevos modos de permisos te permiten controlar exactamente lo que pueden hacer tus agentes: default, acceptEdits, bypassPermissions y modo plan. Cambia durante la sesión desde el compositor.",
+            "de": "Neue Berechtigungsmodi ermöglichen die genaue Kontrolle: default, acceptEdits, bypassPermissions und Plan-Modus. Wechseln Sie während der Sitzung über den Composer.",
+            "fr": "Les nouveaux modes de permission vous permettent de contrôler exactement ce que vos agents peuvent faire. Changez en cours de session depuis le composeur.",
+            "pt": "Os novos modos de permissão permitem controlar exatamente o que seus agentes podem fazer. Troque durante a sessão pelo compositor."
+        }
+    },
+    {
+        "id": "m1",
+        "category": "messages",
+        "date": "2026-03-20",
+        "title": {
+            "en": "Session completed: nest refactoring",
+            "es": "Sesión completada: refactoring nest",
+            "de": "Sitzung abgeschlossen: nest Refactoring",
+            "fr": "Session terminée : refactoring nest",
+            "pt": "Sessão concluída: refatoração nest"
+        },
+        "body": {
+            "en": "Claude finished the refactoring session. 14 files changed, all tests passing.",
+            "es": "Claude terminó la sesión de refactoring. 14 archivos modificados, todos los tests pasando.",
+            "de": "Claude hat die Refactoring-Sitzung abgeschlossen. 14 Dateien geändert, alle Tests bestanden.",
+            "fr": "Claude a terminé la session de refactoring. 14 fichiers modifiés, tous les tests passent.",
+            "pt": "Claude finalizou a sessão de refatoração. 14 arquivos alterados, todos os testes passando."
+        }
+    },
+    {
+        "id": "m2",
+        "category": "messages",
+        "date": "2026-03-18",
+        "title": {
+            "en": "Permission request: file deletion",
+            "es": "Solicitud de permiso: eliminar archivo",
+            "de": "Berechtigungsanfrage: Datei löschen",
+            "fr": "Demande de permission : suppression de fichier",
+            "pt": "Solicitação de permissão: exclusão de arquivo"
+        },
+        "body": {
+            "en": "Codex is requesting permission to delete 3 files in src/legacy/. Review and approve from the session.",
+            "es": "Codex solicita permiso para eliminar 3 archivos en src/legacy/. Revisa y aprueba desde la sesión.",
+            "de": "Codex fordert die Berechtigung an, 3 Dateien in src/legacy/ zu löschen. Überprüfen und genehmigen Sie in der Sitzung.",
+            "fr": "Codex demande la permission de supprimer 3 fichiers dans src/legacy/. Vérifiez et approuvez depuis la session.",
+            "pt": "Codex está solicitando permissão para excluir 3 arquivos em src/legacy/. Revise e aprove na sessão."
+        }
+    }
+]
