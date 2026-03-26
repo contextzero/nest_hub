@@ -1,0 +1,403 @@
+[
+    {
+        "id": "a1",
+        "category": "updates",
+        "date": "2026-03-22",
+        "title": {
+            "en": "NEST Platform Overview",
+            "es": "Visión general de la plataforma NEST",
+            "de": "NEST Plattform-Übersicht",
+            "fr": "Aperçu de la plateforme NEST",
+            "pt": "Visão geral da plataforma NEST"
+        },
+        "body": {
+            "en": "NEST is a local-first platform for running AI coding agents with remote control via web. CLI wraps agents (Claude, Codex, Gemini, Cursor, OpenCode) and connects to the Rust server for real-time sync, analytics, and multi-user management.",
+            "es": "NEST es una plataforma local-first para ejecutar agentes de codificación IA con control remoto vía web. El CLI envuelve agentes y se conecta al servidor Rust para sincronización en tiempo real, analíticas y gestión multi-usuario.",
+            "de": "NEST ist eine Local-First-Plattform für KI-Coding-Agenten mit Remote-Steuerung über Web. Die CLI verbindet Agenten mit dem Rust-Server für Echtzeit-Sync, Analysen und Multi-User-Verwaltung.",
+            "fr": "NEST est une plateforme local-first pour agents IA avec contrôle distant via web. Le CLI connecte les agents au serveur Rust pour la synchronisation temps réel et la gestion multi-utilisateurs.",
+            "pt": "NEST é uma plataforma local-first para agentes IA com controle remoto via web. O CLI conecta agentes ao servidor Rust para sync em tempo real, análises e gestão multi-usuário."
+        },
+        "video": "https://youtu.be/t12su6vuw1Q",
+        "image": "https://raw.githubusercontent.com/contextzero/nest_hub/main/public/annie.png"
+    },
+    {
+        "id": "a2",
+        "category": "updates",
+        "date": "2026-03-20",
+        "title": {
+            "en": "Enterprise terminal with encrypted persistence",
+            "es": "Terminal enterprise con persistencia encriptada",
+            "de": "Enterprise-Terminal mit verschlüsselter Persistenz",
+            "fr": "Terminal entreprise avec persistance chiffrée",
+            "pt": "Terminal enterprise com persistência criptografada"
+        },
+        "body": {
+            "en": "Terminal sessions are encrypted with AES-256-GCM and stored per project/user. Admins can monitor active terminals, view event counts, data sizes, and session durations from the project detail page. Split panes, broadcast mode, and themes included.",
+            "es": "Las sesiones de terminal están encriptadas con AES-256-GCM y almacenadas por proyecto/usuario. Los admins pueden monitorear terminales activas, ver conteo de eventos, tamaños de datos y duraciones desde la página de detalle del proyecto.",
+            "de": "Terminal-Sitzungen werden mit AES-256-GCM verschlüsselt und pro Projekt/Benutzer gespeichert. Admins können aktive Terminals überwachen, Event-Zähler, Datengrößen und Sitzungsdauern einsehen.",
+            "fr": "Les sessions terminal sont chiffrées AES-256-GCM et stockées par projet/utilisateur. Les admins peuvent surveiller les terminaux actifs, les compteurs d'événements et les durées.",
+            "pt": "Sessões de terminal são criptografadas com AES-256-GCM e armazenadas por projeto/usuário. Admins podem monitorar terminais ativos, contagem de eventos e durações."
+        }
+    },
+    {
+        "id": "a3",
+        "category": "updates",
+        "date": "2026-03-18",
+        "title": {
+            "en": "Multi-agent model selection across all agents",
+            "es": "Selección de modelo multi-agente en todos los agentes",
+            "de": "Multi-Agent-Modellauswahl für alle Agenten",
+            "fr": "Sélection de modèle multi-agent pour tous les agents",
+            "pt": "Seleção de modelo multi-agente para todos os agentes"
+        },
+        "body": {
+            "en": "Users can pick models when starting sessions and switch mid-conversation. Supported for Claude Code, Codex, Gemini, Cursor and OpenCode. The CLI passes the chosen model where the agent supports it.",
+            "es": "Los usuarios pueden elegir modelos al iniciar sesiones y cambiar durante la conversación. Soportado para Claude Code, Codex, Gemini, Cursor y OpenCode. El CLI pasa el modelo elegido donde el agente lo soporte.",
+            "de": "Benutzer können Modelle beim Start wählen und mitten im Gespräch wechseln. Unterstützt für alle Agenten. Die CLI übergibt das gewählte Modell.",
+            "fr": "Les utilisateurs peuvent choisir le modèle au démarrage et changer en cours de conversation. Supporté pour tous les agents.",
+            "pt": "Usuários podem escolher modelos ao iniciar e trocar durante a conversa. Suportado para todos os agentes. O CLI passa o modelo escolhido."
+        }
+    },
+    {
+        "id": "a4",
+        "category": "updates",
+        "date": "2026-03-16",
+        "title": {
+            "en": "Permission modes & Kilocode task modes",
+            "es": "Modos de permisos y modos de tarea Kilocode",
+            "de": "Berechtigungsmodi und Kilocode-Aufgabenmodi",
+            "fr": "Modes de permission et modes de tâche Kilocode",
+            "pt": "Modos de permissão e modos de tarefa Kilocode"
+        },
+        "body": {
+            "en": "Admins can set default permission modes per namespace. Users get clear labels for default, acceptEdits, bypassPermissions, and plan-only. Kilocode task modes (Architect, Ask) are controllable from the web and applied on the CLI.",
+            "es": "Los admins pueden configurar modos de permisos por defecto por namespace. Los usuarios ven etiquetas claras para cada modo. Los modos de tarea Kilocode son controlables desde la web y aplicados en el CLI.",
+            "de": "Admins können Standard-Berechtigungsmodi pro Namespace festlegen. Kilocode-Aufgabenmodi sind von der Web-Oberfläche steuerbar und werden auf der CLI angewendet.",
+            "fr": "Les admins peuvent définir des modes de permission par défaut par namespace. Les modes de tâche Kilocode sont contrôlables depuis le web.",
+            "pt": "Admins podem configurar modos de permissão padrão por namespace. Modos de tarefa Kilocode são controláveis pela web e aplicados no CLI."
+        }
+    },
+    {
+        "id": "a5",
+        "category": "updates",
+        "date": "2026-03-14",
+        "title": {
+            "en": "Git file browser & RPC-first architecture",
+            "es": "Explorador Git con arquitectura RPC-first",
+            "de": "Git-Dateibrowser mit RPC-First-Architektur",
+            "fr": "Explorateur Git avec architecture RPC-first",
+            "pt": "Explorador Git com arquitetura RPC-first"
+        },
+        "body": {
+            "en": "The Files tab uses RPC-first strategy: git commands are routed through the CLI via WebSocket, falling back to direct HTTP when offline. Returns empty 200 instead of 404 for sessions without git, preventing UI errors.",
+            "es": "La pestaña Files usa estrategia RPC-first: los comandos git se enrutan por el CLI vía WebSocket, con fallback a HTTP directo. Retorna 200 vacío en vez de 404 para sesiones sin git.",
+            "de": "Der Files-Tab nutzt RPC-First-Strategie: Git-Befehle werden über CLI via WebSocket geroutet, mit HTTP-Fallback. Gibt leere 200-Antworten statt 404 für Sitzungen ohne Git zurück.",
+            "fr": "L'onglet Files utilise une stratégie RPC-first : les commandes git passent par le CLI via WebSocket, avec fallback HTTP. Retourne 200 vide au lieu de 404.",
+            "pt": "A aba Files usa estratégia RPC-first: comandos git são roteados pelo CLI via WebSocket, com fallback HTTP. Retorna 200 vazio em vez de 404."
+        }
+    },
+    {
+        "id": "a6",
+        "category": "updates",
+        "date": "2026-03-12",
+        "title": {
+            "en": "Gemini token usage pipeline",
+            "es": "Pipeline de uso de tokens Gemini",
+            "de": "Gemini Token-Nutzungspipeline",
+            "fr": "Pipeline d'utilisation des tokens Gemini",
+            "pt": "Pipeline de uso de tokens Gemini"
+        },
+        "body": {
+            "en": "Gemini agent sessions now feed token usage into the same server pipeline as Claude and Codex. Usage data is stored for analytics dashboards. The context meter in the chat header reflects real-time token counts.",
+            "es": "Las sesiones de Gemini ahora alimentan el uso de tokens en el mismo pipeline del servidor que Claude y Codex. Los datos se almacenan para dashboards analíticos.",
+            "de": "Gemini-Sitzungen melden Token-Nutzung in dieselbe Server-Pipeline wie Claude und Codex. Daten werden für Analytics-Dashboards gespeichert.",
+            "fr": "Les sessions Gemini alimentent maintenant le même pipeline de tokens que Claude et Codex. Les données sont stockées pour les tableaux de bord analytiques.",
+            "pt": "Sessões Gemini agora alimentam uso de tokens no mesmo pipeline que Claude e Codex. Dados são armazenados para dashboards analíticos."
+        }
+    },
+    {
+        "id": "a7",
+        "category": "updates",
+        "date": "2026-03-10",
+        "title": {
+            "en": "OpenCode & Kilocode token capture",
+            "es": "Captura de tokens OpenCode y Kilocode",
+            "de": "OpenCode & Kilocode Token-Erfassung",
+            "fr": "Capture des tokens OpenCode et Kilocode",
+            "pt": "Captura de tokens OpenCode e Kilocode"
+        },
+        "body": {
+            "en": "Token usage from OpenCode and Kilocode agents is captured in both remote and local modes. ACP usage events are no longer dropped in remote mode. Admin analytics now cover all supported agents.",
+            "es": "El uso de tokens de OpenCode y Kilocode se captura en modos remoto y local. Los eventos ACP ya no se pierden en modo remoto. Las analíticas admin cubren todos los agentes.",
+            "de": "Token-Nutzung von OpenCode und Kilocode wird in Remote- und lokalen Modi erfasst. ACP-Events gehen nicht mehr verloren. Admin-Analytics decken alle Agenten ab.",
+            "fr": "L'utilisation des tokens OpenCode et Kilocode est capturée en modes distant et local. Les événements ACP ne sont plus perdus. Les analytics admin couvrent tous les agents.",
+            "pt": "Uso de tokens OpenCode e Kilocode é capturado em modos remoto e local. Eventos ACP não são mais perdidos. Analytics admin cobrem todos os agentes."
+        }
+    },
+    {
+        "id": "a8",
+        "category": "updates",
+        "date": "2026-03-06",
+        "title": {
+            "en": "Command palette with slash commands",
+            "es": "Paleta de comandos con slash commands",
+            "de": "Befehlspalette mit Slash-Befehlen",
+            "fr": "Palette de commandes avec commandes slash",
+            "pt": "Paleta de comandos com slash commands"
+        },
+        "body": {
+            "en": "Users can press Ctrl+K to access slash commands, switch modes, change models, abort sessions, and trigger quick actions. Optional quick action buttons above the composer reduce friction for common operations.",
+            "es": "Los usuarios presionan Ctrl+K para slash commands, cambiar modos, modelos, abortar sesiones y acciones rápidas. Botones opcionales sobre el compositor reducen la fricción.",
+            "de": "Benutzer drücken Strg+K für Slash-Befehle, Moduswechsel, Modellwechsel und Schnellaktionen. Optionale Quick-Action-Buttons über dem Composer.",
+            "fr": "Les utilisateurs appuient sur Ctrl+K pour les commandes slash, changements de mode/modèle et actions rapides. Boutons d'action rapide optionnels.",
+            "pt": "Usuários pressionam Ctrl+K para slash commands, trocar modos, modelos e ações rápidas. Botões de ação rápida opcionais acima do compositor."
+        }
+    },
+    {
+        "id": "a9",
+        "category": "updates",
+        "date": "2026-03-02",
+        "title": {
+            "en": "Silent auth refresh with JWT rotation",
+            "es": "Refresh silencioso de auth con rotación JWT",
+            "de": "Stille Auth-Aktualisierung mit JWT-Rotation",
+            "fr": "Rafraîchissement silencieux avec rotation JWT",
+            "pt": "Refresh silencioso de auth com rotação JWT"
+        },
+        "body": {
+            "en": "Access tokens are proactively refreshed before expiration. Refresh tokens are rotated on each use and stored securely. Users no longer experience unexpected logouts or 401 errors on page reload.",
+            "es": "Los tokens de acceso se renuevan proactivamente antes de expirar. Los refresh tokens se rotan en cada uso. Los usuarios ya no experimentan logouts inesperados ni errores 401.",
+            "de": "Access-Token werden proaktiv vor Ablauf erneuert. Refresh-Token werden bei jeder Verwendung rotiert. Keine unerwarteten Abmeldungen oder 401-Fehler mehr.",
+            "fr": "Les tokens d'accès sont renouvelés proactivement. Les refresh tokens sont rotés à chaque utilisation. Plus de déconnexions inattendues.",
+            "pt": "Tokens de acesso são renovados proativamente. Refresh tokens são rotados a cada uso. Sem mais logouts inesperados ou erros 401."
+        }
+    },
+    {
+        "id": "a10",
+        "category": "updates",
+        "date": "2026-02-26",
+        "title": {
+            "en": "Cost tracking with model-based pricing",
+            "es": "Seguimiento de costos con precios por modelo",
+            "de": "Kostenverfolgung mit modellbasierter Preisgestaltung",
+            "fr": "Suivi des coûts avec tarification par modèle",
+            "pt": "Rastreamento de custos com preços por modelo"
+        },
+        "body": {
+            "en": "Each model maps to dollar rates per token. Estimated costs are stored per usage event. Admin views show spend per user, project, and model. Daily/monthly budget alerts notify admins before limits are reached.",
+            "es": "Cada modelo tiene tarifas por token. Los costos estimados se almacenan por evento. Las vistas admin muestran gastos por usuario, proyecto y modelo. Alertas de presupuesto diario/mensual.",
+            "de": "Jedes Modell hat Token-Tarife. Geschätzte Kosten werden pro Event gespeichert. Admin-Ansichten zeigen Ausgaben pro Benutzer, Projekt und Modell. Budget-Warnungen.",
+            "fr": "Chaque modèle a des tarifs par token. Les coûts sont stockés par événement. Les vues admin montrent les dépenses par utilisateur, projet et modèle. Alertes budgétaires.",
+            "pt": "Cada modelo tem tarifas por token. Custos estimados são armazenados por evento. Visões admin mostram gastos por usuário, projeto e modelo. Alertas de orçamento."
+        }
+    },
+    {
+        "id": "a11",
+        "category": "updates",
+        "date": "2026-02-22",
+        "title": {
+            "en": "Granular React error boundaries",
+            "es": "Límites de error granulares en React",
+            "de": "Granulare React-Fehlergrenzen",
+            "fr": "Limites d'erreur React granulaires",
+            "pt": "Limites de erro granulares no React"
+        },
+        "body": {
+            "en": "Errors in admin, profile, projects, or settings are contained to that section with a recovery UI. The rest of the app remains functional. Reduces support tickets from full-page crashes.",
+            "es": "Los errores en admin, perfil, proyectos o configuración se contienen en esa sección con UI de recuperación. El resto de la app sigue funcional.",
+            "de": "Fehler in Admin, Profil, Projekten oder Einstellungen werden lokal mit Wiederherstellungs-UI behandelt. Der Rest der App bleibt funktional.",
+            "fr": "Les erreurs sont contenues dans leur section avec interface de récupération. Le reste de l'application reste fonctionnel.",
+            "pt": "Erros em admin, perfil ou projetos ficam contidos naquela seção com UI de recuperação. O resto do app continua funcional."
+        }
+    },
+    {
+        "id": "a12",
+        "category": "updates",
+        "date": "2026-02-18",
+        "title": {
+            "en": "D3.js analytics dashboards",
+            "es": "Dashboards analíticos con D3.js",
+            "de": "D3.js Analytics-Dashboards",
+            "fr": "Tableaux de bord analytiques D3.js",
+            "pt": "Dashboards analíticos com D3.js"
+        },
+        "body": {
+            "en": "Project detail pages include interactive D3.js charts: area charts for activity over time, pie charts for agent distribution, bar charts for usage metrics, and heatmaps for session patterns.",
+            "es": "Las páginas de detalle incluyen gráficos D3.js interactivos: áreas para actividad, pastel para distribución de agentes, barras para métricas y heatmaps para patrones de sesión.",
+            "de": "Projektdetailseiten enthalten interaktive D3.js-Diagramme: Flächendiagramme, Kreisdiagramme, Balkendiagramme und Heatmaps.",
+            "fr": "Les pages projet incluent des graphiques D3.js : aires, camemberts, barres et cartes de chaleur.",
+            "pt": "Páginas de detalhe incluem gráficos D3.js: área, pizza, barras e heatmaps para padrões de sessão."
+        }
+    },
+    {
+        "id": "a13",
+        "category": "updates",
+        "date": "2026-02-14",
+        "title": {
+            "en": "OS-aware download menu with auto-detection",
+            "es": "Menú de descarga con auto-detección de SO",
+            "de": "OS-erkennendes Download-Menü",
+            "fr": "Menu de téléchargement avec détection automatique d'OS",
+            "pt": "Menu de download com auto-detecção de SO"
+        },
+        "body": {
+            "en": "The sidebar download menu detects the user's OS and architecture using navigator.userAgentData, highlights the recommended binary, and links to all releases on the public nest_hub repository.",
+            "es": "El menú de descarga del sidebar detecta el SO y arquitectura del usuario, resalta el binario recomendado y enlaza todas las releases en el repositorio público nest_hub.",
+            "de": "Das Download-Menü erkennt Betriebssystem und Architektur, hebt die empfohlene Binärdatei hervor und verlinkt alle Releases.",
+            "fr": "Le menu de téléchargement détecte l'OS et l'architecture, met en avant le binaire recommandé et renvoie vers toutes les releases.",
+            "pt": "O menu de download detecta SO e arquitetura, destaca o binário recomendado e linka todas as releases no repositório público."
+        }
+    },
+    {
+        "id": "a14",
+        "category": "updates",
+        "date": "2026-02-10",
+        "title": {
+            "en": "Dynamic version from GitHub releases",
+            "es": "Versión dinámica desde GitHub releases",
+            "de": "Dynamische Version von GitHub Releases",
+            "fr": "Version dynamique depuis les releases GitHub",
+            "pt": "Versão dinâmica do GitHub releases"
+        },
+        "body": {
+            "en": "APP_VERSION is no longer hardcoded. The useLatestRelease hook fetches the latest tag from nest_hub releases API, caches it for 1 hour, and falls back to the build-time version.",
+            "es": "APP_VERSION ya no está hardcodeado. El hook useLatestRelease obtiene el último tag de la API de releases de nest_hub, lo cachea por 1 hora y hace fallback a la versión de compilación.",
+            "de": "APP_VERSION ist nicht mehr fest codiert. Der useLatestRelease-Hook ruft den neuesten Tag von der nest_hub Releases-API ab und cached ihn für 1 Stunde.",
+            "fr": "APP_VERSION n'est plus codé en dur. Le hook useLatestRelease récupère le dernier tag depuis l'API releases avec cache d'1 heure.",
+            "pt": "APP_VERSION não é mais hardcoded. O hook useLatestRelease busca a última tag da API de releases e cacheia por 1 hora."
+        }
+    },
+    {
+        "id": "a15",
+        "category": "updates",
+        "date": "2026-02-06",
+        "title": {
+            "en": "CI/CD mirror to public repository",
+            "es": "Mirror CI/CD al repositorio público",
+            "de": "CI/CD-Mirror zum öffentlichen Repository",
+            "fr": "Mirror CI/CD vers le dépôt public",
+            "pt": "Mirror CI/CD para repositório público"
+        },
+        "body": {
+            "en": "The build-release workflow now includes a mirror-to-public job that pushes compiled CLI binaries to the nest_hub repository. Uses a fine-grained PAT with Contents: Read and write scope.",
+            "es": "El workflow build-release ahora incluye un job mirror-to-public que publica binarios compilados del CLI en el repositorio nest_hub. Usa un PAT con scope Contents: Read and write.",
+            "de": "Der Build-Release-Workflow enthält jetzt einen Mirror-Job, der kompilierte CLI-Binaries ins nest_hub-Repository pusht.",
+            "fr": "Le workflow build-release inclut maintenant un job mirror qui pousse les binaires CLI compilés vers le dépôt nest_hub.",
+            "pt": "O workflow build-release agora inclui um job mirror que publica binários compilados do CLI no repositório nest_hub."
+        }
+    },
+    {
+        "id": "a16",
+        "category": "updates",
+        "date": "2026-02-02",
+        "title": {
+            "en": "Multi-instance terminal connection fix",
+            "es": "Fix de conexión terminal multi-instancia",
+            "de": "Multi-Instanz Terminal-Verbindungsfix",
+            "fr": "Correction connexion terminal multi-instance",
+            "pt": "Fix de conexão terminal multi-instância"
+        },
+        "body": {
+            "en": "Fixed the 'Connecting...' issue in production with multiple server instances behind ALB. Added polling fallback when SSE terminal-ready events are missed due to load balancing stickiness gaps.",
+            "es": "Corregido el problema 'Connecting...' en producción con múltiples instancias detrás de ALB. Agregado fallback de polling cuando los eventos SSE se pierden por gaps de stickiness.",
+            "de": "Das 'Connecting...'-Problem in Produktion mit mehreren Instanzen hinter ALB behoben. Polling-Fallback für verlorene SSE-Events hinzugefügt.",
+            "fr": "Correction du problème 'Connecting...' en production multi-instance derrière ALB. Ajout d'un fallback polling.",
+            "pt": "Corrigido o problema 'Connecting...' em produção com múltiplas instâncias atrás de ALB. Adicionado fallback de polling."
+        }
+    },
+    {
+        "id": "a17",
+        "category": "updates",
+        "date": "2026-01-28",
+        "title": {
+            "en": "Hexagonal architecture in Rust server",
+            "es": "Arquitectura hexagonal en servidor Rust",
+            "de": "Hexagonale Architektur im Rust-Server",
+            "fr": "Architecture hexagonale du serveur Rust",
+            "pt": "Arquitetura hexagonal no servidor Rust"
+        },
+        "body": {
+            "en": "The server follows hexagonal architecture: domain entities, port traits, application services, and infrastructure adapters. PostgreSQL with JSONB, BRIN indexes, TOAST storage, and synchronous_commit=off for performance.",
+            "es": "El servidor sigue arquitectura hexagonal: entidades de dominio, traits de puertos, servicios de aplicación y adaptadores de infraestructura. PostgreSQL con JSONB, índices BRIN y synchronous_commit=off.",
+            "de": "Der Server folgt hexagonaler Architektur: Domain-Entitäten, Port-Traits, Anwendungsdienste und Infrastruktur-Adapter. PostgreSQL mit JSONB und BRIN-Indizes.",
+            "fr": "Le serveur suit l'architecture hexagonale : entités, ports, services et adaptateurs. PostgreSQL avec JSONB, index BRIN et synchronous_commit=off.",
+            "pt": "O servidor segue arquitetura hexagonal: entidades de domínio, traits de portas, serviços e adaptadores. PostgreSQL com JSONB, índices BRIN e synchronous_commit=off."
+        }
+    },
+    {
+        "id": "a18",
+        "category": "updates",
+        "date": "2026-01-22",
+        "title": {
+            "en": "Namespace-based multi-user isolation",
+            "es": "Aislamiento multi-usuario por namespace",
+            "de": "Namespace-basierte Multi-User-Isolation",
+            "fr": "Isolation multi-utilisateurs par namespace",
+            "pt": "Isolamento multi-usuário por namespace"
+        },
+        "body": {
+            "en": "Each user operates in an isolated namespace via CLI_API_TOKEN:<namespace> suffix. Sessions, projects, and terminal data are scoped per namespace. Admins see all namespaces from the dashboard.",
+            "es": "Cada usuario opera en un namespace aislado vía sufijo CLI_API_TOKEN:<namespace>. Sesiones, proyectos y datos de terminal están scoped por namespace. Los admins ven todos los namespaces.",
+            "de": "Jeder Benutzer arbeitet in einem isolierten Namespace. Sitzungen, Projekte und Terminal-Daten sind pro Namespace getrennt. Admins sehen alle Namespaces.",
+            "fr": "Chaque utilisateur opère dans un namespace isolé. Sessions, projets et données sont cloisonnés. Les admins voient tous les namespaces.",
+            "pt": "Cada usuário opera em um namespace isolado. Sessões, projetos e dados são separados por namespace. Admins veem todos os namespaces."
+        }
+    },
+    {
+        "id": "a19",
+        "category": "updates",
+        "date": "2026-01-16",
+        "title": {
+            "en": "Apalis job queue integration",
+            "es": "Integración de cola de trabajos Apalis",
+            "de": "Apalis Job-Queue-Integration",
+            "fr": "Intégration de la file d'attente Apalis",
+            "pt": "Integração de fila de jobs Apalis"
+        },
+        "body": {
+            "en": "Background jobs are managed by Apalis with PostgreSQL-backed storage. Schedule recurring tasks with cron expressions, monitor job status from the admin Schedule Jobs page, and track worker health.",
+            "es": "Los trabajos en segundo plano son gestionados por Apalis con almacenamiento PostgreSQL. Programa tareas recurrentes con cron, monitorea el estado desde la página Schedule Jobs.",
+            "de": "Hintergrundjobs werden von Apalis mit PostgreSQL verwaltet. Planen Sie wiederkehrende Aufgaben mit Cron und überwachen Sie den Status über die Schedule Jobs-Seite.",
+            "fr": "Les jobs en arrière-plan sont gérés par Apalis avec stockage PostgreSQL. Planifiez des tâches récurrentes avec cron et surveillez l'état depuis la page Schedule Jobs.",
+            "pt": "Jobs em segundo plano são gerenciados pelo Apalis com PostgreSQL. Programe tarefas recorrentes com cron e monitore o status na página Schedule Jobs."
+        }
+    },
+    {
+        "id": "a20",
+        "category": "updates",
+        "date": "2026-01-10",
+        "title": {
+            "en": "Full i18n across all admin and user views",
+            "es": "i18n completo en todas las vistas admin y usuario",
+            "de": "Vollständige i18n in allen Admin- und Benutzeransichten",
+            "fr": "i18n complète dans toutes les vues admin et utilisateur",
+            "pt": "i18n completo em todas as visões admin e usuário"
+        },
+        "body": {
+            "en": "Every page, modal, and component is internationalized in English, Spanish, German, French, and Portuguese. Admin dashboard, config, users, projects, schedule jobs, notifications — all fully translated.",
+            "es": "Cada página, modal y componente está internacionalizado en inglés, español, alemán, francés y portugués. Dashboard admin, config, usuarios, proyectos, jobs — todo completamente traducido.",
+            "de": "Jede Seite, jedes Modal und jede Komponente ist in 5 Sprachen internationalisiert. Admin-Dashboard, Konfiguration, Benutzer, Projekte — alles vollständig übersetzt.",
+            "fr": "Chaque page, modal et composant est internationalisé en 5 langues. Dashboard admin, configuration, utilisateurs, projets — tout est traduit.",
+            "pt": "Cada página, modal e componente está internacionalizado em 5 idiomas. Dashboard admin, config, usuários, projetos — tudo completamente traduzido."
+        }
+    },
+    {
+        "id": "am1",
+        "category": "messages",
+        "date": "2026-03-22",
+        "title": {
+            "en": "Admin dashboard ready",
+            "es": "Dashboard admin listo",
+            "de": "Admin-Dashboard bereit",
+            "fr": "Tableau de bord admin prêt",
+            "pt": "Dashboard admin pronto"
+        },
+        "body": {
+            "en": "Your admin panel is configured. Monitor sessions, users, projects, terminals, and scheduled jobs. Use the Config section to manage database, email, AI, telemetry, and audit settings.",
+            "es": "Tu panel admin está configurado. Monitorea sesiones, usuarios, proyectos, terminales y trabajos programados. Usa la sección Config para gestionar base de datos, email, IA, telemetría y auditoría.",
+            "de": "Ihr Admin-Panel ist konfiguriert. Überwachen Sie Sitzungen, Benutzer, Projekte, Terminals und geplante Jobs. Nutzen Sie Config für Datenbank, E-Mail, KI und Audit.",
+            "fr": "Votre panneau admin est configuré. Surveillez sessions, utilisateurs, projets, terminaux et jobs. Utilisez Config pour la base de données, l'email, l'IA et l'audit.",
+            "pt": "Seu painel admin está configurado. Monitore sessões, usuários, projetos, terminais e jobs. Use Config para banco de dados, email, IA e auditoria."
+        }
+    }
+]
