@@ -16,9 +16,7 @@
             "de": "NEST ist eine Local-First-Plattform für KI-Coding-Agenten mit Remote-Steuerung über Web. Die CLI verbindet Agenten mit dem Rust-Server für Echtzeit-Sync, Analysen und Multi-User-Verwaltung.",
             "fr": "NEST est une plateforme local-first pour agents IA avec contrôle distant via web. Le CLI connecte les agents au serveur Rust pour la synchronisation temps réel et la gestion multi-utilisateurs.",
             "pt": "NEST é uma plataforma local-first para agentes IA com controle remoto via web. O CLI conecta agentes ao servidor Rust para sync em tempo real, análises e gestão multi-usuário."
-        },
-        "video": "https://youtu.be/t12su6vuw1Q",
-        "image": "https://raw.githubusercontent.com/contextzero/nest_hub/main/public/annie.png"
+        }
     },
     {
         "id": "a2",
