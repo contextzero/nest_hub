@@ -410,11 +410,11 @@
             "pt": "Instale o CLI para acesso completo"
         },
         "body": {
-            "en": "Get the most out of NEST by installing the CLI: npm install -g @anthropic/nest. Run 'nest auth' to connect and 'nest start' to launch your first agent session.",
-            "es": "Saca el máximo de NEST instalando el CLI: npm install -g @anthropic/nest. Ejecuta 'nest auth' para conectar y 'nest start' para lanzar tu primera sesión.",
-            "de": "Holen Sie das Beste aus NEST mit der CLI: npm install -g @anthropic/nest. Führen Sie 'nest auth' zum Verbinden und 'nest start' zum Starten aus.",
-            "fr": "Tirez le meilleur de NEST avec la CLI : npm install -g @anthropic/nest. Lancez 'nest auth' puis 'nest start'.",
-            "pt": "Tire o máximo do NEST com o CLI: npm install -g @anthropic/nest. Execute 'nest auth' para conectar e 'nest start' para iniciar."
+            "en": "Get the most out of NEST by installing the CLI: npm install -g @contextzero/nest. Run 'annie auth login' to connect, then launch agents with 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode', or 'annie opencode'.",
+            "es": "Saca el máximo de NEST instalando el CLI: npm install -g @contextzero/nest. Ejecuta 'annie auth login' para conectar, luego lanza agentes con 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' o 'annie opencode'.",
+            "de": "Holen Sie das Beste aus NEST mit der CLI: npm install -g @contextzero/nest. Führen Sie 'annie auth login' zum Verbinden aus, dann starten Sie Agenten mit 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' oder 'annie opencode'.",
+            "fr": "Tirez le meilleur de NEST avec la CLI : npm install -g @contextzero/nest. Lancez 'annie auth login' pour vous connecter, puis démarrez des agents avec 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' ou 'annie opencode'.",
+            "pt": "Tire o máximo do NEST com o CLI: npm install -g @contextzero/nest. Execute 'annie auth login' para conectar, depois lance agentes com 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' ou 'annie opencode'."
         }
     }
 ]
