@@ -82,7 +82,7 @@ A phased approach to implementing NEST in your organization. From discovery to o
 - First project
 - Basic audit setup
 
-**Related:** [Install Guide](../INSTALL.md), [CLI Business](../CLI-BUSINESS.md)
+**Related:** [Install Guide](../INSTALL.md), [CLI Business](../CLI-BUSINESS.md), [Annie & MCP enterprise guide](../enterprise/annie-cli-mcp-enterprise.md)
 
 ---
 
@@ -201,6 +201,7 @@ Appropriate approvals required. Never fully autonomous without oversight.
 - [Value Proposition](../business/value-proposition.md)
 - [Use Cases](../business/use-cases.md)
 - [Enterprise Features](../enterprise/README.md)
+- [Annie CLI & MCP — Enterprise guide](../enterprise/annie-cli-mcp-enterprise.md)
 - [CLI Business Overview](../CLI-BUSINESS.md)
 - [Install Guide](../INSTALL.md)
 - [Roadmap](../ROADMAP.md)

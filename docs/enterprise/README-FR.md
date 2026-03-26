@@ -11,6 +11,8 @@
 
 [English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | **Français**
 
+**CLI + MCP (toutes les langues) :** [FR](./annie-cli-mcp-enterprise-FR.md) · [EN](./annie-cli-mcp-enterprise.md) · [ES](./annie-cli-mcp-enterprise-ES.md) · [DE](./annie-cli-mcp-enterprise-DE.md) · [PT](./annie-cli-mcp-enterprise-PT.md) · [ZH](./annie-cli-mcp-enterprise-ZH.md)
+
 La version **Enterprise** de NEST apporte des fonctionnalités avancées aux organisations qui ont besoin de plus que le self-hosted seul ne permet. La version Community est gratuite et autonome ; Enterprise ajoute intelligence, échelle et support.
 
 ---
@@ -212,6 +214,7 @@ Vous utilisez déjà NEST en self-hosted ?
 
 ## Documents associés
 
+- [Guide enterprise Annie + MCP](./annie-cli-mcp-enterprise-FR.md) — CLI complète, MCP, déploiement par phases
 - [Business Overview](../business/README.md) — Valeur stratégique pour les fondateurs
 - [Value Proposition](../business/value-proposition.md) — Avantages détaillés
 - [Use Cases](../business/use-cases.md) — Scénarios réels

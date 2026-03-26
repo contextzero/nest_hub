@@ -213,6 +213,7 @@ Control how much autonomy your AI agents have — per employee, per project, per
 | CLI reference & LLM config | [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md) |
 | Framework install (Node, Docker, Rust) | [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) |
 | Enterprise features | [docs/enterprise/README.md](docs/enterprise/README.md) |
+| **Annie CLI + MCP (enterprise)** | [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) · [ES](docs/enterprise/annie-cli-mcp-enterprise-ES.md) · [DE](docs/enterprise/annie-cli-mcp-enterprise-DE.md) · [FR](docs/enterprise/annie-cli-mcp-enterprise-FR.md) · [PT](docs/enterprise/annie-cli-mcp-enterprise-PT.md) · [ZH](docs/enterprise/annie-cli-mcp-enterprise-ZH.md) |
 | ZeroClaw & OpenClaw | [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) |
 | Darwin Agents | [docs/enterprise/darwin-agents.md](docs/enterprise/darwin-agents.md) |
 | Business overview for founders | [docs/business/README.md](docs/business/README.md) |
@@ -229,19 +230,20 @@ Control how much autonomy your AI agents have — per employee, per project, per
 **CLI (on employee machines):**
 
 ```bash
-annie                     # Start Claude Code session
-annie cursor              # Start Cursor agent
-annie codex               # Start Codex session
-annie gemini              # Start Gemini session
-annie opencode            # Start OpenCode session
-annie kilocode            # Start KiloCode session
-annie zeroclaw            # Start ZeroClaw (headless automation)
-annie openclaw            # Start OpenClaw (project orchestration)
-annie worker start        # Start background worker (remote spawn)
+annie claude              # Claude Code session
+annie cursor              # Cursor agent
+annie codex               # Codex session (annie codex resume <id>)
+annie gemini              # Gemini session
+annie opencode            # OpenCode session
+annie kilocode            # KiloCode session
+annie mcp                 # MCP stdio bridge (HTTP target + token)
+annie worker start        # Background worker (remote spawn)
 annie auth login          # Save credentials
 annie auth status         # Check connection
 annie diagnose            # Full diagnostic report
 ```
+
+> **Enterprise CLI + MCP (Cursor, VS Code, Claude, ChatGPT, phased rollout):** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md)
 
 **Server (from `nest_hub/` folder):**
 
