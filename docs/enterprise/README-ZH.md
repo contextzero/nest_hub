@@ -11,6 +11,8 @@
 
 [English](./README.md) | [Español](./README-ES.md) | **中文** | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
 
+**CLI + MCP（多语言）：** [中文](./annie-cli-mcp-enterprise-ZH.md) · [EN](./annie-cli-mcp-enterprise.md) · [ES](./annie-cli-mcp-enterprise-ES.md) · [DE](./annie-cli-mcp-enterprise-DE.md) · [PT](./annie-cli-mcp-enterprise-PT.md) · [FR](./annie-cli-mcp-enterprise-FR.md)
+
 **Enterprise** 版 NEST 面向需要超出纯自建能力的组织，提供高级功能。Community 版免费且可完全自建；Enterprise 则增加智能、规模与支持。
 
 ---
@@ -212,6 +214,7 @@ sales@contextzero.ai
 
 ## 相关文档
 
+- [Annie CLI 与 MCP 企业指南](./annie-cli-mcp-enterprise-ZH.md) — 完整 CLI、MCP、分阶段上线
 - [Business Overview](../business/README.md) — 面向创始人的战略价值
 - [Value Proposition](../business/value-proposition.md) — 详细收益
 - [Use Cases](../business/use-cases.md) — 真实场景

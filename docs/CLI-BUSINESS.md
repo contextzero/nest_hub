@@ -209,28 +209,40 @@ Here's the practical picture of NEST in a working team:
 
 ## Quick Reference — All Commands
 
+Use **explicit** subcommands in scripts. Full enterprise reference (MCP, Cursor, VS Code, Claude, ChatGPT, phased rollout): **[Annie & MCP enterprise guide](enterprise/annie-cli-mcp-enterprise.md)** ([ES](enterprise/annie-cli-mcp-enterprise-ES.md), [DE](enterprise/annie-cli-mcp-enterprise-DE.md), [FR](enterprise/annie-cli-mcp-enterprise-FR.md), [PT](enterprise/annie-cli-mcp-enterprise-PT.md), [ZH](enterprise/annie-cli-mcp-enterprise-ZH.md)).
+
 ```bash
-# Agent modes
-annie                   # Claude Code
-annie codex             # OpenAI Codex
+# Agent modes (prefer explicit names in automation)
+annie claude            # Claude Code
+annie codex             # OpenAI Codex  (annie codex resume <sessionId>)
 annie cursor            # Cursor Agent
 annie opencode          # OpenCode
 annie gemini            # Google Gemini (via ACP)
-annie kilocode          # KiloCode (tightest oversight)
-annie zeroclaw          # ZeroClaw (headless workflow automation)
-annie openclaw          # OpenClaw (visual workflow orchestration)
+annie kilocode          # KiloCode
+
+# MCP
+annie mcp               # STDIO bridge: env NEST_HTTP_MCP_URL + CLI_API_TOKEN, or --url / --token
 
 # Infrastructure
 annie worker start      # Background worker daemon (remote spawn)
 annie worker stop       # Stop the worker
+annie worker status     # Worker status
+annie worker list       # Active sessions
 
 # Auth
 annie auth login        # Save server URL + token interactively
 annie auth status       # Show current auth configuration
+annie auth logout       # Clear saved credentials
+
+# Bundled server (when shipped in your package)
+annie server            # Start bundled hub
 
 # Diagnostics
 annie diagnose          # Full diagnostic report — run this first if anything's wrong
+annie diagnose clean    # Kill runaway NEST-related processes
 ```
+
+> **Note:** `annie connect` and `annie notify` exit with a message in self-hosted direct-connect mode. OpenClaw / ZeroClaw commands may ship per release — see [RELEASES.md](../RELEASES.md).
 
 ---
 
@@ -248,6 +260,7 @@ annie diagnose          # Full diagnostic report — run this first if anything'
 | [Value Proposition](../business/value-proposition.md) | Detailed owner/employee/business benefits |
 | [Use Cases](../business/use-cases.md) | Real scenarios and use cases |
 | [Methodology](../methodology/README.md) | Implementation phases guide |
+| [Annie & MCP enterprise](enterprise/annie-cli-mcp-enterprise.md) | Full CLI + MCP (all clients, URL + token, phases) |
 | [Enterprise Features](../enterprise/README.md) | Enterprise pricing and features |
 
 ---
