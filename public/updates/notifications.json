@@ -1,5 +1,62 @@
 [
     {
+        "id": "u26",
+        "category": "updates",
+        "date": "2026-03-26",
+        "title": {
+            "en": "Roll out NEST with a clear, phased checklist",
+            "es": "Despliega NEST con una checklist por fases",
+            "de": "NEST mit klarer Phasen-Checkliste ausrollen",
+            "fr": "Déployer NEST avec une checklist par phases",
+            "pt": "Implante o NEST com um roteiro em fases claro"
+        },
+        "body": {
+            "en": "For teams and IT: we published an enterprise guide that walks you from pilot to production—credentials, worker hosts, MCP hardening, and Git hygiene for IDE config. Everyone reads the same steps, so expectations stay aligned.",
+            "es": "Para equipos e IT: publicamos una guía enterprise que va del piloto a producción—credenciales, hosts del worker, endurecimiento MCP e higiene Git para config de IDE. Todos leen los mismos pasos y las expectativas se alinean.",
+            "de": "Für Teams und IT: ein Enterprise-Leitfaden führt vom Pilot bis Produktion—Credentials, Worker-Hosts, MCP-Härtung und Git-Hygiene für IDE-Konfiguration. Alle folgen denselben Schritten.",
+            "fr": "Pour les équipes et l’IT : un guide enterprise du pilote à la production—identifiants, hôtes worker, durcissement MCP et hygiène Git pour la config IDE. Même feuille de route pour tous.",
+            "pt": "Para equipes e TI: um guia enterprise do piloto à produção—credenciais, hosts do worker, hardening MCP e higiene Git para config de IDE. Todos seguem os mesmos passos."
+        }
+    },
+    {
+        "id": "u25",
+        "category": "updates",
+        "date": "2026-03-26",
+        "title": {
+            "en": "Annie MCP: set URL and token without extra config files",
+            "es": "Annie MCP: URL y token sin archivos extra",
+            "de": "Annie MCP: URL und Token ohne Zusatzdateien",
+            "fr": "Annie MCP : URL et jeton sans fichiers supplémentaires",
+            "pt": "Annie MCP: URL e token sem arquivos extras"
+        },
+        "body": {
+            "en": "When you bridge MCP over stdio, you can now pass --url and --token (or --bearer) on the command line, or keep using CLI_API_TOKEN and NEST_HTTP_MCP_URL in the environment. Prefer env vars in production so secrets stay out of shell history.",
+            "es": "En el puente MCP stdio puedes pasar --url y --token (o --bearer) en la línea de comandos, o seguir con CLI_API_TOKEN y NEST_HTTP_MCP_URL en el entorno. En producción, mejor variables de entorno para que el secreto no quede en el historial.",
+            "de": "Beim MCP-Stdio-Bridge können Sie --url und --token (oder --bearer) übergeben oder CLI_API_TOKEN und NEST_HTTP_MCP_URL setzen. In Produktion Umgebungsvariablen bevorzugen.",
+            "fr": "Pour le pont MCP stdio, utilisez --url et --token (ou --bearer) en ligne de commande, ou CLI_API_TOKEN et NEST_HTTP_MCP_URL en variables d’environnement. En production, privilégiez l’environnement.",
+            "pt": "No ponte MCP stdio, use --url e --token (ou --bearer) na linha de comando, ou CLI_API_TOKEN e NEST_HTTP_MCP_URL no ambiente. Em produção, prefira variáveis de ambiente."
+        }
+    },
+    {
+        "id": "u24",
+        "category": "updates",
+        "date": "2026-03-26",
+        "title": {
+            "en": "MCP through your server: secure by design",
+            "es": "MCP vía tu servidor: seguro por diseño",
+            "de": "MCP über Ihren Server: sicher von Grund auf",
+            "fr": "MCP via votre serveur : sécurisé par conception",
+            "pt": "MCP pelo seu servidor: seguro por design"
+        },
+        "body": {
+            "en": "Connect Cursor, VS Code, or other MCP clients to NEST without exposing anonymous endpoints. Every call uses your hub URL plus /mcp/sessions/{id} and a Bearer token—the same trust model as the rest of the API. Runner-started Cursor sessions can receive the right URL and headers automatically.",
+            "es": "Conecta Cursor, VS Code u otros clientes MCP a NEST sin endpoints anónimos. Cada llamada usa la URL del hub + /mcp/sessions/{id} y un token Bearer—el mismo modelo de confianza que el resto de la API. Las sesiones Cursor iniciadas por el runner pueden recibir URL y cabeceras automáticamente.",
+            "de": "Verbinden Sie Cursor, VS Code oder andere MCP-Clients ohne anonyme Endpunkte. Jeder Aufruf nutzt Ihre Hub-URL + /mcp/sessions/{id} und Bearer-Token—wie die übrige API. Runner-gestartete Cursor-Sitzungen können URL und Header automatisch erhalten.",
+            "fr": "Connectez Cursor, VS Code ou d’autres clients MCP sans point d’accès anonyme. Chaque appel utilise l’URL du hub + /mcp/sessions/{id} et un jeton Bearer—comme le reste de l’API.",
+            "pt": "Conecte Cursor, VS Code ou outros clientes MCP sem endpoints anônimos. Cada chamada usa a URL do hub + /mcp/sessions/{id} e Bearer token—o mesmo modelo da API. Sessões Cursor pelo runner podem receber URL e headers automaticamente."
+        }
+    },
+    {
         "id": "u1",
         "category": "updates",
         "date": "2026-03-22",
@@ -391,11 +448,11 @@
             "pt": "Bem-vindo ao NEST"
         },
         "body": {
-            "en": "Your account is ready. Start a session from the sidebar, connect your CLI with 'nest auth', and control your agents remotely. Check the Updates tab for new features.",
-            "es": "Tu cuenta está lista. Inicia una sesión desde el sidebar, conecta tu CLI con 'nest auth' y controla tus agentes remotamente. Revisa la pestaña Actualizaciones.",
-            "de": "Ihr Konto ist bereit. Starten Sie eine Sitzung, verbinden Sie Ihre CLI mit 'nest auth' und steuern Sie Ihre Agenten remote.",
-            "fr": "Votre compte est prêt. Démarrez une session, connectez votre CLI avec 'nest auth' et contrôlez vos agents à distance.",
-            "pt": "Sua conta está pronta. Inicie uma sessão, conecte seu CLI com 'nest auth' e controle seus agentes remotamente."
+            "en": "Your account is ready. Start a session from the sidebar, run annie auth login on your machine to connect the CLI, and control your agents from here or your phone. Check the Updates tab for what is new.",
+            "es": "Tu cuenta está lista. Inicia una sesión desde el sidebar, ejecuta annie auth login en tu máquina para conectar el CLI y controla tus agentes desde aquí o el móvil. Revisa Actualizaciones para novedades.",
+            "de": "Ihr Konto ist bereit. Starten Sie eine Sitzung, führen Sie auf Ihrem Rechner annie auth login aus, um die CLI zu verbinden, und steuern Sie Ihre Agenten von hier oder dem Telefon. Unter Updates sehen Sie Neuigkeiten.",
+            "fr": "Votre compte est prêt. Démarrez une session, exécutez annie auth login sur votre machine pour connecter le CLI et pilotez vos agents d’ici ou du téléphone. L’onglet Mises à jour liste les nouveautés.",
+            "pt": "Sua conta está pronta. Inicie uma sessão, rode annie auth login na sua máquina para conectar o CLI e controle seus agentes daqui ou do celular. Veja Atualizações para novidades."
         }
     },
     {
@@ -410,11 +467,11 @@
             "pt": "Instale o CLI para acesso completo"
         },
         "body": {
-            "en": "Get the most out of NEST by installing the CLI: npm install -g @contextzero/nest. Run 'annie auth login' to connect, then launch agents with 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode', or 'annie opencode'.",
-            "es": "Saca el máximo de NEST instalando el CLI: npm install -g @contextzero/nest. Ejecuta 'annie auth login' para conectar, luego lanza agentes con 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' o 'annie opencode'.",
-            "de": "Holen Sie das Beste aus NEST mit der CLI: npm install -g @contextzero/nest. Führen Sie 'annie auth login' zum Verbinden aus, dann starten Sie Agenten mit 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' oder 'annie opencode'.",
-            "fr": "Tirez le meilleur de NEST avec la CLI : npm install -g @contextzero/nest. Lancez 'annie auth login' pour vous connecter, puis démarrez des agents avec 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' ou 'annie opencode'.",
-            "pt": "Tire o máximo do NEST com o CLI: npm install -g @contextzero/nest. Execute 'annie auth login' para conectar, depois lance agentes com 'annie claude', 'annie codex', 'annie agent gemini', 'annie kilocode' ou 'annie opencode'."
+            "en": "Install the CLI once: npm install -g @contextzero/nest. Run annie auth login, then start the agent you need—annie claude, annie codex, annie gemini, annie cursor, annie kilocode, or annie opencode. Need MCP against your hub? Use annie mcp with --url and your token.",
+            "es": "Instala el CLI: npm install -g @contextzero/nest. Ejecuta annie auth login y arranca el agente que necesites—annie claude, codex, gemini, cursor, kilocode u opencode. ¿MCP contra tu hub? Usa annie mcp con --url y tu token.",
+            "de": "CLI installieren: npm install -g @contextzero/nest. annie auth login ausführen, dann den gewünschten Agenten starten—annie claude, codex, gemini, cursor, kilocode oder opencode. MCP zum Hub? annie mcp mit --url und Token.",
+            "fr": "Installez la CLI : npm install -g @contextzero/nest. Lancez annie auth login, puis l’agent voulu—annie claude, codex, gemini, cursor, kilocode ou opencode. MCP vers le hub ? annie mcp avec --url et votre jeton.",
+            "pt": "Instale o CLI: npm install -g @contextzero/nest. Rode annie auth login e inicie o agente—annie claude, codex, gemini, cursor, kilocode ou opencode. MCP no hub? annie mcp com --url e token."
         }
     }
 ]

@@ -1,5 +1,43 @@
 [
     {
+        "id": "a22",
+        "category": "updates",
+        "date": "2026-03-26",
+        "title": {
+            "en": "One rollout narrative for IT, security, and engineering",
+            "es": "Una misma narrativa de despliegue para IT, seguridad e ingeniería",
+            "de": "Eine Rollout-Story für IT, Security und Engineering",
+            "fr": "Une même narration de déploiement pour IT, sécurité et ingénierie",
+            "pt": "Uma narrativa de implantação para TI, segurança e engenharia"
+        },
+        "body": {
+            "en": "The nest_hub enterprise guides (several languages) spell out phased adoption—credentials, worker hosts, MCP hardening, Git hygiene for IDE projects—so every stakeholder hears the same plan before the pilot. Sharing the doc early prevents thrash and sets clear success criteria.",
+            "es": "Las guías enterprise en nest_hub (varios idiomas) detallan adopción por fases—credenciales, hosts del worker, endurecimiento MCP, higiene Git para proyectos IDE—para que todos oigan el mismo plan antes del piloto. Compartir el doc al inicio evita retrabajo y define criterios de éxito.",
+            "de": "Die Enterprise-Guides in nest_hub (mehrere Sprachen) beschreiben die Phasen—Credentials, Worker-Hosts, MCP-Härtung, Git-Hygiene—damit alle vor dem Piloten dieselbe Geschichte hören. Frühes Teilen vermeidet Rework.",
+            "fr": "Les guides enterprise nest_hub (plusieurs langues) décrivent les phases—identifiants, hôtes worker, durcissement MCP, hygiène Git—pour un récit unique avant le pilote. Partager tôt évite les allers-retours.",
+            "pt": "Os guias enterprise no nest_hub (vários idiomas) cobrem fases—credenciais, hosts do worker, hardening MCP, higiene Git—para um plano único antes do piloto. Compartilhar cedo evita retrabalho."
+        }
+    },
+    {
+        "id": "a21",
+        "category": "updates",
+        "date": "2026-03-26",
+        "title": {
+            "en": "Govern MCP like the rest of your API surface",
+            "es": "Gobernar MCP como el resto de tu superficie API",
+            "de": "MCP wie die übrige API-Oberfläche governen",
+            "fr": "Gouverner le MCP comme le reste de votre surface API",
+            "pt": "Governar o MCP como o restante da sua superfície de API"
+        },
+        "body": {
+            "en": "Session-scoped MCP is served at /mcp/sessions/{id} behind the same Bearer model as other hub calls—no anonymous bridge. Rotate CLI_API_TOKEN on offboarding, keep namespace suffixes for isolation, and prefer env-based secrets over checked-in config. Runner-started Cursor sessions can inject URL and headers so developers are not copy-pasting tokens into repos.",
+            "es": "El MCP por sesión está en /mcp/sessions/{id} con el mismo modelo Bearer que el resto del hub—sin puente anónimo. Rota CLI_API_TOKEN al dar de baja, mantén sufijos de namespace para aislar, y prefiere secretos por entorno frente a config en repo. El runner puede inyectar URL y cabeceras en Cursor para no pegar tokens en el código.",
+            "de": "Sitzungs-MCP unter /mcp/sessions/{id} nutzt dasselbe Bearer-Modell—kein anonymer Zugang. CLI_API_TOKEN bei Offboarding rotieren, Namespace-Suffixe für Isolation, Secrets lieber per Umgebung. Der Runner kann URL und Header in Cursor injizieren.",
+            "fr": "Le MCP par session est sur /mcp/sessions/{id} avec le même Bearer que l’API—pas de passerelle anonyme. Faites tourner CLI_API_TOKEN aux départs, suffixes de namespace pour l’isolation, secrets en variables d’environnement. Le runner peut injecter URL et en-têtes pour Cursor.",
+            "pt": "MCP por sessão em /mcp/sessions/{id} com o mesmo Bearer que a API—sem ponte anônima. Rotacione CLI_API_TOKEN em offboarding, use sufixos de namespace, prefira segredos em ambiente. O runner pode injetar URL e headers no Cursor."
+        }
+    },
+    {
         "id": "a1",
         "category": "updates",
         "date": "2026-03-22",
