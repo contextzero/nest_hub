@@ -1,5 +1,43 @@
 [
     {
+        "id": "a24",
+        "category": "updates",
+        "date": "2026-03-27",
+        "title": {
+            "en": "Inline web drain eliminates terminal corruption across all agents",
+            "es": "El drain inline elimina la corrupci\u00f3n de terminal en todos los agentes",
+            "de": "Inline-Web-Drain beseitigt Terminal-Korruption bei allen Agenten",
+            "fr": "Le drain web inline \u00e9limine la corruption du terminal pour tous les agents",
+            "pt": "O drain web inline elimina a corrup\u00e7\u00e3o de terminal em todos os agentes"
+        },
+        "body": {
+            "en": "The dual-input mode-switch bounce (local\u2192remote\u2192local) was corrupting stdin by calling setupTerminal/finalizeTerminal unnecessarily. The new inline drain path processes web messages headlessly without touching terminal state. Each agent has its own headless executor (Claude SDK, Cursor spawn, Codex AppServer, Gemini/OpenCode/Kilocode ACP). Configurable timeout via NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS. Backward compatible\u2014agents without drain fall back to the old switch path.",
+            "es": "El bounce de cambio de modo dual-input (local\u2192remoto\u2192local) corromp\u00eda stdin al llamar setupTerminal/finalizeTerminal innecesariamente. El nuevo path de drain inline procesa mensajes web headless sin tocar el estado del terminal. Cada agente tiene su propio executor headless (Claude SDK, Cursor spawn, Codex AppServer, Gemini/OpenCode/Kilocode ACP). Timeout configurable v\u00eda NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS. Compatible hacia atr\u00e1s.",
+            "de": "Der Dual-Input-Moduswechsel (lokal\u2192remote\u2192lokal) besch\u00e4digte stdin durch unn\u00f6tige setupTerminal/finalizeTerminal-Aufrufe. Der neue Inline-Drain-Pfad verarbeitet Web-Nachrichten headless ohne Terminal-State zu ber\u00fchren. Jeder Agent hat seinen eigenen Headless-Executor. Konfigurierbares Timeout \u00fcber NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS. Abw\u00e4rtskompatibel.",
+            "fr": "Le rebond de switch dual-input (local\u2192remote\u2192local) corrompait stdin en appelant inutilement setupTerminal/finalizeTerminal. Le nouveau chemin drain inline traite les messages web en headless sans toucher l\u2019\u00e9tat du terminal. Chaque agent a son ex\u00e9cuteur headless propre. Timeout configurable via NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS. R\u00e9trocompatible.",
+            "pt": "O bounce de troca de modo dual-input (local\u2192remoto\u2192local) corrompia stdin chamando setupTerminal/finalizeTerminal desnecessariamente. O novo path drain inline processa mensagens web headless sem tocar o estado do terminal. Cada agente tem seu pr\u00f3prio executor headless (Claude SDK, Cursor spawn, Codex AppServer, Gemini/OpenCode/Kilocode ACP). Timeout configur\u00e1vel via NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS. Compat\u00edvel com vers\u00f5es anteriores."
+        }
+    },
+    {
+        "id": "a23",
+        "category": "updates",
+        "date": "2026-03-27",
+        "title": {
+            "en": "MVP roadmap: all 15 items shipped",
+            "es": "Roadmap MVP: los 15 items est\u00e1n listos",
+            "de": "MVP-Roadmap: alle 15 Punkte ausgeliefert",
+            "fr": "Feuille de route MVP : les 15 points sont livr\u00e9s",
+            "pt": "Roadmap MVP: todos os 15 itens entregues"
+        },
+        "body": {
+            "en": "Every item on the enterprise MVP roadmap is complete: usage pipeline, auth refresh, error boundaries, model selection for all 6 agents, permission + task mode controls, Ctrl+K command palette, cost tracking with per-model pricing, concurrent dual-input, queue visibility, inline web drain, and prompt library. The platform is ready for production workloads at scale.",
+            "es": "Todos los items del roadmap MVP enterprise est\u00e1n completos: pipeline de uso, refresh de auth, error boundaries, selecci\u00f3n de modelo para los 6 agentes, controles de modos de permiso + tarea, paleta Ctrl+K, tracking de costos con precios por modelo, dual-input concurrente, visibilidad de cola, drain inline y biblioteca de prompts. La plataforma est\u00e1 lista para cargas productivas a escala.",
+            "de": "Alle Punkte der Enterprise-MVP-Roadmap sind abgeschlossen: Usage-Pipeline, Auth-Refresh, Error Boundaries, Modellauswahl f\u00fcr alle 6 Agenten, Berechtigungs- und Aufgabenmodus-Steuerung, Strg+K-Befehlspalette, Kostenverfolgung, Dual-Input, Queue-Sichtbarkeit, Inline-Drain und Prompt-Bibliothek. Die Plattform ist bereit f\u00fcr Produktions-Workloads.",
+            "fr": "Tous les points de la feuille de route MVP enterprise sont termin\u00e9s : pipeline d\u2019utilisation, rafra\u00eechissement auth, error boundaries, s\u00e9lection de mod\u00e8le pour les 6 agents, contr\u00f4les de modes, palette Ctrl+K, suivi des co\u00fbts, dual-input, visibilit\u00e9 de file, drain inline et biblioth\u00e8que de prompts. La plateforme est pr\u00eate pour la production \u00e0 l\u2019\u00e9chelle.",
+            "pt": "Todos os itens do roadmap MVP enterprise est\u00e3o completos: pipeline de uso, refresh de auth, error boundaries, sele\u00e7\u00e3o de modelo para os 6 agentes, controles de modos, paleta Ctrl+K, tracking de custos, dual-input, visibilidade de fila, drain inline e biblioteca de prompts. A plataforma est\u00e1 pronta para cargas de produ\u00e7\u00e3o em escala."
+        }
+    },
+    {
         "id": "a22",
         "category": "updates",
         "date": "2026-03-26",

@@ -1,5 +1,43 @@
 [
     {
+        "id": "u28",
+        "category": "updates",
+        "date": "2026-03-27",
+        "title": {
+            "en": "Web messages no longer break your terminal",
+            "es": "Los mensajes web ya no rompen tu terminal",
+            "de": "Web-Nachrichten stören Ihr Terminal nicht mehr",
+            "fr": "Les messages web ne cassent plus votre terminal",
+            "pt": "Mensagens web n\u00e3o quebram mais seu terminal"
+        },
+        "body": {
+            "en": "Sending a prompt from the web while working in the terminal used to cause the console to freeze or lose input. Now web messages are processed headlessly in the background\u2014your terminal stays intact, and you keep typing without interruption. Works for all six agents.",
+            "es": "Enviar un prompt desde la web mientras trabajabas en la terminal causaba que la consola se congelara o perdiera input. Ahora los mensajes web se procesan headless en segundo plano\u2014tu terminal queda intacta y sigues escribiendo sin interrupci\u00f3n. Funciona para los seis agentes.",
+            "de": "Das Senden einer Eingabe vom Web w\u00e4hrend der Terminal-Arbeit lie\u00df die Konsole einfrieren. Jetzt werden Web-Nachrichten im Hintergrund verarbeitet\u2014Ihr Terminal bleibt intakt, und Sie tippen ohne Unterbrechung weiter. Funktioniert f\u00fcr alle sechs Agenten.",
+            "fr": "Envoyer un prompt depuis le web pendant le travail au terminal faisait geler la console. D\u00e9sormais, les messages web sont trait\u00e9s en arri\u00e8re-plan\u2014votre terminal reste intact et vous continuez \u00e0 taper sans interruption. Fonctionne pour les six agents.",
+            "pt": "Enviar um prompt pela web enquanto trabalhava no terminal fazia a console congelar. Agora mensagens web s\u00e3o processadas em segundo plano\u2014seu terminal fica intacto e voc\u00ea continua digitando sem interrup\u00e7\u00e3o. Funciona para os seis agentes."
+        }
+    },
+    {
+        "id": "u27",
+        "category": "updates",
+        "date": "2026-03-27",
+        "title": {
+            "en": "Drain timeout keeps you in control",
+            "es": "El timeout de drain te mantiene en control",
+            "de": "Drain-Timeout beh\u00e4lt die Kontrolle",
+            "fr": "Le timeout de drain vous garde en contr\u00f4le",
+            "pt": "O timeout de drain mant\u00e9m voc\u00ea no controle"
+        },
+        "body": {
+            "en": "Set NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS to cap how long a web message can run before the CLI returns to local mode. The terminal shows a brief status line while processing\u2014no guessing whether something is happening. Combine with NEST_DUAL_INPUT_MAX_QUEUE to bound queue depth.",
+            "es": "Configura NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS para limitar cu\u00e1nto tiempo puede correr un mensaje web antes de volver al modo local. La terminal muestra una l\u00ednea de estado breve durante el procesamiento. Combina con NEST_DUAL_INPUT_MAX_QUEUE para limitar la profundidad de cola.",
+            "de": "Setzen Sie NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS, um zu begrenzen, wie lange eine Web-Nachricht laufen kann. Das Terminal zeigt eine kurze Statuszeile\u2014kein R\u00e4tselraten. Kombinieren Sie mit NEST_DUAL_INPUT_MAX_QUEUE f\u00fcr Queue-Grenzen.",
+            "fr": "D\u00e9finissez NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS pour limiter la dur\u00e9e d\u2019ex\u00e9cution d\u2019un message web. Le terminal affiche une ligne de statut bri\u00e8ve\u2014pas de doute. Combinez avec NEST_DUAL_INPUT_MAX_QUEUE pour limiter la file.",
+            "pt": "Configure NEST_DUAL_INPUT_DRAIN_TIMEOUT_MS para limitar quanto tempo uma mensagem web pode rodar antes de voltar ao modo local. O terminal mostra uma linha de status breve. Combine com NEST_DUAL_INPUT_MAX_QUEUE para limitar a fila."
+        }
+    },
+    {
         "id": "u26",
         "category": "updates",
         "date": "2026-03-26",
