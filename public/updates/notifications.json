@@ -1,5 +1,43 @@
 [
     {
+        "id": "u30",
+        "category": "updates",
+        "date": "2026-03-28",
+        "title": {
+            "en": "Type in your terminal, see it in the web — all six agents",
+            "es": "Escribe en tu terminal, v\u00e9elo en la web \u2014 los seis agentes",
+            "de": "Im Terminal tippen, im Web sehen \u2014 alle sechs Agenten",
+            "fr": "Tapez dans votre terminal, voyez-le sur le web \u2014 les six agents",
+            "pt": "Digite no seu terminal, veja na web \u2014 os seis agentes"
+        },
+        "body": {
+            "en": "Every agent now runs inside a pseudo-terminal. When you type a prompt locally, the response streams to the web in real time. When you send from the web, it appears inside the agent\u2019s own TUI as if you typed it. Claude and Gemini use session file scanners; Cursor and Kilocode use output classification (thinking, tools, messages). No extra ports, no hooks to install.",
+            "es": "Cada agente ahora corre dentro de un pseudo-terminal. Cuando escribes un prompt localmente, la respuesta llega a la web en tiempo real. Cuando env\u00edas desde la web, aparece dentro del TUI del agente como si lo hubieras escrito. Claude y Gemini usan scanners de archivos de sesi\u00f3n; Cursor y Kilocode usan clasificaci\u00f3n de output (thinking, tools, mensajes). Sin puertos extra, sin hooks.",
+            "de": "Jeder Agent l\u00e4uft jetzt in einem Pseudo-Terminal. Lokale Eingaben streamen die Antwort in Echtzeit ins Web. Web-Nachrichten erscheinen im TUI des Agenten. Claude und Gemini nutzen Session-Scanner; Cursor und Kilocode Output-Klassifikation. Keine Ports, keine Hooks.",
+            "fr": "Chaque agent tourne d\u00e9sormais dans un pseudo-terminal. Vos prompts locaux sont stream\u00e9s vers le web en temps r\u00e9el. Les messages web apparaissent dans le TUI de l\u2019agent. Claude et Gemini utilisent des scanners de session ; Cursor et Kilocode la classification de sortie. Aucun port, aucun hook.",
+            "pt": "Cada agente agora roda dentro de um pseudo-terminal. Quando voc\u00ea digita localmente, a resposta chega \u00e0 web em tempo real. Quando envia pela web, aparece no TUI do agente. Claude e Gemini usam scanners de sess\u00e3o; Cursor e Kilocode usam classifica\u00e7\u00e3o de output. Sem portas extras, sem hooks."
+        }
+    },
+    {
+        "id": "u29",
+        "category": "updates",
+        "date": "2026-03-28",
+        "title": {
+            "en": "Resume any session from any agent command",
+            "es": "Retoma cualquier sesi\u00f3n desde cualquier comando de agente",
+            "de": "Jede Sitzung von jedem Agenten-Befehl aus fortsetzen",
+            "fr": "Reprenez n\u2019importe quelle session depuis n\u2019importe quel agent",
+            "pt": "Retome qualquer sess\u00e3o de qualquer comando de agente"
+        },
+        "body": {
+            "en": "Selecting a Claude session while running Cursor (or vice versa) used to crash. Now NEST detects the flavor mismatch and routes to the correct agent automatically. The agent-specific session ID is extracted from server metadata so --resume works across flavors.",
+            "es": "Seleccionar una sesi\u00f3n Claude mientras corr\u00edas Cursor (o viceversa) crasheaba. Ahora NEST detecta el mismatch de flavor y rutea al agente correcto autom\u00e1ticamente. El ID de sesi\u00f3n espec\u00edfico se extrae del metadata del servidor.",
+            "de": "Eine Claude-Sitzung w\u00e4hrend Cursor auszuw\u00e4hlen f\u00fchrte zum Absturz. Jetzt erkennt NEST den Flavor-Mismatch und leitet automatisch zum richtigen Agenten weiter.",
+            "fr": "S\u00e9lectionner une session Claude pendant Cursor plantait. NEST d\u00e9tecte maintenant l\u2019incompatibilit\u00e9 de flavor et redirige automatiquement vers le bon agent.",
+            "pt": "Selecionar uma sess\u00e3o Claude enquanto rodava Cursor crashava. Agora NEST detecta o mismatch de flavor e redireciona automaticamente para o agente correto."
+        }
+    },
+    {
         "id": "u28",
         "category": "updates",
         "date": "2026-03-27",
@@ -92,6 +130,63 @@
             "de": "Verbinden Sie Cursor, VS Code oder andere MCP-Clients ohne anonyme Endpunkte. Jeder Aufruf nutzt Ihre Hub-URL + /mcp/sessions/{id} und Bearer-Token—wie die übrige API. Runner-gestartete Cursor-Sitzungen können URL und Header automatisch erhalten.",
             "fr": "Connectez Cursor, VS Code ou d’autres clients MCP sans point d’accès anonyme. Chaque appel utilise l’URL du hub + /mcp/sessions/{id} et un jeton Bearer—comme le reste de l’API.",
             "pt": "Conecte Cursor, VS Code ou outros clientes MCP sem endpoints anônimos. Cada chamada usa a URL do hub + /mcp/sessions/{id} e Bearer token—o mesmo modelo da API. Sessões Cursor pelo runner podem receber URL e headers automaticamente."
+        }
+    },
+    {
+        "id": "u23",
+        "category": "updates",
+        "date": "2026-03-22",
+        "title": {
+            "en": "Prompt Library: reuse prompts across sessions",
+            "es": "Biblioteca de Prompts: reutiliza prompts entre sesiones",
+            "de": "Prompt-Bibliothek: Prompts sitzungsübergreifend wiederverwenden",
+            "fr": "Bibliothèque de Prompts : réutiliser entre sessions",
+            "pt": "Biblioteca de Prompts: reutilize entre sessões"
+        },
+        "body": {
+            "en": "Access all your previous prompts from any session in the same project. Open the + menu, click Prompts, search or expand any prompt, and click Use to insert it into the composer instantly.",
+            "es": "Accede a todos tus prompts anteriores de cualquier sesión del mismo proyecto. Abre el menú +, haz clic en Prompts, busca o expande cualquier prompt y haz clic en Usar para insertarlo en el compositor.",
+            "de": "Greifen Sie auf alle früheren Prompts aus jeder Sitzung im selben Projekt zu. Öffnen Sie das +-Menü, klicken Sie auf Prompts, suchen oder erweitern Sie einen Prompt und klicken Sie auf Verwenden.",
+            "fr": "Accédez à tous vos prompts précédents de n'importe quelle session du même projet. Ouvrez le menu +, cliquez sur Prompts, recherchez ou développez et cliquez sur Utiliser.",
+            "pt": "Acesse todos os seus prompts anteriores de qualquer sessão do mesmo projeto. Abra o menu +, clique em Prompts, pesquise ou expanda e clique em Usar para inserir no compositor."
+        }
+    },
+    {
+        "id": "u22",
+        "category": "updates",
+        "date": "2026-03-22",
+        "title": {
+            "en": "@ File search in composer",
+            "es": "Búsqueda de archivos con @ en el compositor",
+            "de": "@ Dateisuche im Composer",
+            "fr": "Recherche de fichiers @ dans le composeur",
+            "pt": "Busca de arquivos com @ no compositor"
+        },
+        "body": {
+            "en": "Type @ in the chat composer to search project files by name. Results are ranked by priority: exact name match first, then prefix, then contains. Select a file to insert its full path.",
+            "es": "Escribe @ en el compositor para buscar archivos del proyecto por nombre. Los resultados se ordenan por prioridad: nombre exacto primero, luego prefijo, luego contiene. Selecciona para insertar la ruta completa.",
+            "de": "Tippen Sie @ im Composer, um Projektdateien nach Name zu suchen. Ergebnisse werden priorisiert: exakter Name zuerst, dann Präfix, dann enthält. Wählen Sie eine Datei, um den vollständigen Pfad einzufügen.",
+            "fr": "Tapez @ dans le composeur pour rechercher des fichiers par nom. Les résultats sont classés par priorité : nom exact, puis préfixe, puis contient. Sélectionnez pour insérer le chemin complet.",
+            "pt": "Digite @ no compositor para buscar arquivos do projeto por nome. Resultados priorizados: nome exato primeiro, depois prefixo, depois contém. Selecione para inserir o caminho completo."
+        }
+    },
+    {
+        "id": "u21",
+        "category": "updates",
+        "date": "2026-03-22",
+        "title": {
+            "en": "Admin notifications panel",
+            "es": "Panel de notificaciones admin",
+            "de": "Admin-Benachrichtigungspanel",
+            "fr": "Panneau de notifications admin",
+            "pt": "Painel de notificações admin"
+        },
+        "body": {
+            "en": "Admins now have their own notifications page with platform updates, architecture insights, and system announcements. Accessible from the bell icon in the admin header.",
+            "es": "Los administradores ahora tienen su propia página de notificaciones con actualizaciones de plataforma, insights de arquitectura y anuncios del sistema. Accesible desde el icono de campana en el header admin.",
+            "de": "Administratoren haben jetzt eine eigene Benachrichtigungsseite mit Plattform-Updates, Architektur-Einblicken und Systemankündigungen. Erreichbar über das Glockensymbol.",
+            "fr": "Les administrateurs ont maintenant leur propre page de notifications avec les mises à jour de la plateforme et les annonces système. Accessible depuis l'icône cloche.",
+            "pt": "Administradores agora têm sua própria página de notificações com atualizações da plataforma, insights de arquitetura e anúncios do sistema. Acessível pelo ícone de sino."
         }
     },
     {

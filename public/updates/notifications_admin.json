@@ -1,5 +1,43 @@
 [
     {
+        "id": "a26",
+        "category": "updates",
+        "date": "2026-03-28",
+        "title": {
+            "en": "PTY agent wrapper: bidirectional web\u2194CLI for all six agents",
+            "es": "PTY agent wrapper: web\u2194CLI bidireccional para los seis agentes",
+            "de": "PTY-Agent-Wrapper: bidirektionales Web\u2194CLI f\u00fcr alle sechs Agenten",
+            "fr": "PTY agent wrapper : web\u2194CLI bidirectionnel pour les six agents",
+            "pt": "PTY agent wrapper: web\u2194CLI bidirecional para os seis agentes"
+        },
+        "body": {
+            "en": "All agents spawn inside Bun\u2019s native PTY (no node-pty dependency). Web messages inject via getPtyHandle callback with 10x retry (2s window). Claude and Gemini track via session file scanners. Cursor and Kilocode parse PTY output into typed events (thinking/tool-call/message) with ANSI stripping, Ink TUI filtering, and Set-based deduplication. Critical fixes: spread operator copies values not getters (switched to callback), Bun proc.exitCode == null for alive check, 50ms delay between text and \\r for Ink submit. Fallback to P4b inline drain when PTY unavailable. CI test fix for startHookServer (422\u2192200 placeholder forwarding).",
+            "es": "Todos los agentes se ejecutan dentro del PTY nativo de Bun. Los mensajes web se inyectan via callback getPtyHandle con 10 reintentos. Claude y Gemini trackean via scanners de archivos. Cursor y Kilocode parsean el output PTY en eventos tipados (thinking/tool-call/message) con strip ANSI y deduplicaci\u00f3n. Fixes cr\u00edticos: spread copia valores no getters, Bun exitCode == null, delay 50ms para submit Ink.",
+            "de": "Alle Agenten laufen in Buns nativem PTY. Web-Nachrichten werden \u00fcber getPtyHandle-Callback injiziert. Claude und Gemini tracken \u00fcber Session-Scanner. Cursor und Kilocode parsen PTY-Output in typisierte Events. Kritische Fixes: Spread kopiert Werte nicht Getter, Bun exitCode == null, 50ms Delay f\u00fcr Ink-Submit.",
+            "fr": "Tous les agents tournent dans le PTY natif de Bun. Les messages web sont inject\u00e9s via callback getPtyHandle. Claude et Gemini trackent via scanners de session. Cursor et Kilocode parsent la sortie PTY en \u00e9v\u00e9nements typ\u00e9s. Fixes critiques : spread copie les valeurs pas les getters, exitCode == null, d\u00e9lai 50ms pour submit Ink.",
+            "pt": "Todos os agentes rodam no PTY nativo do Bun. Mensagens web s\u00e3o injetadas via callback getPtyHandle. Claude e Gemini rastreiam via scanners de sess\u00e3o. Cursor e Kilocode parseiam output PTY em eventos tipados. Fixes cr\u00edticos: spread copia valores n\u00e3o getters, exitCode == null, delay 50ms para submit Ink."
+        }
+    },
+    {
+        "id": "a25",
+        "category": "updates",
+        "date": "2026-03-28",
+        "title": {
+            "en": "Session resume routing + agent ID extraction from metadata",
+            "es": "Ruteo de resume de sesi\u00f3n + extracci\u00f3n de ID de agente del metadata",
+            "de": "Session-Resume-Routing + Agenten-ID-Extraktion aus Metadaten",
+            "fr": "Routage de reprise de session + extraction d\u2019ID d\u2019agent depuis les m\u00e9tadonn\u00e9es",
+            "pt": "Roteamento de resume de sess\u00e3o + extra\u00e7\u00e3o de ID de agente do metadata"
+        },
+        "body": {
+            "en": "reDispatchIfFlavorMismatch routes to the correct agent when resuming a session with a different flavor than the current CLI command. Agent-specific session IDs (cursorSessionId, codexSessionId, etc.) are extracted from server metadata so --resume passes the right ID to each agent\u2019s CLI. Previously, NEST UUIDs were passed as agent chat IDs, causing crash on resume.",
+            "es": "reDispatchIfFlavorMismatch rutea al agente correcto al retomar una sesi\u00f3n con flavor diferente. Los IDs de sesi\u00f3n espec\u00edficos se extraen del metadata del servidor para que --resume pase el ID correcto a cada CLI. Antes se pasaban UUIDs de NEST como IDs de chat del agente, causando crash.",
+            "de": "reDispatchIfFlavorMismatch leitet zum richtigen Agenten weiter. Agenten-spezifische Session-IDs werden aus Server-Metadaten extrahiert. Vorher wurden NEST-UUIDs als Chat-IDs \u00fcbergeben, was zum Absturz f\u00fchrte.",
+            "fr": "reDispatchIfFlavorMismatch redirige vers le bon agent. Les IDs de session sp\u00e9cifiques sont extraits des m\u00e9tadonn\u00e9es du serveur. Avant, les UUIDs NEST \u00e9taient pass\u00e9s comme IDs de chat, causant des crashs.",
+            "pt": "reDispatchIfFlavorMismatch roteia para o agente correto ao retomar uma sess\u00e3o com flavor diferente. IDs espec\u00edficos s\u00e3o extra\u00eddos do metadata do servidor. Antes, UUIDs do NEST eram passados como IDs de chat, causando crash."
+        }
+    },
+    {
         "id": "a24",
         "category": "updates",
         "date": "2026-03-27",
