@@ -1,6 +1,44 @@
 {
-  "latest_version": "0.2.61",
+  "latest_version": "0.2.62",
   "notifications": [
+    {
+      "id": "a28",
+      "category": "updates",
+      "date": "2026-04-03",
+      "title": {
+        "en": "Ops spotlight: govern multimodal audio/video pipelines",
+        "es": "Enfoque de operaciones: gobierna pipelines multimodales de audio/video",
+        "de": "Ops-Spotlight: Multimodale Audio/Video-Pipelines steuern",
+        "fr": "Focus ops : gouvernez les pipelines multimodaux audio/vidéo",
+        "pt": "Destaque de operações: governe pipelines multimodais de áudio/vídeo"
+      },
+      "body": {
+        "en": "NEST now supports production-style multimodal workflows where teams combine LLM, image, audio, and video models in one governed environment. Admins retain centralized tracking and policy control while project teams ship richer outputs faster with fewer handoffs.",
+        "es": "NEST ahora soporta flujos multimodales estilo producción donde los equipos combinan modelos LLM, imagen, audio y video en un entorno gobernado. Los admins mantienen tracking centralizado y control de políticas, mientras los equipos entregan salidas más ricas con menos handoffs.",
+        "de": "NEST unterstützt jetzt produktionsnahe multimodale Workflows, in denen Teams LLM-, Bild-, Audio- und Video-Modelle in einer gesteuerten Umgebung kombinieren. Admins behalten zentrales Tracking und Richtlinienkontrolle, während Teams schneller umfangreichere Ergebnisse liefern.",
+        "fr": "NEST prend désormais en charge des workflows multimodaux orientés production où les équipes combinent des modèles LLM, image, audio et vidéo dans un environnement gouverné. Les admins conservent le suivi centralisé et le contrôle des politiques, tandis que les équipes livrent plus vite des sorties plus riches.",
+        "pt": "O NEST agora suporta fluxos multimodais em estilo de produção, nos quais as equipes combinam modelos de LLM, imagem, áudio e vídeo em um ambiente governado. Admins mantêm rastreamento centralizado e controle de políticas, enquanto os times entregam saídas mais ricas com menos handoffs."
+      }
+    },
+    {
+      "id": "a27",
+      "category": "updates",
+      "date": "2026-04-03",
+      "title": {
+        "en": "Major milestone: multimodal chat control plane is live",
+        "es": "Hito mayor: el control plane de chat multimodal ya está activo",
+        "de": "Großer Meilenstein: Die multimodale Chat-Control-Plane ist live",
+        "fr": "Jalon majeur : le control plane de chat multimodal est en ligne",
+        "pt": "Grande marco: o control plane de chat multimodal está no ar"
+      },
+      "body": {
+        "en": "Admins can now manage and govern chat workloads across OpenRouter, fal.ai, DeepInfra, and Vertex from one platform. Teams get access to 1,000+ models covering LLM, image, audio, and video while leadership keeps centralized visibility for operations, tracking, and control across projects and users.",
+        "es": "Los admins ahora pueden gestionar y gobernar cargas de chat en OpenRouter, fal.ai, DeepInfra y Vertex desde una sola plataforma. Los equipos acceden a más de 1.000 modelos para LLM, imagen, audio y video, mientras liderazgo mantiene visibilidad centralizada para operación, tracking y control entre proyectos y usuarios.",
+        "de": "Admins können Chat-Workloads über OpenRouter, fal.ai, DeepInfra und Vertex jetzt von einer Plattform aus steuern und verwalten. Teams erhalten Zugriff auf 1.000+ Modelle für LLM, Bild, Audio und Video, während das Management zentrale Transparenz für Betrieb, Tracking und Kontrolle über Projekte und Nutzer behält.",
+        "fr": "Les admins peuvent désormais gérer et gouverner les charges chat sur OpenRouter, fal.ai, DeepInfra et Vertex depuis une seule plateforme. Les équipes accèdent à plus de 1 000 modèles (LLM, image, audio, vidéo), tandis que le management conserve une visibilité centralisée pour l'exploitation, le suivi et le contrôle des projets et des utilisateurs.",
+        "pt": "Admins agora podem gerenciar e governar cargas de chat em OpenRouter, fal.ai, DeepInfra e Vertex em uma única plataforma. As equipes ganham acesso a mais de 1.000 modelos de LLM, imagem, áudio e vídeo, enquanto a liderança mantém visibilidade centralizada para operação, rastreamento e controle entre projetos e usuários."
+      }
+    },
     {
       "id": "a26",
       "category": "updates",
