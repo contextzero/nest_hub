@@ -1,6 +1,44 @@
 {
-  "latest_version": "0.2.61",
+  "latest_version": "0.2.62",
   "notifications": [
+    {
+      "id": "u32",
+      "category": "updates",
+      "date": "2026-04-03",
+      "title": {
+        "en": "Workflow spotlight: ship audio and video outputs faster",
+        "es": "Caso destacado: entrega salidas de audio y video más rápido",
+        "de": "Workflow-Spotlight: Audio- und Video-Outputs schneller liefern",
+        "fr": "Focus workflow : livrez vos sorties audio et vidéo plus vite",
+        "pt": "Destaque de workflow: entregue saídas de áudio e vídeo mais rápido"
+      },
+      "body": {
+        "en": "Use one chat flow to go from prompt to multimodal output: text generation, image assets, voice/audio processing, and video generation in the same project timeline. Teams can iterate creative and technical steps together without switching tools or losing context.",
+        "es": "Usa un solo flujo de chat para ir del prompt a la salida multimodal: generación de texto, assets de imagen, procesamiento de voz/audio y generación de video en la misma línea de proyecto. Los equipos pueden iterar pasos creativos y técnicos juntos sin cambiar de herramienta ni perder contexto.",
+        "de": "Nutzen Sie einen Chat-Flow vom Prompt bis zum multimodalen Output: Textgenerierung, Bild-Assets, Sprach-/Audioverarbeitung und Videogenerierung in derselben Projekt-Timeline. Teams iterieren kreative und technische Schritte gemeinsam, ohne Tools zu wechseln oder Kontext zu verlieren.",
+        "fr": "Utilisez un seul flux de chat pour passer du prompt à la sortie multimodale : génération de texte, assets image, traitement voix/audio et génération vidéo dans la même timeline projet. Les équipes itèrent les étapes créatives et techniques ensemble sans changer d'outil ni perdre le contexte.",
+        "pt": "Use um único fluxo de chat para ir do prompt à saída multimodal: geração de texto, assets de imagem, processamento de voz/áudio e geração de vídeo na mesma timeline de projeto. As equipes iteram etapas criativas e técnicas juntas sem trocar de ferramenta nem perder contexto."
+      }
+    },
+    {
+      "id": "u31",
+      "category": "updates",
+      "date": "2026-04-03",
+      "title": {
+        "en": "Major milestone: 1,000+ AI models in one chat workspace",
+        "es": "Hito mayor: más de 1.000 modelos de IA en un solo chat",
+        "de": "Großer Meilenstein: 1.000+ KI-Modelle in einem Chat-Workspace",
+        "fr": "Jalon majeur : plus de 1 000 modèles IA dans un seul espace de chat",
+        "pt": "Grande marco: mais de 1.000 modelos de IA em um único chat"
+      },
+      "body": {
+        "en": "NEST chat now connects OpenRouter, fal.ai, DeepInfra, and Vertex so users can access 1,000+ models from one place. Run LLM, image, audio, and video workflows in the same project context, switch providers without losing continuity, and keep execution centralized in your existing workspace.",
+        "es": "El chat de NEST ahora conecta OpenRouter, fal.ai, DeepInfra y Vertex para que los usuarios accedan a más de 1.000 modelos desde un solo lugar. Ejecuta flujos LLM, imagen, audio y video en el mismo contexto de proyecto, cambia de proveedor sin perder continuidad y mantén la ejecución centralizada en tu workspace.",
+        "de": "NEST Chat verbindet jetzt OpenRouter, fal.ai, DeepInfra und Vertex, damit Nutzer auf 1.000+ Modelle an einem Ort zugreifen können. Führen Sie LLM-, Bild-, Audio- und Video-Workflows im selben Projektkontext aus, wechseln Sie Anbieter ohne Kontextverlust und halten Sie die Ausführung im bestehenden Workspace zentralisiert.",
+        "fr": "Le chat NEST connecte désormais OpenRouter, fal.ai, DeepInfra et Vertex afin de donner accès à plus de 1 000 modèles depuis un seul endroit. Exécutez des workflows LLM, image, audio et vidéo dans le même contexte projet, changez de fournisseur sans perdre la continuité et centralisez l'exécution dans votre workspace existant.",
+        "pt": "O chat do NEST agora conecta OpenRouter, fal.ai, DeepInfra e Vertex para dar acesso a mais de 1.000 modelos em um só lugar. Execute fluxos de LLM, imagem, áudio e vídeo no mesmo contexto de projeto, troque de provedor sem perder continuidade e mantenha a execução centralizada no seu workspace."
+      }
+    },
     {
       "id": "u30",
       "category": "updates",
