@@ -1,6 +1,25 @@
 {
-  "latest_version": "0.2.66",
+  "latest_version": "0.2.67",
   "notifications": [
+    {
+      "id": "a29",
+      "category": "updates",
+      "date": "2026-04-18",
+      "title": {
+        "en": "Computer v1 control plane: machines, bindings, and persisted runs",
+        "es": "Control plane Computer v1: máquinas, bindings y runs persistidos",
+        "de": "Computer-v1-Control-Plane: Maschinen, Bindings und persistierte Runs",
+        "fr": "Control plane Computer v1 : machines, liaisons et exécutions persistées",
+        "pt": "Control plane Computer v1: máquinas, bindings e runs persistidos"
+      },
+      "body": {
+        "en": "The first Computer rollout exposes user-scoped REST under `/api/user/computers` for listing machines, projects, bindings, launch, run detail, and paginated events — aligned with the Computer MVP (project-first launch, server-side persistence, namespace isolation). Operations can rely on existing machine registration and JWT namespaces; audit and capacity follow your current Postgres + SSE patterns. Review `docs/mvp/computer/` for phase scope, security notes, and the go-live checklist before expanding traffic.",
+        "es": "El primer despliegue de Computer expone REST bajo `/api/user/computers` para máquinas, proyectos, bindings, lanzamiento, detalle de run y eventos paginados — alineado con el MVP (lanzamiento project-first, persistencia en servidor, aislamiento por namespace). Operaciones puede apoyarse en el registro de máquinas y namespaces JWT; auditoría y capacidad siguen Postgres + SSE. Revise `docs/mvp/computer/` para alcance, seguridad y checklist antes de subir tráfico.",
+        "de": "Computer v1 stellt nutzerbezogene REST-Endpunkte unter `/api/user/computers` bereit: Maschinen, Projekte, Bindings, Launch, Run-Detail und paginierte Events — gemäß Computer-MVP (projekt-first, serverseitige Persistenz, Namespace-Isolation). Ops nutzen weiter Maschinenregistrierung und JWT-Namespaces; Audit und Last folgen Postgres + SSE. Bitte `docs/mvp/computer/` zu Umfang, Security und Go-Live lesen, bevor Sie Traffic erhöhen.",
+        "fr": "Le déploiement Computer v1 expose le REST `/api/user/computers` : machines, projets, liaisons, lancement, détail de run et événements paginés — conforme au MVP (lancement project-first, persistance côté serveur, isolation par namespace). Les ops s’appuient sur l’enregistrement des machines et les namespaces JWT ; audit et capacité restent Postgres + SSE. Consultez `docs/mvp/computer/` pour le périmètre, la sécurité et la checklist avant montée en charge.",
+        "pt": "O primeiro rollout Computer expõe REST em `/api/user/computers` para máquinas, projetos, bindings, launch, detalhe de run e eventos paginados — alinhado ao MVP (launch project-first, persistência no servidor, isolamento por namespace). Operações reutilizam registro de máquinas e namespaces JWT; auditoria e capacidade seguem Postgres + SSE. Veja `docs/mvp/computer/` para escopo, segurança e checklist antes de aumentar tráfego."
+      }
+    },
     {
       "id": "a28",
       "category": "updates",

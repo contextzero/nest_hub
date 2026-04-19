@@ -1,6 +1,25 @@
 {
-  "latest_version": "0.2.66",
+  "latest_version": "0.2.67",
   "notifications": [
+    {
+      "id": "u33",
+      "category": "updates",
+      "date": "2026-04-18",
+      "title": {
+        "en": "Computer v1: project-first sessions from CLI and web",
+        "es": "Computer v1: sesiones project-first desde CLI y web",
+        "de": "Computer v1: projekt-first-Sessions per CLI und Web",
+        "fr": "Computer v1 : sessions project-first depuis le CLI et le web",
+        "pt": "Computer v1: sessões project-first pelo CLI e pela web"
+      },
+      "body": {
+        "en": "NEST ships the first Computer release: run `annie computer` to pair a registered machine with a server project, bind the local working directory once, and launch a computer session that reuses the same chat shell you already know. Open **Computers** in the web app to browse active and older computer sessions, search the list, and jump into the same SessionChat experience while the server keeps bindings and run history in one place.",
+        "es": "NEST lanza la primera versión de Computer: ejecuta `annie computer` para emparejar una máquina registrada con un proyecto del servidor, vincula el directorio local una vez y abre una sesión computer que reutiliza el mismo chat que ya conoces. Entra en **Computers** en la web para ver sesiones activas y anteriores, buscar en la lista y abrir el mismo SessionChat mientras el servidor mantiene bindings e historial de runs centralizado.",
+        "de": "NEST liefert Computer v1: Mit `annie computer` koppeln Sie eine registrierte Maschine an ein Server-Projekt, binden das lokale Arbeitsverzeichnis einmalig und starten eine Computer-Session im gewohnten Chat-Layout. Öffnen Sie **Computers** in der Web-App, um aktive und ältere Computer-Sessions zu sehen, zu suchen und dieselbe SessionChat-Oberfläche zu nutzen — Bindings und Run-Verlauf bleiben serverseitig konsolidiert.",
+        "fr": "NEST livre Computer v1 : lancez `annie computer` pour associer une machine enregistrée à un projet serveur, lier une fois le répertoire local et ouvrir une session computer dans le même chat qu’ailleurs. Ouvrez **Computers** dans le web pour parcourir les sessions actives et plus anciennes, rechercher et reprendre le même SessionChat pendant que le serveur conserve liaisons et historique d’exécution au même endroit.",
+        "pt": "NEST entrega o Computer v1: rode `annie computer` para parear uma máquina registrada com um projeto do servidor, vincule o diretório local uma vez e abra uma sessão computer no mesmo shell de chat de sempre. Abra **Computers** na web para listar sessões ativas e antigas, buscar e entrar no mesmo SessionChat enquanto o servidor mantém bindings e histórico de runs em um só lugar."
+      }
+    },
     {
       "id": "u32",
       "category": "updates",
