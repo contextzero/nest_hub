@@ -1,3 +1,11 @@
+
+
+https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
+
+
+
+https://github.com/user-attachments/assets/250d9ae6-4cd1-4784-a1c7-6f974cdbbe00
+
 # NEST — Self-Hosted Workforce Automation
 
 <p align="center">
@@ -88,7 +96,7 @@ Role-aware routing (employee **reviews → approves →** execution on **Compute
 
 ### Product video
 
-[https://github.com/ontextzero/nest_hub/public/nest_hub_v0.2.73.mp4](https://github.com/contextzero/nest_hub/blob/main/public/nest_hub_v0.2.73.mp4)
+https://github.com/contextzero/nest_hub/blob/main/public/nest_hub_v0.2.73.mp4
 
 ### The Four Pillars
 
