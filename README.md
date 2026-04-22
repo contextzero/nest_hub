@@ -92,6 +92,8 @@ Role-aware routing (employee **reviews → approves →** execution on **Compute
 https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
 
 
+Also in this repository: [`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
+
 ### The Four Pillars
 
 | Pillar | What It Means |
@@ -282,7 +284,9 @@ Distribute **only** URLs and tokens from **your** company domain and identity sy
 
 ## Key Concepts
 
-### ZeroClaw & OpenClaw
+### ZeroClaw, OpenClaw & Hermes (inside Computer)
+
+From **June 1, 2026**, these ship as **wrappers inside `annie computer`**—same governed session and audit model as other Computer-backed agents. See [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
 
 **ZeroClaw** = Headless automation with self-correction
 - Runs tasks autonomously on employee machines
@@ -293,6 +297,10 @@ Distribute **only** URLs and tokens from **your** company domain and identity sy
 - Task graphs with dependencies
 - Multi-step workflows
 - Browser and desktop control
+
+**Hermes** = Computer-use wrapper
+- Aligned with **NEST Computer** for governed operational work alongside OpenClaw and ZeroClaw
+- Same hub-synced permissions and audit trail as other Computer sessions
 
 ### Colony Memory (Enterprise)
 
@@ -319,7 +327,7 @@ Specialized agents that **evolve**:
 | **Deployment** | Your Docker server | Our cloud |
 | **Price** | Free ($0 product fee) | Subscription |
 | **Users** | Individual / Small team | Organizations, NGOs, Governments |
-| **Agents** | All coding agents | + Darwin agents + ZeroClaw |
+| **Agents** | All coding agents | + Darwin agents + Computer wrappers (OpenClaw, ZeroClaw, Hermes) |
 | **Memory** | Local session history | Colony-wide Souls |
 | **Governance** | Permission modes + audit | Advanced compliance + RBAC |
 | **Support** | GitHub + Community | Dedicated |
@@ -363,7 +371,7 @@ Control how much autonomy your AI agents have — per employee, per project, per
 | Framework install (Node, Docker, Rust) | [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) |
 | Enterprise features | [docs/enterprise/README.md](docs/enterprise/README.md) |
 | **CLI (`@contextzero/nest`) + MCP (enterprise)** | [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) · [ES](docs/enterprise/annie-cli-mcp-enterprise-ES.md) · [DE](docs/enterprise/annie-cli-mcp-enterprise-DE.md) · [FR](docs/enterprise/annie-cli-mcp-enterprise-FR.md) · [PT](docs/enterprise/annie-cli-mcp-enterprise-PT.md) · [ZH](docs/enterprise/annie-cli-mcp-enterprise-ZH.md) |
-| ZeroClaw & OpenClaw | [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) |
+| Computer wrappers (OpenClaw, ZeroClaw, Hermes) | [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) |
 | Darwin Agents | [docs/enterprise/darwin-agents.md](docs/enterprise/darwin-agents.md) |
 | Business overview for founders | [docs/business/README.md](docs/business/README.md) |
 | Value proposition | [docs/business/value-proposition.md](docs/business/value-proposition.md) |

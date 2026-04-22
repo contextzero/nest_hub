@@ -28,7 +28,7 @@
 | **Darwin Agents** | ❌ | ✅ |
 | **Colony Memory** | ❌ | ✅ |
 | **Specialized Agents** | ❌ | ✅ |
-| **Advanced Automation** | 基础 | 完整 ZeroClaw |
+| **Advanced Automation** | 基础 | 完整 Computer 自动化（包装器：ZeroClaw、OpenClaw、Hermes） |
 | **SSO / SAML** | ❌ | ✅ |
 | **Audit Logs** | 本地 | 全面合规 |
 | **支持** | GitHub | 专属 SLA |
@@ -110,7 +110,9 @@
 
 ---
 
-### 4. Advanced ZeroClaw
+### 4. 高级 Computer 自动化
+
+自 **2026 年 6 月 1 日**起，**OpenClaw**、**ZeroClaw**、**Hermes** 在 **`annie computer`** 内交付——见 [zeroclaw.md](./zeroclaw.md)。
 
 - 更深的系统访问
 - 多机编排

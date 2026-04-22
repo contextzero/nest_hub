@@ -6,6 +6,8 @@
 
 **Selbstgehostete Workforce-Automatisierungsplattform — Enterprise Grade**
 <br/>
+<em>Das Betriebssystem dafür, wie Ihr Unternehmen mit KI arbeitet.</em>
+<br/>
 <em>Dein Hub. Deine Daten. Deine KI-Belegschaft. Direkt aus deiner Hand.</em>
 
 <br/>
@@ -24,16 +26,42 @@
 
 ## Was ist NEST?
 
-**NEST** ist eine vollständige, selbstgehostete **Workforce-Automatisierungsplattform**. Nicht nur zum Programmieren — Mitarbeiter können Maschinen verwalten, Aufgaben lösen, E-Mails senden, recherchieren, Produkte bauen und mehr. Alles über einen Hub. Alles vom Handy.
+> **Ja, Sie haben noch 15+ Apps**—und diese Fragmentation tat schon 2018 weh. Heute kommt **Schatten-KI im Unternehmen** dazu: Menschen nutzen bereits ChatGPT, Claude, Cursor, Copilot, Bildtools und lose API-Keys—oft wissen Sie nicht **wo**, **welches Modell** und **was es kostet**. Prompts starten in jedem Tab bei null; wenn jemand geht, geht das **mit KI verfeinerte Urteil** mit. Sie haben Dashboards für Umsatz und Server, aber nicht dafür, **wie Arbeit mit KI wirklich passiert**.
+
+**NEST** ist die **selbstgehostete Schicht, die Ihr Unternehmen betreibt**: **Projekte**, **Rollen**, **Memory** und **Governance**, damit Agenten und Chat **unter Ihren URLs, Ihren Tokens und Ihrem Audit-Log** laufen—nicht als unsichtbare Schatten-IT.
+
+**NEST** ist auch eine vollständige **Workforce-Automatisierungsplattform**: Coding, Chat und Computer-Nutzung in einem Hub—Telefon, Tablet und Desktop.
 
 > Du deployst: einen Docker-Befehl auf deinem Server.
 > Dein Team erhält: einen Echtzeit-KI-Workforce-Hub, erreichbar von jedem Gerät.
 
+### Drei Oberflächen — in Projekten, die Admins verwalten
+
+Arbeit wird in **Projekten** gebündelt, die Ihre Administratoren anlegen. Das liefert **Tracking pro Projekt** (wer hat was in welcher Session getan), eine **Memory Bank**, die Kontext pro Nutzer und Team ansammelt (die „Seele“, wie jede Person mit KI arbeitet), und **Freigaben** vor riskanten Aktionen—statt loser Browser-Tabs.
+
+| Oberfläche | Was Mitarbeitende heute bekommen | Hinweise |
+|--------|----------------------------|--------|
+| **Development** | **Claude Code**, **Cursor**, **Codex**, **OpenCode** und **KiloCode** über die **`annie`**-CLI (`npm install -g @contextzero/nest`), mit **MCP** für **Cursor** und **Visual Studio Code** | [Vollständige CLI- + MCP-Referenz](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| **Chat** | Ein Hub-Chat auf **Web, Desktop und mobiler PWA**, angetrieben von **OpenRouter**, **Fal.ai**, **Google Vertex AI** und **DeepInfra** — **über 700** Modelle für **Text, Bild, Audio und Video** | Provider-Keys bleiben auf dem **Server**; Mitarbeitende authentifizieren sich an **Ihrem** Hub |
+| **Computer** | **`annie computer`** — hub-synchronisierte „Computer-Nutzung“ aus CLI und PWA (Shell, Browser wo erlaubt, Dateien, Runbooks). Ab **1. Juni 2026** liefern wir **OpenClaw**, **ZeroClaw** und **Hermes** als **Wrapper in Computer** (gleiches Muster wie Claude, Cursor, …)—nicht als eigenständige `annie`-Unterbefehle ([Details](docs/enterprise/zeroclaw.md)) | Gleiche Haltung **prüfen → freigeben → ausführen** wie in Development-Sessions |
+
+### Produkt-Roadmap (2026)
+
+| Datum | Meilenstein |
+|------|-----------|
+| **1. Mai 2026** | **Projektmanagement** in Projekten — Backlogs, Workflow-Status und Sichtbarkeit über Aufgaben |
+| **15. Mai 2026** | **CRM** — Kontakte und Lifecycle (z. B. Pre-Sales → Sales → Post-Sales) **projektübergreifend** |
+| **1. Juni 2026** | **`annie computer`-Wrapper** — **OpenClaw**, **ZeroClaw** und **Hermes** integriert **in Computer** (gleiches Anbinde-Muster wie andere Hub-Agenten) |
+
+Rollenbewusstes Routing (Mitarbeitende **prüfen → genehmigen →** Ausführung auf **Computer**, **Claude**, **Cursor** usw.) verbindet diese Module—siehe [ROADMAP.md](ROADMAP.md) für Umfang und Lieferhinweise.
+
 ### Produktvideo
 
-Überblick über die Hub-Erfahrung (lokale Datei in diesem Repository):
 
-[`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
+https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
+
+
+Auch im Repository: [`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
 
 ### Die vier Säulen
 
@@ -68,18 +96,17 @@ cd nest_hub
 | **Gemini** | `annie gemini` | Google Multimodal-Agent |
 | **OpenCode** | `annie opencode` | Open-Source-Coding-Agent |
 | **KiloCode** | `annie kilocode` | Aufgabenausführung + Fernsteuerung |
-| **Computer (Management)** | `annie computer` | Multi-Tool-Agent am Hub (Shell, Browser, Dateien, Prozesse) |
-| **ZeroClaw** | Headless-Automatisierung | Selbstkorrigierende autonome Aufgaben |
-| **OpenClaw** | Projekt-Orchestrierung | Mehrschritt-Workflows + Browsersteuerung |
-
-\*Ab **1. Juni 2026** werden **ZeroClaw** und **OpenClaw** als **Wrapper in `annie computer`** bereitgestellt (gleiches Muster wie andere Computer-Agenten). Siehe [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
+| **Computer (Management)** | `annie computer` | Multi-Tool-Agent am Hub: Shell, Browser, Dateien, Git, Prozesse, Planung—über einen einzelnen IDE hinaus |
+| **ZeroClaw** | *über `annie computer` (ab 1. Juni 2026)* | Headless-Automatisierungs-Wrapper — selbstkorrigierende autonome Aufgaben ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **OpenClaw** | *über `annie computer` (ab 1. Juni 2026)* | Orchestrierungs-Wrapper — Mehrschritt-Workflows + Browsersteuerung ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **Hermes** | *über `annie computer` (ab 1. Juni 2026)* | Computer-Use-Wrapper neben OpenClaw / ZeroClaw ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
 
 ```bash
 npm install -g @contextzero/nest
 annie --help
 ```
 
-> **Computer vs. bare `annie`:** Ab **1. Juni 2026** laufen **ZeroClaw** und **OpenClaw** als **Wrapper in `annie computer`** (gleiches Muster wie Claude, Cursor, Codex, …)—siehe [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md). Es gibt **keine** eigenständigen Befehle `annie zeroclaw` / `annie openclaw`. In Skripten und CI immer einen expliziten Unterbefehl verwenden (`annie claude`, `annie computer`, …). Ist das erste Argument kein bekannter Unterbefehl, verhält sich die CLI wie **`annie cursor`**.
+> **Computer vs. bare `annie`:** Ab **1. Juni 2026** laufen **OpenClaw**, **ZeroClaw** und **Hermes** als **Wrapper in `annie computer`** (gleiches Muster wie Claude, Cursor, Codex, …)—siehe [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md). Es gibt **keine** eigenständigen Befehle `annie openclaw` / `annie zeroclaw` / `annie hermes`. In Skripten und CI immer einen expliziten Unterbefehl verwenden (`annie claude`, `annie computer`, …). Ist das erste Argument kein bekannter Unterbefehl, verhält sich die CLI wie **`annie cursor`**.
 
 ### Enterprise-Rollout — CLI (`@contextzero/nest`)
 

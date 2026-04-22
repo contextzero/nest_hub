@@ -6,6 +6,8 @@
 
 **Plataforma de Automação da Força de Trabalho — Auto-hospedada — Enterprise Grade**
 <br/>
+<em>O sistema operacional de como a sua empresa trabalha com IA.</em>
+<br/>
 <em>Seu hub. Seus dados. Sua força de trabalho IA. Na palma da sua mão.</em>
 
 <br/>
@@ -24,16 +26,42 @@
 
 ## O que é o NEST?
 
-**NEST** é uma plataforma completa e auto-hospedada de **automação da força de trabalho**. Não é apenas para programação — seus funcionários podem gerenciar máquinas, resolver tarefas, enviar emails, pesquisar, construir produtos e mais. Tudo em um hub. Tudo do celular.
+> **Sim, você ainda tem 15+ apps**—e essa fragmentação já doía em 2018. Hoje soma-se a **IA corporativa nas sombras**: as pessoas já usam ChatGPT, Claude, Cursor, Copilot, ferramentas de imagem e API soltas—muitas vezes você não sabe **onde**, **qual modelo** nem **quanto custa**. Os prompts começam do zero em cada aba; quando alguém sai, o **julgamento refinado com IA** sai junto. Você tem painéis para receita e servidores, mas não para **como o trabalho realmente acontece com IA**.
+
+**NEST** é a **camada auto-hospedada que a sua empresa executa**: **projetos**, **papéis**, **memória** e **governança** para agentes e chat rodarem **sob os seus URLs, os seus tokens e o seu registo de auditoria**—não como TI invisível.
+
+**NEST** é também uma **plataforma completa de automação da força de trabalho**: código, chat e uso do computador num único hub—telefone, tablet e desktop.
 
 > Você implanta: um comando Docker no seu servidor.
 > Sua equipe recebe: um hub de força de trabalho IA em tempo real, acessível de qualquer dispositivo.
 
+### Três superfícies — dentro de projetos que os administradores possuem
+
+O trabalho agrupa-se em **projetos** criados pelos administradores. Isso dá **rastreio por projeto** (quem fez o quê, em que sessão), um **banco de memória** que acumula contexto por utilizador e equipa (a «alma» de como cada pessoa trabalha com IA) e **aprovações** antes de ações de alto risco—em vez de separadores soltos do navegador.
+
+| Superfície | O que os funcionários obtêm hoje | Notas |
+|--------|----------------------------|--------|
+| **Desenvolvimento** | **Claude Code**, **Cursor**, **Codex**, **OpenCode** e **KiloCode** através da CLI **`annie`** (`npm install -g @contextzero/nest`), com **MCP** para **Cursor** e **Visual Studio Code** | [Referência completa CLI + MCP](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| **Chat** | Um chat do hub em **web, desktop e PWA móvel** com **OpenRouter**, **Fal.ai**, **Google Vertex AI** e **DeepInfra** — **mais de 700** modelos em **texto, imagem, áudio e vídeo** | As chaves dos fornecedores ficam no **servidor**; os funcionários autenticam-se no **seu** hub |
+| **Computer** | **`annie computer`** — «computer use» sincronizado com o hub a partir da CLI e da PWA (shell, navegador onde permitido, ficheiros, runbooks). A partir de **1 de junho de 2026**, **OpenClaw**, **ZeroClaw** e **Hermes** são entregues como **invólucros dentro de Computer** (o mesmo padrão que Claude, Cursor, …)—não como subcomandos isolados de `annie` ([detalhe](docs/enterprise/zeroclaw.md)) | A mesma postura **rever → aprovar → executar** das sessões de desenvolvimento |
+
+### Roteiro do produto (2026)
+
+| Data | Marco |
+|------|-----------|
+| **1 de maio de 2026** | **Gestão de projetos** nos projetos — backlogs, estados de fluxo e visibilidade entre tarefas |
+| **15 de maio de 2026** | **CRM** — contactos e ciclo de vida (p. ex. pré-vendas → vendas → pós-vendas) partilhados **entre projetos** |
+| **1 de junho de 2026** | **Invólucros `annie computer`** — **OpenClaw**, **ZeroClaw** e **Hermes** integrados **dentro de Computer** (o mesmo padrão de anexar que outros agentes ligados ao hub) |
+
+Encaminhamento consciente do papel (o funcionário **revê → aprova →** execução em **Computer**, **Claude**, **Cursor**, etc.) liga estes módulos—ver [ROADMAP.md](ROADMAP.md) para âmbito e notas de entrega.
+
 ### Vídeo do produto
 
-Visão geral da experiência do hub (arquivo local neste repositório):
 
-[`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
+https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
+
+
+Também no repositório: [`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
 
 ### Os Quatro Pilares
 
@@ -68,18 +96,17 @@ cd nest_hub
 | **Gemini** | `annie gemini` | Agente multimodal do Google |
 | **OpenCode** | `annie opencode` | Agente de código open source |
 | **KiloCode** | `annie kilocode` | Execução de tarefas + controle remoto |
-| **Computer (gestão)** | `annie computer` | Agente multi-ferramenta sincronizado com o hub (shell, navegador, ficheiros) |
-| **ZeroClaw** | Automação headless | Tarefas autônomas autocorretivas |
-| **OpenClaw** | Orquestração de projetos | Fluxos multi-etapa + controle do navegador |
-
-\*A partir de **1 de junho de 2026**, **ZeroClaw** e **OpenClaw** ficam disponíveis como **invólucros dentro de `annie computer`** (o mesmo padrão que outros agentes Computer). Ver [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
+| **Computer (gestão)** | `annie computer` | Agente multi-ferramenta sincronizado com o hub: shell, navegador, ficheiros, git, processos, agendamento—para além de um único IDE |
+| **ZeroClaw** | *via `annie computer` (a partir de 1 jun 2026)* | Invólucro de automação headless — tarefas autónomas autocorretivas ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **OpenClaw** | *via `annie computer` (a partir de 1 jun 2026)* | Invólucro de orquestração — fluxos multi-etapa + controlo do navegador ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **Hermes** | *via `annie computer` (a partir de 1 jun 2026)* | Invólucro de uso do computador junto a OpenClaw / ZeroClaw ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
 
 ```bash
 npm install -g @contextzero/nest
 annie --help
 ```
 
-> **Computer vs. `annie` solto:** A partir de **1 de junho de 2026**, **ZeroClaw** e **OpenClaw** ficam **dentro de `annie computer`** como invólucros (o mesmo padrão que Claude, Cursor, Codex, …)—ver [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md). **Não** há comandos `annie zeroclaw` / `annie openclaw`. Em scripts e CI use sempre um subcomando explícito (`annie claude`, `annie computer`, …). Se o primeiro token não for um subcomando conhecido, a CLI comporta-se como **`annie cursor`**.
+> **Computer vs. `annie` solto:** A partir de **1 de junho de 2026**, **OpenClaw**, **ZeroClaw** e **Hermes** correm como **invólucros dentro de `annie computer`** (o mesmo padrão que Claude, Cursor, Codex, …)—ver [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md). **Não** há comandos autónomos `annie openclaw` / `annie zeroclaw` / `annie hermes`. Em scripts e CI use sempre um subcomando explícito (`annie claude`, `annie computer`, …). Se o primeiro token não for um subcomando conhecido, a CLI comporta-se como **`annie cursor`**.
 
 ### Implantação enterprise — CLI (`@contextzero/nest`)
 
