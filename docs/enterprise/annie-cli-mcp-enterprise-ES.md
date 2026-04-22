@@ -28,7 +28,7 @@ Este documento es la referencia **de nivel enterprise** para desplegar **Annie**
 5. [Fases de madurez técnica MCP (M1–M4)](#5-fases-de-madurez-técnica-mcp-m1m4)
 6. [Fases de despliegue operativo (P0–P4)](#6-fases-de-despliegue-operativo-p0p4)
 7. [Arquitectura resumida](#7-arquitectura-resumida)
-8. [CLI Annie — referencia completa de comandos](#8-cli-annie--referencia-completa-de-comandos)
+8. [CLI (`@contextzero/nest`) — referencia de comandos](#section-8-cli-es)
 9. [Configuración y reglas de URL](#9-configuración-y-reglas-de-url)
 10. [MCP — protocolo, seguridad y endpoints](#10-mcp--protocolo-seguridad-y-endpoints)
 11. [Patrones por cliente](#11-patrones-por-cliente)
@@ -300,22 +300,29 @@ Cursor / VS Code MCP  ── Streamable HTTP ─────┘
 
 ---
 
-## 8. CLI Annie — referencia completa de comandos
+<a id="section-8-cli-es"></a>
+
+## 8. CLI (`@contextzero/nest`) — referencia de comandos
+
+Instalación: **`npm install -g @contextzero/nest`** → ejecutable **`annie`**. La **referencia canónica y más detallada** (modo Computer, terminales PTY remotas, resolución por defecto a `cursor`, `hook-forwarder`, etc.) está en la **versión en inglés**: [annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) — sin enlaces a repositorios privados.
+
+**Envoltorios Computer (1 de junio de 2026):** **OpenClaw**, **ZeroClaw** y **Hermes** en **`annie computer`**. **Proyectos:** **gestión de proyectos — 1 de mayo de 2026** · **CRM — 15 de mayo de 2026** — [ROADMAP.md](../../ROADMAP.md) · detalle en **inglés** §8.3: [annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) · [zeroclaw.md](./zeroclaw.md).
 
 | Área | Comando | Propósito |
 |------|---------|-----------|
-| Claude | `annie claude [args…]` | Claude Code + NEST |
+| Claude Code | `annie claude [args…]` | Claude Code + NEST |
 | Cursor | `annie cursor [args…]` | Cursor Agent |
 | Codex | `annie codex [args…]` | Codex; `annie codex resume <id>` |
 | Gemini | `annie gemini [args…]` | Gemini (ACP) |
 | OpenCode | `annie opencode [args…]` | OpenCode |
 | KiloCode | `annie kilocode [args…]` | KiloCode |
+| **Computer (gestión)** | `annie computer [args…]` | Agente multi-herramienta en el hub: shell, navegador, archivos, automatización |
 | Auth | `annie auth login` / `status` / `logout` | Credenciales |
-| Worker | `annie worker start` / `stop` / `status` / `list` / `stop-session <id>` / `logs` | Worker |
-| MCP | `annie mcp [--url <url>] [--token \| --bearer <secreto>]` | Puente stdio → HTTP MCP; token también vía `CLI_API_TOKEN` / `NEST_MCP_BEARER_TOKEN` |
-| Servidor | `annie server [--host …] [--port …]` | Hub empaquetado |
+| Worker | `annie worker start` / `stop` / `status` / `list` / `stop-session <id>` / `logs` | Worker en segundo plano |
+| MCP | `annie mcp [--url <url>] [--token \| --bearer <secreto>]` | Puente stdio → HTTP MCP |
+| Servidor | `annie server [--host …] [--port …]` | Hub empaquetado (si tu instalación lo incluye) |
 | Diagnóstico | `annie diagnose` / `annie diagnose clean` | Diagnóstico / limpieza |
-| Limitado | `hook-forwarder`; `connect`; `notify` | Ver documento en inglés |
+| Limitado | `hook-forwarder`; `connect`; `notify` | Ver guía en inglés |
 
 ---
 
@@ -412,7 +419,7 @@ Independiente del **lenguaje del repositorio**.
 | [DEVOPS.md](../DEVOPS.md) | HTTPS, proxy |
 | [Methodology](../methodology/README.md) | Fases NEST 0–6 |
 | [Enterprise README](./README.md) | Enterprise |
-| [nest (código)](https://github.com/contextzero/nest) | Rutas servidor |
+| [Imagen nest-server](https://hub.docker.com/r/matiasbaglieri/nest-server) | Rutas en la imagen publicada; contratos documentados en **nest_hub** |
 
 ---
 
@@ -421,6 +428,6 @@ Independiente del **lenguaje del repositorio**.
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Parte del ecosistema [contextzero/nest](https://github.com/contextzero/nest).*
+*Distribución pública: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

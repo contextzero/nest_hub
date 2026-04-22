@@ -178,7 +178,7 @@ Las credenciales se guardan en `~/.nest/config`. Cada comando `annie` posterior 
 ```bash
 export CLI_API_TOKEN="your-token-from-env"
 export NEST_API_URL="http://localhost"
-annie
+annie auth status
 ```
 
 **Comprobar la conexión:**
@@ -191,16 +191,21 @@ Debería mostrar la URL de tu servidor y confirmar que el token está definido. 
 
 ### Paso 2.3 — Iniciar tu primera sesión de agente
 
+Paquete: **`npm install -g @contextzero/nest`** → **`annie`**. Referencia de comandos: [enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md).
+
 ```bash
-annie            # Claude Code — Anthropic's coding agent
+annie claude     # Claude Code — agente de código de Anthropic
 annie codex      # OpenAI Codex
 annie cursor     # Cursor Agent
-annie gemini     # Google Gemini (via ACP)
-annie opencode   # OpenCode — open-source agent
-annie kilocode   # KiloCode — task execution with tight approval control
-annie zeroclaw   # ZeroClaw — headless workflow automation with self-correction
-annie openclaw   # OpenClaw — visual workflow orchestration and task graphs
+annie gemini     # Google Gemini (vía ACP)
+annie opencode   # OpenCode — agente open source
+annie kilocode   # KiloCode — ejecución de tareas con control de aprobación
+annie computer   # Computer — agente multi-herramienta en el hub (shell, navegador, archivos)
 ```
+
+**Automatización:** si el primer argumento no es un subcomando conocido, la CLI se comporta como **`annie cursor`**. En scripts y CI usa siempre un subcomando explícito (`annie claude`, `annie computer`, …).
+
+**ZeroClaw / OpenClaw** estarán disponibles **dentro de `annie computer`** como envoltorios (mismo patrón que Claude, Cursor, …) a partir del **1 de junio de 2026**—no como subcomandos `annie` aparte. Ver [enterprise/zeroclaw.md](enterprise/zeroclaw.md) y [RELEASES.md](../RELEASES.md).
 
 Cuando arranque una sesión, abre **http://localhost** en el navegador (o en el móvil). La sesión aparece en el panel en tiempo real.
 
@@ -299,6 +304,6 @@ Referencia completa de producción: [DEVOPS.md](DEVOPS.md)
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Distribución pública: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

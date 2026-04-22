@@ -113,7 +113,7 @@ See [voice-and-tone.md](voice-and-tone.md) for full guidelines.
 
 - Free forever
 - Docker deployment
-- 8 agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw
+- Agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw as **in-Computer wrappers** from **June 1, 2026** — see [zeroclaw.md](../enterprise/zeroclaw.md))
 
 See [Quick Start](../QUICKSTART.md) and [Install Guide](../INSTALL.md).
 
@@ -147,6 +147,6 @@ See [Enterprise Features](../enterprise/README.md) and [Business Overview](../bu
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

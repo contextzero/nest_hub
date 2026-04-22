@@ -7,7 +7,17 @@
 
 </div>
 
-# ZeroClaw & OpenClaw — Automation Engines
+# ZeroClaw, OpenClaw & Hermes — Automation Engines
+
+## Computer integration (June 1, 2026)
+
+**OpenClaw**, **ZeroClaw**, and **Hermes** are moving into **`annie computer`** as **wrappers**—the same integration pattern as other agents you run through Computer (for example **Claude Code**, **Cursor**, **Codex**): one multi-tool session on the hub, governed permissions, and a single audit trail. They will **not** ship as separate top-level CLI commands such as `annie openclaw`, `annie zeroclaw`, or `annie hermes`.
+
+**Target release:** **June 1, 2026** (coordinated `@contextzero/nest` + hub update). Until then, behavior may follow the current hub/dashboard flows described below; watch [RELEASES.md](../../RELEASES.md) for the exact package and image versions when this lands.
+
+**Related roadmap (projects):** **Project management** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — see [ROADMAP.md](../../ROADMAP.md).
+
+---
 
 ## Overview
 
@@ -46,6 +56,10 @@ Visual workflow orchestration:
 - Complex workflows
 - Human-in-the-loop approval
 - Project orchestration
+
+### Hermes
+
+Computer-use path aligned with **NEST Computer**—ships as a **wrapper inside `annie computer`** on **June 1, 2026**, alongside OpenClaw and ZeroClaw, with the same governed session and audit model.
 
 ---
 
@@ -247,6 +261,6 @@ Still failing? → Alert human
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

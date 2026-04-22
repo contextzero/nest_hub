@@ -20,7 +20,7 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 | **Employee (PWA)** | Sends requests, specs, voice; receives streams and final answers; approves or denies. |
 | **Owner / admin** | Sets policies, providers, indexing, auto vs approval, and employee profiles. |
 | **Server (Rust)** | Session authority, DB, events, RPC to CLI, permission gates. |
-| **CLI runners** | Cursor, Claude Code, Codex, Gemini, OpenCode, KiloCode; **OpenClaw / ZeroClaw** for project/task automation at scale. |
+| **CLI runners** | Cursor, Claude Code, Codex, Gemini, OpenCode, KiloCode; **OpenClaw / ZeroClaw** ( **`annie computer` wrappers from June 1, 2026** ) for project/task automation at scale. |
 | **LLM providers** | OpenRouter, Vertex, DeepInfra, etc. — keys on server only. |
 | **Voice** | ElevenLabs — bridges mic on phone to tool/session actions. |
 | **Media services (roadmap)** | Video, image as **task backends** when enabled. |
@@ -52,7 +52,7 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 
 ### 4. Orchestration
 
-- **Agent backend selection:** Coding agent vs OpenClaw/ZeroClaw vs future media agent.
+- **Agent backend selection:** Coding agent vs **ZeroClaw/OpenClaw (inside `annie computer` from June 1, 2026)** vs future media agent.
 - **Model routing:** OpenRouter / Vertex / DeepInfra per task type and admin caps.
 - **Permission mode:** default / accept edits / bypass (rare) / plan — aligned with runner.
 
@@ -91,7 +91,7 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 1. **Secrets:** Never ship LLM/voice keys to the mobile client.  
 2. **Audit:** Permission grants/denies and high-risk actions logged.  
 3. **UX:** **Multitasking** — never block the whole app on one long task.  
-4. **Honesty:** If OpenClaw/SSD/media not deployed yet, UI labels **beta** or **roadmap**.
+4. **Honesty:** If OpenClaw/ZeroClaw (Computer wrappers), SSD, or media are not shipped for your tenant/version yet, UI labels **beta** or **roadmap**.
 
 ---
 
@@ -110,6 +110,6 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

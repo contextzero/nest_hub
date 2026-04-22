@@ -7,15 +7,15 @@
 
 </div>
 
-# CLI (annie) — Business Overview
+# CLI (`annie`) — Business Overview
 
-**By Context Zero.** This page is for **business owners and team leads** — the people who decide how the AI workforce runs, not the people who write the code. If you're looking for install commands or raw configuration, see [INSTALL.md](INSTALL.md) and [README.md](../README.md).
+**By Context Zero.** Employees install the published package **`npm install -g @contextzero/nest`**, which provides the **`annie`** command. This page is for **business owners and team leads** — the people who decide how the AI workforce runs, not the people who write the code. Install and configuration details: [INSTALL.md](INSTALL.md) and [README.md](../README.md). **Canonical command surface (MCP, Computer mode, PTY terminals, phased rollout):** [enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md).
 
 ---
 
 ## The One Sentence That Matters
 
-> **`annie` is what runs on your employees' machines. The server — running on your infrastructure — is what gives you control over all of it.**
+> **`annie` (from `@contextzero/nest`) is what runs on your employees' machines. The server — on your infrastructure — is the authority for sessions, audit, permissions, and (where configured) LLM credentials.**
 
 That distinction is everything. The CLI (`annie`) is a thin runner. It starts agents, connects them to your server, and streams events back. The **server** is the authority: it holds the sessions, the audit log, the permissions, and optionally the LLM credentials. Your employees run agents; you run the hub.
 
@@ -26,11 +26,12 @@ That distinction is everything. The CLI (`annie`) is a thin runner. It starts ag
 ```
 Your Employees' Machines          Your Server (Docker)          Your Phone / Tablet
 ────────────────────────    ────────────────────────────    ──────────────────────────
-  annie CLI                 ←──  NEST Server (Rust)       ←──  Mobile PWA
-  (Claude, Codex,           ←──  Session authority         ←──  Live sessions
-   Cursor, Gemini...)       ←──  Audit log (Postgres)      ←──  Approve / reject
-  Executes locally          ←──  LLM keys (server-side)    ←──  Terminal view
-  Reports everything        ←──  Permission enforcement    ←──  Real-time chat
+  annie CLI (`@contextzero/nest`)  ←──  NEST Server (Rust)       ←──  Mobile PWA
+  Claude / Cursor / Codex /   ←──  Session authority         ←──  Live sessions
+  Gemini / OpenCode / KiloCode  ←──  Audit log (Postgres)      ←──  Approve / reject
+  + Computer (multi-tool)     ←──  LLM keys (server-side)    ←──  Remote PTY terminals
+  Executes locally            ←──  Permission enforcement    ←──  Real-time chat
+  Reports everything          ←──  OpenClaw / ZeroClaw / Hermes (Computer) ←──  Dashboard & audit
 ```
 
 **Your LLM API keys never touch employee machines.** They're configured on the server, in Admin. Employees run agents that use the server's credentials — they never see the keys, never store them, never misplace them.
@@ -39,22 +40,34 @@ Your Employees' Machines          Your Server (Docker)          Your Phone / Tab
 
 ---
 
-## The Eight Agent Modes
+## CLI command surfaces (development, management, operations)
 
-Every mode runs through the same hub. Every session is visible from the same mobile dashboard. Every approval comes to the same place: your phone.
+Every published `annie` subcommand runs through the same hub. Sessions are visible in the mobile dashboard; approvals land where you configure them. **Install once:** `npm install -g @contextzero/nest`.
 
-| Command | Agent | What It Does For Your Business |
+### Development — IDE-tied coding agents
+
+| Command | Agent | What it does for your business |
 |---------|-------|-------------------------------|
-| `annie` | **Claude Code** | Anthropic's flagship coding agent. Executes tasks in any repo, reports progress, surfaces approval requests to your mobile. Best for complex, long-horizon development work. |
-| `annie codex` | **OpenAI Codex** | GPT-powered code execution. Resumable sessions — if a machine restarts, the session picks up where it left off. Familiar to teams already using OpenAI's stack. |
-| `annie cursor` | **Cursor Agent** | Full IDE agent mode with remote control. Messages flow bidirectionally: server ↔ PWA ↔ Cursor. Every tool call surfaces permission requests you approve from your phone. |
-| `annie opencode` | **OpenCode** | Open-source agent — no vendor lock-in, full tool use with approval gates. Remote and local control from the web app or PWA. Ideal for teams that want transparency in the agent layer. |
-| `annie gemini` | **Google Gemini** | Multimodal agent via ACP. Remote mode: messages originate from the server UI or Telegram. Useful when tasks require image, document, or audio context. |
-| `annie kilocode` | **KiloCode** | Task execution with the deepest remote control. Multiple concurrent sessions. Every action requires phone approval. Built for business owners who want the tightest oversight loop. |
-| `annie zeroclaw` | **ZeroClaw** | Headless, policy-driven workflow automation. Define playbooks with conditions, fallbacks, and retry logic. Self-correcting — if an action fails, the playbook retries or escalates per your rules. Full audit trail to Postgres. |
-| `annie openclaw` | **OpenClaw** | Visual workflow orchestration and task graph execution. Manages entire task graphs with dependencies, sequencing, and real-time status in your dashboard. Browser and desktop automation with approval gates. |
+| `annie claude` | **Claude Code** | Anthropic's flagship coding agent. Long-horizon development; progress and approvals flow through the hub. |
+| `annie codex` | **OpenAI Codex** | GPT-powered code execution; resumable sessions (`annie codex resume <id>` where supported). |
+| `annie cursor` | **Cursor Agent** | Full IDE agent mode; server ↔ PWA ↔ Cursor; permission prompts on high-stakes actions. |
+| `annie opencode` | **OpenCode** | Open-source agent path with approval gates and hub visibility. |
+| `annie gemini` | **Google Gemini** | Multimodal agent (ACP-style); useful when context includes images, documents, or audio. |
+| `annie kilocode` | **KiloCode** | Deep remote task execution with strong oversight loops. |
 
-**You don't have to choose one.** The same server hub handles all eight. An employee can run Claude on one machine and Codex on another — both appear in your dashboard simultaneously.
+### Management — `annie computer`
+
+| Command | Mode | What it does for your business |
+|---------|------|-------------------------------|
+| `annie computer` | **Computer (multi-tool)** | Hub-synced **general automation**: shell, browser (where enabled), files, git, process control, scheduling, and other tools—beyond a single IDE plugin. **From June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** also run here as **wrappers** (same session pattern as Claude, Cursor, Codex, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`. Use for runbooks, SRE-style tasks, and governed operational work with the same audit model as coding sessions. Optional flags: `--host`, `--token` (or use `annie auth login`). |
+
+### OpenClaw, ZeroClaw & Hermes (inside Computer)
+
+**OpenClaw**, **ZeroClaw**, and **Hermes** remain **NEST automation surfaces** (orchestration, headless playbooks, computer-use paths)—see [zeroclaw.md](enterprise/zeroclaw.md). **Shipping June 1, 2026:** they integrate **inside `annie computer`** as wrappers alongside your other Computer-backed agents, instead of separate top-level `annie` subcommands. **Projects:** **PM** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../ROADMAP.md). Until releases land, follow your current hub version in [RELEASES.md](../RELEASES.md).
+
+**Automation hygiene:** if the first token after `annie` is **not** a known subcommand, the CLI treats the line as **`annie cursor`**. In scripts and CI, **always** use explicit subcommands (`annie claude`, `annie computer`, …).
+
+**You don't have to choose one surface.** The same hub can carry Claude on one laptop, Computer on a jump host, and Codex on another—all visible in one dashboard.
 
 ---
 
@@ -86,9 +99,11 @@ LLM credentials are configured in **Admin on the server**. The CLI never holds, 
 
 ---
 
-## Workflow Automation — ZeroClaw & OpenClaw
+## Workflow Automation — OpenClaw, ZeroClaw & Hermes
 
-The coding agents handle development work. **OpenClaw** and **ZeroClaw** handle everything else — browser automation, desktop control, multi-step business workflows, and zero-touch machine orchestration.
+**From June 1, 2026**, these surfaces are selected and run **inside `annie computer`** as wrappers—alongside the same Computer integration pattern as Claude, Cursor, Codex, and other hub-backed agents—rather than as separate `annie` subcommands.
+
+The coding agents above handle IDE-tied development work. **OpenClaw**, **ZeroClaw**, and **Hermes** (through Computer) handle broader automation — browser automation, desktop control, multi-step business workflows, and governed machine orchestration.
 
 ### OpenClaw
 
@@ -150,7 +165,7 @@ annie auth login
 annie auth status
 ```
 
-After this, `annie` (in any mode) connects to your server automatically. No environment variables to set each session.
+After this, any `annie …` subcommand connects to your server using saved settings (unless overridden by env). No manual URL/token entry each session.
 
 ### For the business owner (on the server)
 
@@ -172,7 +187,7 @@ LLM and voice providers are configured in **Admin** in the NEST web app — not 
 Here's the practical picture of NEST in a working team:
 
 **Morning:**
-- Employee opens terminal, types `annie` (or `annie cursor`, etc.)
+- Employee opens terminal, types **`annie claude`**, **`annie cursor`**, **`annie computer`**, etc. (never rely on a bare `annie` token in automation—it resolves as Cursor when the subcommand is missing)
 - Session appears instantly in your mobile dashboard
 - You see: who started it, which agent, which machine, current status
 
@@ -204,21 +219,25 @@ Here's the practical picture of NEST in a working team:
 | **Agent exceeding permissions** | Permission requests surface to mobile. Agents wait. |
 | **Employee leaves with credentials** | Rotate `CLI_API_TOKEN` in `.env`. Restart server. All sessions invalidated. |
 | **Compliance / data residency** | Everything runs on your infrastructure. Nothing leaves your servers. |
+| **Remote shells (`annie` + hub PTY)** | Treat hub-linked terminals as **privileged**; restrict who can spawn them, rotate `CLI_API_TOKEN`, and use permission modes that require approval for destructive commands. |
 
 ---
 
 ## Quick Reference — All Commands
 
-Use **explicit** subcommands in scripts. Full enterprise reference (MCP, Cursor, VS Code, Claude, ChatGPT, phased rollout): **[Annie & MCP enterprise guide](enterprise/annie-cli-mcp-enterprise.md)** ([ES](enterprise/annie-cli-mcp-enterprise-ES.md), [DE](enterprise/annie-cli-mcp-enterprise-DE.md), [FR](enterprise/annie-cli-mcp-enterprise-FR.md), [PT](enterprise/annie-cli-mcp-enterprise-PT.md), [ZH](enterprise/annie-cli-mcp-enterprise-ZH.md)).
+Use **explicit** subcommands in scripts and golden images. **Enterprise reference** (MCP, Cursor, VS Code, Claude, ChatGPT, **Computer**, **remote PTY terminals**, phased rollout): **[CLI & MCP enterprise guide](enterprise/annie-cli-mcp-enterprise.md)** ([ES](enterprise/annie-cli-mcp-enterprise-ES.md), [DE](enterprise/annie-cli-mcp-enterprise-DE.md), [FR](enterprise/annie-cli-mcp-enterprise-FR.md), [PT](enterprise/annie-cli-mcp-enterprise-PT.md), [ZH](enterprise/annie-cli-mcp-enterprise-ZH.md)).
 
 ```bash
-# Agent modes (prefer explicit names in automation)
+# Development agents (always pass the subcommand explicitly in CI)
 annie claude            # Claude Code
 annie codex             # OpenAI Codex  (annie codex resume <sessionId>)
 annie cursor            # Cursor Agent
 annie opencode          # OpenCode
 annie gemini            # Google Gemini (via ACP)
 annie kilocode          # KiloCode
+
+# Management — multi-tool hub agent
+annie computer          # Shell, browser, files, git, processes, schedulers (hub-synced)
 
 # MCP
 annie mcp               # STDIO bridge: env NEST_HTTP_MCP_URL + CLI_API_TOKEN, or --url / --token
@@ -228,6 +247,7 @@ annie worker start      # Background worker daemon (remote spawn)
 annie worker stop       # Stop the worker
 annie worker status     # Worker status
 annie worker list       # Active sessions
+annie worker stop-session <sessionId>
 
 # Auth
 annie auth login        # Save server URL + token interactively
@@ -240,9 +260,12 @@ annie server            # Start bundled hub
 # Diagnostics
 annie diagnose          # Full diagnostic report — run this first if anything's wrong
 annie diagnose clean    # Kill runaway NEST-related processes
+
+# Advanced / internal (support-guided only)
+annie hook-forwarder    # Session hook forwarding for Claude integrations
 ```
 
-> **Note:** `annie connect` and `annie notify` exit with a message in self-hosted direct-connect mode. OpenClaw / ZeroClaw commands may ship per release — see [RELEASES.md](../RELEASES.md).
+> **Notes:** `annie connect` and `annie notify` exit with guidance in **self-hosted direct-connect** mode. **OpenClaw / ZeroClaw / Hermes** move **into `annie computer`** as wrappers from **June 1, 2026**—see [zeroclaw.md](enterprise/zeroclaw.md) and [RELEASES.md](../RELEASES.md).
 
 ---
 
@@ -254,13 +277,13 @@ annie diagnose clean    # Kill runaway NEST-related processes
 | [INSTALL.md](INSTALL.md) | Full CLI and server install reference |
 | [DEVOPS.md](DEVOPS.md) | Production setup: HTTPS, public URL, environment variables |
 | [README.md](../README.md) | Full command and configuration reference |
-| [ROADMAP.md](../ROADMAP.md) | OpenClaw, ZeroClaw, Souls, and what's next |
+| [ROADMAP.md](../ROADMAP.md) | PM (May 1), CRM (May 15), Computer wrappers (Jun 1), Souls, and what's next |
 | [RELEASES.md](../RELEASES.md) | Everything live today, with verification links |
 | [Business Overview](../business/README.md) | Strategic value for founders |
 | [Value Proposition](../business/value-proposition.md) | Detailed owner/employee/business benefits |
 | [Use Cases](../business/use-cases.md) | Real scenarios and use cases |
 | [Methodology](../methodology/README.md) | Implementation phases guide |
-| [Annie & MCP enterprise](enterprise/annie-cli-mcp-enterprise.md) | Full CLI + MCP (all clients, URL + token, phases) |
+| [CLI & MCP enterprise](enterprise/annie-cli-mcp-enterprise.md) | Full CLI + MCP (all clients, Computer, PTY terminals, URL + token, phases) |
 | [Enterprise Features](../enterprise/README.md) | Enterprise pricing and features |
 
 ---
@@ -270,6 +293,6 @@ annie diagnose clean    # Kill runaway NEST-related processes
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

@@ -80,8 +80,8 @@ O Hub aprende cada colaborador. Sem reexplicar contexto. A inteligência se acum
 Vários agentes de IA especializados trabalhando em paralelo.
 
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
-- ZeroClaw: automação headless com autocorreção
-- OpenClaw: orquestração visual de fluxos de trabalho
+- ZeroClaw: automação headless com autocorreção (**invólucro em `annie computer` a partir de 1 de junho de 2026**)
+- OpenClaw: orquestração visual de fluxos de trabalho (**invólucro em `annie computer` a partir de 1 de junho de 2026**)
 - Darwin Agents: trabalhadores de IA que evoluem com sua organização
 
 ---
@@ -140,6 +140,6 @@ Vários agentes de IA especializados trabalhando em paralelo.
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Distribuição pública: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

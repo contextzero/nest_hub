@@ -13,7 +13,7 @@
 Every component that exists today — real software, running now, free to deploy.
 
 > **Trust is built on one question:** *"Have you done it before?"*
-> Every item below has a public repo, a public Docker image, or a public npm package. Click the links and verify for yourself.
+> Every item below points to a **public npm package**, **public Docker image**, or **this public docs / compose repo** (`nest_hub`). Click the links and verify for yourself.
 
 ---
 
@@ -27,11 +27,13 @@ The command employees run on their machines to start AI agent sessions and conne
 |---|---|
 | **Package** | [`@contextzero/nest`](https://www.npmjs.com/package/@contextzero/nest) on npm |
 | **Install** | `npm install -g @contextzero/nest` |
-| **Source** | [github.com/contextzero/nest](https://github.com/contextzero/nest) |
+| **Docs / compose** | [github.com/contextzero/nest_hub](https://github.com/contextzero/nest_hub) (this repo) |
 | **Status** | ✅ Live — install and run today |
 
 **What it ships:**
-- Agent runners for **Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw**
+- **Development agents:** **Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode** (`annie claude`, `annie codex`, …)
+- **Computer (hub management):** **`annie computer`** — multi-tool agent on the hub (shell, browser, files)
+- **Computer wrappers (Jun 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** alongside other agent wrappers (Claude, Cursor, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`. See [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
 - Session lifecycle management (start, stop, reconnect)
 - Auth: `annie auth login` / `annie auth status`
 - Background worker daemon: `annie worker start`
@@ -53,7 +55,7 @@ The central server your whole team connects to. Handles all real-time communicat
 | | |
 |---|---|
 | **Docker image** | `matiasbaglieri/nest-server:latest` on Docker Hub |
-| **Source** | [github.com/contextzero/nest](https://github.com/contextzero/nest) — `server/` |
+| **Build artifact** | Published server binary inside the image above |
 | **Status** | ✅ Live — pulled automatically by `docker compose up -d` |
 
 **What it ships:**
@@ -76,7 +78,7 @@ The control center your team accesses from any browser — including mobile. No 
 | | |
 |---|---|
 | **Docker image** | `matiasbaglieri/nest-web:latest` on Docker Hub |
-| **Source** | [github.com/contextzero/nest](https://github.com/contextzero/nest) — `web/` |
+| **Build artifact** | Published web bundle inside the image above |
 | **Status** | ✅ Live — served automatically at `http://localhost` after `docker compose up -d` |
 
 **What it ships:**
@@ -131,7 +133,7 @@ The NEST server is built with a hexagonal architecture — clean separation betw
 
 | | |
 |---|---|
-| **Source** | [github.com/contextzero/nest](https://github.com/contextzero/nest) — `server/` |
+| **Distribution** | Server behavior ships in **`matiasbaglieri/nest-server`** (Docker Hub) |
 | **Architecture** | Hexagonal: `domain/` · `ports/` · `application/` · `adapters/` |
 | **Stack** | Rust · Axum · Tokio · tower-http · PostgreSQL |
 | **Status** | ✅ Live — powering the platform |
@@ -143,14 +145,14 @@ The NEST server is built with a hexagonal architecture — clean separation betw
 | Component | Versioning | Where to Check |
 |-----------|-----------|----------------|
 | **CLI** | Semantic versioning — `@contextzero/nest@x.y.z` | [npm](https://www.npmjs.com/package/@contextzero/nest) |
-| **Server** | NEST repo release tags | [GitHub releases](https://github.com/contextzero/nest/releases) |
-| **Web App** | NEST repo release tags | [GitHub releases](https://github.com/contextzero/nest/releases) |
-| **Rust Server** | NEST repo, `server/` path | [GitHub](https://github.com/contextzero/nest) |
-| **nest_hub** | Documentation + Docker image updates | [GitHub](https://github.com/contextzero/nest_hub) |
+| **Server** | Docker image tags / digests | [Docker Hub — nest-server](https://hub.docker.com/r/matiasbaglieri/nest-server) |
+| **Web App** | Docker image tags / digests | [Docker Hub — nest-web](https://hub.docker.com/r/matiasbaglieri/nest-web) |
+| **Rust Server** | Shipped as the **`nest-server`** container image | [Docker Hub — nest-server](https://hub.docker.com/r/matiasbaglieri/nest-server) |
+| **nest_hub** | Documentation + Docker Compose wiring | [GitHub](https://github.com/contextzero/nest_hub) |
 
 **Latest versions — always current:**
 - CLI: [npmjs.com/package/@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)
-- Server, Web, CLI source: [github.com/contextzero/nest/releases](https://github.com/contextzero/nest/releases)
+- Server + Web: pull `matiasbaglieri/nest-server` and `matiasbaglieri/nest-web` from Docker Hub (see `docker-compose.yml` in this repo)
 - This distribution: [github.com/contextzero/nest_hub](https://github.com/contextzero/nest_hub)
 
 ---
@@ -184,6 +186,6 @@ Spec-driven development, Souls (persistent agent personas), extended multi-agent
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

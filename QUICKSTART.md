@@ -22,7 +22,7 @@ In the next 5 minutes you will:
 
 1. ✅ Deploy the NEST server (Rust + Postgres + nginx) locally with **one command**
 2. ✅ Install the `annie` CLI on any machine
-3. ✅ Start your first real AI agent session (Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, or OpenClaw)
+3. ✅ Start your first real AI agent session (Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode—and from **Jun 1, 2026**, ZeroClaw / OpenClaw **via `annie computer`**)
 4. ✅ Watch it **live from your browser** — and from your phone
 
 No prior Rust knowledge required. No cloud account needed. No credit card. If Docker runs on your machine, NEST runs on your machine.
@@ -122,23 +122,25 @@ You should see your server URL and a confirmed token. **You're authenticated.**
 
 ## Step 4 — Start Your First Agent Session
 
-Pick your agent and run one command:
+Pick your agent and run one command (package: **`@contextzero/nest`** → **`annie`**). **Enterprise command reference:** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md).
 
 | Agent | Command | What it does |
 |-------|---------|--------------|
-| **Claude Code** | `annie` | Anthropic's flagship coding agent |
+| **Claude Code** | `annie claude` | Anthropic's flagship coding agent |
 | **Codex** | `annie codex` | OpenAI's code execution agent |
 | **Cursor** | `annie cursor` | Cursor IDE agent mode |
 | **Gemini** | `annie gemini` | Google's multimodal agent |
 | **OpenCode** | `annie opencode` | Open-source coding agent |
 | **KiloCode** | `annie kilocode` | Task execution + remote control |
-| **ZeroClaw** | `annie zeroclaw` | Headless automation with self-correction |
-| **OpenClaw** | `annie openclaw` | Project orchestration + browser control |
+| **Computer (management)** | `annie computer` | Multi-tool hub agent (shell, browser, files—governed like other sessions) |
+| **ZeroClaw / OpenClaw** | *via `annie computer` (from Jun 1, 2026)* | Wrappers inside Computer (same pattern as Claude, Cursor, …)—see [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) and [RELEASES.md](RELEASES.md); not standalone `annie` subcommands. |
+
+**Automation note:** if the first argument is not a known subcommand, the CLI treats the invocation as **`annie cursor`**. Always type **`annie claude`**, **`annie computer`**, etc. explicitly—especially in CI.
 
 Example — start Claude Code:
 
 ```bash
-annie
+annie claude
 ```
 
 The terminal will show the session connecting and streaming. **Don't close this terminal.** The agent is live.
@@ -168,15 +170,15 @@ This is the moment. You just turned a CLI session running on someone's laptop in
 ## Quick Reference — Most Useful Commands
 
 ```bash
-annie                   # Start Claude Code session
-annie codex             # Start Codex session
-annie cursor            # Start Cursor agent
-annie gemini            # Start Gemini session
-annie opencode          # Start OpenCode session
-annie kilocode          # Start KiloCode session
-annie zeroclaw          # Start ZeroClaw (headless automation)
-annie openclaw          # Start OpenClaw (project orchestration)
-annie worker start      # Start background worker (remote spawn)
+annie claude            # Claude Code session
+annie codex             # Codex session
+annie cursor            # Cursor agent
+annie gemini            # Gemini session
+annie opencode          # OpenCode session
+annie kilocode          # KiloCode session
+annie computer          # Multi-tool management / automation session
+annie worker start      # Background worker (remote spawn)
+annie worker list       # Active worker sessions
 annie auth login        # Save credentials interactively
 annie auth status       # Check current auth config
 annie diagnose          # Run diagnostics if something feels off
@@ -203,7 +205,7 @@ You now have:
 | Live session dashboard | Browser / phone | See every agent session your team runs, in real time |
 | Approval workflow | Mobile PWA | Agents wait for your OK before high-stakes actions |
 | Full audit log | Your PostgreSQL | Every message, every action, persisted on your server |
-| Multi-agent support | Any employee machine | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw — all in one hub |
+| Multi-agent support | Any employee machine | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw wrappers from **Jun 1, 2026**) — all in one hub |
 | Zero monthly cost | Your infrastructure | You own the server, the data, and the keys |
 
 > **Ready for more?** Explore these docs:
@@ -254,6 +256,6 @@ You now have:
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

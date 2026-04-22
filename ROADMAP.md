@@ -15,6 +15,8 @@ What's being built next, why it matters, and how to participate.
 > **Already live and free today:** See [RELEASES.md](RELEASES.md).
 > This document is about what comes *after* — the capabilities that transform NEST from a workforce monitor into a fully autonomous AI business operating system.
 
+**Dated milestones (2026):** **May 1** — **project management** in projects · **May 15** — **CRM** (lifecycle + contacts across projects) · **June 1** — **`annie computer` wrappers**: **OpenClaw**, **ZeroClaw**, and **Hermes** (same pattern as Claude, Cursor, Codex, …)—not `annie openclaw` / `annie zeroclaw` / `annie hermes`. Details: [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) · [RELEASES.md](RELEASES.md).
+
 ---
 
 ## The Direction: From Visibility to Intelligence
@@ -227,6 +229,6 @@ Current deliverables: [RELEASES.md](RELEASES.md) · Setup: [QUICKSTART.md](QUICK
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

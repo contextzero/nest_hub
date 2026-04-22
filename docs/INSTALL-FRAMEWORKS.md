@@ -170,26 +170,25 @@ cargo --version   # cargo 1.7x.x
 
 **Windows:** Download and run [rustup-init.exe](https://rustup.rs/) — it handles everything including the MSVC build tools.
 
-### Build the NEST Rust Server from Source
+### NEST Rust server — beyond Docker (optional)
+
+For **self-hosted deployments**, run the server from the **published Docker image** (`matiasbaglieri/nest-server`) using `docker compose` in this repo — no local Rust build required.
+
+If you compile a **custom or vendor-specific** server binary, keep your own source checkout and build runbook with your team. This public distribution documents **Docker + npm (`@contextzero/nest`) + `nest_hub`** only.
 
 ```bash
-# Clone the main NEST repo
-git clone https://github.com/contextzero/nest.git
-cd nest/server
-
-# Build release binary
-cargo build --release
-
-# Binary will be at: target/release/nest-server
+# Typical path — Compose in nest_hub (recommended)
+cd nest_hub
+docker compose pull && docker compose up -d
 ```
 
-See [RELEASES.md](../RELEASES.md) for the current architecture status of the Rust server.
+See [RELEASES.md](../RELEASES.md) for components and [DEVOPS.md](DEVOPS.md) for production operations.
 
 ---
 
 ## Bun — Optional
 
-Bun is only needed if you're developing or building the NEST server and web app from the [main NEST source repo](https://github.com/contextzero/nest). It's not required for deploying or using NEST.
+Bun is only needed for some **local JavaScript tooling** workflows. **It is not required** for deploying or operating NEST with Docker and the `annie` CLI from npm.
 
 ```bash
 # macOS / Linux
@@ -216,9 +215,9 @@ docker compose version    # ✅ V2 syntax (space, not hyphen)
 node -v                   # ✅ v18.x or v20.x
 npm -v                    # ✅ 9.x+
 
-# Optional — only if building from source:
+# Optional — only if you compile a custom server locally:
 rustc --version           # ✅ 1.7x+
-bun --version             # ✅ 1.x+
+bun --version             # ✅ 1.x+   # only if your own tooling needs it
 ```
 
 All green? Head to the [Quick Start →](../QUICKSTART.md)
@@ -246,6 +245,6 @@ All green? Head to the [Quick Start →](../QUICKSTART.md)
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

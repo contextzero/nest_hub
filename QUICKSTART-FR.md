@@ -22,7 +22,7 @@ Dans les 5 prochaines minutes vous allez :
 
 1. ✅ Déployer le serveur NEST (Rust + Postgres + nginx) en local avec **une seule commande**
 2. ✅ Installer le CLI `annie` sur n’importe quelle machine
-3. ✅ Lancer votre première vraie session d’agent IA (Claude Code, Codex, Cursor, Gemini, OpenCode ou KiloCode)
+3. ✅ Lancer votre première vraie session d’agent IA (Claude Code, Codex, Cursor, Gemini, OpenCode ou KiloCode — et à partir du **1er juin 2026**, ZeroClaw / OpenClaw **via `annie computer`**)
 4. ✅ La suivre **en direct depuis le navigateur** — et depuis le téléphone
 
 Aucune connaissance Rust préalable requise. Pas de compte cloud nécessaire. Pas de carte bancaire. Si Docker tourne sur votre machine, NEST tourne sur votre machine.
@@ -122,23 +122,26 @@ Vous devriez voir l’URL du serveur et un token confirmé. **Vous êtes authent
 
 ## Étape 4 — Lancer votre première session d’agent
 
-Choisissez votre agent et exécutez une commande :
+Choisissez votre agent et exécutez une commande (paquet **`@contextzero/nest`** → **`annie`**). **Référence enterprise :** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md).
 
-| Agent | Command | Rôle |
-|-------|---------|------|
-| **Claude Code** | `annie` | Agent de code phare d’Anthropic |
+| Agent | Commande | Rôle |
+|-------|----------|------|
+| **Claude Code** | `annie claude` | Agent de code phare d’Anthropic |
 | **Codex** | `annie codex` | Agent d’exécution de code OpenAI |
 | **Cursor** | `annie cursor` | Mode agent de l’IDE Cursor |
 | **Gemini** | `annie gemini` | Agent multimodal Google |
 | **OpenCode** | `annie opencode` | Agent de code open source |
 | **KiloCode** | `annie kilocode` | Exécution de tâches + contrôle à distance |
+| **Computer (gestion)** | `annie computer` | Agent multi-outils sur le hub (shell, navigateur, fichiers) |
 
-> **Moteurs d’automatisation :** ZeroClaw et OpenClaw sont également disponibles pour l’exécution autonome de tâches et l’automatisation de pipelines. Voir [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
+> **ZeroClaw / OpenClaw :** à partir du **1er juin 2026**, intégrés **dans `annie computer`** comme enveloppes (même schéma que Claude, Cursor, …). Pas de sous-commandes `annie` séparées. Voir [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) et [RELEASES.md](RELEASES.md).
+
+**Automatisation :** si le premier argument n’est pas un sous-commande connu, l’appel est traité comme **`annie cursor`**. En CI, utilisez toujours `annie claude`, `annie computer`, etc.
 
 Exemple — lancer Claude Code :
 
 ```bash
-annie
+annie claude
 ```
 
 Le terminal affichera la session en cours de connexion et de flux. **Ne fermez pas ce terminal.** L’agent est actif.
@@ -168,16 +171,18 @@ C’est le moment. Vous venez de transformer une session CLI sur le portable de 
 ## Référence rapide — Commandes les plus utiles
 
 ```bash
-annie                   # Start Claude Code session
-annie codex             # Start Codex session
-annie cursor            # Start Cursor agent
-annie gemini            # Start Gemini session
-annie opencode          # Start OpenCode session
-annie kilocode          # Start KiloCode session
-annie worker start      # Start background worker (remote spawn)
-annie auth login        # Save credentials interactively
-annie auth status       # Check current auth config
-annie diagnose          # Run diagnostics if something feels off
+annie claude            # Session Claude Code
+annie codex             # Session Codex
+annie cursor            # Agent Cursor
+annie gemini            # Session Gemini
+annie opencode          # Session OpenCode
+annie kilocode          # Session KiloCode
+annie computer          # Agent multi-outils (gestion)
+annie worker start      # Worker en arrière-plan
+annie worker list       # Sessions worker actives
+annie auth login        # Enregistrer les identifiants
+annie auth status       # État d’authentification
+annie diagnose          # Diagnostic
 ```
 
 **Gestion du serveur (depuis le dossier `nest_hub/`) :**
@@ -201,7 +206,7 @@ Vous disposez maintenant de :
 | Tableau de bord des sessions en direct | Navigateur / téléphone | Voir chaque session d’agent lancée par l’équipe, en temps réel |
 | Workflow d’approbation | PWA mobile | Les agents attendent votre validation avant les actions à fort enjeu |
 | Journal d’audit complet | Votre PostgreSQL | Chaque message, chaque action, persisté sur votre serveur |
-| Support multi-agents | Toute machine collaborateur | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode — le tout dans un hub |
+| Support multi-agents | Toute machine collaborateur | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (enveloppes ZeroClaw / OpenClaw à partir du **1er juin 2026**) — le tout dans un hub |
 | Coût mensuel nul | Votre infrastructure | Vous possédez le serveur, les données et les clés |
 
 > **Prêt à aller plus loin ?** Parcourez cette documentation :
@@ -252,6 +257,6 @@ Vous disposez maintenant de :
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Distribution publique : [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI : [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

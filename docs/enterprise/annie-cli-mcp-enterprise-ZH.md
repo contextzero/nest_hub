@@ -28,7 +28,7 @@
 5. [MCP 技术成熟度阶段（M1–M4）](#5-mcp-技术成熟度阶段m1m4)
 6. [运营推广阶段（P0–P4）](#6-运营推广阶段p0p4)
 7. [架构概览](#7-架构概览)
-8. [Annie CLI — 完整命令参考](#8-annie-cli--完整命令参考)
+8. [CLI（`@contextzero/nest`）— 命令参考](#section-8-cli-zh)
 9. [配置与 URL 规则](#9-配置与-url-规则)
 10. [MCP — 协议、安全与端点](#10-mcp--协议安全与端点)
 11. [各客户端集成模式](#11-各客户端集成模式)
@@ -294,7 +294,13 @@ Cursor / VS Code MCP  ── Streamable HTTP ─┘
 
 ---
 
-## 8. Annie CLI — 完整命令参考
+<a id="section-8-cli-zh"></a>
+
+## 8. CLI（`@contextzero/nest`）— 命令参考
+
+安装：**`npm install -g @contextzero/nest`** → 可执行文件 **`annie`**。**完整权威说明**（Computer 模式、远程 PTY 终端、未识别子命令时默认按 `cursor` 解析、`hook-forwarder` 等）见**英文版**：[annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) — 不链接私有源码仓库。
+
+**Computer 包装器（2026-06-01）：** **OpenClaw**、**ZeroClaw**、**Hermes** 在 **`annie computer`** 内。**项目：** **项目管理 2026-05-01** · **CRM 2026-05-15** — [ROADMAP.md](../../ROADMAP.md) · 详见**英文** §8.3：[annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) · [zeroclaw.md](./zeroclaw.md)。
 
 | 领域 | 命令 | 用途 |
 |------|------|------|
@@ -304,12 +310,13 @@ Cursor / VS Code MCP  ── Streamable HTTP ─┘
 | Gemini | `annie gemini [args…]` | Gemini（ACP） |
 | OpenCode | `annie opencode [args…]` | OpenCode |
 | KiloCode | `annie kilocode [args…]` | KiloCode |
+| **Computer（运维）** | `annie computer [args…]` | Hub 侧多工具代理（Shell、浏览器、文件、自动化等） |
 | 认证 | `annie auth login` / `status` / `logout` | 凭据 |
 | Worker | `annie worker start` / `stop` / `status` / `list` / `stop-session <id>` / `logs` | 后台 worker |
-| MCP | `annie mcp [--url <url>] [--token \| --bearer <密钥>]` | stdio → HTTP MCP；令牌亦可用 `CLI_API_TOKEN` / `NEST_MCP_BEARER_TOKEN` |
-| 服务器 | `annie server [--host …] [--port …]` | 捆绑 Hub |
+| MCP | `annie mcp [--url <url>] [--token \| --bearer <密钥>]` | stdio → HTTP MCP |
+| 服务器 | `annie server [--host …] [--port …]` | 捆绑 Hub（若你的安装包含） |
 | 诊断 | `annie diagnose` / `annie diagnose clean` | 诊断 / 清理进程 |
-| 受限 | `hook-forwarder`；`connect`；`notify` | 见英文文档 |
+| 受限 | `hook-forwarder`；`connect`；`notify` | 见英文指南 |
 
 ---
 
@@ -406,7 +413,7 @@ annie mcp --url "https://nest.example.com/mcp/sessions/SESSION_ID" --token "YOUR
 | [DEVOPS.md](../DEVOPS.md) | HTTPS、反向代理 |
 | [Methodology](../methodology/README.md) | NEST 0–6 |
 | [Enterprise README](./README.md) | 企业版功能 |
-| [nest 源码](https://github.com/contextzero/nest) | 服务端路由 |
+| [nest-server 镜像](https://hub.docker.com/r/matiasbaglieri/nest-server) | 路由与契约以已发布容器及 **nest_hub** 文档为准 |
 
 ---
 
@@ -415,6 +422,6 @@ annie mcp --url "https://nest.example.com/mcp/sessions/SESSION_ID" --token "YOUR
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*属于 [contextzero/nest](https://github.com/contextzero/nest) 生态。*
+*公开发布：[contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI：[@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)。*
 
 </div>

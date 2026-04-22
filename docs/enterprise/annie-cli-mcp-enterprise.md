@@ -11,7 +11,7 @@
 
 **English** | [Español](./annie-cli-mcp-enterprise-ES.md) | [Deutsch](./annie-cli-mcp-enterprise-DE.md) | [Português](./annie-cli-mcp-enterprise-PT.md) | [Français](./annie-cli-mcp-enterprise-FR.md) | [中文](./annie-cli-mcp-enterprise-ZH.md)
 
-This document is the **enterprise-grade** reference for deploying **Annie** (`@contextzero/nest` CLI), using **all supported command surfaces**, and integrating **NEST MCP** with ChatGPT, Claude, Cursor, and VS Code.
+This document is the **enterprise-grade** reference for deploying the **`@contextzero/nest`** CLI (command **`annie`**), using **all supported command surfaces** (development agents, **`annie computer`**, worker, MCP, terminals), and integrating **NEST MCP** with ChatGPT, Claude, Cursor, and VS Code.
 
 **Programming-language note:** NEST is **agnostic to the languages in your repositories** (Python, TypeScript, Rust, Go, Java, .NET, etc.). Sessions bind to a **workspace path** and **server session id**, not to a single language runtime.
 
@@ -28,7 +28,7 @@ This document is the **enterprise-grade** reference for deploying **Annie** (`@c
 5. [MCP technical maturity phases (M1–M4)](#5-mcp-technical-maturity-phases-m1m4)
 6. [Operational rollout phases (P0–P4)](#6-operational-rollout-phases-p0p4)
 7. [Architecture snapshot](#7-architecture-snapshot)
-8. [Annie CLI — complete command reference](#8-annie-cli--complete-command-reference)
+8. [CLI (`@contextzero/nest`) — full command surface](#section-8-cli-reference)
 9. [Configuration & URL rules](#9-configuration--url-rules)
 10. [MCP — protocol, security, and endpoints](#10-mcp--protocol-security-and-endpoints)
 11. [Client-specific integration patterns](#11-client-specific-integration-patterns)
@@ -307,27 +307,71 @@ Cursor / VS Code MCP  ── Streamable HTTP ──────────┘
 
 ---
 
-## 8. Annie CLI — complete command reference
+<a id="section-8-cli-reference"></a>
 
-Prefer **explicit** subcommands in automation and documentation.
+## 8. CLI (`@contextzero/nest`) — full command surface
+
+Install the CLI from npm only: **`npm install -g @contextzero/nest`**. The executable is **`annie`**. Capability and flags ship with the published package version—verify with **`annie --version`** and [RELEASES.md](../../RELEASES.md). *(Source trees are private; this section describes the public CLI behavior.)*
+
+### 8.1 Default resolution (automation hygiene)
+
+If the first argv token is **not** a registered subcommand, the CLI historically treats the invocation as **`annie cursor`** with those tokens passed through. **In scripts and CI, always spell the subcommand explicitly** (`annie claude …`, `annie computer …`, `annie cursor …`, etc.)—never rely on the default.
+
+### 8.2 Development — IDE-tied coding agents
+
+These commands launch or resume **editor-scoped** sessions that stream to your NEST hub (Socket.IO session model). Typical use: software development on an employee laptop with Cursor, Claude Code, Codex, OpenCode, or KiloCode installed where applicable.
 
 | Area | Command | Purpose |
 |------|---------|---------|
-| **Claude Code** | `annie claude [args…]` | Claude Code + NEST sync |
-| **Cursor** | `annie cursor [args…]` | Cursor Agent + hooks/MCP |
-| **Codex** | `annie codex [args…]` | Codex; `annie codex resume <sessionId>` |
-| **Gemini** | `annie gemini [args…]` | Gemini (ACP) |
-| **OpenCode** | `annie opencode [args…]` | OpenCode |
-| **KiloCode** | `annie kilocode [args…]` | KiloCode |
-| **Auth** | `annie auth login` / `status` / `logout` | Credentials |
-| **Worker** | `annie worker start` / `stop` / `status` / `list` / `stop-session <id>` / `logs` | Background worker |
-| **MCP** | `annie mcp [--url <url>] [--token \| --bearer <secret>]` | Stdio → Streamable HTTP MCP; token also via `CLI_API_TOKEN` / `NEST_MCP_BEARER_TOKEN` |
-| **Server** | `annie server [--host …] [--port …]` | Bundled hub when packaged |
-| **Diagnostics** | `annie diagnose` / `annie diagnose clean` | Diagnostics / process cleanup |
-| **Internal / limited** | `annie hook-forwarder` | Internal |
-| | `annie connect` / `annie notify` | Not available in self-hosted direct-connect mode |
+| **Claude Code** | `annie claude [args…]` | Anthropic Claude Code + hub sync; supports `--help` passthrough to local `claude` |
+| **Cursor** | `annie cursor [args…]` | Cursor Agent + hooks/MCP wiring; `annie cursor resume <chatId>` when resuming |
+| **Codex** | `annie codex [args…]` | OpenAI Codex; `annie codex resume <sessionId>` where supported |
+| **Gemini** | `annie gemini [args…]` | Google Gemini (ACP-style) session |
+| **OpenCode** | `annie opencode [args…]` | OpenCode local launcher + hub session |
+| **KiloCode** | `annie kilocode [args…]` | KiloCode launcher + hub session |
 
-Verify additions with `annie --version` and [RELEASES.md](../../RELEASES.md).
+### 8.3 Management — `annie computer` (multi-tool “computer use”)
+
+**`annie computer`** starts the **hub-synced computer agent**: an interactive loop backed by a broad **tool registry** (shell, files, git, browser via CDP, process manager, in-process scheduler, HTTP fetch, screenshots, workspace switches, memory/skills hooks, subagent delegation, optional local browser gateway/RPC, etc.). Use it for **operations and management** work that goes beyond a single IDE plugin—runbooks, cross-repo tasks, light SRE, research with browser evidence, and guarded automation—**with the same audit and permission posture** as other hub sessions.
+
+Optional overrides (non-interactive bootstrap): **`annie computer --host <url> --token <CLI_API_TOKEN>`** (also honor `NEST_API_URL` / `CLI_API_TOKEN` from env or `annie auth login`).
+
+**Computer wrappers (June 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside `annie computer`**—the same integration pattern as other Computer-backed agents (for example Claude Code, Cursor, Codex)—**not** as top-level `annie openclaw` / `annie zeroclaw` / `annie hermes` commands. **Projects:** **project management** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../../ROADMAP.md) · product detail: [zeroclaw.md](./zeroclaw.md) · [RELEASES.md](../../RELEASES.md).
+
+### 8.4 Terminal management (remote PTY)
+
+NEST exposes **terminal sessions** tied to hub projects: the CLI hosts **PTY-backed shells** (via `node-pty`, with a Node worker path when the CLI runtime is Bun) so the **web PWA / dashboard** can attach, resize, and stream stdin/stdout for remote troubleshooting or long commands. Treat terminal surfaces as **high-privilege**: scope who can spawn them, rotate tokens, and prefer permission modes that require approval for destructive commands.
+
+### 8.5 Platform operations & integration
+
+| Area | Command | Purpose |
+|------|---------|---------|
+| **Auth** | `annie auth login` / `annie auth status` / `annie auth logout` | Persist or inspect `NEST_API_URL` + `CLI_API_TOKEN` (+ machine binding) |
+| **Worker** | `annie worker start` (detached) · `start-sync` · `stop` · `status` · `list` · `stop-session <id>` · `logs` | Background worker for remote/long-lived hub work |
+| **MCP bridge** | `annie mcp [--url <url>] [--token \| --bearer <secret>]` | stdio MCP → Streamable HTTP to `POST /mcp/sessions/<id>`; env: `NEST_HTTP_MCP_URL`, `CLI_API_TOKEN`, `NEST_MCP_BEARER_TOKEN` |
+| **Bundled server** | `annie server [--host …] [--port …]` | Starts the packaged web/hub dev server when that optional bundle is present in your install |
+| **Diagnostics** | `annie diagnose` · `annie diagnose clean` | Full health report; `clean` kills runaway CLI-related processes |
+| **Hooks** | `annie hook-forwarder [args…]` | Internal: forwards IDE/session hooks for Claude integrations—avoid manual use unless documented by support |
+
+### 8.6 Not available in self-hosted direct-connect mode
+
+| Command | Behavior |
+|---------|----------|
+| **`annie connect`** | Exits with guidance: vendor token storage was for a hosted flow—use `annie auth login` + `CLI_API_TOKEN` instead |
+| **`annie notify`** | Exits with guidance: use Telegram / server-side notifications from your hub |
+
+### 8.7 One-line cheat sheet
+
+```text
+annie auth login | status | logout
+annie claude | cursor | codex | gemini | opencode | kilocode   # development agents
+annie computer                                           # management / multi-tool agent
+annie worker start | stop | status | list | stop-session <id> | logs
+annie mcp
+annie server [--host …] [--port …]
+annie diagnose | diagnose clean
+annie hook-forwarder   # internal / advanced
+```
 
 ---
 
@@ -432,7 +476,7 @@ All of the above are **independent of repository programming language**—they b
 | [DEVOPS.md](../DEVOPS.md) | HTTPS, reverse proxy |
 | [Methodology](../methodology/README.md) | NEST phases 0–6 |
 | [Enterprise README](./README.md) | Enterprise features |
-| [nest source](https://github.com/contextzero/nest) | Server routes, shared URL helpers |
+| [nest-server image](https://hub.docker.com/r/matiasbaglieri/nest-server) | Server routes ship in the published container; contracts documented in **nest_hub** |
 
 ---
 
@@ -441,6 +485,6 @@ All of the above are **independent of repository programming language**—they b
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

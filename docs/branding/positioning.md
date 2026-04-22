@@ -57,7 +57,7 @@
 
 1. **Self-Hosted First** — No recurring SaaS fees, complete data ownership
 2. **Mobile-First Control** — Phone/tablet PWA for real-time oversight
-3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode, KiloCode, ZeroClaw, OpenClaw in one platform
+3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw **wrappers inside Computer** from **June 1, 2026**) in one platform
 4. **BYOK Everything** — Your LLMs, your voice, your infrastructure
 5. **Enterprise Audit** — Full Postgres audit trail, compliance-ready
 6. **Zero Lock-In** — Docker + npm, no proprietary stack
@@ -123,6 +123,6 @@ NEST rides all four trends simultaneously.
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

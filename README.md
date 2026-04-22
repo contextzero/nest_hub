@@ -1,35 +1,96 @@
-<div align="center">
+# NEST — Self-Hosted Workforce Automation
 
-<img src="./public/nest_logo.png" alt="NEST" width="280"/>
+<p align="center">
+  <img src="./public/nest_logo.png" alt="NEST" width="280" />
+</p>
 
-<br/>
+<p align="center">
+  <strong>Self-Hosted Workforce Automation Platform — Enterprise Grade</strong><br />
+  <em>The operating system for how your company works with AI.</em><br />
+  <em>Your hub. Your data. Your AI workforce. From the palm of your hand.</em>
+</p>
 
-**Self-Hosted Workforce Automation Platform — Enterprise Grade**
-<br/>
-<em>Your hub. Your data. Your AI workforce. From the palm of your hand.</em>
+<p align="center">
+  <a href="https://github.com/contextzero/nest_hub/releases"><img src="https://img.shields.io/github/v/release/contextzero/nest_hub?include_prereleases&style=for-the-badge" alt="GitHub release"></a>
+  <a href="https://github.com/contextzero/nest_hub/stargazers"><img src="https://img.shields.io/github/stars/contextzero/nest_hub?style=for-the-badge&logo=github" alt="GitHub stars"></a>
+  <a href="https://discord.gg/ygjuuDAw"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://www.npmjs.com/package/@contextzero/nest"><img src="https://img.shields.io/npm/v/@contextzero/nest?style=for-the-badge&logo=npm&label=CLI" alt="npm CLI"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge" alt="License"></a>
+</p>
 
-<br/>
+<p align="center">
+  <a href="https://t.me/ctx0_io"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+  <a href="https://discord.gg/ygjuuDAw"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://github.com/contextzero/nest_hub/stargazers"><img src="https://img.shields.io/github/stars/contextzero/nest_hub?style=flat-square&color=DAA520" alt="GitHub Stars"></a>
+  <a href="https://github.com/contextzero/nest_hub/network"><img src="https://img.shields.io/github/forks/contextzero/nest_hub?style=flat-square" alt="GitHub Forks"></a>
+  <a href="https://hub.docker.com/u/matiasbaglieri"><img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"></a>
+  <a href="https://www.npmjs.com/package/@contextzero/nest"><img src="https://img.shields.io/npm/v/@contextzero/nest?style=flat-square&logo=npm&label=CLI" alt="npm CLI"></a>
+</p>
 
-[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
-[![GitHub Stars](https://img.shields.io/github/stars/contextzero/nest_hub?style=flat-square&color=DAA520)](https://github.com/contextzero/nest_hub/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/contextzero/nest_hub?style=flat-square)](https://github.com/contextzero/nest_hub/network)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/u/matiasbaglieri)
-[![npm](https://img.shields.io/npm/v/@contextzero/nest?style=flat-square&logo=npm&label=CLI)](https://www.npmjs.com/package/@contextzero/nest)
-[![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)]()
+<p align="center">
+  <a href="./QUICKSTART.md">Quick start</a>
+  · <a href="./docs/INSTALL.md">Install</a>
+  · <a href="./docs/DEVOPS.md">Production &amp; HTTPS</a>
+  · <a href="./docs/enterprise/annie-cli-mcp-enterprise.md">CLI (<code>@contextzero/nest</code>) &amp; MCP</a>
+  · <a href="./docs/enterprise/README.md">Enterprise</a>
+  · <a href="./RELEASES.md">Releases</a>
+  · <a href="./ROADMAP.md">Roadmap</a>
+  · <a href="https://www.npmjs.com/package/@contextzero/nest">CLI on npm (<code>@contextzero/nest</code>)</a>
+</p>
 
-[English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
+<p align="center">
+  <a href="./README.md">English</a>
+  · <a href="./README-ES.md">Español</a>
+  · <a href="./README-ZH.md">中文</a>
+  · <a href="./README-DE.md">Deutsch</a>
+  · <a href="./README-PT.md">Português</a>
+  · <a href="./README-FR.md">Français</a>
+</p>
 
-</div>
+**New install?** Start here: [QUICKSTART.md](QUICKSTART.md).
+
+**Preferred setup — hub (Docker):** clone this repo, `cd nest_hub`, run `./setup.sh`. It generates secrets, pulls images, starts the stack, and waits for health.
+
+**CLI (employee machines):** the published interface is **`npm install -g @contextzero/nest`** — that package is the CLI and installs the **`annie`** command. Use Node.js **LTS** (20+), then `annie auth login`. **pnpm** and **bun** work too if your policy allows global installs via those clients.
 
 ---
 
 ## What is NEST?
 
-**NEST** is a complete, self-hosted **workforce automation platform**. Not just for coding — your employees can manage machines, resolve tasks, send emails, do research, build products, and more. All from one hub. All from their phone.
+> **Yes, you still have 15+ apps**—and that fragmentation was already painful in 2018. Today it compounds with **shadow corporate AI**: people already use ChatGPT, Claude, Cursor, Copilot, image tools, and loose API keys—you often don’t know **where**, **which model**, or **what it costs**. Prompts start from zero in every tab; when someone leaves, the **judgment they refined with AI** walks out the door. You have dashboards for revenue and servers, but not for **how work actually happens with AI**.
+
+**NEST** is the **self-hosted layer your company runs**: **projects**, **roles**, **memory**, and **governance** so agents and chat run **under your URLs, your tokens, and your audit log**—not as invisible shadow IT.
+
+**NEST** is also a complete **workforce automation platform**: coding, chat, and computer use in one hub—phone, tablet, and desktop.
 
 > You deploy: one Docker command on your server.
 > Your team gets: a real-time AI workforce hub accessible from any device — phone, tablet, desktop.
+
+### Three surfaces — inside projects admins own
+
+Work is grouped in **projects** your administrators create. That gives you **per-project tracking** (who did what, in which session), a **memory bank** that accumulates context per user and team (the “soul” of how each person works with AI), and **approvals** before high-risk actions—instead of one-off browser tabs.
+
+| Surface | What employees get today | Notes |
+|--------|----------------------------|--------|
+| **Development** | **Claude Code**, **Cursor**, **Codex**, **OpenCode**, and **KiloCode** through the **`annie`** CLI (`npm install -g @contextzero/nest`), with **MCP** for **Cursor** and **Visual Studio Code** | [Full CLI + MCP reference](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| **Chat** | One hub chat on **web, desktop, and mobile PWA** backed by **OpenRouter**, **Fal.ai**, **Google Vertex AI**, and **DeepInfra** — **700+** models across **text, image, audio, and video** | Provider keys stay on the **server**; employees authenticate to **your** hub |
+| **Computer** | **`annie computer`** — hub-synced “computer use” from CLI and PWA (shell, browser where enabled, files, runbooks). From **June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside Computer** (same pattern as Claude, Cursor, …)—not standalone `annie` subcommands ([detail](docs/enterprise/zeroclaw.md)) | Same **approve → execute** posture as development sessions |
+
+### Product roadmap (2026)
+
+| Date | Milestone |
+|------|-----------|
+| **May 1, 2026** | **Project management** in projects — backlogs, workflow states, and visibility across tasks |
+| **May 15, 2026** | **CRM** — contacts and lifecycle (e.g. pre-sales → sales → post-sales) shared **across projects** |
+| **June 1, 2026** | **`annie computer` wrappers** — **OpenClaw**, **ZeroClaw**, and **Hermes** integrated **inside Computer** (same attach pattern as other hub-backed agents) |
+
+Role-aware routing (employee **reviews → approves →** execution on **Computer**, **Claude**, **Cursor**, etc.) ties these modules together—see [ROADMAP.md](ROADMAP.md) for scope and ship notes.
+
+### Product video
+
+Overview of the hub experience (local file in this repository):
+
+[`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
 
 ### The Four Pillars
 
@@ -63,6 +124,35 @@ Open on your phone. Install the PWA. Your hub is live.
 
 ---
 
+## Highlights
+
+- **[Phone-first hub](QUICKSTART.md)** — PWA on any device; approve work without a laptop.
+- **[Production deploy (HTTPS)](docs/DEVOPS.md)** — public URL, reverse proxy, and operational hardening.
+- **[CLI (`@contextzero/nest`) + MCP — enterprise](docs/enterprise/annie-cli-mcp-enterprise.md)** — development agents (**Claude Code**, **Cursor**, **Codex**, **OpenCode**, **KiloCode**); **MCP** for **Cursor** and **Visual Studio Code**; phased rollout and token hygiene.
+- **Hub Chat** — **OpenRouter**, **Fal.ai**, **Vertex**, **DeepInfra**; **700+** models (text, image, audio, video) on web, desktop, and mobile—keys on the server, not employee laptops.
+- **[Computer automation wrappers](docs/enterprise/zeroclaw.md)** — **OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** on **June 1, 2026** (same pattern as Claude, Cursor, …)—not `annie openclaw` / `annie zeroclaw` / `annie hermes`.
+- **Roadmap:** **Project management** — **May 1, 2026** · **CRM** — **May 15, 2026** · **Computer wrappers** (OpenClaw, ZeroClaw, Hermes) — **June 1, 2026** — [ROADMAP.md](ROADMAP.md).
+- **[Darwin agents](docs/enterprise/darwin-agents.md)** — evolving specialist agents (enterprise).
+- **CLI on npm:** [`@contextzero/nest`](https://www.npmjs.com/package/@contextzero/nest) — install with `npm install -g @contextzero/nest`; the binary is `annie`.
+
+## Docs by goal
+
+| Goal | Start here |
+|------|------------|
+| First-time hub in Docker | [QUICKSTART.md](QUICKSTART.md) → [docs/INSTALL.md](docs/INSTALL.md) |
+| Public URL + TLS | [docs/DEVOPS.md](docs/DEVOPS.md) |
+| Employee laptops (Cursor, Claude Code, Codex, …) | [Enterprise rollout — `npm install -g @contextzero/nest`](#annie-cli-enterprise-rollout) → [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| LLM keys, billing, CLI config | [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md) |
+| Node / Docker / Rust toolchain | [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) |
+| Enterprise positioning & sales context | [docs/enterprise/README.md](docs/enterprise/README.md) |
+| What shipped vs planned | [RELEASES.md](RELEASES.md) · [ROADMAP.md](ROADMAP.md) |
+
+## Security posture (self-hosted)
+
+NEST connects real agents to real infrastructure. Treat **CLI tokens**, **hub URLs**, and **inbound webhooks** as sensitive. Rotate `CLI_API_TOKEN` on compromise; prefer HTTPS everywhere; scope [permission modes](#permission-modes) per employee and project. Read [docs/DEVOPS.md](docs/DEVOPS.md) before exposing the stack to the internet. The [Important notice](#important-notice--self-hosted-deployments-responsibility-and-access) at the end of this file describes responsibility boundaries for self-hosted deployments.
+
+---
+
 ## What NEST Does
 
 ```
@@ -72,8 +162,8 @@ Open on your phone. Install the PWA. Your hub is live.
 │                                                                         │
 │  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────────┐  │
 │  │  CODING AGENTS   │  │  AUTOMATION      │  │  INTELLIGENCE       │  │
-│  │  Claude Code     │  │  ZeroClaw        │  │  Souls (Memory)     │  │
-│  │  Cursor          │  │  OpenClaw        │  │  Darwin Agents      │  │
+│  │  Claude Code     │  │  ZeroClaw*       │  │  Souls (Memory)     │  │
+│  │  Cursor          │  │  OpenClaw*       │  │  Darwin Agents      │  │
 │  │  Codex           │  │  Browser control │  │  Colony Memory      │  │
 │  │  Gemini          │  │  Scheduled tasks │  │  Learning systems   │  │
 │  │  OpenCode        │  │  File management │  │  Cross-team context │  │
@@ -91,6 +181,8 @@ Open on your phone. Install the PWA. Your hub is live.
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
+\*From **June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** ship as **wrappers inside `annie computer`** (same pattern as other Computer agents). See [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
+
 ---
 
 ## Architecture
@@ -98,16 +190,18 @@ Open on your phone. Install the PWA. Your hub is live.
 ```
 YOU (Phone/Tablet/Desktop)        SERVER                      EMPLOYEE MACHINE
 ──────────────────────────      ──────────────              ─────────────────────
-  📱 PWA Dashboard        ←──  NEST Server (Rust)   ←──    annie CLI
+  📱 PWA Dashboard        ←──  NEST Server (Rust)   ←──    annie (`@contextzero/nest`)
   ✅ Approve / Reject           Axum + Socket.IO             Claude Code
   💬 Live Chat             ←──  SSE real-time stream         Cursor / Codex
   📊 Audit & Stats        ←──  PostgreSQL                   Gemini / OpenCode
-  🎤 Voice Interface            nginx reverse proxy          KiloCode
-                                                             ZeroClaw / OpenClaw
+  🎤 Voice Interface            nginx reverse proxy          KiloCode / Computer
+  🖥 Remote terminals (PTY)  ←──  session streams  ←──    `annie` CLI (explicit subcommands)
 
                                 YOUR INFRASTRUCTURE
                                 (self-hosted Docker)
 ```
+
+> **Computer vs bare `annie`:** From **June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** run as **wrappers inside `annie computer`** (same pattern as Claude, Cursor, Codex, …)—see [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md). They are **not** standalone `annie openclaw` / `annie zeroclaw` / `annie hermes` commands. In scripts and CI, always invoke an explicit subcommand (`annie claude`, `annie computer`, …); if the first token is not a known subcommand, the CLI behaves like **`annie cursor`**.
 
 ---
 
@@ -115,19 +209,74 @@ YOU (Phone/Tablet/Desktop)        SERVER                      EMPLOYEE MACHINE
 
 | Agent | Command | Description |
 |-------|---------|------------|
-| **Claude Code** | `annie` | Anthropic's flagship coding agent |
+| **Claude Code** | `annie claude` | Anthropic's flagship coding agent |
 | **Cursor** | `annie cursor` | Cursor IDE agent mode |
 | **Codex** | `annie codex` | OpenAI's code execution agent |
 | **Gemini** | `annie gemini` | Google's multimodal agent |
 | **OpenCode** | `annie opencode` | Open-source coding agent |
 | **KiloCode** | `annie kilocode` | Task execution + remote control |
-| **ZeroClaw** | Headless automation | Self-correcting autonomous tasks |
-| **OpenClaw** | Project orchestration | Multi-step workflows + browser control |
+| **Computer (management)** | `annie computer` | Hub-synced multi-tool agent: shell, browser, files, git, processes, scheduling—beyond a single IDE |
+| **ZeroClaw** | *via `annie computer` (from Jun 1, 2026)* | Headless automation wrapper — self-correcting autonomous tasks ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **OpenClaw** | *via `annie computer` (from Jun 1, 2026)* | Orchestration wrapper — multi-step workflows + browser control ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
+| **Hermes** | *via `annie computer` (from Jun 1, 2026)* | Computer-use wrapper alongside OpenClaw / ZeroClaw ([zeroclaw.md](docs/enterprise/zeroclaw.md)) |
 
 ```bash
 npm install -g @contextzero/nest
 annie --help
 ```
+
+<a id="annie-cli-enterprise-rollout"></a>
+
+### Enterprise rollout — CLI (`@contextzero/nest`)
+
+Use this sequence for **macOS, Windows, and Linux** machines where employees run Cursor, Claude Code, Codex, OpenCode, or KiloCode. One global install of **`@contextzero/nest`** (the `annie` CLI from that package) connects each workstation to **your** NEST instance; Context Zero does not host your self‑hosted hub or join your network.
+
+**1. Install the CLI (IT or employee, with Node.js LTS + npm):**
+
+```bash
+npm install -g @contextzero/nest
+```
+
+Confirm the binary is on `PATH`:
+
+```bash
+annie --version
+```
+
+**2. Authenticate the machine against your hub**
+
+Run once per profile (or automate via your MDM / secrets vault using the same variables `annie auth login` persists):
+
+```bash
+annie auth login
+```
+
+You will be prompted for the **base URL of your deployment** (for example `https://nest.yourcompany.com`, issued by your organization) and a **CLI API token** your administrators generate on the server. Verify connectivity:
+
+```bash
+annie auth status
+```
+
+**3. Standard agent entry points (after login)**
+
+| Surface | Command | Purpose |
+|--------|---------|--------|
+| **Claude Code** | `annie claude` | Anthropic Claude Code sessions |
+| **Cursor** | `annie cursor` | Cursor IDE agent mode |
+| **Codex** | `annie codex` | OpenAI Codex sessions (`annie codex resume <id>` where supported) |
+| **Gemini** | `annie gemini` | Google Gemini sessions |
+| **OpenCode** | `annie opencode` | OpenCode sessions |
+| **KiloCode** | `annie kilocode` | KiloCode task execution |
+| **Computer** | `annie computer` | Management / multi-tool agent (shell, browser, files, git, processes, schedulers—hub-synced) |
+| **MCP bridge** | `annie mcp` | stdio MCP bridge toward your hub (HTTP target + token) |
+| **Background worker** | `annie worker start` · `list` · `stop-session <id>` | Remote / long‑running work tied to the hub |
+| **Hub terminals** | *(PWA ↔ server ↔ CLI PTY)* | Operator shells for debugging and long jobs (treat as privileged) |
+
+Distribute **only** URLs and tokens from **your** company domain and identity systems. Employees should install the **PWA or native clients** from links you control (intranet, MDM, or branded download pages), then use phone, tablet, or desktop to approve work, monitor sessions, and audit activity—without sharing credentials outside your tenant.
+
+**Further reading:** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) — full surface: development agents, **`annie computer`** (management), **remote PTY terminals**, worker, MCP, diagnostics; no private source links.
+
+**Automation note:** if the first argument is not a known subcommand, the CLI treats the invocation as **`annie cursor`**. In CI and runbooks, always pass an explicit subcommand (`annie claude`, `annie computer`, …).
 
 ---
 
@@ -194,12 +343,12 @@ Control how much autonomy your AI agents have — per employee, per project, per
 
 | Problem | How Others Solve It | How NEST Solves It |
 |---------|--------------------|--------------------|
-| 15+ fragmented apps | Add another integration | **One hub replaces the pile** |
+| **15+ apps** and **shadow corporate AI** (unapproved models, tabs, and cost) | Policy PDFs, another checklist | **One operating layer** — projects, **server-side keys**, **full audit**; **PM May 1**, **CRM May 15**, **Computer** wrappers (**OpenClaw · ZeroClaw · Hermes**) **Jun 1** — [ROADMAP.md](ROADMAP.md) |
 | Desk-bound workforce | Slack mobile (partial) | **Phone-first PWA — approve from anywhere** |
-| AI forgets everything | System prompts, RAG hacks | **Souls — the hub learns each employee** |
+| AI forgets everything | System prompts, RAG hacks | **Memory bank / Souls — context accumulates per user and project** |
 | One agent bottleneck | Manual coordination | **Agent swarm — specialists in parallel** |
-| Shadow AI / no visibility | Honor system, IT policies | **Full audit trail through the hub** |
-| Personal assistants don't scale | OpenClaw per person | **Workforce hub — shared memory, structured projects** |
+| No executive dashboard for “how we use AI” | N/A | **Live hub views** — sessions, approvals, and spend tied to **projects** |
+| Personal assistants don't scale | One chatbot per person | **Workforce hub — shared memory, structured projects, governed CLIs** |
 
 ---
 
@@ -213,7 +362,7 @@ Control how much autonomy your AI agents have — per employee, per project, per
 | CLI reference & LLM config | [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md) |
 | Framework install (Node, Docker, Rust) | [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) |
 | Enterprise features | [docs/enterprise/README.md](docs/enterprise/README.md) |
-| **Annie CLI + MCP (enterprise)** | [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) · [ES](docs/enterprise/annie-cli-mcp-enterprise-ES.md) · [DE](docs/enterprise/annie-cli-mcp-enterprise-DE.md) · [FR](docs/enterprise/annie-cli-mcp-enterprise-FR.md) · [PT](docs/enterprise/annie-cli-mcp-enterprise-PT.md) · [ZH](docs/enterprise/annie-cli-mcp-enterprise-ZH.md) |
+| **CLI (`@contextzero/nest`) + MCP (enterprise)** | [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md) · [ES](docs/enterprise/annie-cli-mcp-enterprise-ES.md) · [DE](docs/enterprise/annie-cli-mcp-enterprise-DE.md) · [FR](docs/enterprise/annie-cli-mcp-enterprise-FR.md) · [PT](docs/enterprise/annie-cli-mcp-enterprise-PT.md) · [ZH](docs/enterprise/annie-cli-mcp-enterprise-ZH.md) |
 | ZeroClaw & OpenClaw | [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) |
 | Darwin Agents | [docs/enterprise/darwin-agents.md](docs/enterprise/darwin-agents.md) |
 | Business overview for founders | [docs/business/README.md](docs/business/README.md) |
@@ -231,19 +380,22 @@ Control how much autonomy your AI agents have — per employee, per project, per
 
 ```bash
 annie claude              # Claude Code session
-annie cursor              # Cursor agent
+annie cursor              # Cursor agent (default if first token is unknown)
 annie codex               # Codex session (annie codex resume <id>)
 annie gemini              # Gemini session
 annie opencode            # OpenCode session
 annie kilocode            # KiloCode session
+annie computer            # Multi-tool hub agent (shell, browser, files, ops)
 annie mcp                 # MCP stdio bridge (HTTP target + token)
 annie worker start        # Background worker (remote spawn)
+annie worker list         # Active worker sessions
+annie worker stop-session <id>
 annie auth login          # Save credentials
 annie auth status         # Check connection
 annie diagnose            # Full diagnostic report
 ```
 
-> **Enterprise CLI + MCP (Cursor, VS Code, Claude, ChatGPT, phased rollout):** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md)
+> **Enterprise — CLI package [`@contextzero/nest`](https://www.npmjs.com/package/@contextzero/nest) + MCP (Cursor, VS Code, Claude, ChatGPT, phased rollout):** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md)
 
 **Server (from `nest_hub/` folder):**
 
@@ -295,7 +447,7 @@ docker compose pull && docker compose up -d  # Update to latest
 
 - **Issues & Feature Requests:** [github.com/contextzero/nest_hub/issues](https://github.com/contextzero/nest_hub/issues)
 - **Discussions:** [github.com/contextzero/nest_hub/discussions](https://github.com/contextzero/nest_hub/discussions)
-- **Source code (CLI, Server, Web):** [github.com/contextzero/nest](https://github.com/contextzero/nest)
+- **Employee CLI (published):** npm package [`@contextzero/nest`](https://www.npmjs.com/package/@contextzero/nest) — `npm install -g @contextzero/nest` → command `annie`
 
 ---
 
@@ -307,8 +459,20 @@ NEST Hub distribution is proprietary. See LICENSE for details.
 
 ---
 
+## Important notice — self‑hosted deployments, responsibility, and access
+
+The following is a **general information notice** for customers and operators. It is **not** tailored legal advice; your counsel should review it against your contracts, jurisdiction, and regulatory obligations.
+
+**Use and compliance.** Your organization—**not** Context Zero Inc. (including its affiliates, contractors, or personnel, collectively “**Context Zero**”)—is **solely responsible** for how you deploy, configure, secure, and use NEST Hub, including all outputs of AI agents, integrations, data processing, employment practices, export controls, privacy, sectoral regulations, and internal policies. Context Zero does not supervise your runtime environment and does not assume liability for decisions your employees, agents, or systems make on your infrastructure.
+
+**Self‑hosted connectivity.** When you operate NEST as **self‑hosted** software on infrastructure you control, **Context Zero does not operate that server**, does not receive an automatic administrative connection to it, and **cannot access** your installation merely because you downloaded or licensed materials from us. Your hub is joined by your users and tooling (for example the **`annie`** CLI from **`npm install -g @contextzero/nest`**) **outbound** to the endpoints **you** configure (your DNS, your TLS certificates, your tokens). Unless you separately contract for managed services that explicitly provide remote administration and scope of access, **no member of the Context Zero team is granted inbound access** to your servers as part of the self‑hosted product model described in this repository.
+
+**No agency.** Nothing in this README creates a partnership, joint venture, or agency relationship. Context Zero is a software provider; **your company remains exclusively responsible** for lawful use, workforce governance, and the security of your deployment.
+
+---
+
 <div align="center">
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

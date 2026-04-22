@@ -80,8 +80,8 @@ Hub 学习每位员工。无需重复解释上下文。智能持续积累。
 多个专业 AI 智能体并行协作。
 
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
-- ZeroClaw：无界面自动化与自纠错
-- OpenClaw：可视化工作流编排
+- ZeroClaw：无界面自动化与自纠错（**2026 年 6 月 1 日起作为 `annie computer` 包装器**）
+- OpenClaw：可视化工作流编排（**2026 年 6 月 1 日起作为 `annie computer` 包装器**）
 - Darwin Agents：随组织演进的 AI 工作者
 
 ---
@@ -140,6 +140,6 @@ Hub 学习每位员工。无需重复解释上下文。智能持续积累。
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*公开发布：[contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI：[@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)。*
 
 </div>

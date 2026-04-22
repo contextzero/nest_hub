@@ -178,7 +178,7 @@ Credentials are saved to `~/.nest/config`. Every subsequent `annie` command uses
 ```bash
 export CLI_API_TOKEN="your-token-from-env"
 export NEST_API_URL="http://localhost"
-annie
+annie auth status
 ```
 
 **Verify the connection:**
@@ -191,16 +191,21 @@ Should print your server URL and confirm the token is set. If it shows an error,
 
 ### Step 2.3 — Start your first agent session
 
+Package: **`npm install -g @contextzero/nest`** → **`annie`**. Full command reference: [enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md).
+
 ```bash
-annie            # Claude Code — Anthropic's coding agent
+annie claude     # Claude Code — Anthropic's coding agent
 annie codex      # OpenAI Codex
 annie cursor     # Cursor Agent
 annie gemini     # Google Gemini (via ACP)
 annie opencode   # OpenCode — open-source agent
 annie kilocode   # KiloCode — task execution with tight approval control
-annie zeroclaw   # ZeroClaw — headless workflow automation with self-correction
-annie openclaw   # OpenClaw — visual workflow orchestration and task graphs
+annie computer   # Computer — multi-tool management agent on the hub (shell, browser, files)
 ```
+
+**Automation:** if the first argument is not a known subcommand, the CLI behaves like **`annie cursor`**. In scripts and CI, always use an explicit subcommand (`annie claude`, `annie computer`, …).
+
+**ZeroClaw / OpenClaw** will be exposed **inside `annie computer`** as wrappers (same pattern as Claude, Cursor, …) from **June 1, 2026**—not as separate `annie` subcommands. See [enterprise/zeroclaw.md](enterprise/zeroclaw.md) and [RELEASES.md](../RELEASES.md).
 
 Once a session starts, open **http://localhost** in your browser (or on your phone). The session appears in the dashboard in real time.
 
@@ -299,6 +304,6 @@ Full production reference: [DEVOPS.md](DEVOPS.md)
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>

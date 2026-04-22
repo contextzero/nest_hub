@@ -22,7 +22,7 @@
 
 1. ✅ 用**一条命令**在本地部署 NEST 服务器（Rust + Postgres + nginx）
 2. ✅ 在任意机器上安装 `annie` CLI
-3. ✅ 启动第一个真实的 AI agent 会话（Claude Code、Codex、Cursor、Gemini、OpenCode 或 KiloCode）
+3. ✅ 启动第一个真实的 AI agent 会话（Claude Code、Codex、Cursor、Gemini、OpenCode 或 KiloCode；自 **2026 年 6 月 1 日**起 ZeroClaw / OpenClaw **经 `annie computer`**）
 4. ✅ 在**浏览器**里实时查看 — 手机上也可以
 
 无需事先会 Rust。无需云账号。无需信用卡。只要你的机器能跑 Docker，NEST 就能跑。
@@ -122,23 +122,26 @@ annie auth status
 
 ## 第 4 步 — 启动第一个 Agent 会话
 
-选择你的 agent，执行一条命令：
+选择你的 agent，执行一条命令（包 **`@contextzero/nest`** → **`annie`**）。**企业级参考：** [docs/enterprise/annie-cli-mcp-enterprise.md](docs/enterprise/annie-cli-mcp-enterprise.md)。
 
-| Agent | Command | 说明 |
-|-------|---------|------|
-| **Claude Code** | `annie` | Anthropic 旗舰编程 agent |
+| Agent | 命令 | 说明 |
+|-------|------|------|
+| **Claude Code** | `annie claude` | Anthropic 旗舰编程 agent |
 | **Codex** | `annie codex` | OpenAI 代码执行 agent |
 | **Cursor** | `annie cursor` | Cursor IDE agent 模式 |
 | **Gemini** | `annie gemini` | Google 多模态 agent |
 | **OpenCode** | `annie opencode` | 开源编程 agent |
 | **KiloCode** | `annie kilocode` | 任务执行 + 远程控制 |
+| **Computer（管理）** | `annie computer` | Hub 上的多工具 agent（shell、浏览器、文件） |
 
-> **自动化引擎：** ZeroClaw 与 OpenClaw 也可用于自主任务执行与流水线自动化。见 [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md)。
+> **ZeroClaw / OpenClaw：** 自 **2026 年 6 月 1 日**起在 **`annie computer`** 内以包装器形式提供（与 Claude、Cursor 等相同方式）。不是独立的 `annie` 子命令。见 [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) 与 [RELEASES.md](RELEASES.md)。
+
+**自动化：** 若第一个参数不是已知子命令，调用会按 **`annie cursor`** 处理。在 CI 中请始终使用 `annie claude`、`annie computer` 等。
 
 示例 — 启动 Claude Code：
 
 ```bash
-annie
+annie claude
 ```
 
 终端会显示会话连接与流式输出。**不要关闭此终端。** Agent 正在运行。
@@ -168,16 +171,18 @@ http://localhost
 ## 速查 — 最常用命令
 
 ```bash
-annie                   # Start Claude Code session
-annie codex             # Start Codex session
-annie cursor            # Start Cursor agent
-annie gemini            # Start Gemini session
-annie opencode          # Start OpenCode session
-annie kilocode          # Start KiloCode session
-annie worker start      # Start background worker (remote spawn)
-annie auth login        # Save credentials interactively
-annie auth status       # Check current auth config
-annie diagnose          # Run diagnostics if something feels off
+annie claude            # Claude Code 会话
+annie codex             # Codex 会话
+annie cursor            # Cursor agent
+annie gemini            # Gemini 会话
+annie opencode          # OpenCode 会话
+annie kilocode          # KiloCode 会话
+annie computer          # 多工具管理 agent
+annie worker start      # 后台 worker
+annie worker list       # 活跃 worker 会话
+annie auth login        # 交互保存凭据
+annie auth status       # 认证状态
+annie diagnose          # 诊断
 ```
 
 **Server 管理（在 `nest_hub/` 目录下）：**
@@ -201,7 +206,7 @@ docker compose restart      # Restart after .env changes
 | 实时会话 dashboard | 浏览器 / 手机 | 实时查看团队运行的每个 agent 会话 |
 | 审批工作流 | Mobile PWA | 高风险操作前 agent 等待你的确认 |
 | 完整审计日志 | 你的 PostgreSQL | 每条消息、每个动作都持久化在你的 server |
-| 多 agent 支持 | 任意员工机器 | Claude Code、Codex、Cursor、Gemini、OpenCode、KiloCode — 同一 hub |
+| 多 agent 支持 | 任意员工机器 | Claude Code、Codex、Cursor、Gemini、OpenCode、KiloCode，以及 **Computer**（**2026 年 6 月 1 日**起 ZeroClaw / OpenClaw 包装器）— 同一 hub |
 | 零月费 | 你的基础设施 | Server、数据、密钥都由你掌控 |
 
 > **想深入？** 可阅读：
@@ -252,6 +257,6 @@ docker compose restart      # Restart after .env changes
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*公开发布：[contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI：[@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)。*
 
 </div>

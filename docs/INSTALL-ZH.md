@@ -180,7 +180,7 @@ annie auth login
 ```bash
 export CLI_API_TOKEN="your-token-from-env"
 export NEST_API_URL="http://localhost"
-annie
+annie auth status
 ```
 
 **验证连接：**
@@ -193,16 +193,21 @@ annie auth status
 
 ### 步骤 2.3 — 启动第一个 agent session
 
+包：**`npm install -g @contextzero/nest`** → **`annie`**。完整命令说明：[enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md)。
+
 ```bash
-annie            # Claude Code — Anthropic's coding agent
+annie claude     # Claude Code — Anthropic 编程 agent
 annie codex      # OpenAI Codex
 annie cursor     # Cursor Agent
-annie gemini     # Google Gemini (via ACP)
-annie opencode   # OpenCode — open-source agent
-annie kilocode   # KiloCode — task execution with tight approval control
-annie zeroclaw   # ZeroClaw — headless workflow automation with self-correction
-annie openclaw   # OpenClaw — visual workflow orchestration and task graphs
+annie gemini     # Google Gemini（经 ACP）
+annie opencode   # OpenCode — 开源 agent
+annie kilocode   # KiloCode — 任务执行与审批控制
+annie computer   # Computer — hub 上的多工具管理 agent（shell、浏览器、文件）
 ```
+
+**自动化：** 若第一个参数不是已知子命令，CLI 会按 **`annie cursor`** 处理。在脚本与 CI 中请始终写显式子命令（`annie claude`、`annie computer` 等）。
+
+**ZeroClaw / OpenClaw** 自 **2026 年 6 月 1 日**起在 **`annie computer`** 内以 **包装器（wrapper）** 形式提供（与 Claude、Cursor 等相同集成方式）— 不是独立的 `annie` 子命令。见 [enterprise/zeroclaw.md](enterprise/zeroclaw.md) 与 [RELEASES.md](../RELEASES.md)。
 
 Session 启动后，在浏览器（或手机）打开 **http://localhost**。Dashboard 会实时显示该 session。
 
@@ -301,6 +306,6 @@ docker compose pull && docker compose up -d
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Part of the [contextzero/nest](https://github.com/contextzero/nest) ecosystem.*
+*公开发布：[contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI：[@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)。*
 
 </div>

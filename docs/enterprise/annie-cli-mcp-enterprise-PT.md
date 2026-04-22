@@ -28,7 +28,7 @@ Este documento é a referência **nível enterprise** para implantar **Annie** (
 5. [Fases de maturidade técnica MCP (M1–M4)](#5-fases-de-maturidade-técnica-mcp-m1m4)
 6. [Fases de rollout operacional (P0–P4)](#6-fases-de-rollout-operacional-p0p4)
 7. [Arquitetura](#7-arquitetura)
-8. [CLI Annie — referência completa de comandos](#8-cli-annie--referência-completa-de-comandos)
+8. [CLI (`@contextzero/nest`) — referência de comandos](#section-8-cli-pt)
 9. [Configuração e regras de URL](#9-configuração-e-regras-de-url)
 10. [MCP — protocolo, segurança e endpoints](#10-mcp--protocolo-segurança-e-endpoints)
 11. [Padrões por cliente](#11-padrões-por-cliente)
@@ -294,7 +294,13 @@ Cursor / VS Code MCP  ── Streamable HTTP ──┘
 
 ---
 
-## 8. CLI Annie — referência completa de comandos
+<a id="section-8-cli-pt"></a>
+
+## 8. CLI (`@contextzero/nest`) — referência de comandos
+
+Instalação: **`npm install -g @contextzero/nest`** → binário **`annie`**. A **referência canónica completa** (modo Computer, terminais PTY remotos, resolução por omissão para `cursor`, `hook-forwarder`, etc.) está na **versão em inglês**: [annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) — sem ligações a repositórios privados.
+
+**Invólucros Computer (1 de junho de 2026):** **OpenClaw**, **ZeroClaw** e **Hermes** em **`annie computer`**. **Projetos:** **gestão de projetos — 1 de maio de 2026** · **CRM — 15 de maio de 2026** — [ROADMAP.md](../../ROADMAP.md) · detalhe em **inglês** §8.3: [annie-cli-mcp-enterprise.md](./annie-cli-mcp-enterprise.md#section-8-cli-reference) · [zeroclaw.md](./zeroclaw.md).
 
 | Área | Comando | Função |
 |------|---------|--------|
@@ -304,12 +310,13 @@ Cursor / VS Code MCP  ── Streamable HTTP ──┘
 | Gemini | `annie gemini [args…]` | Gemini (ACP) |
 | OpenCode | `annie opencode [args…]` | OpenCode |
 | KiloCode | `annie kilocode [args…]` | KiloCode |
+| **Computer (gestão)** | `annie computer [args…]` | Agente multi-ferramenta no hub (shell, navegador, ficheiros, automação) |
 | Auth | `annie auth login` / `status` / `logout` | Credenciais |
 | Worker | `annie worker start` / `stop` / `status` / `list` / `stop-session <id>` / `logs` | Worker |
-| MCP | `annie mcp [--url <url>] [--token \| --bearer <segredo>]` | Stdio → MCP HTTP; token também via `CLI_API_TOKEN` / `NEST_MCP_BEARER_TOKEN` |
-| Servidor | `annie server [--host …] [--port …]` | Hub empacotado |
+| MCP | `annie mcp [--url <url>] [--token \| --bearer <segredo>]` | Stdio → MCP HTTP |
+| Servidor | `annie server [--host …] [--port …]` | Hub empacotado (se incluído na sua instalação) |
 | Diagnóstico | `annie diagnose` / `annie diagnose clean` | Diagnóstico / limpeza |
-| Limitado | `hook-forwarder` ; `connect` ; `notify` | Ver doc EN |
+| Limitado | `hook-forwarder` ; `connect` ; `notify` | Ver guia EN |
 
 ---
 
@@ -406,7 +413,7 @@ Independente da **linguagem do repositório**.
 | [DEVOPS.md](../DEVOPS.md) | HTTPS, proxy |
 | [Methodology](../methodology/README.md) | NEST 0–6 |
 | [Enterprise README](./README.md) | Enterprise |
-| [nest (código)](https://github.com/contextzero/nest) | Rotas do servidor |
+| [Imagem nest-server](https://hub.docker.com/r/matiasbaglieri/nest-server) | Rotas distribuídas na imagem publicada; contratos neste repositório **nest_hub** |
 
 ---
 
@@ -415,6 +422,6 @@ Independente da **linguagem do repositório**.
 [![Telegram](https://img.shields.io/badge/Telegram-ctx0__io-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ctx0_io)
 [![Discord](https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ygjuuDAw)
 
-*Ecossistema [contextzero/nest](https://github.com/contextzero/nest).*
+*Distribuição pública: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest).*
 
 </div>
