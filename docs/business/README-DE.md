@@ -82,6 +82,7 @@ Mehrere spezialisierte KI-Agenten parallel am Werk.
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
 - ZeroClaw: Headless-Automatisierung mit Selbstkorrektur (**Wrapper in `annie computer` ab 1. Juni 2026**)
 - OpenClaw: visuelle Workflow-Orchestrierung (**Wrapper in `annie computer` ab 1. Juni 2026**)
+- Hermes: Computer-Use-Wrapper neben OpenClaw und ZeroClaw (**Wrapper in `annie computer` ab 1. Juni 2026**)
 - Darwin Agents: KI-Arbeiter, die mit Ihrer Organisation wachsen
 
 ---

@@ -82,6 +82,7 @@ Hub 学习每位员工。无需重复解释上下文。智能持续积累。
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
 - ZeroClaw：无界面自动化与自纠错（**2026 年 6 月 1 日起作为 `annie computer` 包装器**）
 - OpenClaw：可视化工作流编排（**2026 年 6 月 1 日起作为 `annie computer` 包装器**）
+- Hermes：与 OpenClaw、ZeroClaw 并行的计算机使用包装器（**2026 年 6 月 1 日起作为 `annie computer` 包装器**）
 - Darwin Agents：随组织演进的 AI 工作者
 
 ---

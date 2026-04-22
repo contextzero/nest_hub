@@ -98,7 +98,7 @@ The roadmap from a single tool to a complete workforce automation platform.
 
 **What's Built:**
 - Playbook system
-- Advanced ZeroClaw/OpenClaw workflows (via **`annie computer`** from **June 1, 2026**)
+- Advanced ZeroClaw / OpenClaw / Hermes workflows (via **`annie computer`** from **June 1, 2026**)
 - Enterprise-grade security policies
 
 **Status:** 🚧 Building

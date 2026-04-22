@@ -82,6 +82,7 @@ Multiple specialized AI agents working in parallel.
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
 - ZeroClaw: headless automation with self-correction (**`annie computer` wrapper from June 1, 2026**)
 - OpenClaw: visual workflow orchestration (**`annie computer` wrapper from June 1, 2026**)
+- Hermes: computer-use wrapper alongside OpenClaw and ZeroClaw (**`annie computer` wrapper from June 1, 2026**)
 - Darwin Agents: AI workers that evolve with your organization
 
 ---

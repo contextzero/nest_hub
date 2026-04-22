@@ -28,7 +28,7 @@ La version **Enterprise** de NEST apporte des fonctionnalités avancées aux org
 | **Darwin Agents** | ❌ | ✅ |
 | **Colony Memory** | ❌ | ✅ |
 | **Specialized Agents** | ❌ | ✅ |
-| **Advanced Automation** | Basique | ZeroClaw complet |
+| **Advanced Automation** | Basique | Automatisation Computer complète (enveloppes ZeroClaw, OpenClaw, Hermes) |
 | **SSO / SAML** | ❌ | ✅ |
 | **Audit Logs** | Local | Conformité complète |
 | **Support** | GitHub | SLA dédié |
@@ -110,7 +110,9 @@ Agents prêts à l’emploi pour les tâches enterprise courantes :
 
 ---
 
-### 4. Advanced ZeroClaw
+### 4. Automatisation avancée (Computer)
+
+**OpenClaw**, **ZeroClaw** et **Hermes** sont livrés **dans `annie computer`** à partir du **1er juin 2026**—voir [zeroclaw.md](./zeroclaw.md).
 
 - Accès système plus profond
 - Orchestration multi-machines

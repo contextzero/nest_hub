@@ -6,6 +6,8 @@
 
 **自托管劳动力自动化平台 — 企业级**
 <br/>
+<em>贵司如何与 AI 协作的「操作系统」。</em>
+<br/>
 <em>你的中心。你的数据。你的AI劳动力。掌中掌控。</em>
 
 <br/>
@@ -24,16 +26,42 @@
 
 ## 什么是 NEST？
 
-**NEST** 是一个完整的、自托管的**劳动力自动化平台**。不仅仅是编程工具——你的员工可以管理机器、处理任务、发送邮件、进行研究、构建产品等。一切都在一个中心。一切都在手机上。
+> **是的，你仍有 15+ 个应用**——这种碎片化在 2018 年就已经很痛。如今又叠加**影子企业 AI**：人们已在用 ChatGPT、Claude、Cursor、Copilot、图像工具和零散 API——你往往不知道**在哪里**、**哪个模型**、**花多少钱**。每个标签页提示词从零开始；有人离职时，他**用 AI 打磨出的判断**也一起带走。你有营收与服务器的仪表盘，却没有**工作如何真实发生在 AI 上**的视图。
+
+**NEST** 是**公司自托管运行的一层**：**项目**、**角色**、**记忆**与**治理**，让代理与聊天跑在**你的 URL、你的令牌与你的审计日志**之下——而不是看不见的影子 IT。
+
+**NEST** 也是完整的**劳动力自动化平台**：编码、聊天与计算机使用同一中心——手机、平板与桌面。
 
 > 你部署：在服务器上运行一个 Docker 命令。
 > 你的团队获得：一个实时 AI 劳动力中心，可从任何设备访问——手机、平板、桌面。
 
+### 三种界面 —— 在管理员拥有的项目内
+
+工作按管理员创建的**项目**组织。这样可获得**按项目的追踪**（谁在哪个会话做了什么）、按用户与团队累积上下文的**记忆库**（每个人如何用 AI 的「灵魂」），以及在高风险操作前的**审批**——而不是散落的浏览器标签。
+
+| 界面 | 员工今天获得的能力 | 说明 |
+|--------|----------------------------|--------|
+| **开发** | 通过 **`annie`** CLI（`npm install -g @contextzero/nest`）使用 **Claude Code**、**Cursor**、**Codex**、**OpenCode**、**KiloCode**，并为 **Cursor** 与 **Visual Studio Code** 提供 **MCP** | [完整 CLI + MCP 参考](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| **聊天** | **Web、桌面与移动 PWA** 上的中心聊天，由 **OpenRouter**、**Fal.ai**、**Google Vertex AI**、**DeepInfra** 驱动 —— **700+** 模型覆盖**文本、图像、音频与视频** | 提供商密钥留在**服务器**；员工向**你的**中心认证 |
+| **Computer** | **`annie computer`** —— 从 CLI 与 PWA 与 Hub 同步的「计算机使用」（Shell、在允许处的浏览器、文件、运行手册）。自 **2026 年 6 月 1 日**起，**OpenClaw**、**ZeroClaw**、**Hermes** 作为 **Computer 内的包装器**交付（与 Claude、Cursor 等相同模式）——而非独立 `annie` 子命令（[详情](docs/enterprise/zeroclaw.md)） | 与开发会话相同的**审阅 → 批准 → 执行**姿态 |
+
+### 产品路线图（2026）
+
+| 日期 | 里程碑 |
+|------|-----------|
+| **2026 年 5 月 1 日** | 项目内的**项目管理** —— 待办列表、工作流状态与跨任务可见性 |
+| **2026 年 5 月 15 日** | **CRM** —— 联系人与客户旅程（如售前 → 销售 → 售后）**跨项目**共享 |
+| **2026 年 6 月 1 日** | **`annie computer` 包装器** —— **OpenClaw**、**ZeroClaw**、**Hermes** 集成在 **Computer** 内（与其它 Hub 支撑代理相同的挂载模式） |
+
+角色感知路由（员工**审阅 → 批准 →** 在 **Computer**、**Claude**、**Cursor** 等上执行）将这些模块串联——范围与交付说明见 [ROADMAP.md](ROADMAP.md)。
+
 ### 产品视频
 
-平台体验概览（本仓库中的本地文件）：
 
-[`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
+https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
+
+
+仓库内文件：[`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
 
 ### 四大支柱
 
@@ -77,18 +105,17 @@ cd nest_hub
 | **Gemini** | `annie gemini` | Google 的多模态代理 |
 | **OpenCode** | `annie opencode` | 开源编码代理 |
 | **KiloCode** | `annie kilocode` | 任务执行 + 远程控制 |
-| **Computer（运维）** | `annie computer` | 与 Hub 同步的多工具代理（Shell、浏览器、文件等） |
-| **ZeroClaw** | 无头自动化 | 自我纠正的自主任务 |
-| **OpenClaw** | 项目编排 | 多步骤工作流 + 浏览器控制 |
-
-\*自 **2026 年 6 月 1 日**起，**ZeroClaw** 与 **OpenClaw** 以 **`annie computer`** 内包装器形式提供（与其它 Computer 代理相同方式）。详见 [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md)。
+| **Computer（运维）** | `annie computer` | 与 Hub 同步的多工具代理：Shell、浏览器、文件、git、进程、调度——超越单一 IDE |
+| **ZeroClaw** | *经 `annie computer`（自 2026-06-01）* | 无头自动化包装器 —— 自我纠正的自主任务（[zeroclaw.md](docs/enterprise/zeroclaw.md)） |
+| **OpenClaw** | *经 `annie computer`（自 2026-06-01）* | 编排包装器 —— 多步骤工作流 + 浏览器控制（[zeroclaw.md](docs/enterprise/zeroclaw.md)） |
+| **Hermes** | *经 `annie computer`（自 2026-06-01）* | 与 OpenClaw / ZeroClaw 并行的计算机使用包装器（[zeroclaw.md](docs/enterprise/zeroclaw.md)） |
 
 ```bash
 npm install -g @contextzero/nest
 annie --help
 ```
 
-> **Computer 与裸 `annie`：** 自 **2026 年 6 月 1 日**起，**ZeroClaw** 与 **OpenClaw** 在 **`annie computer`** 内以包装器运行（与 Claude、Cursor、Codex 等相同方式）—见 [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md)。**没有**独立的 `annie zeroclaw` / `annie openclaw` 命令。在脚本与 CI 中请始终使用显式子命令（`annie claude`、`annie computer` 等）。若第一个参数不是已知子命令，CLI 会按 **`annie cursor`** 处理。
+> **Computer 与裸 `annie`：** 自 **2026 年 6 月 1 日**起，**OpenClaw**、**ZeroClaw**、**Hermes** 在 **`annie computer`** 内以包装器运行（与 Claude、Cursor、Codex 等相同方式）—见 [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md)。**没有**独立的 `annie openclaw` / `annie zeroclaw` / `annie hermes` 命令。在脚本与 CI 中请始终使用显式子命令（`annie claude`、`annie computer` 等）。若第一个参数不是已知子命令，CLI 会按 **`annie cursor`** 处理。
 
 ### 企业级推广 — CLI（`@contextzero/nest`）
 

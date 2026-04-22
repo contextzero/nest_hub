@@ -82,6 +82,7 @@ Vários agentes de IA especializados trabalhando em paralelo.
 - Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode
 - ZeroClaw: automação headless com autocorreção (**invólucro em `annie computer` a partir de 1 de junho de 2026**)
 - OpenClaw: orquestração visual de fluxos de trabalho (**invólucro em `annie computer` a partir de 1 de junho de 2026**)
+- Hermes: invólucro de uso do computador junto a OpenClaw e ZeroClaw (**invólucro em `annie computer` a partir de 1 de junho de 2026**)
 - Darwin Agents: trabalhadores de IA que evoluem com sua organização
 
 ---

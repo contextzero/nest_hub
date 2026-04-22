@@ -113,7 +113,7 @@ See [voice-and-tone.md](voice-and-tone.md) for full guidelines.
 
 - Free forever
 - Docker deployment
-- Agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw as **in-Computer wrappers** from **June 1, 2026** — see [zeroclaw.md](../enterprise/zeroclaw.md))
+- Agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (OpenClaw, ZeroClaw, and Hermes as **in-Computer wrappers** from **June 1, 2026** — see [zeroclaw.md](../enterprise/zeroclaw.md))
 
 See [Quick Start](../QUICKSTART.md) and [Install Guide](../INSTALL.md).
 
