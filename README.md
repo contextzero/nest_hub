@@ -88,7 +88,7 @@ Role-aware routing (employee **reviews → approves →** execution on **Compute
 
 ### Product video
 
-https://github.com/ontextzero/nest_hub/public/nest_hub_v0.2.73.mp4
+[https://github.com/ontextzero/nest_hub/public/nest_hub_v0.2.73.mp4](https://github.com/contextzero/nest_hub/blob/main/public/nest_hub_v0.2.73.mp4)
 
 ### The Four Pillars
 
