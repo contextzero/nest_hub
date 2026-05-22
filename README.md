@@ -66,33 +66,36 @@
 > You deploy: one Docker command on your server.
 > Your team gets: a real-time AI workforce hub accessible from any device — phone, tablet, desktop.
 
-### Three surfaces — inside projects admins own
+### Four surfaces — inside projects admins own
 
 Work is grouped in **projects** your administrators create. That gives you **per-project tracking** (who did what, in which session), a **memory bank** that accumulates context per user and team (the “soul” of how each person works with AI), and **approvals** before high-risk actions—instead of one-off browser tabs.
 
 | Surface | What employees get today | Notes |
 |--------|----------------------------|--------|
-| **Development** | **Claude Code**, **Cursor**, **Codex**, **OpenCode**, and **KiloCode** through the **`annie`** CLI (`npm install -g @contextzero/nest`), with **MCP** for **Cursor** and **Visual Studio Code** | [Full CLI + MCP reference](docs/enterprise/annie-cli-mcp-enterprise.md) |
-| **Chat** | One hub chat on **web, desktop, and mobile PWA** backed by **OpenRouter**, **Fal.ai**, **Google Vertex AI**, and **DeepInfra** — **700+** models across **text, image, audio, and video** | Provider keys stay on the **server**; employees authenticate to **your** hub |
-| **Computer** | **`annie computer`** — hub-synced “computer use” from CLI and PWA (shell, browser where enabled, files, runbooks). From **June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside Computer** (same pattern as Claude, Cursor, …)—not standalone `annie` subcommands ([detail](docs/enterprise/zeroclaw.md)) | Same **approve → execute** posture as development sessions |
+| **Forge** *(formerly Development)* | **Claude Code**, **Cursor**, **Codex**, **OpenCode**, and **KiloCode** through the **`annie`** CLI (`npm install -g @contextzero/nest`), with **MCP** for **Cursor** and **Visual Studio Code** | [Full CLI + MCP reference](docs/enterprise/annie-cli-mcp-enterprise.md) |
+| **Nexus** *(formerly Chat)* | One hub chat on **web, desktop, and mobile PWA** backed by **OpenRouter**, **Fal.ai**, **Google Vertex AI**, and **DeepInfra** — **700+** models across **text, image, audio, and video** | Provider keys stay on the **server**; employees authenticate to **your** hub |
+| **Computer** | **`annie computer`** — hub-synced “computer use” from CLI and PWA (shell, browser where enabled, files, runbooks). From **June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside Computer** (same pattern as Claude, Cursor, …)—not standalone `annie` subcommands ([detail](docs/enterprise/zeroclaw.md)) | Same **approve → execute** posture as Forge sessions |
+| **Project** *(new)* | Full **project management** alongside Forge / Nexus / Computer: Gantt chart, Kanban board, progress tracking, Wiki, tasks, statuses, comments, attachments. Tasks connect directly to execution targets (Forge, Nexus, Computer). | Backlogs, workflow states, and visibility across tasks — shipped May 1, 2026 |
+
+### Hive — DNA + contextual analysis (in tasks)
+
+Every project carries a **Hive**: a customizable bundle of **agents**, **skills**, **commands**, **packages**, and **computers** that attach to a task. The defaults come from the project's **DNA** (configurable per project), and tasks may override individually. When a task runs in **Forge**, **Nexus**, or **Computer**, the surface inherits the task's Hive automatically — so the right context, tooling, and policies follow the work wherever it executes. Cognitive / contextual analytics surface per-target so admins can see where attention and cost actually land.
 
 ### Product roadmap (2026)
 
-| Date | Milestone |
-|------|-----------|
-| **May 1, 2026** | **Project management** in projects — backlogs, workflow states, and visibility across tasks |
-| **May 15, 2026** | **CRM** — contacts and lifecycle (e.g. pre-sales → sales → post-sales) shared **across projects** |
-| **June 1, 2026** | **`annie computer` wrappers** — **OpenClaw**, **ZeroClaw**, and **Hermes** integrated **inside Computer** (same attach pattern as other hub-backed agents) |
+| Date | Milestone | Status |
+|------|-----------|--------|
+| **May 1, 2026** | **Project management** — Gantt, Kanban, Wiki, progress, tasks tied to Forge / Nexus / Computer | ✅ Shipped |
+| **~June 13, 2026** *(+25 days)* | **CRM** — contacts and lifecycle (e.g. pre-sales → sales → post-sales) shared **across projects** | 🔨 In progress |
+| **After CRM** | **Dispatcher** — agents that **auto-dispatch entire task groups** across a project, plus single-task dispatcher agents (one task → one execution) | 🛣 Next |
+| **June 1, 2026** | **`annie computer` wrappers** — **OpenClaw**, **ZeroClaw**, and **Hermes** integrated **inside Computer** (same attach pattern as other hub-backed agents) | 🔨 Tracked |
 
 Role-aware routing (employee **reviews → approves →** execution on **Computer**, **Claude**, **Cursor**, etc.) ties these modules together—see [ROADMAP.md](ROADMAP.md) for scope and ship notes.
 
-### Product video
+### Product videos
 
-
-https://github.com/user-attachments/assets/abfe0d75-8808-45a6-a671-8b84dd21fd2f
-
-
-Also in this repository: [`public/nest_hub_v0.2.73.mp4`](./public/nest_hub_v0.2.73.mp4)
+- **Product (60s):** [youtu.be/KXJgjWesM1s](https://youtu.be/KXJgjWesM1s)
+- **Problem & solution:** [youtu.be/5KeN9lwUZwE](https://youtu.be/5KeN9lwUZwE)
 
 ### The Four Pillars
 
@@ -133,7 +136,7 @@ Open on your phone. Install the PWA. Your hub is live.
 - **[CLI (`@contextzero/nest`) + MCP — enterprise](docs/enterprise/annie-cli-mcp-enterprise.md)** — development agents (**Claude Code**, **Cursor**, **Codex**, **OpenCode**, **KiloCode**); **MCP** for **Cursor** and **Visual Studio Code**; phased rollout and token hygiene.
 - **Hub Chat** — **OpenRouter**, **Fal.ai**, **Vertex**, **DeepInfra**; **700+** models (text, image, audio, video) on web, desktop, and mobile—keys on the server, not employee laptops.
 - **[Computer automation wrappers](docs/enterprise/zeroclaw.md)** — **OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** on **June 1, 2026** (same pattern as Claude, Cursor, …)—not `annie openclaw` / `annie zeroclaw` / `annie hermes`.
-- **Roadmap:** **Project management** — **May 1, 2026** · **CRM** — **May 15, 2026** · **Computer wrappers** (OpenClaw, ZeroClaw, Hermes) — **June 1, 2026** — [ROADMAP.md](ROADMAP.md).
+- **Roadmap:** **Project management** ✅ **shipped May 1, 2026** · **CRM** — **~June 13, 2026** *(25 days)* · **Dispatcher** (auto-dispatch task groups + single-task agents) — **next** · **Computer wrappers** (OpenClaw, ZeroClaw, Hermes) — **June 1, 2026** — [ROADMAP.md](ROADMAP.md).
 - **[Darwin agents](docs/enterprise/darwin-agents.md)** — evolving specialist agents (enterprise).
 - **CLI on npm:** [`@contextzero/nest`](https://www.npmjs.com/package/@contextzero/nest) — install with `npm install -g @contextzero/nest`; the binary is `annie`.
 
@@ -351,7 +354,7 @@ Control how much autonomy your AI agents have — per employee, per project, per
 
 | Problem | How Others Solve It | How NEST Solves It |
 |---------|--------------------|--------------------|
-| **15+ apps** and **shadow corporate AI** (unapproved models, tabs, and cost) | Policy PDFs, another checklist | **One operating layer** — projects, **server-side keys**, **full audit**; **PM May 1**, **CRM May 15**, **Computer** wrappers (**OpenClaw · ZeroClaw · Hermes**) **Jun 1** — [ROADMAP.md](ROADMAP.md) |
+| **15+ apps** and **shadow corporate AI** (unapproved models, tabs, and cost) | Policy PDFs, another checklist | **One operating layer** — projects, **server-side keys**, **full audit**; **PM ✅ May 1**, **CRM ~Jun 13**, **Dispatcher** next, **Computer** wrappers (**OpenClaw · ZeroClaw · Hermes**) **Jun 1** — [ROADMAP.md](ROADMAP.md) |
 | Desk-bound workforce | Slack mobile (partial) | **Phone-first PWA — approve from anywhere** |
 | AI forgets everything | System prompts, RAG hacks | **Memory bank / Souls — context accumulates per user and project** |
 | One agent bottleneck | Manual coordination | **Agent swarm — specialists in parallel** |
@@ -434,9 +437,12 @@ docker compose pull && docker compose up -d  # Update to latest
 
 | Initiative | What It Solves | Status |
 |------------|---------------|--------|
+| **Project management** — Gantt, Kanban, Wiki, progress, tasks tied to Forge / Nexus / Computer | Fragmented tracking outside the AI workflow | ✅ Shipped (May 1, 2026) |
+| **Hive (DNA + contextual analysis)** — per-task agents/skills/commands/packages/computers | Tasks executing without the right tools or context | ✅ Shipped |
+| **CRM** — contacts + lifecycle across projects | Sales / post-sales context disconnected from execution | 🔨 ~June 13, 2026 (25 days) |
+| **Dispatcher** — agents that auto-dispatch task groups + single-task agents | Manual hand-off between planning and execution | 🛣 Next, after CRM |
 | **Souls** — Persistent memory | Agents start from zero every session | Design & scoping |
 | **Multi-agent orchestration** | One agent doing everything serially | Strategy ready; runtime pending |
-| **Forge** — Spec-driven development | Implementation disconnected from business intent | Concept defined |
 
 > Full details: [ROADMAP.md](ROADMAP.md)
 

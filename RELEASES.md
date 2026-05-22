@@ -17,6 +17,36 @@ Every component that exists today — real software, running now, free to deploy
 
 ---
 
+## What's New (May 2026)
+
+### Project Management — shipped May 1, 2026
+
+A built-in **project management workspace** alongside Forge / Nexus / Computer. No more bouncing between Trello, Notion, and your AI hub.
+
+- **Gantt chart** — timelines, dependencies, baselines
+- **Kanban board** — drag-and-drop status flow
+- **Progress tracking** — per-task and per-project completion
+- **Wiki** — living documentation next to the work
+- **Tasks** with statuses, priorities, comments, attachments, assignees
+- **Tasks are execution targets** — every task can be opened directly in **Forge**, **Nexus**, or **Computer**; the surface inherits the task's Hive automatically
+
+### Hive — DNA + contextual analysis
+
+Each project has a **Hive**: a customizable bundle of **agents**, **skills**, **commands**, **packages**, and **computers** that attach to a task. The defaults come from the project's **DNA** (configurable per project); individual tasks can override. When the task runs in Forge / Nexus / Computer, the surface inherits the Hive — the right tooling and context follow the work automatically. Cognitive / contextual analytics surface per-target (Forge, Nexus, Computer, Project) so admins can see where attention and cost actually land.
+
+### Renames
+
+The two long-standing surfaces were renamed to better reflect what they are:
+
+| Was | Now |
+|-----|-----|
+| **Development** | **Forge** — coding agents (Claude Code, Cursor, Codex, OpenCode, KiloCode) |
+| **Chat** | **Nexus** — hub AI chat (700+ models across OpenRouter / Vertex / Fal / DeepInfra) |
+
+CLI surfaces (`annie claude`, `annie cursor`, etc.) are unchanged. Only the workspace labels change.
+
+---
+
 ## What's Live Today
 
 ### 1 — NEST CLI (`@contextzero/nest`)
@@ -176,6 +206,10 @@ The NEST server is built with a hexagonal architecture — clean separation betw
 ---
 
 ## What's Coming Next
+
+**Next 25 days — CRM** (~June 13, 2026): contacts + lifecycle (pre-sales → sales → post-sales) shared across projects.
+
+**After CRM — Dispatcher:** agents that **auto-dispatch entire task groups** across a project, plus **single-task dispatcher agents** (one task → one execution). Bridges the gap between project planning and the Forge / Nexus / Computer execution surfaces.
 
 Spec-driven development, Souls (persistent agent personas), extended multi-agent orchestration, and enterprise features are described in [ROADMAP.md](ROADMAP.md).
 
