@@ -9,7 +9,6 @@
 
 # Enterprise Guide — Annie CLI, MCP & Multi-Client Integration
 
-**English** | [Español](./annie-cli-mcp-enterprise-ES.md) | [Deutsch](./annie-cli-mcp-enterprise-DE.md) | [Português](./annie-cli-mcp-enterprise-PT.md) | [Français](./annie-cli-mcp-enterprise-FR.md) | [中文](./annie-cli-mcp-enterprise-ZH.md)
 
 This document is the **enterprise-grade** reference for deploying the **`@contextzero/nest`** CLI (command **`annie`**), using **all supported command surfaces** (development agents, **`annie computer`**, worker, MCP, terminals), and integrating **NEST MCP** with ChatGPT, Claude, Cursor, and VS Code.
 
@@ -336,7 +335,7 @@ These commands launch or resume **editor-scoped** sessions that stream to your N
 
 Optional overrides (non-interactive bootstrap): **`annie computer --host <url> --token <CLI_API_TOKEN>`** (also honor `NEST_API_URL` / `CLI_API_TOKEN` from env or `annie auth login`).
 
-**Computer wrappers (June 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside `annie computer`**—the same integration pattern as other Computer-backed agents (for example Claude Code, Cursor, Codex)—**not** as top-level `annie openclaw` / `annie zeroclaw` / `annie hermes` commands. **Projects:** **project management** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../../ROADMAP.md) · product detail: [zeroclaw.md](./zeroclaw.md) · [RELEASES.md](../../RELEASES.md).
+**Operator wrappers (June 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **as wrappers inside `annie computer`**—the same integration pattern as other Operator-backed agents (for example Claude Code, Cursor, Codex)—**not** as top-level `annie openclaw` / `annie zeroclaw` / `annie hermes` commands. **Projects:** **project management** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../../ROADMAP.md) · [RELEASES.md](../../RELEASES.md).
 
 ### 8.4 Terminal management (remote PTY)
 

@@ -204,7 +204,7 @@ Appropriate approvals required. Never fully autonomous without oversight.
 - [Annie CLI & MCP — Enterprise guide](../enterprise/annie-cli-mcp-enterprise.md)
 - [CLI Business Overview](../CLI-BUSINESS.md)
 - [Install Guide](../INSTALL.md)
-- [Roadmap](../ROADMAP.md)
+- [Roadmap](../../ROADMAP.md)
 
 ---
 

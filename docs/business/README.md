@@ -9,7 +9,6 @@
 
 # Business — NEST
 
-[English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
 
 Strategic documentation for founders and leaders building their AI workforce.
 
@@ -103,7 +102,7 @@ Multiple specialized AI agents working in parallel.
 
 | Step | Action | Reference |
 |------|--------|-----------|
-| 1 | Deploy server in 5 minutes | [Quick Start](../QUICKSTART.md) |
+| 1 | Deploy server in 5 minutes | [Quick Start](../../QUICKSTART.md) |
 | 2 | Install CLI on employee machines | [Install Guide](../INSTALL.md) |
 | 3 | Understand strategic value | [Value Proposition](./value-proposition.md) |
 
@@ -132,7 +131,7 @@ Multiple specialized AI agents working in parallel.
 
 - [Enterprise Features](../enterprise/README.md) — Scaling beyond Community
 - [CLI Business Overview](../CLI-BUSINESS.md) — Technical deep dive
-- [Roadmap](../ROADMAP.md) — What's coming next
+- [Roadmap](../../ROADMAP.md) — What's coming next
 
 ---
 

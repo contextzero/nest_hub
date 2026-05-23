@@ -9,9 +9,8 @@
 
 # Enterprise — NEST Platform
 
-[English](./README.md) | [Español](./README-ES.md) | [中文](./README-ZH.md) | [Deutsch](./README-DE.md) | [Português](./README-PT.md) | [Français](./README-FR.md)
 
-**CLI + MCP (all languages):** [Annie & MCP enterprise guide](./annie-cli-mcp-enterprise.md) · [ES](./annie-cli-mcp-enterprise-ES.md) · [DE](./annie-cli-mcp-enterprise-DE.md) · [PT](./annie-cli-mcp-enterprise-PT.md) · [FR](./annie-cli-mcp-enterprise-FR.md) · [ZH](./annie-cli-mcp-enterprise-ZH.md)
+**CLI + MCP:** [Annie & MCP enterprise guide](./annie-cli-mcp-enterprise.md)
 
 The **Enterprise version** of NEST provides advanced features for organizations that need more than self-hosted can offer. While the Community version is free and self-contained, Enterprise adds intelligence, scale, and support.
 
@@ -28,7 +27,7 @@ The **Enterprise version** of NEST provides advanced features for organizations 
 | **Darwin Agents** | ❌ | ✅ |
 | **Colony Memory** | ❌ | ✅ |
 | **Specialized Agents** | ❌ | ✅ |
-| **Advanced Automation** | Basic | Full Computer automation (ZeroClaw, OpenClaw, Hermes wrappers) |
+| **Advanced Automation** | Basic | Full Operator automation (ZeroClaw, OpenClaw, Hermes wrappers) |
 | **SSO / SAML** | ❌ | ✅ |
 | **Audit Logs** | Local | Full compliance |
 | **Support** | GitHub | Dedicated SLA |
@@ -110,9 +109,9 @@ Pre-built agents for common enterprise tasks:
 
 ---
 
-### 4. Advanced Computer automation
+### 4. Advanced Operator automation
 
-**OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** from **June 1, 2026**—see [zeroclaw.md](./zeroclaw.md).
+**OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** from **June 1, 2026**.
 
 - Deeper system access
 - Multi-machine orchestration

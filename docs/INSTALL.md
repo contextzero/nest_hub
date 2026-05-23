@@ -9,7 +9,6 @@
 
 # NEST — Full Installation Guide
 
-[English](./INSTALL.md) | [Español](./INSTALL-ES.md) | [中文](./INSTALL-ZH.md) | [Deutsch](./INSTALL-DE.md) | [Português](./INSTALL-PT.md) | [Français](./INSTALL-FR.md)
 
 **By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
 
@@ -200,12 +199,12 @@ annie cursor     # Cursor Agent
 annie gemini     # Google Gemini (via ACP)
 annie opencode   # OpenCode — open-source agent
 annie kilocode   # KiloCode — task execution with tight approval control
-annie computer   # Computer — multi-tool management agent on the hub (shell, browser, files)
+annie computer   # Operator — multi-tool management agent on the hub (shell, browser, files)
 ```
 
 **Automation:** if the first argument is not a known subcommand, the CLI behaves like **`annie cursor`**. In scripts and CI, always use an explicit subcommand (`annie claude`, `annie computer`, …).
 
-**ZeroClaw / OpenClaw** will be exposed **inside `annie computer`** as wrappers (same pattern as Claude, Cursor, …) from **June 1, 2026**—not as separate `annie` subcommands. See [enterprise/zeroclaw.md](enterprise/zeroclaw.md) and [RELEASES.md](../RELEASES.md).
+**ZeroClaw / OpenClaw** will be exposed **inside `annie computer`** as wrappers (same pattern as Claude, Cursor, …) from **June 1, 2026**—not as separate `annie` subcommands. See [RELEASES.md](../RELEASES.md).
 
 Once a session starts, open **http://localhost** in your browser (or on your phone). The session appears in the dashboard in real time.
 
