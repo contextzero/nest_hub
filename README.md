@@ -78,7 +78,7 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 
 For installation questions and community support, open a [discussion](https://github.com/contextzero/nest_hub/discussions) or file an issue.
 
-For enterprise support, SSO, advanced RBAC, and air-gapped deployments, contact [enterprise@ctx0.io](mailto:enterprise@ctx0.io).
+For enterprise support, SSO, advanced RBAC, and air-gapped deployments, contact [caro@ctx0.io](mailto:caro@ctx0.io).
 
 ## License
 
@@ -88,7 +88,7 @@ NEST is [fair-code](https://faircode.io) distributed under the [Sustainable Use 
 - **Self-Hostable**: Deploy anywhere — cloud, on-prem, or air-gapped
 - **Extensible**: Add your own model providers, MCP servers, and agent specialists
 
-[Enterprise Licenses](mailto:license@ctx0.io) available for advanced features and support.
+[Enterprise licensing](mailto:caro@ctx0.io) available for advanced features and support.
 
 > **Legal entity note.** **Context Zero** ("CTX0") is the brand and project, launched February 2026. The legal entity operating it is **Carlos Matias Baglieri LTD**, a UK private limited company (Company number 14267762, registered at 20-22 Wenlock Road, London, England, N1 7GU). All licensing, contracts, and IP rights are held by this entity. Governing law: England and Wales.
 
@@ -98,7 +98,7 @@ Found a bug 🐛 or have a feature idea ✨? Check our [Contributing Guide](http
 
 ## Join the Team
 
-Want to shape the future of enterprise AI infrastructure? Check out our [open roles](https://ctx0.io/careers) and join us.
+Want to shape the future of enterprise AI infrastructure? Email us at [caro@ctx0.io](mailto:caro@ctx0.io) and tell us what you'd build.
 
 ## What does NEST mean?
 
