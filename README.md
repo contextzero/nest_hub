@@ -66,10 +66,10 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 
 ## Resources
 
-- 📚 [Documentation](https://docs.ctx0.io)
-- 🔧 [Module Reference](https://docs.ctx0.io/modules)
-- 🤖 [BYOK Setup Guide](https://docs.ctx0.io/byok)
-- 🧠 [Organizational Memory Guide](https://docs.ctx0.io/hive)
+- 📚 [Quick Start](QUICKSTART.md)
+- 🛠 [Installation reference](docs/INSTALL.md)
+- 🌐 [Production deploy (HTTPS)](docs/DEVOPS.md)
+- 🤖 [CLI &amp; LLM / BYOK config](docs/CLI-BUSINESS.md)
 - 🎬 [Product overview (60s)](https://youtu.be/KXJgjWesM1s)
 - 🎥 [Problem &amp; solution](https://youtu.be/5KeN9lwUZwE)
 - 👥 [Community](https://github.com/contextzero/nest_hub/discussions)
