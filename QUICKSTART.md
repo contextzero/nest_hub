@@ -13,6 +13,8 @@
 **By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
 From zero to a live AI workforce hub in under 5 minutes.
 
+**Watch:** [Product (60s)](https://youtu.be/KXJgjWesM1s) · [Problem &amp; solution](https://youtu.be/5KeN9lwUZwE)
+
 ---
 
 ## Before You Start — What You'll Have When You're Done
