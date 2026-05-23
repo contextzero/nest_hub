@@ -95,8 +95,9 @@ internal-only (no published port); emergency admin is
 
 NEST is **fair-code** (mirrors n8n's model):
 
-- Default license: **Sustainable Use License** (`LICENSE.md`), licensor is
-  **Context Zero Inc.**
+- Default license: **Sustainable Use License** (`LICENSE.md`). The licensor /
+  legal entity is **Carlos Matias Baglieri LTD** (UK company no. 14267762),
+  operating the Context Zero / CTX0 project. Governing law: England and Wales.
 - Files with `.ee.` in the filename or `.ee` in the dirname require a **NEST
   Enterprise License** (`LICENSE_EE.md`).
 - Third-party components keep their original licenses.
