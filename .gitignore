@@ -4,6 +4,9 @@ n8n-master/
 # Generated runtime secrets (created by setup.sh) — never commit
 .env
 
+# Internal/compliance scratch — never publish (e.g. internal license notes)
+files/
+
 # OS / editor artifacts
 .DS_Store
 Thumbs.db

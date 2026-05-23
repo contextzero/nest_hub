@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/header_ctx0.png" alt="Context Zero — NEST" width="100%" />
+</p>
+
 # NEST — Self-Hosted AI Hub for Enterprise Teams
 
 NEST is a self-hosted AI workforce hub that consolidates fragmented tool stacks into a single, governed plane: organizational memory, multi-agent orchestration, 700+ models via BYOK, and full audit trails — all running on infrastructure you own. Built by Context Zero (CTX0) under a fair-code license, NEST gives enterprises the speed of modern AI tooling without surrendering data, cost control, or operational sovereignty.
@@ -86,6 +90,8 @@ NEST is [fair-code](https://faircode.io) distributed under the [Sustainable Use 
 
 [Enterprise Licenses](mailto:license@ctx0.io) available for advanced features and support.
 
+> **Legal entity note.** **Context Zero** ("CTX0") is the brand and project, launched February 2026. The legal entity operating it is **Carlos Matias Baglieri LTD**, a UK private limited company (Company number 14267762, registered at 20-22 Wenlock Road, London, England, N1 7GU). All licensing, contracts, and IP rights are held by this entity. Governing law: England and Wales.
+
 ## Contributing
 
 Found a bug 🐛 or have a feature idea ✨? Check our [Contributing Guide](https://github.com/contextzero/nest_hub/blob/main/CONTRIBUTING.md) for setup and best practices.
@@ -101,3 +107,34 @@ Want to shape the future of enterprise AI infrastructure? Check out our [open ro
 **Long answer:** NEST is the gateway product of the Context Zero (CTX0) ecosystem. We started with a simple observation: companies have perfect visibility into their cloud spend and zero visibility into their AI spend. The same knowledge worker touches 14 AI tools and 6 subscriptions a week, with no shared memory, no audit, and no answer to the question "is this actually working?". NEST is the missing infrastructure layer that gives that answer back to the organization — without taking away the speed of the tools developers already love. It's free to self-host, fair-code by design, and built to scale with you toward the Team and Enterprise tiers of the CTX0 platform.
 
 — **Carolina Fogliato**, Founder & CEO, Context Zero
+
+## Built by
+
+Two founders shipping in public, since February 2026.
+
+- **Carolina Fogliato** — Founder & CEO
+- **Matías Baglieri** — Founder & CAIO
+
+Questions, feedback, or enterprise inquiries: caro@ctx0.io
+
+---
+
+## Important notice — self-hosted deployments, responsibility, and access
+
+The following is a **general information notice** for customers and operators. It is **not** tailored legal advice; your counsel should review it against your contracts, jurisdiction, and regulatory obligations.
+
+**Use and compliance.** Your organization — **not** Carlos Matias Baglieri LTD (operating the "Context Zero" / "CTX0" project), including its affiliates, contractors, or personnel (collectively "**Context Zero**") — is **solely responsible** for how you deploy, configure, secure, and use NEST, including all outputs of AI agents, integrations, data processing, employment practices, export controls, privacy, sectoral regulations, and internal policies. Context Zero does not supervise your runtime environment and does not assume liability for decisions your employees, agents, or systems make on your infrastructure.
+
+**Self-hosted connectivity.** When you operate NEST as **self-hosted** software on infrastructure you control, **Context Zero does not operate that server**, does not receive an automatic administrative connection to it, and **cannot access** your installation merely because you downloaded or licensed materials from us. Your hub is joined by your users and tooling (for example the **`annie`** CLI from **`npm install -g @contextzero/nest`**) **outbound** to the endpoints **you** configure (your DNS, your TLS certificates, your tokens). Unless you separately contract for managed services that explicitly provide remote administration and scope of access, **no member of the Context Zero team is granted inbound access** to your servers as part of the self-hosted product model.
+
+**No agency.** Nothing in this README creates a partnership, joint venture, or agency relationship. Context Zero is a software provider; **your company remains exclusively responsible** for lawful use, workforce governance, and the security of your deployment.
+
+---
+
+<div align="center">
+
+*Public distribution: [contextzero/nest_hub](https://github.com/contextzero/nest_hub) · CLI: [@contextzero/nest](https://www.npmjs.com/package/@contextzero/nest)*
+
+**© 2026 Carlos Matias Baglieri LTD · Operating the Context Zero / CTX0 project**
+
+</div>
