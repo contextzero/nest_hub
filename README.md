@@ -4,6 +4,16 @@
 
 # NEST — Self-Hosted AI Hub for Enterprise Teams
 
+<p align="center">
+  <a href="./LICENSE.md"><img src="https://img.shields.io/badge/License-Fair--code-FAB040?style=flat-square" alt="License: Fair-code"></a>
+  <a href="https://github.com/contextzero/nest_hub/stargazers"><img src="https://img.shields.io/github/stars/contextzero/nest_hub?style=flat-square&logo=github" alt="Stars"></a>
+  <a href="https://github.com/contextzero/nest_hub/network"><img src="https://img.shields.io/github/forks/contextzero/nest_hub?style=flat-square" alt="Forks"></a>
+  <a href="https://hub.docker.com/u/matiasbaglieri"><img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker" alt="Docker"></a>
+  <a href="https://www.npmjs.com/package/@contextzero/nest"><img src="https://img.shields.io/npm/v/@contextzero/nest?style=flat-square&logo=npm&label=CLI" alt="npm CLI"></a>
+  <a href="https://discord.gg/ygjuuDAw"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord" alt="Discord"></a>
+  <a href="https://t.me/ctx0_io"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram" alt="Telegram"></a>
+</p>
+
 NEST is a self-hosted AI workforce hub that consolidates fragmented tool stacks into a single, governed plane: organizational memory, multi-agent orchestration, 700+ models via BYOK, and full audit trails — all running on infrastructure you own. Built by Context Zero (CTX0) under a fair-code license, NEST gives enterprises the speed of modern AI tooling without surrendering data, cost control, or operational sovereignty.
 
 ## Watch
@@ -79,6 +89,15 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 For installation questions and community support, open a [discussion](https://github.com/contextzero/nest_hub/discussions) or file an issue.
 
 For enterprise support, SSO, advanced RBAC, and air-gapped deployments, contact [caro@ctx0.io](mailto:caro@ctx0.io).
+
+## Community
+
+- **Discord:** [discord.gg/ygjuuDAw](https://discord.gg/ygjuuDAw) — fastest way to ask questions; the team is there
+- **Telegram:** [t.me/ctx0_io](https://t.me/ctx0_io)
+- **Issues:** [github.com/contextzero/nest_hub/issues](https://github.com/contextzero/nest_hub/issues)
+- **Discussions:** [github.com/contextzero/nest_hub/discussions](https://github.com/contextzero/nest_hub/discussions)
+
+We respond within 24 hours. Usually faster.
 
 ## License
 
