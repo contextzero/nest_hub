@@ -1,0 +1,10 @@
+# Reference checkout — upstream n8n, not part of this repository
+n8n-master/
+
+# Generated runtime secrets (created by setup.sh) — never commit
+.env
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
