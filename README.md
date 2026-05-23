@@ -110,10 +110,10 @@ Want to shape the future of enterprise AI infrastructure? Check out our [open ro
 
 ## Built by
 
-Two founders shipping in public, since February 2026.
+Shipping in public since February 2026.
 
 - **Carolina Fogliato** — Founder & CEO
-- **Matías Baglieri** — Founder & CAIO
+- **Matías Baglieri** — Fractional CAIO/CTO
 
 Questions, feedback, or enterprise inquiries: caro@ctx0.io
 
