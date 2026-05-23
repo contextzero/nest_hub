@@ -91,7 +91,7 @@ The **console** is the **logical backoffice** of NEST: everything that happens *
 1. **Secrets:** Never ship LLM/voice keys to the mobile client.  
 2. **Audit:** Permission grants/denies and high-risk actions logged.  
 3. **UX:** **Multitasking** — never block the whole app on one long task.  
-4. **Honesty:** If OpenClaw/ZeroClaw (Computer wrappers), SSD, or media are not shipped for your tenant/version yet, UI labels **beta** or **roadmap**.
+4. **Honesty:** If OpenClaw/ZeroClaw (Operator wrappers), SSD, or media are not shipped for your tenant/version yet, UI labels **beta** or **roadmap**.
 
 ---
 

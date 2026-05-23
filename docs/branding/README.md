@@ -113,9 +113,9 @@ See [voice-and-tone.md](voice-and-tone.md) for full guidelines.
 
 - Free forever
 - Docker deployment
-- Agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (OpenClaw, ZeroClaw, and Hermes as **in-Computer wrappers** from **June 1, 2026** — see [zeroclaw.md](../enterprise/zeroclaw.md))
+- Agents: Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Operator** (OpenClaw, ZeroClaw, and Hermes as **in-Operator wrappers** from **June 1, 2026**)
 
-See [Quick Start](../QUICKSTART.md) and [Install Guide](../INSTALL.md).
+See [Quick Start](../../QUICKSTART.md) and [Install Guide](../INSTALL.md).
 
 ### Enterprise
 
@@ -133,7 +133,7 @@ See [Enterprise Features](../enterprise/README.md) and [Business Overview](../bu
 
 | Document | For Who | What's Inside |
 |----------|---------|---------------|
-| [Quick Start](../QUICKSTART.md) | Everyone | 5-minute setup |
+| [Quick Start](../../QUICKSTART.md) | Everyone | 5-minute setup |
 | [Install Guide](../INSTALL.md) | IT/Ops | Full installation reference |
 | [Business Overview](../business/README.md) | Founders | Strategic value, pillars |
 | [Value Proposition](../business/value-proposition.md) | Decision makers | Detailed benefits |

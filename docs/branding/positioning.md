@@ -57,7 +57,7 @@
 
 1. **Self-Hosted First** — No recurring SaaS fees, complete data ownership
 2. **Mobile-First Control** — Phone/tablet PWA for real-time oversight
-3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw **wrappers inside Computer** from **June 1, 2026**) in one platform
+3. **Multi-Agent Hub** — Claude, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Operator** (ZeroClaw / OpenClaw **wrappers inside Operator** from **June 1, 2026**) in one platform
 4. **BYOK Everything** — Your LLMs, your voice, your infrastructure
 5. **Enterprise Audit** — Full Postgres audit trail, compliance-ready
 6. **Zero Lock-In** — Docker + npm, no proprietary stack

@@ -9,7 +9,6 @@
 
 # NEST — Quick Start
 
-[English](./QUICKSTART.md) | [Español](./QUICKSTART-ES.md) | [中文](./QUICKSTART-ZH.md) | [Deutsch](./QUICKSTART-DE.md) | [Português](./QUICKSTART-PT.md) | [Français](./QUICKSTART-FR.md)
 
 **By Context Zero.** Self-Hosted Workforce Automation Platform — Enterprise Grade.
 From zero to a live AI workforce hub in under 5 minutes.
@@ -132,8 +131,8 @@ Pick your agent and run one command (package: **`@contextzero/nest`** → **`ann
 | **Gemini** | `annie gemini` | Google's multimodal agent |
 | **OpenCode** | `annie opencode` | Open-source coding agent |
 | **KiloCode** | `annie kilocode` | Task execution + remote control |
-| **Computer (management)** | `annie computer` | Multi-tool hub agent (shell, browser, files—governed like other sessions) |
-| **ZeroClaw / OpenClaw** | *via `annie computer` (from Jun 1, 2026)* | Wrappers inside Computer (same pattern as Claude, Cursor, …)—see [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) and [RELEASES.md](RELEASES.md); not standalone `annie` subcommands. |
+| **Operator (management)** | `annie computer` | Multi-tool hub agent (shell, browser, files—governed like other sessions) |
+| **ZeroClaw / OpenClaw** | *via `annie computer` (from Jun 1, 2026)* | Wrappers inside Operator (same pattern as Claude, Cursor, …)—see [RELEASES.md](RELEASES.md); not standalone `annie` subcommands. |
 
 **Automation note:** if the first argument is not a known subcommand, the CLI treats the invocation as **`annie cursor`**. Always type **`annie claude`**, **`annie computer`**, etc. explicitly—especially in CI.
 
@@ -205,7 +204,7 @@ You now have:
 | Live session dashboard | Browser / phone | See every agent session your team runs, in real time |
 | Approval workflow | Mobile PWA | Agents wait for your OK before high-stakes actions |
 | Full audit log | Your PostgreSQL | Every message, every action, persisted on your server |
-| Multi-agent support | Any employee machine | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Computer** (ZeroClaw / OpenClaw wrappers from **Jun 1, 2026**) — all in one hub |
+| Multi-agent support | Any employee machine | Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode, plus **Operator** (ZeroClaw / OpenClaw wrappers from **Jun 1, 2026**) — all in one hub |
 | Zero monthly cost | Your infrastructure | You own the server, the data, and the keys |
 
 > **Ready for more?** Explore these docs:
@@ -223,7 +222,7 @@ You now have:
 | Deploy on a real server with HTTPS | [docs/DEVOPS.md](docs/DEVOPS.md) |
 | Configure LLM keys (Vertex, OpenRouter, DeepInfra, ElevenLabs...) | [docs/CLI-BUSINESS.md](docs/CLI-BUSINESS.md) |
 | Add more employee machines | Share this doc + your `NEST_API_URL` + the token |
-| Understand OpenClaw / ZeroClaw agent modes | [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) |
+| Understand OpenClaw / ZeroClaw agent modes | [ROADMAP.md](ROADMAP.md) *(roadmap)* |
 | Business value for founders | [docs/business/README.md](docs/business/README.md) |
 | Implementation methodology | [docs/methodology/README.md](docs/methodology/README.md) |
 | Full environment variable reference | [README.md](README.md) |

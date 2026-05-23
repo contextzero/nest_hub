@@ -21,18 +21,18 @@ Every component that exists today — real software, running now, free to deploy
 
 ### Project Management — shipped May 1, 2026
 
-A built-in **project management workspace** alongside Forge / Nexus / Computer. No more bouncing between Trello, Notion, and your AI hub.
+A built-in **project management workspace** — part of **Mission Control** — alongside the Forge / Nexus / Operator execution surfaces. No more bouncing between Trello, Notion, and your AI hub.
 
 - **Gantt chart** — timelines, dependencies, baselines
 - **Kanban board** — drag-and-drop status flow
 - **Progress tracking** — per-task and per-project completion
 - **Wiki** — living documentation next to the work
 - **Tasks** with statuses, priorities, comments, attachments, assignees
-- **Tasks are execution targets** — every task can be opened directly in **Forge**, **Nexus**, or **Computer**; the surface inherits the task's Hive automatically
+- **Tasks are execution targets** — every task can be opened directly in **Forge**, **Nexus**, or **Operator**; the surface inherits the task's Hive automatically
 
 ### Hive — DNA + contextual analysis
 
-Each project has a **Hive**: a customizable bundle of **agents**, **skills**, **commands**, **packages**, and **computers** that attach to a task. The defaults come from the project's **DNA** (configurable per project); individual tasks can override. When the task runs in Forge / Nexus / Computer, the surface inherits the Hive — the right tooling and context follow the work automatically. Cognitive / contextual analytics surface per-target (Forge, Nexus, Computer, Project) so admins can see where attention and cost actually land.
+Each project has a **Hive**: a customizable bundle of **agents**, **skills**, **commands**, **packages**, and **computers** that attach to a task. The defaults come from the project's **DNA** (configurable per project); individual tasks can override. When the task runs in Forge / Nexus / Operator, the surface inherits the Hive — the right tooling and context follow the work automatically. Cognitive / contextual analytics surface per-target (Forge, Nexus, Operator, Mission Control) so admins can see where attention and cost actually land.
 
 ### Renames
 
@@ -62,8 +62,8 @@ The command employees run on their machines to start AI agent sessions and conne
 
 **What it ships:**
 - **Development agents:** **Claude Code, Codex, Cursor, Gemini, OpenCode, KiloCode** (`annie claude`, `annie codex`, …)
-- **Computer (hub management):** **`annie computer`** — multi-tool agent on the hub (shell, browser, files)
-- **Computer wrappers (Jun 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** alongside other agent wrappers (Claude, Cursor, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`. See [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md).
+- **Operator (hub management):** **`annie computer`** — multi-tool agent on the hub (shell, browser, files)
+- **Operator wrappers (Jun 1, 2026):** **OpenClaw**, **ZeroClaw**, and **Hermes** ship **inside `annie computer`** alongside other agent wrappers (Claude, Cursor, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`.
 - Session lifecycle management (start, stop, reconnect)
 - Auth: `annie auth login` / `annie auth status`
 - Background worker daemon: `annie worker start`
@@ -209,7 +209,7 @@ The NEST server is built with a hexagonal architecture — clean separation betw
 
 **Next 25 days — CRM** (~June 13, 2026): contacts + lifecycle (pre-sales → sales → post-sales) shared across projects.
 
-**After CRM — Dispatcher:** agents that **auto-dispatch entire task groups** across a project, plus **single-task dispatcher agents** (one task → one execution). Bridges the gap between project planning and the Forge / Nexus / Computer execution surfaces.
+**After CRM — Dispatcher:** agents that **auto-dispatch entire task groups** across a project, plus **single-task dispatcher agents** (one task → one execution). Bridges the gap between project planning and the Forge / Nexus / Operator execution surfaces.
 
 Spec-driven development, Souls (persistent agent personas), extended multi-agent orchestration, and enterprise features are described in [ROADMAP.md](ROADMAP.md).
 

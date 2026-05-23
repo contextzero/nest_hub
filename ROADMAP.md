@@ -15,7 +15,7 @@ What's being built next, why it matters, and how to participate.
 > **Already live and free today:** See [RELEASES.md](RELEASES.md).
 > This document is about what comes *after* — the capabilities that transform NEST from a workforce monitor into a fully autonomous AI business operating system.
 
-**Dated milestones (2026):** **✅ May 1 — project management** (Gantt, Kanban, Wiki, progress, tasks tied to Forge / Nexus / Computer) **shipped** · **~June 13 — CRM** (25-day rollout: lifecycle + contacts across projects) · **after CRM — Dispatcher** (agents that auto-dispatch task groups, plus single-task dispatcher agents) · **June 1 — `annie computer` wrappers**: **OpenClaw**, **ZeroClaw**, and **Hermes** (same pattern as Claude, Cursor, Codex, …)—not `annie openclaw` / `annie zeroclaw` / `annie hermes`. Details: [docs/enterprise/zeroclaw.md](docs/enterprise/zeroclaw.md) · [RELEASES.md](RELEASES.md).
+**Dated milestones (2026):** **✅ May 1 — project management** (Gantt, Kanban, Wiki, progress, tasks tied to Forge / Nexus / Operator) **shipped** · **~June 13 — CRM** (25-day rollout: lifecycle + contacts across projects) · **after CRM — Dispatcher** (agents that auto-dispatch task groups, plus single-task dispatcher agents) · **June 1 — `annie computer` wrappers**: **OpenClaw**, **ZeroClaw**, and **Hermes** (same pattern as Claude, Cursor, Codex, …)—not `annie openclaw` / `annie zeroclaw` / `annie hermes`. Details: [RELEASES.md](RELEASES.md).
 
 > **Surface renames (May 2026):** *Development → **Forge*** · *Chat → **Nexus***. *Project* joins them as the new project-management surface. CLI commands (`annie claude`, `annie cursor`, …) are unchanged.
 
@@ -41,14 +41,14 @@ The three initiatives below are the next phase of NEST. Each one compounds the v
 
 ### CRM — ~June 13, 2026 (25-day rollout)
 
-A **contacts + lifecycle** workspace shared **across projects**: pre-sales → sales → post-sales. Tied to the same projects/tasks/Hive model that PM already uses, so a deal in CRM can drop tasks into Forge / Nexus / Computer with the right agents, skills, and packages already attached.
+A **contacts + lifecycle** workspace shared **across projects**: pre-sales → sales → post-sales. Tied to the same projects/tasks/Hive model that PM already uses, so a deal in CRM can drop tasks into Forge / Nexus / Operator with the right agents, skills, and packages already attached.
 
 ### Dispatcher — after CRM
 
-The piece that closes the loop between **planning** (Project) and **execution** (Forge / Nexus / Computer). Two shapes:
+The piece that closes the loop between **planning** (Mission Control) and **execution** (Forge / Nexus / Operator). Two shapes:
 
 - **Multi-task dispatcher agents** — given a project (or a phase/epic), the dispatcher reads the task graph and **automatically distributes whole groups of tasks** to the right execution surfaces, respecting dependencies, the project's DNA, and each task's Hive. Think: "ship this milestone" → dispatcher decomposes and routes.
-- **Single-task dispatcher agents** — one task → one execution. Picks the surface (Forge / Nexus / Computer), the agent (Claude / Cursor / Codex / …), and the policy, then hands off. Useful for ad-hoc tasks and for the long tail that doesn't need orchestration.
+- **Single-task dispatcher agents** — one task → one execution. Picks the surface (Forge / Nexus / Operator), the agent (Claude / Cursor / Codex / …), and the policy, then hands off. Useful for ad-hoc tasks and for the long tail that doesn't need orchestration.
 
 Both honor the same approval / audit posture as everything else in NEST — every dispatch is a visible session in your hub.
 
@@ -237,7 +237,7 @@ The organizations that participate in design get the system that fits them. The 
 
 | Initiative | What It Solves | Status |
 |------------|---------------|--------|
-| **Project management** — Gantt / Kanban / Wiki / progress / tasks → Forge·Nexus·Computer | Fragmented tracking outside the AI workflow | ✅ Shipped (May 1, 2026) |
+| **Project management** — Gantt / Kanban / Wiki / progress / tasks → Forge·Nexus·Operator | Fragmented tracking outside the AI workflow | ✅ Shipped (May 1, 2026) |
 | **Hive** — DNA + per-task agents/skills/commands/packages/computers | Tasks executing without the right tools or context | ✅ Shipped |
 | **CRM** — contacts + lifecycle across projects | Sales / post-sales context disconnected from execution | 🔨 ~June 13, 2026 |
 | **Dispatcher** — multi-task + single-task auto-dispatch | Manual hand-off between planning and execution | 🛣 Next, after CRM |

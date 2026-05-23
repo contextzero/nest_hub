@@ -9,7 +9,7 @@
 
 # CLI (`annie`) — Business Overview
 
-**By Context Zero.** Employees install the published package **`npm install -g @contextzero/nest`**, which provides the **`annie`** command. This page is for **business owners and team leads** — the people who decide how the AI workforce runs, not the people who write the code. Install and configuration details: [INSTALL.md](INSTALL.md) and [README.md](../README.md). **Canonical command surface (MCP, Computer mode, PTY terminals, phased rollout):** [enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md).
+**By Context Zero.** Employees install the published package **`npm install -g @contextzero/nest`**, which provides the **`annie`** command. This page is for **business owners and team leads** — the people who decide how the AI workforce runs, not the people who write the code. Install and configuration details: [INSTALL.md](INSTALL.md) and [README.md](../README.md). **Canonical command surface (MCP, Operator mode, PTY terminals, phased rollout):** [enterprise/annie-cli-mcp-enterprise.md](enterprise/annie-cli-mcp-enterprise.md).
 
 ---
 
@@ -29,9 +29,9 @@ Your Employees' Machines          Your Server (Docker)          Your Phone / Tab
   annie CLI (`@contextzero/nest`)  ←──  NEST Server (Rust)       ←──  Mobile PWA
   Claude / Cursor / Codex /   ←──  Session authority         ←──  Live sessions
   Gemini / OpenCode / KiloCode  ←──  Audit log (Postgres)      ←──  Approve / reject
-  + Computer (multi-tool)     ←──  LLM keys (server-side)    ←──  Remote PTY terminals
+  + Operator (multi-tool)     ←──  LLM keys (server-side)    ←──  Remote PTY terminals
   Executes locally            ←──  Permission enforcement    ←──  Real-time chat
-  Reports everything          ←──  OpenClaw / ZeroClaw / Hermes (Computer) ←──  Dashboard & audit
+  Reports everything          ←──  OpenClaw / ZeroClaw / Hermes (Operator) ←──  Dashboard & audit
 ```
 
 **Your LLM API keys never touch employee machines.** They're configured on the server, in Admin. Employees run agents that use the server's credentials — they never see the keys, never store them, never misplace them.
@@ -59,15 +59,15 @@ Every published `annie` subcommand runs through the same hub. Sessions are visib
 
 | Command | Mode | What it does for your business |
 |---------|------|-------------------------------|
-| `annie computer` | **Computer (multi-tool)** | Hub-synced **general automation**: shell, browser (where enabled), files, git, process control, scheduling, and other tools—beyond a single IDE plugin. **From June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** also run here as **wrappers** (same session pattern as Claude, Cursor, Codex, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`. Use for runbooks, SRE-style tasks, and governed operational work with the same audit model as coding sessions. Optional flags: `--host`, `--token` (or use `annie auth login`). |
+| `annie computer` | **Operator (multi-tool)** | Hub-synced **general automation**: shell, browser (where enabled), files, git, process control, scheduling, and other tools—beyond a single IDE plugin. **From June 1, 2026**, **OpenClaw**, **ZeroClaw**, and **Hermes** also run here as **wrappers** (same session pattern as Claude, Cursor, Codex, …)—not as `annie openclaw` / `annie zeroclaw` / `annie hermes`. Use for runbooks, SRE-style tasks, and governed operational work with the same audit model as coding sessions. Optional flags: `--host`, `--token` (or use `annie auth login`). |
 
-### OpenClaw, ZeroClaw & Hermes (inside Computer)
+### OpenClaw, ZeroClaw & Hermes (inside Operator)
 
-**OpenClaw**, **ZeroClaw**, and **Hermes** remain **NEST automation surfaces** (orchestration, headless playbooks, computer-use paths)—see [zeroclaw.md](enterprise/zeroclaw.md). **Shipping June 1, 2026:** they integrate **inside `annie computer`** as wrappers alongside your other Computer-backed agents, instead of separate top-level `annie` subcommands. **Projects:** **PM** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../ROADMAP.md). Until releases land, follow your current hub version in [RELEASES.md](../RELEASES.md).
+**OpenClaw**, **ZeroClaw**, and **Hermes** remain **NEST automation surfaces** (orchestration, headless playbooks, computer-use paths). **Shipping June 1, 2026:** they integrate **inside `annie computer`** as wrappers alongside your other Operator-backed agents, instead of separate top-level `annie` subcommands. **Projects:** **PM** targets **May 1, 2026**; **CRM** targets **May 15, 2026** — [ROADMAP.md](../ROADMAP.md). Until releases land, follow your current hub version in [RELEASES.md](../RELEASES.md).
 
 **Automation hygiene:** if the first token after `annie` is **not** a known subcommand, the CLI treats the line as **`annie cursor`**. In scripts and CI, **always** use explicit subcommands (`annie claude`, `annie computer`, …).
 
-**You don't have to choose one surface.** The same hub can carry Claude on one laptop, Computer on a jump host, and Codex on another—all visible in one dashboard.
+**You don't have to choose one surface.** The same hub can carry Claude on one laptop, Operator on a jump host, and Codex on another—all visible in one dashboard.
 
 ---
 
@@ -101,9 +101,9 @@ LLM credentials are configured in **Admin on the server**. The CLI never holds, 
 
 ## Workflow Automation — OpenClaw, ZeroClaw & Hermes
 
-**From June 1, 2026**, these surfaces are selected and run **inside `annie computer`** as wrappers—alongside the same Computer integration pattern as Claude, Cursor, Codex, and other hub-backed agents—rather than as separate `annie` subcommands.
+**From June 1, 2026**, these surfaces are selected and run **inside `annie computer`** as wrappers—alongside the same Operator integration pattern as Claude, Cursor, Codex, and other hub-backed agents—rather than as separate `annie` subcommands.
 
-The coding agents above handle IDE-tied development work. **OpenClaw**, **ZeroClaw**, and **Hermes** (through Computer) handle broader automation — browser automation, desktop control, multi-step business workflows, and governed machine orchestration.
+The coding agents above handle IDE-tied development work. **OpenClaw**, **ZeroClaw**, and **Hermes** (through Operator) handle broader automation — browser automation, desktop control, multi-step business workflows, and governed machine orchestration.
 
 ### OpenClaw
 
@@ -225,7 +225,7 @@ Here's the practical picture of NEST in a working team:
 
 ## Quick Reference — All Commands
 
-Use **explicit** subcommands in scripts and golden images. **Enterprise reference** (MCP, Cursor, VS Code, Claude, ChatGPT, **Computer**, **remote PTY terminals**, phased rollout): **[CLI & MCP enterprise guide](enterprise/annie-cli-mcp-enterprise.md)** ([ES](enterprise/annie-cli-mcp-enterprise-ES.md), [DE](enterprise/annie-cli-mcp-enterprise-DE.md), [FR](enterprise/annie-cli-mcp-enterprise-FR.md), [PT](enterprise/annie-cli-mcp-enterprise-PT.md), [ZH](enterprise/annie-cli-mcp-enterprise-ZH.md)).
+Use **explicit** subcommands in scripts and golden images. **Enterprise reference** (MCP, Cursor, VS Code, Claude, ChatGPT, **Operator**, **remote PTY terminals**, phased rollout): **[CLI & MCP enterprise guide](enterprise/annie-cli-mcp-enterprise.md)**.
 
 ```bash
 # Development agents (always pass the subcommand explicitly in CI)
@@ -265,7 +265,7 @@ annie diagnose clean    # Kill runaway NEST-related processes
 annie hook-forwarder    # Session hook forwarding for Claude integrations
 ```
 
-> **Notes:** `annie connect` and `annie notify` exit with guidance in **self-hosted direct-connect** mode. **OpenClaw / ZeroClaw / Hermes** move **into `annie computer`** as wrappers from **June 1, 2026**—see [zeroclaw.md](enterprise/zeroclaw.md) and [RELEASES.md](../RELEASES.md).
+> **Notes:** `annie connect` and `annie notify` exit with guidance in **self-hosted direct-connect** mode. **OpenClaw / ZeroClaw / Hermes** move **into `annie computer`** as wrappers from **June 1, 2026** and [RELEASES.md](../RELEASES.md).
 
 ---
 
@@ -277,14 +277,14 @@ annie hook-forwarder    # Session hook forwarding for Claude integrations
 | [INSTALL.md](INSTALL.md) | Full CLI and server install reference |
 | [DEVOPS.md](DEVOPS.md) | Production setup: HTTPS, public URL, environment variables |
 | [README.md](../README.md) | Full command and configuration reference |
-| [ROADMAP.md](../ROADMAP.md) | PM (May 1), CRM (May 15), Computer wrappers (Jun 1), Souls, and what's next |
+| [ROADMAP.md](../ROADMAP.md) | PM (May 1), CRM (May 15), Operator wrappers (Jun 1), Souls, and what's next |
 | [RELEASES.md](../RELEASES.md) | Everything live today, with verification links |
-| [Business Overview](../business/README.md) | Strategic value for founders |
-| [Value Proposition](../business/value-proposition.md) | Detailed owner/employee/business benefits |
-| [Use Cases](../business/use-cases.md) | Real scenarios and use cases |
-| [Methodology](../methodology/README.md) | Implementation phases guide |
-| [CLI & MCP enterprise](enterprise/annie-cli-mcp-enterprise.md) | Full CLI + MCP (all clients, Computer, PTY terminals, URL + token, phases) |
-| [Enterprise Features](../enterprise/README.md) | Enterprise pricing and features |
+| [Business Overview](business/README.md) | Strategic value for founders |
+| [Value Proposition](business/value-proposition.md) | Detailed owner/employee/business benefits |
+| [Use Cases](business/use-cases.md) | Real scenarios and use cases |
+| [Methodology](methodology/README.md) | Implementation phases guide |
+| [CLI & MCP enterprise](enterprise/annie-cli-mcp-enterprise.md) | Full CLI + MCP (all clients, Operator, PTY terminals, URL + token, phases) |
+| [Enterprise Features](enterprise/README.md) | Enterprise pricing and features |
 
 ---
 
