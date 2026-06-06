@@ -120,6 +120,7 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 - 🎬 [Product — first version](https://youtu.be/KXJgjWesM1s)
 - 🆕 [Product update](https://youtu.be/6LcGFfOi8mg)
 - 🎥 [Problem &amp; solution](https://youtu.be/5KeN9lwUZwE)
+- 📹 [Demo videos &amp; GIFs (download)](https://github.com/contextzero/nest_hub/releases/tag/media-v1)
 - 👥 [Community](https://github.com/contextzero/nest_hub/discussions)
 
 ## Support
