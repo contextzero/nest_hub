@@ -45,6 +45,35 @@ NEST is organized as a set of composable modules sharing one audit and governanc
 | **OPERATOR** | Desktop automation (computer-use) under governance |
 | **HIVE** | Persistent organizational memory, owned by the client |
 
+## Why NEST
+
+| | **NEST** (self-hosted) | SaaS AI hubs | DIY glue scripts |
+|---|:---:|:---:|:---:|
+| **Data residency** | ✅ Your infra (cloud / on-prem / air-gapped) | ❌ Vendor cloud | ✅ Yours |
+| **Model choice** | ✅ 700+ via BYOK, no markup | ⚠️ Vendor shortlist | ⚠️ Per-integration |
+| **Full audit trail** | ✅ Every prompt & action | ⚠️ Partial / vendor-held | ❌ None |
+| **Per-project RBAC & approvals** | ✅ Built-in | ⚠️ Add-on / higher tier | ❌ Roll your own |
+| **Code agents + computer-use + chat** | ✅ One governed plane | ⚠️ Usually chat-only | ❌ Fragmented |
+| **Cost model** | ✅ Your keys, no per-seat platform fee | ❌ Per-seat + markup | ✅ Infra only |
+| **Lock-in** | ✅ Fair-code, source-available | ❌ Proprietary | ✅ None |
+
+## Architecture
+
+Everything runs on infrastructure you own. Employee machines and browsers connect **outbound** to your hub; model providers are reached with **your** keys. No inbound access for anyone else.
+
+```mermaid
+flowchart LR
+    CLI["👩‍💻 Employees · annie CLI"] -->|outbound| NG
+    PWA["📱 Web PWA · any browser"] -->|outbound| NG
+    subgraph infra["Your infrastructure (cloud · on-prem · air-gapped)"]
+        NG["nginx"] --> SRV["NEST Server<br/>Rust · Axum · Socket.IO · SSE"]
+        SRV --> DB[("PostgreSQL<br/>full audit log")]
+    end
+    SRV -->|BYOK| LLM["700+ models<br/>OpenRouter · Fal · direct providers"]
+```
+
+Architecture: hexagonal (`domain` → `ports` → `application` → `adapters`). See the [security model](docs/SECURITY-MODEL.md) for the data-residency and audit posture.
+
 ## Quick Start
 
 Deploy the self-hosted hub with [Docker](https://docs.docker.com/get-docker/). Clone the repo and run the setup script — it generates secrets, pulls the published images, starts the stack, and waits for health:
@@ -82,6 +111,7 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 - 📚 [Quick Start](QUICKSTART.md)
 - 🛠 [Installation reference](docs/INSTALL.md)
 - 🌐 [Production deploy (HTTPS)](docs/DEVOPS.md)
+- 🔐 [Security model](docs/SECURITY-MODEL.md)
 - 🤖 [CLI &amp; LLM / BYOK config](docs/CLI-BUSINESS.md)
 - 🎬 [Product overview (60s)](https://youtu.be/KXJgjWesM1s)
 - 🎥 [Problem &amp; solution](https://youtu.be/5KeN9lwUZwE)
@@ -101,6 +131,14 @@ For enterprise support, SSO, advanced RBAC, and air-gapped deployments, contact 
 - **Discussions:** [github.com/contextzero/nest_hub/discussions](https://github.com/contextzero/nest_hub/discussions)
 
 We respond within 24 hours. Usually faster.
+
+## Star history
+
+If NEST helps your team, a ⭐ makes it discoverable for the next one.
+
+<a href="https://star-history.com/#contextzero/nest_hub&Date">
+  <img src="https://api.star-history.com/svg?repos=contextzero/nest_hub&type=Date" alt="Star History Chart" width="70%">
+</a>
 
 ## License
 
