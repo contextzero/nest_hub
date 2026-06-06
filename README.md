@@ -16,6 +16,8 @@
 
 NEST is a self-hosted AI workforce hub that consolidates fragmented tool stacks into a single, governed plane: organizational memory, multi-agent orchestration, 700+ models via BYOK, and full audit trails — all running on infrastructure you own. Built by Context Zero (CTX0) under a fair-code license, NEST gives enterprises the speed of modern AI tooling without surrendering data, cost control, or operational sovereignty.
 
+> ⭐ **If NEST is useful to your team, star the repo** — it helps other organizations find a self-hosted, audited alternative to SaaS AI sprawl. See **[everything we've shipped →](https://github.com/contextzero/nest_hub/issues/17)** — live, dated, and independently verifiable.
+
 ## Watch
 
 | Product (60s) | Problem &amp; solution |
@@ -76,6 +78,7 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 
 ## Resources
 
+- 📦 [What's shipped — changelog](https://github.com/contextzero/nest_hub/issues/17)
 - 📚 [Quick Start](QUICKSTART.md)
 - 🛠 [Installation reference](docs/INSTALL.md)
 - 🌐 [Production deploy (HTTPS)](docs/DEVOPS.md)
