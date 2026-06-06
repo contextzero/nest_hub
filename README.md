@@ -18,11 +18,15 @@ NEST is a self-hosted AI workforce hub that consolidates fragmented tool stacks 
 
 > ⭐ **If NEST is useful to your team, star the repo** — it helps other organizations find a self-hosted, audited alternative to SaaS AI sprawl. See **[everything we've shipped →](https://github.com/contextzero/nest_hub/issues/17)** — live, dated, and independently verifiable.
 
+<p align="center">
+  <img src="./public/nest_demo.gif" alt="NEST in action" width="100%" />
+</p>
+
 ## Watch
 
-| Product (60s) | Problem &amp; solution |
-|:---:|:---:|
-| [![NEST — Product (60s)](https://img.youtube.com/vi/KXJgjWesM1s/hqdefault.jpg)](https://youtu.be/KXJgjWesM1s) | [![NEST — Problem &amp; solution](https://img.youtube.com/vi/5KeN9lwUZwE/hqdefault.jpg)](https://youtu.be/5KeN9lwUZwE) |
+| Product (first version) | Product update | Problem &amp; solution |
+|:---:|:---:|:---:|
+| [![NEST — Product (first version)](https://img.youtube.com/vi/KXJgjWesM1s/hqdefault.jpg)](https://youtu.be/KXJgjWesM1s) | [![NEST — Product update](https://img.youtube.com/vi/6LcGFfOi8mg/hqdefault.jpg)](https://youtu.be/6LcGFfOi8mg) | [![NEST — Problem &amp; solution](https://img.youtube.com/vi/5KeN9lwUZwE/hqdefault.jpg)](https://youtu.be/5KeN9lwUZwE) |
 
 ## Key Capabilities
 
@@ -113,7 +117,8 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 - 🌐 [Production deploy (HTTPS)](docs/DEVOPS.md)
 - 🔐 [Security model](docs/SECURITY-MODEL.md)
 - 🤖 [CLI &amp; LLM / BYOK config](docs/CLI-BUSINESS.md)
-- 🎬 [Product overview (60s)](https://youtu.be/KXJgjWesM1s)
+- 🎬 [Product — first version](https://youtu.be/KXJgjWesM1s)
+- 🆕 [Product update](https://youtu.be/6LcGFfOi8mg)
 - 🎥 [Problem &amp; solution](https://youtu.be/5KeN9lwUZwE)
 - 👥 [Community](https://github.com/contextzero/nest_hub/discussions)
 
