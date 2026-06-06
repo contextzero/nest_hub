@@ -67,13 +67,13 @@ Everything runs on infrastructure you own. Employee machines and browsers connec
 
 ```mermaid
 flowchart LR
-    CLI["👩‍💻 Employees · annie CLI"] -->|outbound| NG
-    PWA["📱 Web PWA · any browser"] -->|outbound| NG
-    subgraph infra["Your infrastructure (cloud · on-prem · air-gapped)"]
-        NG["nginx"] --> SRV["NEST Server<br/>Rust · Axum · Socket.IO · SSE"]
-        SRV --> DB[("PostgreSQL<br/>full audit log")]
+    CLI["Employees — annie CLI"] -->|outbound| NG
+    PWA["Web PWA — any browser"] -->|outbound| NG
+    subgraph infra["Your infrastructure: cloud, on-prem, air-gapped"]
+        NG["nginx"] --> SRV["NEST Server — Rust, Axum, Socket.IO, SSE"]
+        SRV --> DB[("PostgreSQL — full audit log")]
     end
-    SRV -->|BYOK| LLM["700+ models<br/>OpenRouter · Fal · direct providers"]
+    SRV -->|BYOK| LLM["700+ models — OpenRouter, Fal, direct"]
 ```
 
 Architecture: hexagonal (`domain` → `ports` → `application` → `adapters`). See the [security model](docs/SECURITY-MODEL.md) for the data-residency and audit posture.
