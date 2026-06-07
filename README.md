@@ -113,6 +113,7 @@ annie claude              # or: annie cursor / annie codex / annie gemini ...
 
 - 📦 [What's shipped — changelog](https://github.com/contextzero/nest_hub/issues/17)
 - 📚 [Quick Start](QUICKSTART.md)
+- 🪟 [Windows install guide (WSL2 + Docker Desktop)](docs/INSTALL-WINDOWS.md)
 - 🛠 [Installation reference](docs/INSTALL.md)
 - 🌐 [Production deploy (HTTPS)](docs/DEVOPS.md)
 - 🔐 [Security model](docs/SECURITY-MODEL.md)

@@ -45,6 +45,8 @@ docker compose version  # V2 syntax (not docker-compose)
 
 **Missing something?** → [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) — installs Node, npm, and Docker in minutes on Mac, Linux, or Windows.
 
+**Running on Windows?** → [docs/INSTALL-WINDOWS.md](docs/INSTALL-WINDOWS.md) — full WSL2 + Docker Desktop path for self-hosting the hub locally.
+
 > **Why these?** Node + npm power the `annie` CLI you'll install on employee machines. Docker runs the server without you needing to install Rust, Postgres, or nginx yourself.
 
 ---
