@@ -45,6 +45,8 @@ docker compose version  # V2 syntax (not docker-compose)
 
 **Missing something?** → [docs/INSTALL-FRAMEWORKS.md](docs/INSTALL-FRAMEWORKS.md) — installs Node, npm, and Docker in minutes on Mac, Linux, or Windows.
 
+**Docker still giving you trouble?** → [docs/DOCKER-COMPOSE-TROUBLESHOOTING.md](docs/DOCKER-COMPOSE-TROUBLESHOOTING.md) — bind, health, auth, and restart fixes for local self-hosting.
+
 > **Why these?** Node + npm power the `annie` CLI you'll install on employee machines. Docker runs the server without you needing to install Rust, Postgres, or nginx yourself.
 
 ---
@@ -243,6 +245,8 @@ You now have:
 | Port 80 already in use | Set `WEB_PORT=8080` in `.env`, then `docker compose restart` |
 | Session not appearing in dashboard | Confirm `NEST_API_URL` in CLI points to the correct server address |
 | Something else is wrong | Run `annie diagnose` — it prints a full diagnostic report |
+
+Need deeper Compose-specific debugging? See [docs/DOCKER-COMPOSE-TROUBLESHOOTING.md](docs/DOCKER-COMPOSE-TROUBLESHOOTING.md).
 
 ---
 
