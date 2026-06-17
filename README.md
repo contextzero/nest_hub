@@ -99,6 +99,13 @@ docker compose logs -f                        # stream logs
 docker compose pull && docker compose up -d   # update to the latest images
 ```
 
+### Common Issues
+
+- `annie: command not found` or login failures: check [docs/INSTALL.md](docs/INSTALL.md) and confirm Node.js/npm are on PATH.
+- `Web app blank / 502` after startup: wait for `nest-server` health, then inspect `docker compose logs nest-server`.
+- `Port 80 already in use`: set `WEB_PORT=8080` in `.env` and restart Compose.
+- `docker compose` not found: install Docker Compose V2, not legacy `docker-compose`.
+
 ### CLI for developer machines
 
 Connect each workstation to your hub with the published CLI (package `@contextzero/nest`, binary `annie`):
