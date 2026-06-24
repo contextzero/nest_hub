@@ -2,6 +2,82 @@
   "latest_version": "0.2.84",
   "notifications": [
     {
+      "id": "u55",
+      "category": "updates",
+      "date": "2026-06-23",
+      "title": {
+        "en": "Ponytail cleanup complete: −1445 lines of dead code removed",
+        "es": "Limpieza de ponytail completa: −1445 líneas de código muerto removidas",
+        "de": "Ponytail-Bereinigung abgeschlossen: −1445 Zeilen toter Code entfernt",
+        "fr": "Nettoyage ponytail terminé : −1445 lignes de code mort supprimées",
+        "pt": "Limpeza de ponytail concluída: −1445 linhas de código morto removidas"
+      },
+      "body": {
+        "en": "The platform now ships with leaner, faster code. Dead packages removed, unused exports consolidated, and runtime swaps completed (CLI now uses Bun's native WebSocket and Node's child_process, fetch via httpJson helper). No behavioral changes — only internal efficiency gains. Maintenance burden reduced across all layers: CLI, web, server, mobile, and shared packages.",
+        "es": "La plataforma ahora funciona con código más limpio y rápido. Se removieron paquetes muertos, se consolidaron exportaciones no usadas y se completaron los cambios de runtime (CLI ahora usa WebSocket nativo de Bun y child_process de Node). Sin cambios de comportamiento — solo ganancias internas de eficiencia. Carga de mantenimiento reducida en todas las capas: CLI, web, servidor, mobile y paquetes compartidos.",
+        "de": "Die Plattform läuft jetzt mit schlankerem, schnellerem Code. Tote Pakete entfernt, ungenutzte Exporte konsolidiert und Runtime-Swaps abgeschlossen (CLI nutzt jetzt Buns natives WebSocket und Nodes child_process). Keine Verhaltensänderungen — nur interne Effizienzgewinne. Wartungslast in allen Schichten reduziert: CLI, Web, Server, Mobile und freigegebene Pakete.",
+        "fr": "La plateforme s'exécute désormais avec du code plus épuré et plus rapide. Paquets non utilisés supprimés, exports consolidés et remplacements d'exécution terminés (CLI utilise maintenant WebSocket natif de Bun et child_process de Node). Aucun changement comportemental — gains d'efficacité internes uniquement. Charge de maintenance réduite dans toutes les couches : CLI, web, serveur, mobile et paquets partagés.",
+        "pt": "A plataforma agora funciona com código mais limpo e rápido. Pacotes mortos removidos, exports não usados consolidados e swaps de runtime concluídos (CLI agora usa WebSocket nativo do Bun e child_process do Node). Sem alterações comportamentais — apenas ganhos de eficiência interna. Carga de manutenção reduzida em todas as camadas: CLI, web, servidor, mobile e pacotes compartilhados."
+      }
+    },
+    {
+      "id": "u54",
+      "category": "updates",
+      "date": "2026-05-22",
+      "title": {
+        "en": "Wave C9 complete: modern auth architecture across all PM handlers",
+        "es": "Wave C9 completa: arquitectura de auth moderna en todos los manejadores PM",
+        "de": "Wave C9 abgeschlossen: moderne Auth-Architektur über alle PM-Handler",
+        "fr": "Wave C9 terminée : architecture auth moderne sur tous les gestionnaires PM",
+        "pt": "Wave C9 completa: arquitetura de auth moderna em todos os manipuladores PM"
+      },
+      "body": {
+        "en": "The backend auth subsystem now uses a unified, modern architecture across all 8 PM workspace handlers. AuthContext replaces inline token extraction, reducing duplication and improving security posture. Authentication is now consistently enforced at the boundary, with namespace isolation verified at every step. No user-facing changes — this is infrastructure hardening that improves code maintainability and reduces attack surface.",
+        "es": "El subsistema de auth del backend ahora usa una arquitectura unificada y moderna en todos los 8 manejadores PM del workspace. AuthContext reemplaza la extracción de tokens inline, reduciendo duplicación y mejorando la seguridad. La autenticación se aplica consistentemente en el límite, con aislamiento por namespace verificado en cada paso. Sin cambios visibles para el usuario — es endurecimiento de infraestructura que mejora la mantenibilidad del código y reduce la superficie de ataque.",
+        "de": "Das Backend-Auth-Subsystem nutzt jetzt eine einheitliche, moderne Architektur über alle 8 PM-Workspace-Handler. AuthContext ersetzt inline Token-Extraktion, reduziert Duplikation und verbessert die Sicherheitsposition. Authentifizierung wird konsistent an der Grenze durchgesetzt, mit Namespace-Isolation bei jedem Schritt verifiziert. Keine Änderungen für den Endnutzer — dies ist Infrastruktur-Härtung, die Wartbarkeit verbessert und die Angriffsfläche reduziert.",
+        "fr": "Le sous-système auth du backend utilise désormais une architecture unifiée et moderne sur tous les 8 gestionnaires PM de workspace. AuthContext remplace l'extraction de tokens en ligne, réduisant la duplication et améliorant la sécurité. L'authentification est appliquée de manière cohérente à la limite, avec isolation du namespace vérifiée à chaque étape. Aucun changement visible — renforcement d'infrastructure qui améliore la maintenabilité du code et réduit la surface d'attaque.",
+        "pt": "O subsistema de auth do backend agora usa uma arquitetura unificada e moderna em todos os 8 manipuladores PM do workspace. AuthContext substitui extração de tokens inline, reduzindo duplicação e melhorando a postura de segurança. Autenticação agora é aplicada consistentemente na fronteira, com isolamento por namespace verificado a cada passo. Sem mudanças visíveis ao usuário — é endurecimento de infraestrutura que melhora a manutenibilidade do código e reduz a superfície de ataque."
+      }
+    },
+    {
+      "id": "u53",
+      "category": "updates",
+      "date": "2026-05-21",
+      "title": {
+        "en": "E2E auth testing harness: every login path verified",
+        "es": "Arnés de pruebas E2E de auth: cada camino de login verificado",
+        "de": "E2E-Auth-Test-Harness: Jeder Login-Pfad überprüft",
+        "fr": "Harnais de test E2E pour auth : chaque chemin de connexion vérifié",
+        "pt": "Arnês de testes E2E de auth: cada camino de login verificado"
+      },
+      "body": {
+        "en": "Authentication is now covered by comprehensive end-to-end tests that exercise all three auth idioms (Bearer tokens, session cookies, and namespace isolation) across CLI and web surfaces. Tests run against a live database and verify the full round-trip: login, encryption, token validation, and session persistence. This safeguard ensures that auth changes never break the critical trust boundary.",
+        "es": "La autenticación ahora está cubierta por pruebas E2E completas que ejercitan los tres idiomas de auth (tokens Bearer, cookies de sesión e aislamiento por namespace) en las superficies CLI y web. Las pruebas se ejecutan contra una base de datos en vivo y verifican el viaje completo: login, encriptación, validación de tokens y persistencia de sesión. Esta salvaguardia asegura que los cambios de auth nunca rompan el límite de confianza crítico.",
+        "de": "Die Authentifizierung wird jetzt durch umfassende E2E-Tests abgedeckt, die alle drei Auth-Idiome (Bearer-Tokens, Session-Cookies und Namespace-Isolation) über CLI- und Web-Oberflächen testen. Tests laufen gegen eine Live-Datenbank und überprüfen die volle Runde: Login, Verschlüsselung, Token-Validierung und Session-Persistenz. Diese Sicherheitsmaßnahme stellt sicher, dass Auth-Änderungen niemals die kritische Vertrauensgrenze unterbrechen.",
+        "fr": "L'authentification est désormais couverte par des tests E2E complets qui exercent les trois idiomes d'authentification (tokens Bearer, cookies de session et isolation par namespace) sur les surfaces CLI et web. Les tests s'exécutent sur une base de données en direct et vérifient l'aller-retour complet : connexion, chiffrement, validation de tokens et persistance de session. Cette protection garantit que les modifications d'auth ne cassent jamais la limite de confiance critique.",
+        "pt": "Autenticação agora é coberta por testes E2E abrangentes que exercitam os três idiomas de auth (tokens Bearer, cookies de sessão e isolamento por namespace) nas superfícies CLI e web. Testes rodam contra um banco de dados ativo e verificam o ciclo completo: login, encriptação, validação de tokens e persistência de sessão. Essa salvaguarda garante que mudanças de auth nunca quebrem a fronteira crítica de confiança."
+      }
+    },
+    {
+      "id": "u52",
+      "category": "updates",
+      "date": "2026-05-20",
+      "title": {
+        "en": "SDK integration guides and app/deino conformance documentation",
+        "es": "Guías de integración SDK y documentación de conformidad app/deino",
+        "de": "SDK-Integrationsleitfäden und App/Deino-Konformitätsdokumentation",
+        "fr": "Guides d'intégration SDK et documentation de conformité app/deino",
+        "pt": "Guias de integração SDK e documentação de conformidade app/deino"
+      },
+      "body": {
+        "en": "New architecture documentation explains how to integrate the NEST SDKs (app and deino) with your own AI services. Step-by-step integration guides show the patterns for session management, encryption, and message routing. Conformance checklist ensures your service works seamlessly with the platform. Architecture diagrams, code examples, and troubleshooting tips are included — so third-party integrators can build on top of NEST with confidence.",
+        "es": "Nueva documentación de arquitectura explica cómo integrar los SDKs de NEST (app y deino) con tus propios servicios de IA. Guías de integración paso a paso muestran los patrones para gestión de sesiones, encriptación y enrutamiento de mensajes. Lista de conformidad asegura que tu servicio funcione sin problemas con la plataforma. Se incluyen diagramas de arquitectura, ejemplos de código y consejos de resolución de problemas — para que integradores de terceros construyan sobre NEST con confianza.",
+        "de": "Neue Architekturdokumentation erklärt, wie du die NEST SDKs (app und deino) mit deinen eigenen KI-Services integrierst. Schritt-für-Schritt-Integrationsleitfäden zeigen Muster für Session-Verwaltung, Verschlüsselung und Message-Routing. Konformitätsprüfliste stellt sicher, dass dein Service nahtlos mit der Plattform funktioniert. Architekturdiagramme, Code-Beispiele und Fehlerbehebungstipps enthalten — damit Drittanbieter-Integratoren sicher auf NEST aufbauen können.",
+        "fr": "Une nouvelle documentation d'architecture explique comment intégrer les SDKs NEST (app et deino) à vos propres services IA. Des guides d'intégration pas à pas montrent les modèles de gestion de session, chiffrement et routage des messages. Une liste de conformité garantit que votre service fonctionne sans problème avec la plateforme. Les diagrammes d'architecture, exemples de code et conseils de dépannage sont inclus — pour que les intégrateurs tiers puissent construire sur NEST en toute confiance.",
+        "pt": "Nova documentação de arquitetura explica como integrar os SDKs NEST (app e deino) com seus próprios serviços de IA. Guias de integração passo a passo mostram padrões para gerenciamento de sessão, criptografia e roteamento de mensagens. Checklist de conformidade garante que seu serviço funcione perfeitamente com a plataforma. Diagramas de arquitetura, exemplos de código e dicas de solução de problemas estão inclusos — para que integradores de terceiros construam sobre NEST com confiança."
+      }
+    },
+    {
       "id": "u51",
       "category": "updates",
       "date": "2026-05-19",
@@ -18,766 +94,6 @@
         "de": "Jeder Agent, jedes Skill-Bundle und jeder Befehl, den du einem Task anhängst, kann vor dem Ausführen vollständig bearbeitet werden. Öffne einen Agenten aus dem Hive-Panel und passe seinen System-Prompt, die Temperatur und das Modell an — damit er sich genau so verhält, wie du es für diesen spezifischen Task brauchst, nicht nur den generischen Standard. Skill-Bundles können erweitert und einzelne Skills an- oder abgeschaltet werden, damit die KI nur Zugriff auf das hat, was sie tatsächlich braucht. Befehle sind inline bearbeitbar: ändere das Skript, füge Argumente hinzu, setze Umgebungsvariablen oder ordne die Sequenz neu. Deine Anpassungen werden im Task gespeichert und reisen mit ihm — egal ob er über Computer, Forge oder Nexus läuft, der Agent nimmt immer deine Version, nicht den Workspace-Standard.",
         "fr": "Chaque agent, bundle de compétences et commande que vous attachez à une tâche peut être entièrement modifié avant son exécution. Ouvrez n'importe quel agent depuis le panneau Hive et ajustez son prompt système, sa température et son modèle — pour qu'il se comporte exactement comme vous en avez besoin pour cette tâche spécifique, et non pas simplement le comportement par défaut. Les bundles de compétences peuvent être développés et les compétences individuelles activées ou désactivées, de sorte que l'IA n'ait accès qu'à ce dont elle a réellement besoin. Les commandes sont modifiables en ligne : changez le script, ajoutez des arguments, définissez des variables d'environnement ou réordonnez la séquence. Vos personnalisations sont sauvegardées dans la tâche et voyagent avec elle — que ce soit via Computer, Forge ou Nexus, l'agent prend toujours votre version, pas celle par défaut du workspace.",
         "pt": "Cada agente, bundle de skills e comando que você adiciona a uma tarefa pode ser totalmente editado antes de executar. Abra qualquer agente no painel Hive e ajuste o prompt de sistema, temperatura e modelo — para que ele se comporte exatamente como você precisa para aquela tarefa específica, não apenas o padrão genérico. Bundles de skills podem ser expandidos e skills individuais ativados ou desativados, para que a IA só tenha acesso ao que realmente precisa. Comandos são editáveis diretamente: mude o script, adicione argumentos, defina variáveis de ambiente ou reordene a sequência. Suas personalizações são salvas na tarefa e viajam com ela — seja executando pelo Computer, Forge ou Nexus, o agente sempre usa sua versão, não o padrão do workspace."
-      }
-    },
-    {
-      "id": "u50",
-      "category": "updates",
-      "date": "2026-05-19",
-      "title": {
-        "en": "Hive in your tasks: attach agents, skills, commands, packages, and computers",
-        "es": "Hive en tus tareas: adjunta agentes, skills, comandos, paquetes y computadoras",
-        "de": "Hive in deinen Tasks: Agenten, Skills, Befehle, Pakete und Computer anhängen",
-        "fr": "Hive dans vos tâches : attachez agents, compétences, commandes, packages et ordinateurs",
-        "pt": "Hive nas suas tarefas: adicione agentes, skills, comandos, pacotes e computadores"
-      },
-      "body": {
-        "en": "Tasks now have a Hive panel where you set everything the AI needs to execute that specific piece of work. Pick one or more agents, attach skill bundles from the DNA shelf, add the terminal commands that need to run, pin the packages required, and bind a computer if the work should happen on a specific machine. Once configured, that task context flows automatically into whichever execution environment picks it up — a Computer session runs with the right agent and skills already loaded, a Forge run uses the pinned packages and commands, a Nexus orchestration knows which agents to activate and in what order. DNA is what ties it together: the defaults you set there apply unless a task overrides them, so you can standardise how your workspace runs without configuring every task from scratch.",
-        "es": "Las tareas tienen ahora un panel Hive donde configuras todo lo que la IA necesita para ejecutar ese trabajo específico. Elige uno o más agentes, adjunta bundles de skills de la estantería DNA, agrega los comandos de terminal que necesitan ejecutarse, fija los paquetes requeridos y vincula una computadora si el trabajo debe ocurrir en una máquina específica. Una vez configurado, ese contexto de tarea fluye automáticamente hacia el entorno de ejecución que lo tome — una sesión Computer arranca con el agente y los skills ya cargados, un run de Forge usa los paquetes y comandos fijados, una orquestación Nexus sabe qué agentes activar y en qué orden. DNA es lo que lo une todo: los valores por defecto que configures ahí se aplican salvo que una tarea los reemplace, para que puedas estandarizar cómo funciona tu workspace sin configurar cada tarea desde cero.",
-        "de": "Tasks haben jetzt ein Hive-Panel, in dem du alles konfigurierst, was die KI braucht, um diese spezifische Arbeit auszuführen. Wähle einen oder mehrere Agenten, hänge Skill-Bundles vom DNA-Regal an, füge die Terminal-Befehle hinzu, die ausgeführt werden sollen, fixiere die benötigten Pakete und binde einen Computer, wenn die Arbeit auf einer bestimmten Maschine stattfinden soll. Einmal konfiguriert, fließt dieser Task-Kontext automatisch in die Ausführungsumgebung, die ihn aufnimmt — eine Computer-Session startet mit dem richtigen Agenten und bereits geladenen Skills, ein Forge-Run verwendet die fixierten Pakete und Befehle, eine Nexus-Orchestrierung weiß, welche Agenten in welcher Reihenfolge aktiviert werden sollen. DNA verbindet alles: Die dort gesetzten Standardwerte gelten, sofern ein Task sie nicht überschreibt — so kannst du standardisieren, wie dein Workspace läuft, ohne jeden Task von Grund auf zu konfigurieren.",
-        "fr": "Les tâches disposent maintenant d'un panneau Hive où vous configurez tout ce dont l'IA a besoin pour exécuter ce travail spécifique. Choisissez un ou plusieurs agents, attachez des bundles de compétences depuis l'étagère DNA, ajoutez les commandes terminal à exécuter, épinglez les packages requis et associez un ordinateur si le travail doit se faire sur une machine précise. Une fois configuré, ce contexte de tâche se propage automatiquement vers l'environnement d'exécution qui le prend en charge — une session Computer démarre avec le bon agent et les compétences déjà chargées, un run Forge utilise les packages et commandes épinglés, une orchestration Nexus sait quels agents activer et dans quel ordre. DNA est ce qui relie tout : les valeurs par défaut que vous y définissez s'appliquent sauf si une tâche les remplace, ce qui vous permet de standardiser le fonctionnement de votre workspace sans tout reconfigurer à chaque tâche.",
-        "pt": "As tarefas agora têm um painel Hive onde você configura tudo que a IA precisa para executar aquele trabalho específico. Escolha um ou mais agentes, adicione bundles de skills da prateleira DNA, inclua os comandos de terminal que precisam rodar, fixe os pacotes necessários e vincule um computador se o trabalho deve acontecer em uma máquina específica. Uma vez configurado, esse contexto da tarefa flui automaticamente para o ambiente de execução que o assumir — uma sessão Computer inicia com o agente certo e os skills já carregados, um run Forge usa os pacotes e comandos fixados, uma orquestração Nexus sabe quais agentes ativar e em que ordem. DNA é o que une tudo: os valores padrão que você define lá se aplicam salvo quando uma tarefa os substitui, para que você possa padronizar como seu workspace funciona sem configurar cada tarefa do zero."
-      }
-    },
-    {
-      "id": "u49",
-      "category": "updates",
-      "date": "2026-05-19",
-      "title": {
-        "en": "Tasks connected to Computer, Forge, and Nexus",
-        "es": "Tareas conectadas a Computer, Forge y Nexus",
-        "de": "Tasks verbunden mit Computer, Forge und Nexus",
-        "fr": "Tâches connectées à Computer, Forge et Nexus",
-        "pt": "Tarefas conectadas a Computer, Forge e Nexus"
-      },
-      "body": {
-        "en": "Every task in your project can now be linked directly to a Computer session, a Forge run, or a Nexus orchestration. Start a Computer session from inside a task and the work is automatically attributed — time logged, progress updated. Launch a Forge run from a task card and the output lands back in the task when it finishes. Orchestrate a multi-agent Nexus flow and the results tie back to the task that triggered it. Your board reflects what your agents actually did, in real time.",
-        "es": "Cada tarea de tu proyecto puede vincularse directamente a una sesión de Computer, un run de Forge o una orquestación de Nexus. Inicia una sesión de Computer desde dentro de una tarea y el trabajo se atribuye automáticamente — tiempo registrado, avance actualizado. Lanza un run de Forge desde una tarjeta de tarea y el resultado vuelve a la tarea al terminar. Orquesta un flujo multi-agente de Nexus y los resultados quedan vinculados a la tarea que lo disparó. Tu tablero refleja lo que hicieron tus agentes, en tiempo real.",
-        "de": "Jeder Task in deinem Projekt kann jetzt direkt mit einer Computer-Session, einem Forge-Run oder einer Nexus-Orchestrierung verknüpft werden. Starte eine Computer-Session aus einem Task heraus und die Arbeit wird automatisch zugeordnet — Zeit erfasst, Fortschritt aktualisiert. Starte einen Forge-Run aus einer Task-Karte und das Ergebnis landet beim Abschluss im Task. Orchestriere einen Multi-Agent-Nexus-Flow und die Ergebnisse sind mit dem auslösenden Task verknüpft. Dein Board spiegelt wider, was deine Agenten wirklich getan haben — in Echtzeit.",
-        "fr": "Chaque tâche de votre projet peut désormais être liée directement à une session Computer, un run Forge ou une orchestration Nexus. Démarrez une session Computer depuis l'intérieur d'une tâche et le travail est automatiquement attribué — temps enregistré, avancement mis à jour. Lancez un run Forge depuis une carte de tâche et le résultat revient dans la tâche à la fin. Orchestrez un flux multi-agents Nexus et les résultats se rattachent à la tâche qui l'a déclenché. Votre tableau reflète ce que vos agents ont réellement accompli, en temps réel.",
-        "pt": "Cada tarefa do seu projeto pode agora ser vinculada diretamente a uma sessão Computer, um run Forge ou uma orquestração Nexus. Inicie uma sessão Computer de dentro de uma tarefa e o trabalho é atribuído automaticamente — tempo registrado, progresso atualizado. Lance um run Forge a partir de um card de tarefa e o resultado volta para a tarefa ao finalizar. Orquestre um fluxo multi-agente Nexus e os resultados ficam vinculados à tarefa que o disparou. Seu board reflete o que seus agentes realmente fizeram, em tempo real."
-      }
-    },
-    {
-      "id": "u48",
-      "category": "updates",
-      "date": "2026-05-19",
-      "title": {
-        "en": "Project Wiki: living documentation next to your tasks",
-        "es": "Wiki del proyecto: documentación viva junto a tus tareas",
-        "de": "Projekt-Wiki: lebende Dokumentation neben deinen Tasks",
-        "fr": "Wiki de projet : documentation vivante à côté de vos tâches",
-        "pt": "Wiki do projeto: documentação viva ao lado das suas tarefas"
-      },
-      "body": {
-        "en": "Every project now has a built-in Wiki tab for structured documentation that lives alongside your tasks. Write onboarding guides, decision logs, architecture notes, meeting summaries, or any reference material your team needs. Pages support rich text with headings, code blocks, tables, and links between pages. Changes are tracked so you always see who wrote what and when. Link any wiki page directly from a task — so the context is always one click away when you need it.",
-        "es": "Cada proyecto tiene ahora una pestaña Wiki integrada para documentación estructurada que vive junto a tus tareas. Escribe guías de incorporación, registros de decisiones, notas de arquitectura, resúmenes de reuniones o cualquier material de referencia que tu equipo necesite. Las páginas admiten texto enriquecido con encabezados, bloques de código, tablas y enlaces entre páginas. Los cambios quedan registrados para que siempre sepas quién escribió qué y cuándo. Vincula cualquier página de la wiki directamente desde una tarea — el contexto siempre está a un clic de distancia cuando lo necesitas.",
-        "de": "Jedes Projekt hat jetzt einen integrierten Wiki-Tab für strukturierte Dokumentation, die direkt neben deinen Tasks lebt. Schreibe Onboarding-Guides, Entscheidungsprotokolle, Architekturnotizen, Meeting-Zusammenfassungen oder beliebiges Referenzmaterial, das dein Team braucht. Seiten unterstützen Rich-Text mit Überschriften, Code-Blöcken, Tabellen und Links zwischen Seiten. Änderungen werden verfolgt, damit du immer siehst, wer was wann geschrieben hat. Verknüpfe jede Wiki-Seite direkt aus einem Task — der Kontext ist immer einen Klick entfernt.",
-        "fr": "Chaque projet dispose maintenant d'un onglet Wiki intégré pour la documentation structurée qui vit aux côtés de vos tâches. Rédigez des guides d'intégration, des journaux de décisions, des notes d'architecture, des comptes-rendus de réunions ou tout matériel de référence dont votre équipe a besoin. Les pages prennent en charge le texte enrichi avec des titres, des blocs de code, des tableaux et des liens entre pages. Les modifications sont suivies afin que vous sachiez toujours qui a écrit quoi et quand. Liez n'importe quelle page wiki directement depuis une tâche — le contexte est toujours à portée de clic.",
-        "pt": "Cada projeto agora tem uma aba Wiki integrada para documentação estruturada que vive ao lado das suas tarefas. Escreva guias de integração, registros de decisões, notas de arquitetura, resumos de reuniões ou qualquer material de referência que sua equipe precisar. As páginas suportam texto rico com títulos, blocos de código, tabelas e links entre páginas. As alterações são rastreadas para que você sempre saiba quem escreveu o quê e quando. Vincule qualquer página da wiki diretamente de uma tarefa — o contexto está sempre a um clique de distância quando você precisa."
-      }
-    },
-    {
-      "id": "u47",
-      "category": "updates",
-      "date": "2026-05-19",
-      "title": {
-        "en": "Gantt chart, progress tracking, and Kanban side by side",
-        "es": "Diagrama de Gantt, seguimiento de progreso y Kanban lado a lado",
-        "de": "Gantt-Diagramm, Fortschrittsverfolgung und Kanban nebeneinander",
-        "fr": "Diagramme de Gantt, suivi de l'avancement et Kanban côte à côte",
-        "pt": "Diagrama de Gantt, acompanhamento de progresso e Kanban lado a lado"
-      },
-      "body": {
-        "en": "Switch between three views of your project without losing context: the Kanban board for daily flow, the Gantt chart for timeline planning, and the List view for bulk editing. The Gantt shows every task as a bar on a date axis — drag to reschedule, draw lines to set dependencies, and collapse phases to see the big picture. Progress bars on each task and phase update automatically as you complete work. Set a percent-complete on any task manually or let it derive from subtasks. The overall project health score is always visible at the top of your board.",
-        "es": "Cambia entre tres vistas de tu proyecto sin perder el contexto: el tablero Kanban para el flujo diario, el diagrama de Gantt para la planificación de la línea de tiempo y la vista de lista para ediciones en masa. El Gantt muestra cada tarea como una barra en un eje de fechas — arrastra para reprogramar, dibuja líneas para establecer dependencias y colapsa fases para ver el panorama general. Las barras de progreso en cada tarea y fase se actualizan automáticamente a medida que completas el trabajo. Establece un porcentaje de completado en cualquier tarea de forma manual o déjalo derivar de las subtareas. La puntuación de salud general del proyecto siempre es visible en la parte superior del tablero.",
-        "de": "Wechsel zwischen drei Ansichten deines Projekts, ohne den Kontext zu verlieren: das Kanban-Board für den täglichen Ablauf, das Gantt-Diagramm für die Zeitplanung und die Listenansicht für Massenbearbeitung. Das Gantt zeigt jeden Task als Balken auf einer Datumsachse — ziehe zum Umplanen, zeichne Linien für Abhängigkeiten und klappe Phasen ein, um das Gesamtbild zu sehen. Fortschrittsbalken für jeden Task und jede Phase aktualisieren sich automatisch, während du Arbeit abschließt. Lege einen Prozentwert manuell fest oder lass ihn aus Unteraufgaben ableiten. Der Gesamtgesundheitsscore des Projekts ist immer oben im Board sichtbar.",
-        "fr": "Basculez entre trois vues de votre projet sans perdre le contexte : le tableau Kanban pour le flux quotidien, le diagramme de Gantt pour la planification de la chronologie et la vue liste pour les modifications en masse. Le Gantt affiche chaque tâche comme une barre sur un axe de dates — faites glisser pour reprogrammer, tracez des lignes pour définir des dépendances et réduisez les phases pour voir l'ensemble. Les barres de progression pour chaque tâche et phase se mettent à jour automatiquement au fur et à mesure de l'avancement. Définissez un pourcentage d'avancement manuellement ou laissez-le se déduire des sous-tâches. Le score de santé global du projet est toujours visible en haut du tableau.",
-        "pt": "Alterne entre três views do seu projeto sem perder o contexto: o board Kanban para o fluxo diário, o diagrama de Gantt para planejamento da linha do tempo e a view de lista para edições em massa. O Gantt mostra cada tarefa como uma barra em um eixo de datas — arraste para reagendar, desenhe linhas para definir dependências e recolha fases para ver o panorama geral. Barras de progresso em cada tarefa e fase se atualizam automaticamente conforme você conclui o trabalho. Defina um percentual de conclusão em qualquer tarefa manualmente ou deixe derivar das subtarefas. O score de saúde geral do projeto é sempre visível no topo do seu board."
-      }
-    },
-    {
-      "id": "u46",
-      "category": "updates",
-      "date": "2026-05-19",
-      "title": {
-        "en": "Annie Cognitive Analytics: see your Ikigai radar and session insights",
-        "es": "Analítica Cognitiva de Annie: tu radar Ikigai e insights de sesiones",
-        "de": "Annie Cognitive Analytics: dein Ikigai-Radar und Session-Einblicke",
-        "fr": "Analytique Cognitive Annie : votre radar Ikigai et vos insights de sessions",
-        "pt": "Analítica Cognitiva da Annie: seu radar Ikigai e insights de sessões"
-      },
-      "body": {
-        "en": "Annie now has her own analytics dashboard in the Hive: Cognitive Analytics. See 30 days of session activity on a line chart, how your execution targets break down on a donut, conversation balance between you and Annie, the hours when you're most active, and your Ikigai radar — a five-axis score (Passion, Mission, Vocation, Profession, Flow) derived from your real usage patterns. Open the Hive and select Cognitive Analytics to explore your profile.",
-        "es": "Annie ahora tiene su propio panel de analítica en el Hive: Analítica Cognitiva. Visualiza 30 días de actividad de sesiones, cómo se distribuyen tus objetivos de ejecución, el balance conversacional entre tú y Annie, tus horas más activas y tu radar Ikigai — una puntuación en cinco ejes (Pasión, Misión, Vocación, Profesión, Flujo) calculada desde tus patrones de uso reales.",
-        "de": "Annie hat jetzt ihr eigenes Analytics-Dashboard im Hive: Cognitive Analytics. Sieh 30 Tage Session-Aktivität, wie sich deine Ausführungsziele verteilen, Gesprächsbalance zwischen dir und Annie, deine aktivsten Stunden und dein Ikigai-Radar — fünf Achsen (Leidenschaft, Mission, Berufung, Beruf, Flow) aus echten Nutzungsmustern.",
-        "fr": "Annie dispose maintenant de son propre tableau de bord dans le Hive : Analytique Cognitive. Visualisez 30 jours d'activité de sessions, la répartition de vos cibles d'exécution, l'équilibre conversationnel entre vous et Annie, vos heures les plus actives et votre radar Ikigai — cinq axes (Passion, Mission, Vocation, Profession, Flux) issus de vos habitudes réelles.",
-        "pt": "A Annie agora tem seu próprio painel de analytics no Hive: Analítica Cognitiva. Veja 30 dias de atividade de sessões, como seus alvos de execução se distribuem, o equilíbrio conversacional entre você e a Annie, suas horas mais ativas e seu radar Ikigai — cinco eixos (Paixão, Missão, Vocação, Profissão, Fluxo) derivados dos seus padrões de uso reais."
-      }
-    },
-    {
-      "id": "u45",
-      "category": "updates",
-      "date": "2026-05-17",
-      "title": {
-        "en": "Voice greetings with Vapi: Annie says hello when you open the app",
-        "es": "Saludos de voz con Vapi: Annie te saluda al abrir la app",
-        "de": "Sprachbegrüßung mit Vapi: Annie begrüßt dich beim Öffnen der App",
-        "fr": "Salutations vocales avec Vapi : Annie vous accueille à l'ouverture de l'app",
-        "pt": "Saudações de voz com Vapi: Annie te cumprimenta ao abrir o app"
-      },
-      "body": {
-        "en": "The NEST mobile app now greets you by name when you log in, powered by Vapi. The greeting is personalised with your current project context — a quick audio cue to orient you before you start typing. The feature is opt-in and can be disabled from your mobile settings if you prefer a quieter start to your day.",
-        "es": "La app móvil de NEST ahora te saluda por nombre al iniciar sesión, gracias a Vapi. El saludo se personaliza con el contexto de tu proyecto actual — una señal de audio rápida para orientarte antes de empezar a escribir. La función es opcional y se puede desactivar desde los ajustes de la app.",
-        "de": "Die NEST-Mobile-App begrüßt dich jetzt beim Login namentlich, powered by Vapi. Der Gruß ist mit deinem aktuellen Projektkontext personalisiert — ein kurzes Audio-Signal zur Orientierung. Das Feature ist opt-in und kann in den App-Einstellungen deaktiviert werden.",
-        "fr": "L'application mobile NEST vous salue maintenant par votre nom à la connexion, via Vapi. Le message est personnalisé avec le contexte de votre projet actuel — un repère audio rapide avant de commencer. La fonctionnalité est optionnelle et peut être désactivée dans les paramètres.",
-        "pt": "O app mobile do NEST agora te cumprimenta pelo nome ao fazer login, via Vapi. A saudação é personalizada com o contexto do seu projeto atual — um sinal de áudio rápido para orientação. O recurso é opt-in e pode ser desativado nas configurações do app."
-      }
-    },
-    {
-      "id": "u44",
-      "category": "updates",
-      "date": "2026-05-16",
-      "title": {
-        "en": "Full 5-language support across every PM surface",
-        "es": "Soporte completo en 5 idiomas en todas las superficies PM",
-        "de": "Vollständiger 5-Sprachsupport auf allen PM-Oberflächen",
-        "fr": "Support complet en 5 langues sur toutes les surfaces PM",
-        "pt": "Suporte completo em 5 idiomas em todas as superfícies PM"
-      },
-      "body": {
-        "en": "The entire app is now available in English, Spanish, German, French, and Portuguese. Every PM surface — tasks, sprints, milestones, roadmap, calendar, Gantt, analytics, notifications, settings — follows your account language preference. Switch language from your profile and the change applies instantly across all tabs. No reload needed.",
-        "es": "Toda la app está disponible en inglés, español, alemán, francés y portugués. Todas las superficies PM — tareas, sprints, milestones, roadmap, calendario, Gantt, analítica, notificaciones y configuración — siguen el idioma de tu cuenta. Cambia el idioma desde tu perfil y el cambio se aplica al instante en todas las pestañas.",
-        "de": "Die gesamte App ist jetzt in Englisch, Spanisch, Deutsch, Französisch und Portugiesisch verfügbar. Alle PM-Oberflächen folgen deiner Kontosprache. Sprache im Profil ändern — sofortige Wirkung in allen Tabs, kein Reload nötig.",
-        "fr": "Toute l'application est désormais disponible en anglais, espagnol, allemand, français et portugais. Toutes les surfaces PM suivent la langue de votre compte. Changez de langue dans votre profil — prise d'effet immédiate, sans rechargement.",
-        "pt": "Todo o app está disponível em inglês, espanhol, alemão, francês e português. Todas as superfícies PM seguem a preferência de idioma da sua conta. Troque o idioma no perfil — a mudança é aplicada instantaneamente, sem recarregar."
-      }
-    },
-    {
-      "id": "u43",
-      "category": "updates",
-      "date": "2026-05-13",
-      "title": {
-        "en": "Attach files in chat, DNA skill chips on runs, and smoother mobile Kanban",
-        "es": "Adjunta archivos en el chat, chips de habilidades DNA en runs y Kanban móvil más fluido",
-        "de": "Dateien im Chat anhängen, DNA-Skill-Chips in Runs und flüssigeres Mobile-Kanban",
-        "fr": "Joindre des fichiers dans le chat, chips DNA sur les runs et Kanban mobile amélioré",
-        "pt": "Anexar arquivos no chat, chips de habilidades DNA em runs e Kanban mobile mais fluido"
-      },
-      "body": {
-        "en": "Drag or paste any image or document into a chat session or computer run composer — images appear as inline thumbnails, other files as rich previews with name and size. DNA skill chips now appear below the composer so you always know which skills are active on your current run; click × to remove one or drag to reorder. The Kanban board is now touch-native on mobile with smooth column scrolling and visual snap-to feedback on drop.",
-        "es": "Arrastra o pega imágenes y documentos en un chat o compositor de run — las imágenes aparecen como miniaturas en línea, otros archivos como vistas previas con nombre y tamaño. Los chips de habilidades DNA aparecen bajo el compositor para mostrar las habilidades activas; haz clic en × para eliminar. El tablero Kanban es ahora nativo para táctil en móvil.",
-        "de": "Bilder oder Dokumente per Drag & Drop oder Einfügen in Chat oder Run-Komponist. Bilder als Thumbnails, andere Dateien mit Name und Größe. DNA-Skill-Chips unter dem Komponisten zeigen aktive Skills; × zum Entfernen. Das Kanban-Board ist jetzt touch-nativ auf Mobile.",
-        "fr": "Glissez ou collez images et documents dans le chat ou le compositeur de run — images en miniatures, autres fichiers avec nom et taille. Les chips DNA apparaissent sous le compositeur pour montrer les compétences actives ; cliquez × pour en retirer. Le Kanban est maintenant natif tactile sur mobile.",
-        "pt": "Arraste ou cole imagens e documentos no chat ou compositor de run — imagens como miniaturas, outros arquivos com nome e tamanho. Chips de habilidades DNA aparecem abaixo do compositor; clique × para remover. O Kanban é agora nativo para toque no mobile."
-      }
-    },
-    {
-      "id": "u42",
-      "category": "updates",
-      "date": "2026-05-10",
-      "title": {
-        "en": "Hive workspace, DNA skill shelf, roadmap view, and AI Enhance",
-        "es": "Workspace Hive, estantería DNA, vista de roadmap y AI Enhance",
-        "de": "Hive-Workspace, DNA-Skill-Regal, Roadmap-Ansicht und AI Enhance",
-        "fr": "Espace de travail Hive, étagère DNA, vue feuille de route et AI Enhance",
-        "pt": "Workspace Hive, prateleira DNA, view de roadmap e AI Enhance"
-      },
-      "body": {
-        "en": "The Hive is now your central workspace: sessions, computer runs, Annie analytics, and the DNA skill shelf in one place. Browse the skill marketplace, select bundles relevant to your project, and attach them to any session or computer run so the AI agent has focused context from the start. The Roadmap view lets you see your project's phase timeline without needing admin access. Use AI Enhance on any task description to instantly expand, clarify, or add acceptance criteria.",
-        "es": "El Hive es ahora tu workspace central: sesiones, runs de ordenador, analítica de Annie y la estantería DNA en un solo lugar. Explora el marketplace de habilidades, selecciona bundles relevantes y adjúntalos a cualquier sesión o run. La vista de Roadmap muestra el timeline de fases de tu proyecto sin necesitar acceso admin. Usa AI Enhance en cualquier descripción de tarea para expandirla, clarificarla o agregar criterios de aceptación.",
-        "de": "Der Hive ist jetzt dein zentraler Workspace: Sessions, Computer-Runs, Annie-Analytics und DNA-Regal in einem. Durchsuche den Skill-Marktplatz und hänge Bundles an Sessions oder Runs. Die Roadmap-Ansicht zeigt Projekt-Phasen ohne Admin-Zugang. AI Enhance verbessert Task-Beschreibungen auf Knopfdruck.",
-        "fr": "Le Hive est votre espace de travail central : sessions, runs ordinateur, analytics Annie et étagère DNA réunis. Explorez le marketplace de compétences et attachez des bundles à vos sessions. La vue feuille de route affiche les phases du projet sans accès admin. AI Enhance améliore les descriptions de tâches en un clic.",
-        "pt": "O Hive é agora seu workspace central: sessões, runs de computador, analytics da Annie e prateleira DNA em um só lugar. Navegue pelo marketplace de habilidades e anexe bundles a sessões ou runs. A view de Roadmap mostra as fases do projeto sem precisar de acesso admin. AI Enhance melhora descrições de tarefas com um clique."
-      }
-    },
-    {
-      "id": "u41",
-      "category": "updates",
-      "date": "2026-05-08",
-      "title": {
-        "en": "Built-in task timer and redesigned task drawer",
-        "es": "Temporizador de tareas integrado y drawer de tareas rediseñado",
-        "de": "Eingebauter Task-Timer und überarbeiteter Task-Drawer",
-        "fr": "Chronomètre de tâche intégré et drawer de tâche repensé",
-        "pt": "Timer de tarefa integrado e drawer de tarefa redesenhado"
-      },
-      "body": {
-        "en": "Every task now has a built-in timer: tap Start when you begin, Pause if you step away, Resume when you're back, and Stop when you're done — the elapsed time is automatically saved as a time log entry. No manual entry needed for tracked work. The task drawer is now organised into four focused tabs: Details, Comments, Watchers, and Time, with a 'More' menu for advanced options so the most useful panels are always one tap away.",
-        "es": "Cada tarea tiene ahora un temporizador integrado: toca Start al comenzar, Pause si te vas, Resume al volver y Stop al terminar — el tiempo transcurrido se guarda automáticamente como entrada de tiempo. El drawer de tareas se organiza ahora en cuatro pestañas: Detalles, Comentarios, Watchers y Tiempo, con un menú 'Más' para opciones avanzadas.",
-        "de": "Jeder Task hat jetzt einen eingebauten Timer: Start beim Beginn, Pause beim Unterbrechen, Resume bei Rückkehr, Stop beim Abschluss — die Zeit wird automatisch als Zeiteintrag gespeichert. Der Task-Drawer ist in vier Tabs organisiert: Details, Kommentare, Watcher, Zeit, plus 'Mehr'-Menü.",
-        "fr": "Chaque tâche dispose maintenant d'un chronomètre intégré : Start au début, Pause à l'interruption, Resume au retour, Stop à la fin — le temps est automatiquement enregistré. Le drawer est organisé en quatre onglets : Détails, Commentaires, Abonnés, Temps, avec un menu 'Plus'.",
-        "pt": "Cada tarefa agora tem um timer integrado: toque Start ao começar, Pause ao sair, Resume ao voltar e Stop ao terminar — o tempo é salvo automaticamente como registro. O drawer de tarefas tem agora quatro abas: Detalhes, Comentários, Watchers e Tempo, com menu 'Mais' para opções avançadas."
-      }
-    },
-    {
-      "id": "u40",
-      "category": "updates",
-      "date": "2026-05-07",
-      "title": {
-        "en": "Command palette (⌘K) and AI assistant inside every project",
-        "es": "Paleta de comandos (⌘K) y asistente IA dentro de cada proyecto",
-        "de": "Befehls-Palette (⌘K) und KI-Assistent in jedem Projekt",
-        "fr": "Palette de commandes (⌘K) et assistant IA dans chaque projet",
-        "pt": "Paleta de comandos (⌘K) e assistente IA em cada projeto"
-      },
-      "body": {
-        "en": "Press ⌘K (or Ctrl+K) anywhere in a project to open the command palette — fuzzy search tasks, navigate between views, assign members, and trigger quick actions without touching the mouse. Projects also get a dedicated AI Assistant tab: start a conversation about your project's tasks, blockers, sprint progress, and next priorities, with full board context built in. Ask questions and get answers grounded in your actual data.",
-        "es": "Presiona ⌘K (o Ctrl+K) en cualquier lugar del proyecto para abrir la paleta de comandos — busca tareas, navega entre vistas, asigna miembros y ejecuta acciones rápidas sin usar el mouse. Los proyectos también tienen una pestaña de Asistente IA: chatea sobre tareas, bloqueos, progreso del sprint y próximas prioridades, con contexto completo del tablero.",
-        "de": "⌘K (oder Strg+K) öffnet die Befehlspalette — Tasks suchen, Ansichten wechseln, Mitglieder zuweisen und Schnellaktionen ohne Maus. Projekte erhalten außerdem einen KI-Assistent-Tab: Chatte über Tasks, Blocker, Sprint-Fortschritt und Prioritäten mit vollem Board-Kontext.",
-        "fr": "⌘K (ou Ctrl+K) ouvre la palette de commandes — recherchez des tâches, naviguez, assignez des membres sans souris. Les projets ont aussi un onglet Assistant IA : conversez sur les tâches, blocages, avancement du sprint et prochaines priorités avec le contexte complet.",
-        "pt": "⌘K (ou Ctrl+K) abre a paleta de comandos — busque tarefas, navegue entre views, atribua membros sem usar o mouse. Projetos também ganham uma aba de Assistente IA: converse sobre tarefas, bloqueios, progresso do sprint e próximas prioridades com contexto completo do board."
-      }
-    },
-    {
-      "id": "u39",
-      "category": "updates",
-      "date": "2026-05-06",
-      "title": {
-        "en": "Project analytics with member insights: velocity, workload, and burn rate",
-        "es": "Analítica de proyecto con insights de miembros: velocidad, carga de trabajo y tasa de consumo",
-        "de": "Projektanalysen mit Mitglieder-Insights: Velocity, Auslastung und Burn Rate",
-        "fr": "Analytique projet avec insights membres : vélocité, charge de travail et taux de consommation",
-        "pt": "Analytics de projeto com insights de membros: velocidade, carga de trabalho e burn rate"
-      },
-      "body": {
-        "en": "The Insights tab in every project now shows a Member Board with six D3 charts: sprint velocity, task completion per member, workload distribution, individual contribution over time, cycle time, and burn rate. Each chart is scoped to the current sprint or a custom date range. Open the project and go to the Insights tab to see how your team is performing at a glance.",
-        "es": "La pestaña Insights de cada proyecto muestra un Member Board con seis gráficos D3: velocidad de sprint, completado por miembro, distribución de carga, contribución individual, tiempo de ciclo y tasa de consumo. Cada gráfico se puede filtrar por sprint actual o rango de fechas personalizado.",
-        "de": "Der Insights-Tab in jedem Projekt zeigt ein Member-Board mit sechs D3-Diagrammen: Sprint-Velocity, Task-Abschluss pro Mitglied, Auslastungsverteilung, individuelle Beiträge, Cycle-Time und Burn-Rate. Gefiltert nach Sprint oder Zeitraum.",
-        "fr": "L'onglet Insights de chaque projet affiche un Member Board avec six graphiques D3 : vélocité sprint, complétion par membre, distribution de charge, contribution individuelle, cycle time et burn rate. Filtrable par sprint ou plage de dates.",
-        "pt": "A aba Insights de cada projeto mostra um Member Board com seis gráficos D3: velocidade de sprint, conclusão por membro, distribuição de carga, contribuição individual, tempo de ciclo e burn rate. Filtrável por sprint ou intervalo de datas."
-      }
-    },
-    {
-      "id": "u38",
-      "category": "updates",
-      "date": "2026-05-05",
-      "title": {
-        "en": "175+ workspace analytics views: everything from burndown to Monte Carlo",
-        "es": "Más de 175 vistas de analítica: desde burndown hasta Monte Carlo",
-        "de": "175+ Workspace-Analytics-Ansichten: von Burndown bis Monte Carlo",
-        "fr": "175+ vues d'analytique workspace : du burndown au Monte Carlo",
-        "pt": "175+ views de analytics: de burndown a Monte Carlo"
-      },
-      "body": {
-        "en": "The workspace analytics centre now has 175+ purpose-built views. You can explore sprint velocity, burndown, cycle time, WIP load, utilisation heatmap, priority matrix, Monte Carlo backlog forecast, OKR progress, SLA compliance, blocked-task aging, risk register, member productivity, phase bottleneck analysis, and much more. Find all views in the Analytics section of the workspace sidebar — each one updates in real time from the live data cache.",
-        "es": "El centro de analítica del workspace ahora tiene más de 175 vistas. Puedes explorar velocidad de sprint, burndown, tiempo de ciclo, carga WIP, heatmap de utilización, matriz de prioridades, pronóstico Monte Carlo del backlog, progreso OKR, cumplimiento SLA, envejecimiento de tareas bloqueadas, registro de riesgos, productividad de miembros y mucho más.",
-        "de": "Das Workspace-Analytics-Zentrum hat jetzt 175+ Views: Sprint-Velocity, Burndown, Cycle Time, WIP-Last, Nutzungs-Heatmap, Prioritätsmatrix, Monte-Carlo-Prognose, OKR-Fortschritt, SLA-Compliance, Blocker-Alterung, Risikoregister und mehr.",
-        "fr": "Le centre analytics workspace compte maintenant 175+ vues : vélocité sprint, burndown, cycle time, charge WIP, heatmap d'utilisation, matrice de priorités, prévision Monte Carlo, progression OKR, conformité SLA, vieillissement des blocages, registre des risques et bien plus.",
-        "pt": "O centro de analytics do workspace agora tem 175+ views: velocidade de sprint, burndown, tempo de ciclo, carga WIP, heatmap de utilização, matriz de prioridades, previsão Monte Carlo, progresso OKR, conformidade SLA, envelhecimento de bloqueios, registro de riscos e muito mais."
-      }
-    },
-    {
-      "id": "u37",
-      "category": "updates",
-      "date": "2026-05-04",
-      "title": {
-        "en": "Real-time template editing and per-event notification opt-outs",
-        "es": "Edición de plantillas en tiempo real y opt-outs de notificaciones por evento",
-        "de": "Echtzeit-Template-Bearbeitung und ereignisbezogene Benachrichtigungs-Opt-outs",
-        "fr": "Édition de modèles en temps réel et désabonnements par type d'événement",
-        "pt": "Edição de templates em tempo real e opt-outs de notificações por evento"
-      },
-      "body": {
-        "en": "Template editing is now collaborative in real time: edits you make appear instantly for anyone else viewing the same template — no refresh needed. On the notifications side, you can now silence individual event types without touching your global channel settings. Go to Settings → Notifications and toggle any event (task assigned, sprint started, task unblocked, task reminder due …) independently for in-app and email delivery.",
-        "es": "La edición de plantillas es ahora colaborativa en tiempo real: los cambios que realizas aparecen al instante para cualquier persona que vea la misma plantilla. En notificaciones, puedes silenciar tipos de eventos individuales sin tocar la configuración global de canales. Ve a Configuración → Notificaciones para activar o desactivar cada evento (tarea asignada, sprint iniciado, tarea desbloqueada…) de forma independiente.",
-        "de": "Template-Bearbeitung ist jetzt kollaborativ in Echtzeit — Änderungen erscheinen sofort für alle. Benachrichtigungen: Du kannst jetzt einzelne Ereignistypen ohne globale Kanaleinstellungen stummschalten. Einstellungen → Benachrichtigungen → togglee jeden Ereignistyp separat für In-App und E-Mail.",
-        "fr": "L'édition de modèles est maintenant collaborative en temps réel — les modifications apparaissent instantanément. Notifications : désactivez des types d'événements individuels sans changer les paramètres globaux. Paramètres → Notifications → basculez chaque événement indépendamment pour in-app et email.",
-        "pt": "A edição de templates agora é colaborativa em tempo real — edições aparecem imediatamente para todos. Notificações: desative tipos de eventos individuais sem alterar configurações globais. Vá em Configurações → Notificações e alterne cada evento (tarefa atribuída, sprint iniciado, tarefa desbloqueada…) independentemente para in-app e e-mail."
-      }
-    },
-    {
-      "id": "u36",
-      "category": "updates",
-      "date": "2026-04-30",
-      "title": {
-        "en": "Watch tasks, plan sprints, set milestones, and schedule recurring work",
-        "es": "Observa tareas, planifica sprints, define milestones y programa trabajo recurrente",
-        "de": "Tasks beobachten, Sprints planen, Meilensteine setzen und Wiederholungsaufgaben planen",
-        "fr": "Abonnez-vous aux tâches, planifiez les sprints, posez des jalons et programmez les récurrences",
-        "pt": "Observe tarefas, planeje sprints, defina marcos e programe trabalho recorrente"
-      },
-      "body": {
-        "en": "Four new PM capabilities are available today. Watch any task with the bell icon to receive notifications whenever a comment is posted, the status changes, or the task is reassigned — without being the assignee. Sprints let you group tasks into focused iterations with a live burndown chart. Milestones mark key deadlines with overdue, due-soon, and upcoming indicators. Recurring tasks auto-generate on a schedule you define: frequency, day of week, time of day, and timezone — with pause, skip, and snooze controls.",
-        "es": "Cuatro nuevas capacidades PM disponibles hoy. Observa cualquier tarea con el ícono de campana para recibir notificaciones cuando se agregue un comentario, cambie el estado o se reasigne — sin ser el asignado. Los Sprints agrupan tareas con burndown en vivo. Los Milestones marcan plazos clave con indicadores de vencido, próximo y futuro. Las tareas recurrentes se generan automáticamente según el horario que definas.",
-        "de": "Vier neue PM-Funktionen heute. Tasks beobachten mit dem Glocken-Icon für Benachrichtigungen. Sprints gruppieren Tasks mit Live-Burndown. Meilensteine markieren Schlüsseltermine. Wiederkehrende Tasks generieren sich automatisch nach deinem Zeitplan — mit Pause-, Überspringen- und Snooze-Kontrollen.",
-        "fr": "Quatre nouvelles fonctionnalités PM disponibles. Abonnez-vous à n'importe quelle tâche avec la cloche pour recevoir des notifications. Les sprints regroupent les tâches avec un burndown en direct. Les jalons marquent les échéances clés. Les tâches récurrentes se génèrent automatiquement selon votre calendrier.",
-        "pt": "Quatro novas capacidades PM disponíveis hoje. Observe qualquer tarefa com o sino para receber notificações. Sprints agrupam tarefas com burndown ao vivo. Marcos marcam prazos importantes. Tarefas recorrentes se geram automaticamente segundo o horário definido — com controles de pausa, pular e snooze."
-      }
-    },
-    {
-      "id": "u35",
-      "category": "updates",
-      "date": "2026-04-28",
-      "title": {
-        "en": "Notifications on every channel: push, Slack, Teams, SMS, and WhatsApp",
-        "es": "Notificaciones en todos los canales: push, Slack, Teams, SMS y WhatsApp",
-        "de": "Benachrichtigungen auf jedem Kanal: Push, Slack, Teams, SMS und WhatsApp",
-        "fr": "Notifications sur tous les canaux : push, Slack, Teams, SMS et WhatsApp",
-        "pt": "Notificações em todos os canais: push, Slack, Teams, SMS e WhatsApp"
-      },
-      "body": {
-        "en": "You can now receive project notifications on any channel you choose. Enable web push to get alerts in your browser without keeping a tab open. Connect Slack, Teams, SMS, or WhatsApp from Settings → Notifications → Channel destinations. The preferences matrix lets you set each event type to instant, digest, or off per channel independently — so you can get task assignments by push but comment mentions by Slack only, for example.",
-        "es": "Ahora puedes recibir notificaciones de proyecto en el canal que prefieras. Activa el push web para recibir alertas en el navegador sin mantener una pestaña abierta. Conecta Slack, Teams, SMS o WhatsApp desde Configuración → Notificaciones → Destinos de canales. La matriz de preferencias permite configurar cada tipo de evento en instantáneo, resumen o apagado por canal de forma independiente.",
-        "de": "Erhalte Projektbenachrichtigungen auf jedem gewünschten Kanal. Web-Push für Browser-Alerts ohne offenen Tab. Slack, Teams, SMS oder WhatsApp über Einstellungen → Benachrichtigungen verbinden. Die Präferenz-Matrix stellt jeden Ereignistyp unabhängig auf sofort, digest oder aus.",
-        "fr": "Recevez des notifications de projet sur n'importe quel canal. Activez le push web pour des alertes navigateur sans onglet ouvert. Connectez Slack, Teams, SMS ou WhatsApp dans Paramètres → Notifications. La matrice configure chaque type d'événement indépendamment : instantané, résumé ou désactivé.",
-        "pt": "Receba notificações de projeto em qualquer canal. Ative web push para alertas no navegador sem aba aberta. Conecte Slack, Teams, SMS ou WhatsApp em Configurações → Notificações. A matriz de preferências define cada tipo de evento como imediato, resumo ou desligado por canal independentemente."
-      }
-    },
-    {
-      "id": "u34",
-      "category": "updates",
-      "date": "2026-04-19",
-      "title": {
-        "en": "Project Management is here: tasks, boards, time tracking, and team roles",
-        "es": "El Project Management ya está disponible: tareas, tableros, time tracking y roles de equipo",
-        "de": "Project Management ist da: Tasks, Boards, Zeiterfassung und Teamrollen",
-        "fr": "La gestion de projet est là : tâches, tableaux, suivi du temps et rôles d'équipe",
-        "pt": "O Project Management chegou: tarefas, boards, time tracking e papéis de equipe"
-      },
-      "body": {
-        "en": "NEST now includes a full project management suite. Enable PM features on any project to get task lists, a drag-and-drop Kanban board, custom phases and statuses, member role management, time tracking with billing, and task dependencies. Open the **For You** page to see every task assigned to you across all projects in one prioritised view. Everything is encrypted and scoped to your workspace — nothing leaks between teams.",
-        "es": "NEST ahora incluye una suite completa de gestión de proyectos. Activa las funciones PM en cualquier proyecto para obtener listas de tareas, tablero Kanban con drag-and-drop, fases y estados personalizados, gestión de roles, time tracking con facturación y dependencias de tareas. Abre la página **For You** para ver todas las tareas asignadas en todos tus proyectos en una vista priorizada.",
-        "de": "NEST enthält jetzt eine vollständige Projektmanagement-Suite. Aktiviere PM-Features in jedem Projekt für Aufgabenlisten, Kanban-Board, benutzerdefinierte Phasen, Mitgliederrollen, Zeiterfassung mit Abrechnung und Abhängigkeiten. Die **For You**-Seite zeigt alle zugewiesenen Tasks über alle Projekte priorisiert.",
-        "fr": "NEST inclut maintenant une suite de gestion de projet complète. Activez les fonctionnalités PM sur n'importe quel projet pour obtenir des listes de tâches, un tableau Kanban, des phases personnalisées, la gestion des rôles, le suivi du temps et les dépendances. La page **For You** réunit toutes vos tâches assignées en une vue priorisée.",
-        "pt": "O NEST agora inclui uma suite completa de gestão de projetos. Ative PM em qualquer projeto para obter listas de tarefas, board Kanban, fases e status personalizados, papéis de membro, time tracking com faturamento e dependências. A página **For You** reúne todas as tarefas atribuídas em todos os projetos em uma view priorizada."
-      }
-    },
-    {
-      "id": "u33",
-      "category": "updates",
-      "date": "2026-04-18",
-      "title": {
-        "en": "Computer v1: project-first sessions from CLI and web",
-        "es": "Computer v1: sesiones project-first desde CLI y web",
-        "de": "Computer v1: projekt-first-Sessions per CLI und Web",
-        "fr": "Computer v1 : sessions project-first depuis le CLI et le web",
-        "pt": "Computer v1: sessões project-first pelo CLI e pela web"
-      },
-      "body": {
-        "en": "NEST ships the first Computer release: run `annie computer` to pair a registered machine with a server project, bind the local working directory once, and launch a computer session that reuses the same chat shell you already know. Open **Computers** in the web app to browse active and older computer sessions, search the list, and jump into the same SessionChat experience while the server keeps bindings and run history in one place.",
-        "es": "NEST lanza la primera versión de Computer: ejecuta `annie computer` para emparejar una máquina registrada con un proyecto del servidor, vincula el directorio local una vez y abre una sesión computer que reutiliza el mismo chat que ya conoces. Entra en **Computers** en la web para ver sesiones activas y anteriores, buscar en la lista y abrir el mismo SessionChat mientras el servidor mantiene bindings e historial de runs centralizado.",
-        "de": "NEST liefert Computer v1: Mit `annie computer` koppeln Sie eine registrierte Maschine an ein Server-Projekt, binden das lokale Arbeitsverzeichnis einmalig und starten eine Computer-Session im gewohnten Chat-Layout. Öffnen Sie **Computers** in der Web-App, um aktive und ältere Computer-Sessions zu sehen, zu suchen und dieselbe SessionChat-Oberfläche zu nutzen — Bindings und Run-Verlauf bleiben serverseitig konsolidiert.",
-        "fr": "NEST livre Computer v1 : lancez `annie computer` pour associer une machine enregistrée à un projet serveur, lier une fois le répertoire local et ouvrir une session computer dans le même chat qu’ailleurs. Ouvrez **Computers** dans le web pour parcourir les sessions actives et plus anciennes, rechercher et reprendre le même SessionChat pendant que le serveur conserve liaisons et historique d’exécution au même endroit.",
-        "pt": "NEST entrega o Computer v1: rode `annie computer` para parear uma máquina registrada com um projeto do servidor, vincule o diretório local uma vez e abra uma sessão computer no mesmo shell de chat de sempre. Abra **Computers** na web para listar sessões ativas e antigas, buscar e entrar no mesmo SessionChat enquanto o servidor mantém bindings e histórico de runs em um só lugar."
-      }
-    },
-    {
-      "id": "u32",
-      "category": "updates",
-      "date": "2026-04-03",
-      "title": {
-        "en": "Workflow spotlight: ship audio and video outputs faster",
-        "es": "Caso destacado: entrega salidas de audio y video más rápido",
-        "de": "Workflow-Spotlight: Audio- und Video-Outputs schneller liefern",
-        "fr": "Focus workflow : livrez vos sorties audio et vidéo plus vite",
-        "pt": "Destaque de workflow: entregue saídas de áudio e vídeo mais rápido"
-      },
-      "body": {
-        "en": "Use one chat flow to go from prompt to multimodal output: text generation, image assets, voice/audio processing, and video generation in the same project timeline. Teams can iterate creative and technical steps together without switching tools or losing context.",
-        "es": "Usa un solo flujo de chat para ir del prompt a la salida multimodal: generación de texto, assets de imagen, procesamiento de voz/audio y generación de video en la misma línea de proyecto. Los equipos pueden iterar pasos creativos y técnicos juntos sin cambiar de herramienta ni perder contexto.",
-        "de": "Nutzen Sie einen Chat-Flow vom Prompt bis zum multimodalen Output: Textgenerierung, Bild-Assets, Sprach-/Audioverarbeitung und Videogenerierung in derselben Projekt-Timeline. Teams iterieren kreative und technische Schritte gemeinsam, ohne Tools zu wechseln oder Kontext zu verlieren.",
-        "fr": "Utilisez un seul flux de chat pour passer du prompt à la sortie multimodale : génération de texte, assets image, traitement voix/audio et génération vidéo dans la même timeline projet. Les équipes itèrent les étapes créatives et techniques ensemble sans changer d'outil ni perdre le contexte.",
-        "pt": "Use um único fluxo de chat para ir do prompt à saída multimodal: geração de texto, assets de imagem, processamento de voz/áudio e geração de vídeo na mesma timeline de projeto. As equipes iteram etapas criativas e técnicas juntas sem trocar de ferramenta nem perder contexto."
-      }
-    },
-    {
-      "id": "u31",
-      "category": "updates",
-      "date": "2026-04-03",
-      "title": {
-        "en": "Major milestone: 1,000+ AI models in one chat workspace",
-        "es": "Hito mayor: más de 1.000 modelos de IA en un solo chat",
-        "de": "Großer Meilenstein: 1.000+ KI-Modelle in einem Chat-Workspace",
-        "fr": "Jalon majeur : plus de 1 000 modèles IA dans un seul espace de chat",
-        "pt": "Grande marco: mais de 1.000 modelos de IA em um único chat"
-      },
-      "body": {
-        "en": "NEST chat now connects OpenRouter, fal.ai, DeepInfra, and Vertex so users can access 1,000+ models from one place. Run LLM, image, audio, and video workflows in the same project context, switch providers without losing continuity, and keep execution centralized in your existing workspace.",
-        "es": "El chat de NEST ahora conecta OpenRouter, fal.ai, DeepInfra y Vertex para que los usuarios accedan a más de 1.000 modelos desde un solo lugar. Ejecuta flujos LLM, imagen, audio y video en el mismo contexto de proyecto, cambia de proveedor sin perder continuidad y mantén la ejecución centralizada en tu workspace.",
-        "de": "NEST Chat verbindet jetzt OpenRouter, fal.ai, DeepInfra und Vertex, damit Nutzer auf 1.000+ Modelle an einem Ort zugreifen können. Führen Sie LLM-, Bild-, Audio- und Video-Workflows im selben Projektkontext aus, wechseln Sie Anbieter ohne Kontextverlust und halten Sie die Ausführung im bestehenden Workspace zentralisiert.",
-        "fr": "Le chat NEST connecte désormais OpenRouter, fal.ai, DeepInfra et Vertex afin de donner accès à plus de 1 000 modèles depuis un seul endroit. Exécutez des workflows LLM, image, audio et vidéo dans le même contexte projet, changez de fournisseur sans perdre la continuité et centralisez l'exécution dans votre workspace existant.",
-        "pt": "O chat do NEST agora conecta OpenRouter, fal.ai, DeepInfra e Vertex para dar acesso a mais de 1.000 modelos em um só lugar. Execute fluxos de LLM, imagem, áudio e vídeo no mesmo contexto de projeto, troque de provedor sem perder continuidade e mantenha a execução centralizada no seu workspace."
-      }
-    },
-    {
-      "id": "u30",
-      "category": "updates",
-      "date": "2026-03-28",
-      "title": {
-        "en": "Work from your terminal or the web — everything stays in sync",
-        "es": "Trabaja desde la terminal o la web — todo se mantiene sincronizado",
-        "de": "Arbeiten Sie im Terminal oder im Web — alles bleibt synchron",
-        "fr": "Travaillez depuis le terminal ou le web — tout reste synchronisé",
-        "pt": "Trabalhe do terminal ou da web — tudo fica sincronizado"
-      },
-      "body": {
-        "en": "Type a request in your terminal and watch the response appear in the web in real time. Send a message from the web and the agent processes it as if you were sitting at the keyboard. Works across all six agents. Your team chooses the interface they prefer — the platform handles the rest.",
-        "es": "Escribe una solicitud en tu terminal y observa la respuesta aparecer en la web en tiempo real. Envía un mensaje desde la web y el agente lo procesa como si estuvieras frente al teclado. Funciona con los seis agentes. Tu equipo elige la interfaz que prefiera.",
-        "de": "Geben Sie eine Anfrage im Terminal ein und sehen Sie die Antwort in Echtzeit im Web. Senden Sie eine Nachricht vom Web und der Agent verarbeitet sie wie Tastatureingabe. Funktioniert mit allen sechs Agenten.",
-        "fr": "Tapez une demande dans le terminal et voyez la réponse apparaître sur le web en temps réel. Envoyez depuis le web et l'agent traite comme si vous étiez au clavier. Fonctionne avec les six agents.",
-        "pt": "Digite uma solicitação no terminal e veja a resposta aparecer na web em tempo real. Envie pela web e o agente processa como se você estivesse no teclado. Funciona com os seis agentes."
-      }
-    },
-    {
-      "id": "u29",
-      "category": "updates",
-      "date": "2026-03-28",
-      "title": {
-        "en": "Pick up where you left off — with any agent",
-        "es": "Retoma donde lo dejaste — con cualquier agente",
-        "de": "Nahtlos weitermachen — mit jedem Agenten",
-        "fr": "Reprenez là où vous en étiez — avec n'importe quel agent",
-        "pt": "Continue de onde parou — com qualquer agente"
-      },
-      "body": {
-        "en": "Resume any past session regardless of which agent you started it with. NEST routes it to the right tool automatically. No more lost context or session crashes when switching between agents.",
-        "es": "Reanuda cualquier sesión pasada sin importar con qué agente la iniciaste. NEST la dirige a la herramienta correcta automáticamente. Sin más pérdida de contexto ni crashes al cambiar entre agentes.",
-        "de": "Setzen Sie jede vergangene Sitzung fort, unabhängig vom ursprünglichen Agenten. NEST leitet automatisch zum richtigen Tool weiter. Kein Kontextverlust mehr.",
-        "fr": "Reprenez n'importe quelle session passée, quel que soit l'agent d'origine. NEST dirige automatiquement vers le bon outil.",
-        "pt": "Retome qualquer sessão passada independente do agente usado. NEST direciona para a ferramenta correta automaticamente."
-      }
-    },
-    {
-      "id": "u28",
-      "category": "updates",
-      "date": "2026-03-27",
-      "title": {
-        "en": "Send tasks from the web without interrupting the developer",
-        "es": "Envía tareas desde la web sin interrumpir al desarrollador",
-        "de": "Aufgaben vom Web senden, ohne den Entwickler zu unterbrechen",
-        "fr": "Envoyez des tâches depuis le web sans interrompre le développeur",
-        "pt": "Envie tarefas pela web sem interromper o desenvolvedor"
-      },
-      "body": {
-        "en": "When a developer is working locally and someone sends a task from the web, the agent handles it in the background. The developer's workflow stays uninterrupted — no freezes, no lost work. Applies to all six supported agents.",
-        "es": "Cuando un desarrollador trabaja localmente y alguien envía una tarea desde la web, el agente la procesa en segundo plano. El flujo del desarrollador no se interrumpe. Aplica a los seis agentes.",
-        "de": "Wenn ein Entwickler lokal arbeitet und jemand eine Aufgabe vom Web sendet, verarbeitet der Agent sie im Hintergrund. Kein Einfrieren, keine verlorene Arbeit.",
-        "fr": "Quand un développeur travaille localement et qu'une tâche arrive du web, l'agent la traite en arrière-plan. Aucune interruption.",
-        "pt": "Quando um desenvolvedor trabalha localmente e alguém envia uma tarefa pela web, o agente processa em segundo plano. Sem interrupções."
-      }
-    },
-    {
-      "id": "u26",
-      "category": "updates",
-      "date": "2026-03-26",
-      "title": {
-        "en": "Step-by-step rollout guide for your team",
-        "es": "Guía de implementación paso a paso para tu equipo",
-        "de": "Schritt-für-Schritt-Rollout-Anleitung für Ihr Team",
-        "fr": "Guide de déploiement étape par étape pour votre équipe",
-        "pt": "Guia de implantação passo a passo para sua equipe"
-      },
-      "body": {
-        "en": "A phased adoption checklist covers everything from initial credentials to production hardening. Share it with IT, security, and engineering so everyone follows the same plan from day one.",
-        "es": "Una checklist de adopción por fases cubre desde credenciales iniciales hasta endurecimiento en producción. Compártela con IT, seguridad e ingeniería para que todos sigan el mismo plan.",
-        "de": "Eine Phasen-Checkliste deckt alles ab — von Credentials bis Produktions-Härtung. Teilen Sie sie mit IT, Security und Engineering.",
-        "fr": "Une checklist par phases couvre tout — des identifiants au durcissement en production. Partagez-la avec IT, sécurité et ingénierie.",
-        "pt": "Uma checklist faseada cobre tudo — de credenciais a hardening em produção. Compartilhe com TI, segurança e engenharia."
-      }
-    },
-    {
-      "id": "u25",
-      "category": "updates",
-      "date": "2026-03-26",
-      "title": {
-        "en": "Secure agent connections — no exposed credentials",
-        "es": "Conexiones de agentes seguras — sin credenciales expuestas",
-        "de": "Sichere Agent-Verbindungen — keine offenen Credentials",
-        "fr": "Connexions d'agents sécurisées — aucune fuite d'identifiants",
-        "pt": "Conexões de agentes seguras — sem credenciais expostas"
-      },
-      "body": {
-        "en": "All agent connections go through your own server with token-based authentication. Secrets stay in environment variables, never in code repositories. Teams connect securely without extra setup steps.",
-        "es": "Todas las conexiones pasan por tu servidor con autenticación por token. Los secretos quedan en variables de entorno, nunca en repositorios. Los equipos se conectan de forma segura sin pasos extra.",
-        "de": "Alle Verbindungen laufen über Ihren Server mit Token-Authentifizierung. Secrets bleiben in Umgebungsvariablen. Teams verbinden sich sicher ohne Zusatzschritte.",
-        "fr": "Toutes les connexions passent par votre serveur avec authentification par token. Les secrets restent dans les variables d'environnement.",
-        "pt": "Todas as conexões passam pelo seu servidor com autenticação por token. Segredos ficam em variáveis de ambiente, nunca em repositórios."
-      }
-    },
-    {
-      "id": "u23",
-      "category": "updates",
-      "date": "2026-03-22",
-      "title": {
-        "en": "Save and reuse your best prompts",
-        "es": "Guarda y reutiliza tus mejores prompts",
-        "de": "Speichern und Wiederverwenden Ihrer besten Prompts",
-        "fr": "Enregistrez et réutilisez vos meilleurs prompts",
-        "pt": "Salve e reutilize seus melhores prompts"
-      },
-      "body": {
-        "en": "The Prompt Library stores every prompt you have used. Search past prompts, pick the one you need, and insert it into a new conversation with one click. Stop rewriting the same instructions.",
-        "es": "La Biblioteca de Prompts almacena cada prompt que has usado. Busca prompts anteriores, elige el que necesitas e insértalo en una nueva conversación con un clic. Deja de reescribir las mismas instrucciones.",
-        "de": "Die Prompt-Bibliothek speichert jeden verwendeten Prompt. Suchen, auswählen und mit einem Klick einfügen. Keine doppelten Anweisungen mehr.",
-        "fr": "La bibliothèque de prompts stocke chaque prompt utilisé. Recherchez, sélectionnez et insérez en un clic.",
-        "pt": "A Biblioteca de Prompts armazena cada prompt usado. Pesquise, escolha e insira em uma nova conversa com um clique."
-      }
-    },
-    {
-      "id": "u22",
-      "category": "updates",
-      "date": "2026-03-22",
-      "title": {
-        "en": "Reference project files by name in your messages",
-        "es": "Referencia archivos del proyecto por nombre en tus mensajes",
-        "de": "Projektdateien per Name in Nachrichten referenzieren",
-        "fr": "Référencez des fichiers par nom dans vos messages",
-        "pt": "Referencie arquivos do projeto por nome nas suas mensagens"
-      },
-      "body": {
-        "en": "Type @ in the message box to search project files by name. Select a file and its path is inserted automatically. The agent knows exactly which file you are talking about.",
-        "es": "Escribe @ en el cuadro de mensaje para buscar archivos por nombre. Selecciona y la ruta se inserta automáticamente. El agente sabe exactamente de qué archivo hablas.",
-        "de": "Geben Sie @ im Nachrichtenfeld ein, um Dateien zu suchen. Wählen Sie eine Datei und der Pfad wird eingefügt. Der Agent weiß genau, welche Datei gemeint ist.",
-        "fr": "Tapez @ pour rechercher des fichiers par nom. Le chemin est inséré automatiquement. L'agent sait exactement de quel fichier il s'agit.",
-        "pt": "Digite @ na caixa de mensagem para buscar arquivos por nome. Selecione e o caminho é inserido automaticamente."
-      }
-    },
-    {
-      "id": "u21",
-      "category": "updates",
-      "date": "2026-03-22",
-      "title": {
-        "en": "Platform updates delivered to your dashboard",
-        "es": "Actualizaciones de la plataforma directo en tu panel",
-        "de": "Plattform-Updates direkt in Ihrem Dashboard",
-        "fr": "Mises à jour de la plateforme dans votre tableau de bord",
-        "pt": "Atualizações da plataforma direto no seu painel"
-      },
-      "body": {
-        "en": "New features and improvements are announced directly in the notification panel. Stay informed about what is new without checking release notes externally.",
-        "es": "Las nuevas funcionalidades y mejoras se anuncian directamente en el panel de notificaciones. Mantente informado sin revisar notas de release externas.",
-        "de": "Neue Funktionen werden direkt im Benachrichtigungspanel angekündigt. Bleiben Sie informiert ohne externe Release-Notes.",
-        "fr": "Les nouvelles fonctionnalités sont annoncées dans le panneau de notifications. Restez informé sans consulter les notes de version externes.",
-        "pt": "Novas funcionalidades são anunciadas no painel de notificações. Fique informado sem consultar notas de release externas."
-      }
-    },
-    {
-      "id": "u1",
-      "category": "updates",
-      "date": "2026-03-22",
-      "title": {
-        "en": "Welcome to NEST — your AI coding control center",
-        "es": "Bienvenido a NEST — tu centro de control IA para código",
-        "de": "Willkommen bei NEST — Ihre KI-Coding-Zentrale",
-        "fr": "Bienvenue sur NEST — votre centre de contrôle IA",
-        "pt": "Bem-vindo ao NEST — seu centro de controle IA para código"
-      },
-      "body": {
-        "en": "NEST connects all your AI coding agents to one web dashboard. Monitor what your team is doing, send tasks from your phone, and manage sessions from anywhere. Claude, Codex, Gemini, Cursor, OpenCode, and Kilocode — all in one place.",
-        "es": "NEST conecta todos tus agentes IA de código a un panel web. Monitorea lo que tu equipo está haciendo, envía tareas desde tu teléfono y gestiona sesiones desde cualquier lugar. Claude, Codex, Gemini, Cursor, OpenCode y Kilocode — todo en un solo lugar.",
-        "de": "NEST verbindet alle KI-Agenten mit einem Web-Dashboard. Überwachen Sie Ihr Team, senden Sie Aufgaben vom Handy und verwalten Sie Sitzungen von überall.",
-        "fr": "NEST connecte tous vos agents IA à un tableau de bord web. Surveillez votre équipe, envoyez des tâches depuis votre téléphone et gérez les sessions de n'importe où.",
-        "pt": "NEST conecta todos os seus agentes IA a um painel web. Monitore sua equipe, envie tarefas do celular e gerencie sessões de qualquer lugar."
-      }
-    },
-    {
-      "id": "u2",
-      "category": "updates",
-      "date": "2026-03-20",
-      "title": {
-        "en": "Full-featured remote terminal in the browser",
-        "es": "Terminal remota completa en el navegador",
-        "de": "Voll ausgestattetes Remote-Terminal im Browser",
-        "fr": "Terminal distant complet dans le navigateur",
-        "pt": "Terminal remoto completo no navegador"
-      },
-      "body": {
-        "en": "Access your team's machines directly from the web. Split panes, broadcast commands to multiple terminals, choose from several themes, save command snippets, and search terminal history. Everything a developer needs, right in the browser.",
-        "es": "Accede a las máquinas de tu equipo directo desde la web. Divide paneles, envía comandos a múltiples terminales, elige entre varios temas, guarda snippets y busca en el historial. Todo lo que un desarrollador necesita, en el navegador.",
-        "de": "Greifen Sie direkt im Browser auf Team-Maschinen zu. Split-Panes, Broadcast, Themes, Snippets, Suche — alles was Entwickler brauchen.",
-        "fr": "Accédez aux machines de votre équipe depuis le navigateur. Panneaux divisés, broadcast, thèmes, snippets et recherche.",
-        "pt": "Acesse as máquinas da equipe direto pelo navegador. Divide painéis, broadcast, temas, snippets e busca no histórico."
-      }
-    },
-    {
-      "id": "u3",
-      "category": "updates",
-      "date": "2026-03-18",
-      "title": {
-        "en": "Terminal sessions are encrypted and persistent",
-        "es": "Las sesiones de terminal son encriptadas y persistentes",
-        "de": "Terminal-Sitzungen sind verschlüsselt und persistent",
-        "fr": "Les sessions terminal sont chiffrées et persistantes",
-        "pt": "Sessões de terminal são criptografadas e persistentes"
-      },
-      "body": {
-        "en": "All terminal data is encrypted at rest. If you disconnect or refresh, your session picks up right where you left it. No data loss, no re-typing commands.",
-        "es": "Todos los datos del terminal están encriptados en reposo. Si te desconectas o refrescas, tu sesión continúa donde la dejaste. Sin pérdida de datos.",
-        "de": "Alle Terminal-Daten werden verschlüsselt gespeichert. Bei Verbindungsabbruch geht nichts verloren — Ihre Sitzung wird exakt fortgesetzt.",
-        "fr": "Toutes les données terminal sont chiffrées au repos. En cas de déconnexion, votre session reprend exactement là où vous l'avez laissée.",
-        "pt": "Todos os dados do terminal são criptografados em repouso. Se desconectar ou atualizar, sua sessão continua de onde parou."
-      }
-    },
-    {
-      "id": "u4",
-      "category": "updates",
-      "date": "2026-03-15",
-      "title": {
-        "en": "Switch AI models on the fly",
-        "es": "Cambia de modelo IA sobre la marcha",
-        "de": "KI-Modelle im laufenden Betrieb wechseln",
-        "fr": "Changez de modèle IA à la volée",
-        "pt": "Troque de modelo IA durante a conversa"
-      },
-      "body": {
-        "en": "Choose which AI model to use when you start a session and switch mid-conversation without losing context. Use a lightweight model for quick tasks and a powerful one when you need deeper reasoning.",
-        "es": "Elige qué modelo usar al iniciar y cambia durante la conversación sin perder contexto. Usa un modelo liviano para tareas rápidas y uno potente cuando necesites razonamiento profundo.",
-        "de": "Wählen Sie das Modell beim Start und wechseln Sie während des Gesprächs. Leichtes Modell für schnelle Aufgaben, leistungsstarkes für tiefes Reasoning.",
-        "fr": "Choisissez le modèle au démarrage et changez en cours de conversation. Modèle léger pour les tâches rapides, puissant pour le raisonnement complexe.",
-        "pt": "Escolha o modelo ao iniciar e troque durante a conversa. Modelo leve para tarefas rápidas, potente para raciocínio profundo."
-      }
-    },
-    {
-      "id": "u5",
-      "category": "updates",
-      "date": "2026-03-12",
-      "title": {
-        "en": "Control what AI agents can and cannot do",
-        "es": "Controla lo que los agentes IA pueden y no pueden hacer",
-        "de": "Kontrollieren Sie, was KI-Agenten dürfen und was nicht",
-        "fr": "Contrôlez ce que les agents IA peuvent faire ou non",
-        "pt": "Controle o que os agentes IA podem e não podem fazer"
-      },
-      "body": {
-        "en": "Set permission levels so agents ask before editing files, run in read-only mode, or auto-approve safe operations. Switch between planning mode and execution mode mid-session based on the task at hand.",
-        "es": "Configura niveles de permisos para que los agentes pidan antes de editar, operen en modo lectura, o auto-aprueben operaciones seguras. Cambia entre modo planificación y ejecución según la tarea.",
-        "de": "Legen Sie Berechtigungen fest: Agenten fragen vor dem Bearbeiten, arbeiten nur lesend oder genehmigen sichere Operationen automatisch. Wechseln Sie zwischen Planungs- und Ausführungsmodus.",
-        "fr": "Définissez les niveaux de permission : les agents demandent avant de modifier, fonctionnent en lecture seule ou approuvent automatiquement. Basculez entre planification et exécution.",
-        "pt": "Configure permissões: agentes pedem antes de editar, operam em modo leitura ou auto-aprovam operações seguras. Alterne entre planejamento e execução."
-      }
-    },
-    {
-      "id": "u6",
-      "category": "updates",
-      "date": "2026-03-08",
-      "title": {
-        "en": "See what the agent changed — right in the browser",
-        "es": "Ve lo que el agente cambió — directo en el navegador",
-        "de": "Sehen Sie, was der Agent geändert hat — direkt im Browser",
-        "fr": "Voyez ce que l'agent a modifié — directement dans le navigateur",
-        "pt": "Veja o que o agente mudou — direto no navegador"
-      },
-      "body": {
-        "en": "The Files tab shows your project's file tree, which files were modified, and a clear before-and-after diff. Reviewers and managers can audit agent work without cloning the repository.",
-        "es": "La pestaña Files muestra el árbol de archivos del proyecto, qué archivos se modificaron y un diff claro de antes y después. Revisores y managers pueden auditar el trabajo del agente sin clonar el repo.",
-        "de": "Der Dateien-Tab zeigt den Dateibaum, geänderte Dateien und klare Vorher-Nachher-Diffs. Reviewer und Manager können die Agent-Arbeit ohne Repository-Klon prüfen.",
-        "fr": "L'onglet fichiers montre l'arbre du projet, les fichiers modifiés et un diff clair. Les reviewers peuvent auditer sans cloner le dépôt.",
-        "pt": "A aba Files mostra a árvore de arquivos, quais foram modificados e um diff claro. Revisores podem auditar sem clonar o repositório."
-      }
-    },
-    {
-      "id": "u7",
-      "category": "updates",
-      "date": "2026-03-05",
-      "title": {
-        "en": "Every agent's usage in one dashboard",
-        "es": "El uso de cada agente en un solo dashboard",
-        "de": "Nutzung aller Agenten in einem Dashboard",
-        "fr": "L'utilisation de chaque agent dans un seul tableau de bord",
-        "pt": "Uso de cada agente em um só dashboard"
-      },
-      "body": {
-        "en": "Token consumption from Claude, Gemini, Codex, Cursor, OpenCode, and Kilocode all feeds into the same analytics view. Compare usage across agents, teams, and projects at a glance.",
-        "es": "El consumo de tokens de los seis agentes alimenta la misma vista de analytics. Compara uso entre agentes, equipos y proyectos de un vistazo.",
-        "de": "Token-Verbrauch aller sechs Agenten in einer Analytics-Ansicht. Vergleichen Sie Nutzung nach Agent, Team und Projekt auf einen Blick.",
-        "fr": "La consommation de tokens des six agents alimente la même vue analytics. Comparez l'utilisation par agent, équipe et projet.",
-        "pt": "Consumo de tokens dos seis agentes alimenta a mesma visão de analytics. Compare uso entre agentes, equipes e projetos."
-      }
-    },
-    {
-      "id": "u9",
-      "category": "updates",
-      "date": "2026-02-26",
-      "title": {
-        "en": "Quick commands from your keyboard",
-        "es": "Comandos rápidos desde tu teclado",
-        "de": "Schnellbefehle per Tastatur",
-        "fr": "Commandes rapides depuis le clavier",
-        "pt": "Comandos rápidos pelo teclado"
-      },
-      "body": {
-        "en": "Press Ctrl+K to open a searchable command menu. Switch models, change agent modes, cancel running tasks, and trigger common actions — all without reaching for the mouse.",
-        "es": "Presiona Ctrl+K para abrir un menú de comandos con búsqueda. Cambia modelos, modos, cancela tareas y dispara acciones comunes — todo sin tocar el mouse.",
-        "de": "Strg+K öffnet ein durchsuchbares Befehlsmenü. Modelle wechseln, Modi ändern, Aufgaben abbrechen — alles ohne Maus.",
-        "fr": "Ctrl+K ouvre un menu de commandes. Changez de modèle, de mode, annulez des tâches — sans toucher la souris.",
-        "pt": "Ctrl+K abre um menu de comandos. Troque modelos, modos, cancele tarefas — tudo sem usar o mouse."
-      }
-    },
-    {
-      "id": "u10",
-      "category": "updates",
-      "date": "2026-02-22",
-      "title": {
-        "en": "Stay logged in without interruptions",
-        "es": "Mantente conectado sin interrupciones",
-        "de": "Angemeldet bleiben ohne Unterbrechungen",
-        "fr": "Restez connecté sans interruption",
-        "pt": "Fique conectado sem interrupções"
-      },
-      "body": {
-        "en": "Your session renews automatically in the background. No more surprise logouts, no more losing work because a token expired while you were in the middle of a review.",
-        "es": "Tu sesión se renueva automáticamente en segundo plano. Sin más logouts sorpresa ni pérdida de trabajo porque un token expiró mientras revisabas algo.",
-        "de": "Ihre Sitzung wird automatisch im Hintergrund erneuert. Keine überraschenden Abmeldungen mehr.",
-        "fr": "Votre session se renouvelle automatiquement en arrière-plan. Plus de déconnexions surprises.",
-        "pt": "Sua sessão se renova automaticamente em segundo plano. Sem mais logouts surpresa."
-      }
-    },
-    {
-      "id": "u11",
-      "category": "updates",
-      "date": "2026-02-18",
-      "title": {
-        "en": "Track AI costs and set budget alerts",
-        "es": "Rastrea costos de IA y configura alertas de presupuesto",
-        "de": "KI-Kosten verfolgen und Budget-Warnungen einrichten",
-        "fr": "Suivez les coûts IA et configurez des alertes budgétaires",
-        "pt": "Acompanhe custos de IA e configure alertas de orçamento"
-      },
-      "body": {
-        "en": "See estimated costs per session and per model. Set daily or monthly spending limits and get notified before they are reached. Admins see a breakdown by user, project, and model.",
-        "es": "Ve costos estimados por sesión y modelo. Configura límites de gasto diarios o mensuales y recibe alertas antes de alcanzarlos. Los admins ven el desglose por usuario, proyecto y modelo.",
-        "de": "Geschätzte Kosten pro Sitzung und Modell. Tages- oder Monatslimits setzen und rechtzeitig gewarnt werden. Admin-Aufschlüsselung nach Benutzer, Projekt und Modell.",
-        "fr": "Coûts estimés par session et modèle. Limites quotidiennes ou mensuelles avec alertes. Vue admin par utilisateur, projet et modèle.",
-        "pt": "Custos estimados por sessão e modelo. Limites diários ou mensais com alertas. Visão admin por usuário, projeto e modelo."
-      }
-    },
-    {
-      "id": "u12",
-      "category": "updates",
-      "date": "2026-02-14",
-      "title": {
-        "en": "One section breaks — the rest keeps working",
-        "es": "Una sección falla — el resto sigue funcionando",
-        "de": "Ein Bereich fällt aus — der Rest läuft weiter",
-        "fr": "Une section tombe — le reste continue",
-        "pt": "Uma seção falha — o restante continua funcionando"
-      },
-      "body": {
-        "en": "If something goes wrong in one part of the dashboard, only that section shows a recovery option. The rest of the app stays fully functional — no more blank screens or full reloads.",
-        "es": "Si algo sale mal en una parte del panel, solo esa sección muestra una opción de recuperación. El resto de la app sigue funcional — sin más pantallas en blanco.",
-        "de": "Bei einem Problem in einem Bereich zeigt nur dieser eine Wiederherstellungsoption. Der Rest bleibt voll funktional.",
-        "fr": "En cas de problème dans une section, seule celle-ci affiche une option de récupération. Le reste reste fonctionnel.",
-        "pt": "Se algo der errado em uma seção, apenas ela mostra opção de recuperação. O restante do app continua funcional."
-      }
-    },
-    {
-      "id": "u13",
-      "category": "updates",
-      "date": "2026-02-10",
-      "title": {
-        "en": "Install in under a minute on any platform",
-        "es": "Instala en menos de un minuto en cualquier plataforma",
-        "de": "In unter einer Minute auf jeder Plattform installieren",
-        "fr": "Installation en moins d'une minute sur toute plateforme",
-        "pt": "Instale em menos de um minuto em qualquer plataforma"
-      },
-      "body": {
-        "en": "The download page detects your operating system and offers the right version automatically. macOS, Linux, and Windows are fully supported. Your team can be up and running before the onboarding call ends.",
-        "es": "La página de descarga detecta tu sistema operativo y ofrece la versión correcta automáticamente. macOS, Linux y Windows totalmente soportados. Tu equipo puede estar operativo antes de que termine la llamada de onboarding.",
-        "de": "Die Download-Seite erkennt Ihr Betriebssystem und bietet automatisch die richtige Version. macOS, Linux und Windows vollständig unterstützt.",
-        "fr": "La page de téléchargement détecte votre OS et propose la bonne version. macOS, Linux et Windows entièrement supportés.",
-        "pt": "A página de download detecta seu SO e oferece a versão correta. macOS, Linux e Windows totalmente suportados."
       }
     }
   ]
