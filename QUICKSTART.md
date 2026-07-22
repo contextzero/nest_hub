@@ -103,6 +103,8 @@ export NEST_API_URL="http://localhost"
 
 > **Where's your token?** `setup.sh` saved it in `.env`. Run: `grep CLI_API_TOKEN .env` to see it.
 
+The token is automatically generated during setup and stored in the `.env` file.
+
 **Option B: Interactive login (saves credentials permanently)**
 
 ```bash
@@ -150,10 +152,7 @@ The terminal will show the session connecting and streaming. **Don't close this 
 
 ## Step 5 — Your AHA Moment 🎯
 
-Switch to your browser (or phone) and open:
-
-```
-http://localhost
+Switch to your browser and open the URL displayed by setup.sh. If accessing NEST from another device on your network, use the server's IP address instead of localhost.
 ```
 
 **You should now see the live session in the dashboard.**
@@ -238,13 +237,21 @@ You now have:
 | Problem | Fix |
 |---------|-----|
 | `annie` not found after install | Run `npm install -g @contextzero/nest` again; check your `$PATH` |
-| Web app shows blank / won't load | Wait 30s for DB init; run `docker compose logs nest-server` |
+| Web app is blank or fails to load | Wait 30s for DB init; run `docker compose logs nest-server` |
 | `401 Unauthorized` in CLI | Token mismatch — `setup.sh` generates it automatically. Run `grep CLI_API_TOKEN .env` to see your token. |
 | Port 80 already in use | Set `WEB_PORT=8080` in `.env`, then `docker compose restart` |
 | Session not appearing in dashboard | Confirm `NEST_API_URL` in CLI points to the correct server address |
 | Something else is wrong | Run `annie diagnose` — it prints a full diagnostic report |
 
 ---
+
+## Common First-Time Mistakes
+
+- Using an outdated Node.js version (requires v18+).
+- Forgetting to start Docker before running `setup.sh`.
+- Using `localhost` from a different device on the network.
+- Copying an incorrect `CLI_API_TOKEN`.
+- Forgetting to run `annie auth login` before starting an agent session.
 
 > **You're running an enterprise-grade AI workforce hub. For free. On your own infrastructure.**
 > 
