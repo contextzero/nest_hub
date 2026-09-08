@@ -2,6 +2,63 @@
   "latest_version": "0.2.84",
   "notifications": [
     {
+      "id": "u58",
+      "category": "updates",
+      "date": "2026-07-10",
+      "title": {
+        "en": "Modernized, hardened platform: dependencies current, all tests green",
+        "es": "Plataforma modernizada y endurecida: dependencias al día, todos los tests en verde",
+        "de": "Modernisierte, gehärtete Plattform: Abhängigkeiten aktuell, alle Tests grün",
+        "fr": "Plateforme modernisée et renforcée : dépendances à jour, tous les tests au vert",
+        "pt": "Plataforma modernizada e reforçada: dependências atualizadas, todos os testes no verde"
+      },
+      "body": {
+        "en": "NEST now runs on the latest framework and library majors across the whole stack — Rust (axum, sqlx, the crypto stack, toolchain 1.96) and the web/CLI (Vite 8, TypeScript 6, and more). The upgrade was verified end to end: over 1,100 web/CLI tests plus the full Rust suite green, clean typecheck and production build, and a server smoke test against a live database. No behavioural changes — just a faster, more secure, and better-maintained platform underneath everything you do.",
+        "es": "NEST ahora corre sobre los últimos majors de frameworks y librerías en todo el stack — Rust (axum, sqlx, el stack de criptografía, toolchain 1.96) y web/CLI (Vite 8, TypeScript 6 y más). La actualización se verificó de punta a punta: más de 1.100 tests de web/CLI más la suite completa de Rust en verde, typecheck y build de producción limpios, y un smoke test del servidor contra una base de datos en vivo. Sin cambios de comportamiento — solo una plataforma más rápida, más segura y mejor mantenida debajo de todo lo que hacés.",
+        "de": "NEST läuft jetzt auf den neuesten Framework- und Bibliotheks-Majors im gesamten Stack — Rust (axum, sqlx, der Krypto-Stack, Toolchain 1.96) und Web/CLI (Vite 8, TypeScript 6 und mehr). Das Upgrade wurde end-to-end verifiziert: über 1.100 Web/CLI-Tests plus die vollständige Rust-Suite grün, sauberer Typecheck und Produktions-Build sowie ein Server-Smoke-Test gegen eine Live-Datenbank. Keine Verhaltensänderungen — nur eine schnellere, sicherere und besser gewartete Plattform unter allem, was du tust.",
+        "fr": "NEST fonctionne désormais sur les dernières versions majeures de frameworks et bibliothèques dans toute la stack — Rust (axum, sqlx, la pile cryptographique, toolchain 1.96) et web/CLI (Vite 8, TypeScript 6 et plus). La mise à niveau a été vérifiée de bout en bout : plus de 1 100 tests web/CLI plus la suite Rust complète au vert, typecheck et build de production propres, et un smoke test du serveur contre une base de données en direct. Aucun changement comportemental — juste une plateforme plus rapide, plus sûre et mieux maintenue sous tout ce que vous faites.",
+        "pt": "O NEST agora roda sobre os últimos majors de frameworks e bibliotecas em toda a stack — Rust (axum, sqlx, a pilha de criptografia, toolchain 1.96) e web/CLI (Vite 8, TypeScript 6 e mais). A atualização foi verificada de ponta a ponta: mais de 1.100 testes de web/CLI mais a suíte completa de Rust no verde, typecheck e build de produção limpos, e um smoke test do servidor contra um banco de dados ativo. Sem mudanças de comportamento — apenas uma plataforma mais rápida, mais segura e melhor mantida sob tudo o que você faz."
+      }
+    },
+    {
+      "id": "u57",
+      "category": "updates",
+      "date": "2026-07-10",
+      "title": {
+        "en": "Easier to self-host, easier to navigate the code",
+        "es": "Más fácil de autoalojar, más fácil de navegar el código",
+        "de": "Einfacher selbst zu hosten, einfacher den Code zu navigieren",
+        "fr": "Plus simple à auto-héberger, plus simple à naviguer dans le code",
+        "pt": "Mais fácil de auto-hospedar, mais fácil de navegar pelo código"
+      },
+      "body": {
+        "en": "Two improvements for teams running their own NEST. Deploying is now simpler: a Helm chart for Kubernetes, one-click templates for Render, Railway and DigitalOcean, a Windows (WSL2 + Docker Desktop) install guide, a Docker Compose troubleshooting FAQ, and a QUICKSTART in English, Spanish and Portuguese. And your developers can build a searchable knowledge graph of the codebase with a single command (`make graph`) — then ask it questions in plain language instead of digging through files. Both ship as tooling and documentation in this release.",
+        "es": "Dos mejoras para equipos que corren su propio NEST. Desplegar ahora es más simple: un chart de Helm para Kubernetes, plantillas de un clic para Render, Railway y DigitalOcean, una guía de instalación en Windows (WSL2 + Docker Desktop), un FAQ de resolución de problemas de Docker Compose y un QUICKSTART en inglés, español y portugués. Y tus desarrolladores pueden construir un grafo de conocimiento navegable del código con un solo comando (`make graph`) — y hacerle preguntas en lenguaje natural en vez de rebuscar entre archivos. Ambos llegan como tooling y documentación en este release.",
+        "de": "Zwei Verbesserungen für Teams, die ihr eigenes NEST betreiben. Das Deployment ist jetzt einfacher: ein Helm-Chart für Kubernetes, One-Click-Vorlagen für Render, Railway und DigitalOcean, eine Windows-Installationsanleitung (WSL2 + Docker Desktop), ein Docker-Compose-Fehlerbehebungs-FAQ und ein QUICKSTART auf Englisch, Spanisch und Portugiesisch. Und deine Entwickler können mit einem einzigen Befehl (`make graph`) einen durchsuchbaren Wissensgraphen der Codebasis erstellen — und ihm dann Fragen in natürlicher Sprache stellen, statt Dateien zu durchsuchen. Beides kommt als Tooling und Dokumentation in diesem Release.",
+        "fr": "Deux améliorations pour les équipes qui hébergent leur propre NEST. Le déploiement est désormais plus simple : un chart Helm pour Kubernetes, des modèles en un clic pour Render, Railway et DigitalOcean, un guide d'installation Windows (WSL2 + Docker Desktop), une FAQ de dépannage Docker Compose, et un QUICKSTART en anglais, espagnol et portugais. Et vos développeurs peuvent construire un graphe de connaissances explorable de la base de code avec une seule commande (`make graph`) — puis lui poser des questions en langage naturel au lieu de fouiller dans les fichiers. Les deux arrivent sous forme d'outillage et de documentation dans cette version.",
+        "pt": "Duas melhorias para equipes que rodam seu próprio NEST. Implantar agora é mais simples: um chart Helm para Kubernetes, templates de um clique para Render, Railway e DigitalOcean, um guia de instalação no Windows (WSL2 + Docker Desktop), um FAQ de solução de problemas do Docker Compose e um QUICKSTART em inglês, espanhol e português. E seus desenvolvedores podem construir um grafo de conhecimento navegável do código com um único comando (`make graph`) — e fazer perguntas em linguagem natural em vez de vasculhar arquivos. Ambos chegam como ferramentas e documentação neste release."
+      }
+    },
+    {
+      "id": "u56",
+      "category": "updates",
+      "date": "2026-07-05",
+      "title": {
+        "en": "Annie Voice comes to the web: talk to your agents and see your projects live",
+        "es": "Annie Voice llega a la web: hablá con tus agentes y mirá tus proyectos en vivo",
+        "de": "Annie Voice kommt ins Web: Sprich mit deinen Agenten und sieh deine Projekte live",
+        "fr": "Annie Voice arrive sur le web : parlez à vos agents et visualisez vos projets en direct",
+        "pt": "Annie Voice chega à web: fale com seus agentes e veja seus projetos ao vivo"
+      },
+      "body": {
+        "en": "Annie — the voice assistant you know from mobile — is now in the web app. Tap the microphone in the top bar to open the full-screen voice view: a live lattice of your projects, each branching into Computer, Forge (developer sessions), Nexus (chat) and Hive, with your active sessions as glowing leaves. Push to talk to Annie, watch the equalizer react as you speak, or type a query. It runs as a PWA, so it adapts to your phone too. Same Annie, now wherever you work.",
+        "es": "Annie —el asistente de voz que ya conocés de mobile— ya está en la app web. Tocá el micrófono en la barra superior para abrir la vista de voz a pantalla completa: un lattice en vivo de tus proyectos, cada uno ramificado en Computer, Forge (sesiones de desarrollo), Nexus (chat) e Hive, con tus sesiones activas como hojas brillantes. Mantené presionado para hablarle a Annie, mirá el ecualizador reaccionar mientras hablás, o escribí una consulta. Funciona como PWA, así que se adapta también a tu teléfono. La misma Annie, ahora donde trabajes.",
+        "de": "Annie — der Sprachassistent, den du von Mobile kennst — ist jetzt in der Web-App. Tippe auf das Mikrofon in der oberen Leiste, um die Vollbild-Sprachansicht zu öffnen: ein Live-Lattice deiner Projekte, jeweils verzweigt in Computer, Forge (Entwicklersitzungen), Nexus (Chat) und Hive, mit deinen aktiven Sitzungen als leuchtende Blätter. Halte gedrückt, um mit Annie zu sprechen, beobachte den Equalizer, während du sprichst, oder tippe eine Anfrage. Es läuft als PWA und passt sich auch deinem Smartphone an. Dieselbe Annie, jetzt überall wo du arbeitest.",
+        "fr": "Annie — l'assistant vocal que vous connaissez sur mobile — est désormais dans l'app web. Touchez le microphone dans la barre supérieure pour ouvrir la vue vocale en plein écran : un lattice en direct de vos projets, chacun se ramifiant en Computer, Forge (sessions de développement), Nexus (chat) et Hive, avec vos sessions actives comme feuilles lumineuses. Maintenez pour parler à Annie, regardez l'égaliseur réagir pendant que vous parlez, ou saisissez une requête. Cela fonctionne en PWA, donc s'adapte aussi à votre téléphone. La même Annie, désormais où que vous travailliez.",
+        "pt": "Annie — a assistente de voz que você conhece do mobile — agora está no app web. Toque no microfone na barra superior para abrir a visão de voz em tela cheia: um lattice ao vivo dos seus projetos, cada um ramificando em Computer, Forge (sessões de desenvolvimento), Nexus (chat) e Hive, com suas sessões ativas como folhas brilhantes. Segure para falar com a Annie, veja o equalizador reagir enquanto você fala, ou digite uma consulta. Funciona como PWA, então se adapta também ao seu telefone. A mesma Annie, agora onde você trabalhar."
+      }
+    },
+    {
       "id": "u55",
       "category": "updates",
       "date": "2026-06-23",
@@ -63,18 +120,18 @@
       "category": "updates",
       "date": "2026-05-20",
       "title": {
-        "en": "SDK integration guides and app/deino conformance documentation",
-        "es": "Guías de integración SDK y documentación de conformidad app/deino",
-        "de": "SDK-Integrationsleitfäden und App/Deino-Konformitätsdokumentation",
-        "fr": "Guides d'intégration SDK et documentation de conformité app/deino",
-        "pt": "Guias de integração SDK e documentação de conformidade app/deino"
+        "en": "SDK integration guides and app conformance documentation",
+        "es": "Guías de integración SDK y documentación de conformidad app",
+        "de": "SDK-Integrationsleitfäden und App-Konformitätsdokumentation",
+        "fr": "Guides d'intégration SDK et documentation de conformité app",
+        "pt": "Guias de integração SDK e documentação de conformidade app"
       },
       "body": {
-        "en": "New architecture documentation explains how to integrate the NEST SDKs (app and deino) with your own AI services. Step-by-step integration guides show the patterns for session management, encryption, and message routing. Conformance checklist ensures your service works seamlessly with the platform. Architecture diagrams, code examples, and troubleshooting tips are included — so third-party integrators can build on top of NEST with confidence.",
-        "es": "Nueva documentación de arquitectura explica cómo integrar los SDKs de NEST (app y deino) con tus propios servicios de IA. Guías de integración paso a paso muestran los patrones para gestión de sesiones, encriptación y enrutamiento de mensajes. Lista de conformidad asegura que tu servicio funcione sin problemas con la plataforma. Se incluyen diagramas de arquitectura, ejemplos de código y consejos de resolución de problemas — para que integradores de terceros construyan sobre NEST con confianza.",
-        "de": "Neue Architekturdokumentation erklärt, wie du die NEST SDKs (app und deino) mit deinen eigenen KI-Services integrierst. Schritt-für-Schritt-Integrationsleitfäden zeigen Muster für Session-Verwaltung, Verschlüsselung und Message-Routing. Konformitätsprüfliste stellt sicher, dass dein Service nahtlos mit der Plattform funktioniert. Architekturdiagramme, Code-Beispiele und Fehlerbehebungstipps enthalten — damit Drittanbieter-Integratoren sicher auf NEST aufbauen können.",
-        "fr": "Une nouvelle documentation d'architecture explique comment intégrer les SDKs NEST (app et deino) à vos propres services IA. Des guides d'intégration pas à pas montrent les modèles de gestion de session, chiffrement et routage des messages. Une liste de conformité garantit que votre service fonctionne sans problème avec la plateforme. Les diagrammes d'architecture, exemples de code et conseils de dépannage sont inclus — pour que les intégrateurs tiers puissent construire sur NEST en toute confiance.",
-        "pt": "Nova documentação de arquitetura explica como integrar os SDKs NEST (app e deino) com seus próprios serviços de IA. Guias de integração passo a passo mostram padrões para gerenciamento de sessão, criptografia e roteamento de mensagens. Checklist de conformidade garante que seu serviço funcione perfeitamente com a plataforma. Diagramas de arquitetura, exemplos de código e dicas de solução de problemas estão inclusos — para que integradores de terceiros construam sobre NEST com confiança."
+        "en": "New architecture documentation explains how to integrate the NEST SDKs (app) with your own AI services. Step-by-step integration guides show the patterns for session management, encryption, and message routing. Conformance checklist ensures your service works seamlessly with the platform. Architecture diagrams, code examples, and troubleshooting tips are included — so third-party integrators can build on top of NEST with confidence.",
+        "es": "Nueva documentación de arquitectura explica cómo integrar los SDKs de NEST (app) con tus propios servicios de IA. Guías de integración paso a paso muestran los patrones para gestión de sesiones, encriptación y enrutamiento de mensajes. Lista de conformidad asegura que tu servicio funcione sin problemas con la plataforma. Se incluyen diagramas de arquitectura, ejemplos de código y consejos de resolución de problemas — para que integradores de terceros construyan sobre NEST con confianza.",
+        "de": "Neue Architekturdokumentation erklärt, wie du die NEST SDKs (app) mit deinen eigenen KI-Services integrierst. Schritt-für-Schritt-Integrationsleitfäden zeigen Muster für Session-Verwaltung, Verschlüsselung und Message-Routing. Konformitätsprüfliste stellt sicher, dass dein Service nahtlos mit der Plattform funktioniert. Architekturdiagramme, Code-Beispiele und Fehlerbehebungstipps enthalten — damit Drittanbieter-Integratoren sicher auf NEST aufbauen können.",
+        "fr": "Une nouvelle documentation d'architecture explique comment intégrer les SDKs NEST (app) à vos propres services IA. Des guides d'intégration pas à pas montrent les modèles de gestion de session, chiffrement et routage des messages. Une liste de conformité garantit que votre service fonctionne sans problème avec la plateforme. Les diagrammes d'architecture, exemples de code et conseils de dépannage sont inclus — pour que les intégrateurs tiers puissent construire sur NEST en toute confiance.",
+        "pt": "Nova documentação de arquitetura explica como integrar os SDKs NEST (app) com seus próprios serviços de IA. Guias de integração passo a passo mostram padrões para gerenciamento de sessão, criptografia e roteamento de mensagens. Checklist de conformidade garante que seu serviço funcione perfeitamente com a plataforma. Diagramas de arquitetura, exemplos de código e dicas de solução de problemas estão inclusos — para que integradores de terceiros construam sobre NEST com confiança."
       }
     },
     {
