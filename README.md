@@ -78,6 +78,16 @@ flowchart LR
 
 Architecture: hexagonal (`domain` → `ports` → `application` → `adapters`). See the [security model](docs/SECURITY-MODEL.md) for the data-residency and audit posture.
 
+### Runtime layers
+
+- `annie` CLI lives on employee machines and authenticates with `CLI_API_TOKEN`
+- `nginx` is public entrypoint for web, REST, Socket.IO, and SSE
+- `nest-server` handles auth, policy, sessions, audit trail, and orchestration
+- `postgres` stores users, sessions, prompts, approvals, and logs
+- model providers stay external and are reached only through your configured keys
+
+This separation keeps browser and CLI traffic outbound-only from user devices while the server and database stay inside your boundary.
+
 ## Quick Start
 
 Deploy the self-hosted hub with [Docker](https://docs.docker.com/get-docker/). Clone the repo and run the setup script — it generates secrets, pulls the published images, starts the stack, and waits for health:
