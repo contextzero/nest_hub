@@ -14,7 +14,22 @@
   <a href="https://t.me/ctx0_io"><img src="https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram" alt="Telegram"></a>
 </p>
 
-NEST is a self-hosted AI workforce hub that consolidates fragmented tool stacks into a single, governed plane: organizational memory, multi-agent orchestration, 700+ models via BYOK, and full audit trails — all running on infrastructure you own. Built by Context Zero (CTX0) under a fair-code license, NEST gives enterprises the speed of modern AI tooling without surrendering data, cost control, or operational sovereignty.
+## What is NEST?
+
+NEST is a self-hosted AI workforce hub designed to help organizations deploy and manage AI securely on their own infrastructure.
+
+### Key Features
+
+- **Unified AI Platform** – Consolidates fragmented AI tools and workflows into a single, centralized workspace.
+- **Organizational Memory** – Enables teams to store, retrieve, and leverage institutional knowledge efficiently.
+- **Multi-Agent Orchestration** – Supports collaboration between multiple AI agents to automate complex tasks and workflows.
+- **Extensive Model Access** – Connects to **700+ AI models** through a Bring Your Own Key (BYOK) approach, providing flexibility and choice.
+- **Comprehensive Audit Trails** – Maintains detailed activity logs to ensure transparency, governance, and compliance.
+- **Self-Hosted & Secure** – Runs entirely on infrastructure owned and controlled by the organization, enhancing data privacy and security.
+- **Cost & Operational Control** – Eliminates dependency on third-party AI platforms, giving organizations greater control over expenses and operations.
+- **Enterprise-Ready** – Delivers the capabilities of modern AI tooling while preserving data sovereignty and governance requirements.
+
+Developed by **Context Zero (CTX0)** under a fair-code license, NEST empowers organizations to adopt AI without compromising security, compliance, or operational independence.
 
 > ⭐ **If NEST is useful to your team, star the repo** — it helps other organizations find a self-hosted, audited alternative to SaaS AI sprawl. See **[everything we've shipped →](https://github.com/contextzero/nest_hub/issues/17)** — live, dated, and independently verifiable.
 
@@ -61,43 +76,126 @@ NEST is organized as a set of composable modules sharing one audit and governanc
 | **Cost model** | ✅ Your keys, no per-seat platform fee | ❌ Per-seat + markup | ✅ Infra only |
 | **Lock-in** | ✅ Fair-code, source-available | ❌ Proprietary | ✅ None |
 
+Here's a cleaner and more professional version:
+
 ## Architecture
 
-Everything runs on infrastructure you own. Employee machines and browsers connect **outbound** to your hub; model providers are reached with **your** keys. No inbound access for anyone else.
+NEST is designed to run entirely on infrastructure you control, whether in the cloud, on-premises, or within air-gapped environments. Employee devices connect securely to the hub using outbound connections only, while AI model providers are accessed through your organization's own API keys (BYOK). This architecture ensures data sovereignty, security, and operational control without requiring inbound access from external parties.
+
+### Architecture Overview
+
+* **Employee Access** – Users interact with NEST through the Annie CLI or the web-based PWA from any browser.
+* **Outbound-Only Connectivity** – All client connections are outbound, minimizing exposure and simplifying network security.
+* **Self-Hosted Deployment** – NEST runs entirely on infrastructure owned and managed by your organization.
+* **High-Performance Backend** – Powered by a Rust-based server built with Axum, Socket.IO, and Server-Sent Events (SSE) for scalable real-time communication.
+* **Persistent Audit Logging** – PostgreSQL stores organizational data and maintains comprehensive audit trails for governance and compliance.
+* **Flexible Model Integration** – Connect to 700+ AI models through a Bring Your Own Key (BYOK) approach using providers such as OpenRouter, Fal, and direct model integrations.
 
 ```mermaid
 flowchart LR
-    CLI["Employees — annie CLI"] -->|outbound| NG
-    PWA["Web PWA — any browser"] -->|outbound| NG
-    subgraph infra["Your infrastructure: cloud, on-prem, air-gapped"]
-        NG["nginx"] --> SRV["NEST Server — Rust, Axum, Socket.IO, SSE"]
-        SRV --> DB[("PostgreSQL — full audit log")]
+    CLI["Employees - Annie CLI"] -->|Outbound Connection| NG
+    PWA["Web PWA - Any Browser"] -->|Outbound Connection| NG
+
+    subgraph INFRA["Your Infrastructure (Cloud, On-Premises, or Air-Gapped)"]
+        NG["Nginx Reverse Proxy"] --> SRV["NEST Server (Rust, Axum, Socket.IO, SSE)"]
+        SRV --> DB[("PostgreSQL<br/>Audit Logs & Data Storage")]
     end
-    SRV -->|BYOK| LLM["700+ models — OpenRouter, Fal, direct"]
+
+    SRV -->|BYOK| LLM["700+ AI Models<br/>OpenRouter, Fal, Direct Integrations"]
 ```
+
+This version explains *why* the architecture matters, not just *what* the components are, which is usually more valuable in documentation.
+
 
 Architecture: hexagonal (`domain` → `ports` → `application` → `adapters`). See the [security model](docs/SECURITY-MODEL.md) for the data-residency and audit posture.
 
+## Why Self-Hosting?
+
+NEST is designed for organizations that require full control over their AI infrastructure.
+
+### Benefits
+
+- Data remains within your infrastructure.
+- No vendor lock-in for AI models.
+- Flexible deployment across cloud, on-premises, or air-gapped environments.
+- Complete visibility through audit logging and governance controls.
+- Better cost management through BYOK model integrations.
+
 ## Quick Start
 
-Deploy the self-hosted hub with [Docker](https://docs.docker.com/get-docker/). Clone the repo and run the setup script — it generates secrets, pulls the published images, starts the stack, and waits for health:
+Deploy NEST on your own infrastructure using Docker. The setup script automatically generates the required secrets, downloads the latest published images, starts all services, and performs health checks to ensure the deployment is successful.
 
-```
+### Prerequisites
+
+Before starting, ensure the following tools are installed:
+
+* Docker
+* Docker Compose
+* Git
+
+### Installation
+
+```bash
 git clone https://github.com/contextzero/nest_hub.git
 cd nest_hub
 ./setup.sh
 ```
 
-Then open the PWA at `http://localhost` (or the `WEB_PORT` you set in `.env`) and install it on your phone, tablet, or desktop.
+### Accessing NEST
 
-Day-2 operations:
+Once deployment is complete, open the Progressive Web App (PWA) in your browser:
 
+```text
+http://localhost
 ```
-docker compose up -d                          # start
-docker compose down                           # stop
-docker compose logs -f                        # stream logs
-docker compose pull && docker compose up -d   # update to the latest images
+
+If you have configured a custom `WEB_PORT` in your `.env` file, use that port instead.
+
+The PWA can be installed on desktop, tablet, and mobile devices for a native-app-like experience.
+
+### Day-2 Operations
+
+Common operational commands:
+
+```bash
+docker compose up -d                          # Start services
+docker compose down                           # Stop services
+docker compose logs -f                        # Stream logs
+docker compose pull && docker compose up -d   # Update to the latest images
 ```
+
+## Troubleshooting
+
+### Docker is not running
+
+If you encounter Docker connection errors during setup, ensure that Docker is installed and running before executing:
+
+```bash
+./setup.sh
+```
+
+### Port already in use
+
+If `localhost` is unavailable after deployment, verify that the configured port is not being used by another application. You can also modify the `WEB_PORT` value in your `.env` file.
+
+### Services fail to start
+
+Check container status and logs:
+
+```bash
+docker compose ps
+docker compose logs -f
+```
+
+### Updating NEST
+
+To update to the latest published images:
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
 
 ### CLI for developer machines
 
