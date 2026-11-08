@@ -17,6 +17,14 @@ Every component that exists today — real software, running now, free to deploy
 
 ---
 
+## What's New (June 2026)
+
+### Approval Quality — shipping June 12, 2026
+
+Approvals now carry a quality signal, not just an approve/reject. Reviewers can rate how AI output held up across the hub, and project insights gain an **Approval Quality** view so admins can see, at a glance, how their AI work is actually performing.
+
+---
+
 ## What's New (May 2026)
 
 ### Project Management — shipped May 1, 2026

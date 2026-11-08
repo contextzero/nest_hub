@@ -119,6 +119,21 @@ annie auth status
 
 You should see your server URL and a confirmed token. **You're authenticated.**
 
+**Optional — RPC security policy (recommended for shared deployments)**
+
+The CLI ships with `NEST_RPC_POLICY=standard` by default. Under `standard`, dangerous operations (like shell execution) surface a web approval request before running. Your team approves or denies from the browser or phone — exactly what you'll see in Step 5.
+
+```bash
+# standard (default): read + write auto-allowed; shell/dangerous require web approval ← recommended
+export NEST_RPC_POLICY=standard
+
+# open: all methods run without approval (use only on your personal machine)
+export NEST_RPC_POLICY=open
+
+# strict: only read-only methods auto-allowed; everything else requires web approval
+export NEST_RPC_POLICY=strict
+```
+
 ---
 
 ## Step 4 — Start Your First Agent Session
